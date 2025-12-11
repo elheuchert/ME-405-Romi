@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['saved_0',['saved',['../namespaceui__old.html#acbd922a3d44213c04d3488d1fda084e9',1,'ui_old']]],
+  ['savedata_1',['saveData',['../namespacepc__micro__reader.html#a495968f7788cbecaba157e8418b4c3dd',1,'pc_micro_reader']]],
+  ['saveheaders_2',['saveHeaders',['../namespacepc__micro__reader.html#a61b3bc501899026e36fc605a6fed1130',1,'pc_micro_reader']]],
+  ['schedule_3',['schedule',['../classcotask_1_1_task.html#af60def0ed4a1bc5fec32f3cf8b8a90c8',1,'cotask::Task']]],
+  ['sens_5fdist_4',['sens_dist',['../classline__sensor_1_1_line___sensor.html#ab08bea34ac577bab1e620b3b06e4de82',1,'line_sensor::Line_Sensor']]],
+  ['sensor_5fend_5',['SENSOR_END',['../namespaceline__task.html#a2e536a9275c49e1b15f3d87d7b154fa9',1,'line_task']]],
+  ['sensor_5fstart_6',['SENSOR_START',['../namespaceline__task.html#af424651385a226e59d22204fa75e9d49',1,'line_task']]],
+  ['ser_7',['ser',['../classui_1_1ui.html#a9da9e91758d2fbf23f96a806b50f04a4',1,'ui.ui.ser'],['../namespaceui__old.html#af5e1c57d807b57974e3b86b6e137e9c0',1,'ui_old.ser']]],
+  ['ser_5fnum_8',['ser_num',['../classtask__share_1_1_queue.html#a6f9d87b116eb16dba0867d3746af9f5f',1,'task_share.Queue.ser_num'],['../classtask__share_1_1_share.html#a2e8df029af46fbfd44ef0c2e7e8c7af6',1,'task_share.Share.ser_num']]],
+  ['set_5feffort_9',['set_effort',['../classmotor_1_1_motor.html#aacaeae41be4d94273ff9318b5a616b93',1,'motor::Motor']]],
+  ['set_5foffset_10',['set_offset',['../classencoder_1_1_encoder.html#ada0eb6236b545b232280989fc5a03378',1,'encoder::Encoder']]],
+  ['set_5fperiod_11',['set_period',['../classcotask_1_1_task.html#a0fcee5beb8b2fed77e5125c58ba35c26',1,'cotask::Task']]],
+  ['share_12',['Share',['../classtask__share_1_1_share.html',1,'task_share']]],
+  ['share0_13',['share0',['../namespacebasic__tasks.html#a5e57826dfa518c88be513bb2d009f69a',1,'basic_tasks']]],
+  ['share_5flist_14',['share_list',['../namespacetask__share.html#a75818e5b662453e3723d0f234c85e519',1,'task_share']]],
+  ['show_5fall_15',['show_all',['../namespacetask__share.html#ad6aea1db68be1a10f72039a5ac9e9dd4',1,'task_share']]],
+  ['side_16',['side',['../namespaceui__old.html#a330a5ab2a4caf3fb69ead24c7f6c19b8',1,'ui_old']]],
+  ['state_17',['state',['../classbump__task_1_1_bump___task.html#ae93bb0184d5d977a5d003cdf01438f30',1,'bump_task.Bump_Task.state'],['../classcontrol__task_1_1control__task.html#ada23fbf679e7a4019cfd89f4e2c3e978',1,'control_task.control_task.state'],['../classdata__collector_1_1data__collector.html#a407038e1560b6177a442121fdbffb7d9',1,'data_collector.data_collector.state'],['../classimu__task_1_1imu__task.html#a03e632626f33b41142ffc3caf229fbfd',1,'imu_task.imu_task.state'],['../classline__task_1_1line__task.html#ae51501acac9437c8ce714843a2e4f985',1,'line_task.line_task.state'],['../classmotor__encoder__left__class_1_1motor__encoder__left__class.html#a8e321dd926755135bc7d4dc177f5ae20',1,'motor_encoder_left_class.motor_encoder_left_class.state'],['../classmotor__encoder__right__class_1_1motor__encoder__right__class.html#a4f54400e3497bf6fddba979275309e22',1,'motor_encoder_right_class.motor_encoder_right_class.state'],['../classobserver_1_1observer.html#ae19f95f09104799a5300be5c4fd4f1a5',1,'observer.observer.state'],['../classpathing__plan__task_1_1pathing__plan.html#a1d72985cc982ceb82ef7b26d13b8ad2d',1,'pathing_plan_task.pathing_plan.state'],['../classui_1_1ui.html#a577487ab95eea041009593952c25b66c',1,'ui.ui.state']]],
+  ['stop_18',['stop',['../namespacemain.html#aecf5bf40941c86c93701117fcabb16b9',1,'main']]],
+  ['substate_19',['substate',['../classimu__task_1_1imu__task.html#aaab01292f988af3746f689688b9aada3',1,'imu_task::imu_task']]],
+  ['summed_5ferrors_20',['summed_errors',['../classcontroller_1_1_controller.html#a5784a365448f4942ea8faaf246a25c6b',1,'controller::Controller']]],
+  ['sys_21',['sys',['../classimu__task_1_1imu__task.html#a7b3131e9885343495727a4895d249c50',1,'imu_task::imu_task']]]
+];

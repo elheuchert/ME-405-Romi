@@ -1,0 +1,373 @@
+\doxysection{imu.\+IMU Class Reference}
+\hypertarget{classimu_1_1_i_m_u}{}\label{classimu_1_1_i_m_u}\index{imu.IMU@{imu.IMU}}
+
+
+add description here  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classimu_1_1_i_m_u_1_1reg}{reg}}
+\begin{DoxyCompactList}\small\item\em add description here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a488d18932deb60d537837b5a2bb0a25f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, i2c)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a27674173a181ba9fa71a68d585dc085b}{euler}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a611190325ea22dc5e7ec5b333a19c95b}{calibration\+\_\+check}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a684c3303d64145a56407b0c0047c19be}{calibration\+\_\+check\+\_\+sys}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_abf7474d41fd7e72a0334775219de8fae}{calibration\+\_\+check\+\_\+gyro}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_acea538246f0be91fbf2bffbf8a4a444b}{calibration\+\_\+check\+\_\+accel}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a463e3c2b9e75856574472c3c5e71d655}{calibration\+\_\+check\+\_\+mag}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a84315ed8d4f0be761ae9bc350f35d5d7}{get\+\_\+calibration\+\_\+coeff\+\_\+accel}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a928a807b936a16058c8c5e582920ee8b}{get\+\_\+calibration\+\_\+coeff\+\_\+mag}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a9b924b34a82cb1eccef23b0100e0fc5f}{get\+\_\+calibration\+\_\+coeff\+\_\+gyro}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_af3dfed56b64b0ad9eaf257255affa32c}{get\+\_\+calibration\+\_\+coeff}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a16c419e22587426d4bc88a0329d5177b}{change\+\_\+mode}} (self, mode)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a1186b18bfa64be37260606cff40a1af1}{write\+\_\+calibration\+\_\+coeff}} (self, coef1, coef2, coef3, coef4, coef5, coef6, coef7, coef8, coef9, coef10, coef11)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a3ac6fc32a370c62c1d5101895f8548f0}{get\+\_\+\+Euler\+\_\+x}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_af77d640901260a5a9c8ecd80f61d4502}{get\+\_\+\+Euler\+\_\+y}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a68bb59c57ed454ce07e7130691beb500}{get\+\_\+\+Euler\+\_\+z}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_aaced4aad6bd7f309c900b28a754e34c4}{get\+\_\+\+Yaw\+\_\+\+Velocity}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a8df912354018c699a2f35dc72eaded0f}{get\+\_\+\+Roll\+\_\+\+Velocity}} (self)
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a3f9f9f49c405b5360cf1331afbeff416}{get\+\_\+\+Pitch\+\_\+\+Velocity}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classimu_1_1_i_m_u_ac0b14415aa948f8da749133084ebab28}{DEV\+\_\+\+ADDR}} = 0x28
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a276a19d26853b1fb7ace435433f55a84}{\+\_\+read\+\_\+reg}} (self, \mbox{\hyperlink{classimu_1_1_i_m_u_1_1reg}{reg}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a0c34784cac204277210114717a334708}{\+\_\+buf}} = bytearray((0 for n in range(22)))
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_a0811b43bdf3272195cb38823eb28d96d}{\+\_\+i2c}} = i2c
+\item 
+\mbox{\hyperlink{classimu_1_1_i_m_u_ac56f92fac2a1b083e801fc72d326f0e8}{\+\_\+buf\+\_\+8}} = bytearray((0))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+add description here 
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00010}{10}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classimu_1_1_i_m_u_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classimu_1_1_i_m_u_a488d18932deb60d537837b5a2bb0a25f}\index{imu.IMU@{imu.IMU}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a488d18932deb60d537837b5a2bb0a25f} 
+imu.\+IMU.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{i2c}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00045}{45}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classimu_1_1_i_m_u_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classimu_1_1_i_m_u_a276a19d26853b1fb7ace435433f55a84}\index{imu.IMU@{imu.IMU}!\_read\_reg@{\_read\_reg}}
+\index{\_read\_reg@{\_read\_reg}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{\_read\_reg()}{\_read\_reg()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a276a19d26853b1fb7ace435433f55a84} 
+imu.\+IMU.\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{reg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00053}{53}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{classimu_1_1_i_m_u_a611190325ea22dc5e7ec5b333a19c95b}\index{imu.IMU@{imu.IMU}!calibration\_check@{calibration\_check}}
+\index{calibration\_check@{calibration\_check}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{calibration\_check()}{calibration\_check()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a611190325ea22dc5e7ec5b333a19c95b} 
+imu.\+IMU.\+calibration\+\_\+check (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00075}{75}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\Hypertarget{classimu_1_1_i_m_u_acea538246f0be91fbf2bffbf8a4a444b}\index{imu.IMU@{imu.IMU}!calibration\_check\_accel@{calibration\_check\_accel}}
+\index{calibration\_check\_accel@{calibration\_check\_accel}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{calibration\_check\_accel()}{calibration\_check\_accel()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_acea538246f0be91fbf2bffbf8a4a444b} 
+imu.\+IMU.\+calibration\+\_\+check\+\_\+accel (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00095}{95}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{classimu_1_1_i_m_u_abf7474d41fd7e72a0334775219de8fae}\index{imu.IMU@{imu.IMU}!calibration\_check\_gyro@{calibration\_check\_gyro}}
+\index{calibration\_check\_gyro@{calibration\_check\_gyro}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{calibration\_check\_gyro()}{calibration\_check\_gyro()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_abf7474d41fd7e72a0334775219de8fae} 
+imu.\+IMU.\+calibration\+\_\+check\+\_\+gyro (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00090}{90}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{classimu_1_1_i_m_u_a463e3c2b9e75856574472c3c5e71d655}\index{imu.IMU@{imu.IMU}!calibration\_check\_mag@{calibration\_check\_mag}}
+\index{calibration\_check\_mag@{calibration\_check\_mag}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{calibration\_check\_mag()}{calibration\_check\_mag()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a463e3c2b9e75856574472c3c5e71d655} 
+imu.\+IMU.\+calibration\+\_\+check\+\_\+mag (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00100}{100}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{classimu_1_1_i_m_u_a684c3303d64145a56407b0c0047c19be}\index{imu.IMU@{imu.IMU}!calibration\_check\_sys@{calibration\_check\_sys}}
+\index{calibration\_check\_sys@{calibration\_check\_sys}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{calibration\_check\_sys()}{calibration\_check\_sys()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a684c3303d64145a56407b0c0047c19be} 
+imu.\+IMU.\+calibration\+\_\+check\+\_\+sys (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00085}{85}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+\Hypertarget{classimu_1_1_i_m_u_a16c419e22587426d4bc88a0329d5177b}\index{imu.IMU@{imu.IMU}!change\_mode@{change\_mode}}
+\index{change\_mode@{change\_mode}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{change\_mode()}{change\_mode()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a16c419e22587426d4bc88a0329d5177b} 
+imu.\+IMU.\+change\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00127}{127}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+\Hypertarget{classimu_1_1_i_m_u_a27674173a181ba9fa71a68d585dc085b}\index{imu.IMU@{imu.IMU}!euler@{euler}}
+\index{euler@{euler}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{euler()}{euler()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a27674173a181ba9fa71a68d585dc085b} 
+imu.\+IMU.\+euler (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00069}{69}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+\Hypertarget{classimu_1_1_i_m_u_af3dfed56b64b0ad9eaf257255affa32c}\index{imu.IMU@{imu.IMU}!get\_calibration\_coeff@{get\_calibration\_coeff}}
+\index{get\_calibration\_coeff@{get\_calibration\_coeff}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_calibration\_coeff()}{get\_calibration\_coeff()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_af3dfed56b64b0ad9eaf257255affa32c} 
+imu.\+IMU.\+get\+\_\+calibration\+\_\+coeff (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00123}{123}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+\Hypertarget{classimu_1_1_i_m_u_a84315ed8d4f0be761ae9bc350f35d5d7}\index{imu.IMU@{imu.IMU}!get\_calibration\_coeff\_accel@{get\_calibration\_coeff\_accel}}
+\index{get\_calibration\_coeff\_accel@{get\_calibration\_coeff\_accel}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_calibration\_coeff\_accel()}{get\_calibration\_coeff\_accel()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a84315ed8d4f0be761ae9bc350f35d5d7} 
+imu.\+IMU.\+get\+\_\+calibration\+\_\+coeff\+\_\+accel (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00105}{105}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+\Hypertarget{classimu_1_1_i_m_u_a9b924b34a82cb1eccef23b0100e0fc5f}\index{imu.IMU@{imu.IMU}!get\_calibration\_coeff\_gyro@{get\_calibration\_coeff\_gyro}}
+\index{get\_calibration\_coeff\_gyro@{get\_calibration\_coeff\_gyro}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_calibration\_coeff\_gyro()}{get\_calibration\_coeff\_gyro()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a9b924b34a82cb1eccef23b0100e0fc5f} 
+imu.\+IMU.\+get\+\_\+calibration\+\_\+coeff\+\_\+gyro (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00117}{117}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 9
+\Hypertarget{classimu_1_1_i_m_u_a928a807b936a16058c8c5e582920ee8b}\index{imu.IMU@{imu.IMU}!get\_calibration\_coeff\_mag@{get\_calibration\_coeff\_mag}}
+\index{get\_calibration\_coeff\_mag@{get\_calibration\_coeff\_mag}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_calibration\_coeff\_mag()}{get\_calibration\_coeff\_mag()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a928a807b936a16058c8c5e582920ee8b} 
+imu.\+IMU.\+get\+\_\+calibration\+\_\+coeff\+\_\+mag (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00111}{111}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 10
+\Hypertarget{classimu_1_1_i_m_u_a3ac6fc32a370c62c1d5101895f8548f0}\index{imu.IMU@{imu.IMU}!get\_Euler\_x@{get\_Euler\_x}}
+\index{get\_Euler\_x@{get\_Euler\_x}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_Euler\_x()}{get\_Euler\_x()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a3ac6fc32a370c62c1d5101895f8548f0} 
+imu.\+IMU.\+get\+\_\+\+Euler\+\_\+x (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00141}{141}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 11
+\Hypertarget{classimu_1_1_i_m_u_af77d640901260a5a9c8ecd80f61d4502}\index{imu.IMU@{imu.IMU}!get\_Euler\_y@{get\_Euler\_y}}
+\index{get\_Euler\_y@{get\_Euler\_y}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_Euler\_y()}{get\_Euler\_y()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_af77d640901260a5a9c8ecd80f61d4502} 
+imu.\+IMU.\+get\+\_\+\+Euler\+\_\+y (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00147}{147}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 12
+\Hypertarget{classimu_1_1_i_m_u_a68bb59c57ed454ce07e7130691beb500}\index{imu.IMU@{imu.IMU}!get\_Euler\_z@{get\_Euler\_z}}
+\index{get\_Euler\_z@{get\_Euler\_z}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_Euler\_z()}{get\_Euler\_z()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a68bb59c57ed454ce07e7130691beb500} 
+imu.\+IMU.\+get\+\_\+\+Euler\+\_\+z (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00153}{153}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 13
+\Hypertarget{classimu_1_1_i_m_u_a3f9f9f49c405b5360cf1331afbeff416}\index{imu.IMU@{imu.IMU}!get\_Pitch\_Velocity@{get\_Pitch\_Velocity}}
+\index{get\_Pitch\_Velocity@{get\_Pitch\_Velocity}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_Pitch\_Velocity()}{get\_Pitch\_Velocity()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a3f9f9f49c405b5360cf1331afbeff416} 
+imu.\+IMU.\+get\+\_\+\+Pitch\+\_\+\+Velocity (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00167}{167}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 14
+\Hypertarget{classimu_1_1_i_m_u_a8df912354018c699a2f35dc72eaded0f}\index{imu.IMU@{imu.IMU}!get\_Roll\_Velocity@{get\_Roll\_Velocity}}
+\index{get\_Roll\_Velocity@{get\_Roll\_Velocity}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_Roll\_Velocity()}{get\_Roll\_Velocity()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a8df912354018c699a2f35dc72eaded0f} 
+imu.\+IMU.\+get\+\_\+\+Roll\+\_\+\+Velocity (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00163}{163}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 15
+\Hypertarget{classimu_1_1_i_m_u_aaced4aad6bd7f309c900b28a754e34c4}\index{imu.IMU@{imu.IMU}!get\_Yaw\_Velocity@{get\_Yaw\_Velocity}}
+\index{get\_Yaw\_Velocity@{get\_Yaw\_Velocity}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{get\_Yaw\_Velocity()}{get\_Yaw\_Velocity()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_aaced4aad6bd7f309c900b28a754e34c4} 
+imu.\+IMU.\+get\+\_\+\+Yaw\+\_\+\+Velocity (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00159}{159}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 16
+\Hypertarget{classimu_1_1_i_m_u_a1186b18bfa64be37260606cff40a1af1}\index{imu.IMU@{imu.IMU}!write\_calibration\_coeff@{write\_calibration\_coeff}}
+\index{write\_calibration\_coeff@{write\_calibration\_coeff}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{write\_calibration\_coeff()}{write\_calibration\_coeff()}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a1186b18bfa64be37260606cff40a1af1} 
+imu.\+IMU.\+write\+\_\+calibration\+\_\+coeff (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{coef1}{, }\item[{}]{coef2}{, }\item[{}]{coef3}{, }\item[{}]{coef4}{, }\item[{}]{coef5}{, }\item[{}]{coef6}{, }\item[{}]{coef7}{, }\item[{}]{coef8}{, }\item[{}]{coef9}{, }\item[{}]{coef10}{, }\item[{}]{coef11}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00134}{134}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classimu_1_1_i_m_u_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classimu_1_1_i_m_u_a0c34784cac204277210114717a334708}\index{imu.IMU@{imu.IMU}!\_buf@{\_buf}}
+\index{\_buf@{\_buf}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{\_buf}{\_buf}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a0c34784cac204277210114717a334708} 
+imu.\+IMU.\+\_\+buf = bytearray((0 for n in range(22)))\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00047}{47}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+\Hypertarget{classimu_1_1_i_m_u_ac56f92fac2a1b083e801fc72d326f0e8}\index{imu.IMU@{imu.IMU}!\_buf\_8@{\_buf\_8}}
+\index{\_buf\_8@{\_buf\_8}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{\_buf\_8}{\_buf\_8}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_ac56f92fac2a1b083e801fc72d326f0e8} 
+imu.\+IMU.\+\_\+buf\+\_\+8 = bytearray((0))\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00049}{49}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+\Hypertarget{classimu_1_1_i_m_u_a0811b43bdf3272195cb38823eb28d96d}\index{imu.IMU@{imu.IMU}!\_i2c@{\_i2c}}
+\index{\_i2c@{\_i2c}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{\_i2c}{\_i2c}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_a0811b43bdf3272195cb38823eb28d96d} 
+imu.\+IMU.\+\_\+i2c = i2c\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00048}{48}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+\Hypertarget{classimu_1_1_i_m_u_ac0b14415aa948f8da749133084ebab28}\index{imu.IMU@{imu.IMU}!DEV\_ADDR@{DEV\_ADDR}}
+\index{DEV\_ADDR@{DEV\_ADDR}!imu.IMU@{imu.IMU}}
+\doxysubsubsection{\texorpdfstring{DEV\_ADDR}{DEV\_ADDR}}
+{\footnotesize\ttfamily \label{classimu_1_1_i_m_u_ac0b14415aa948f8da749133084ebab28} 
+imu.\+IMU.\+DEV\+\_\+\+ADDR = 0x28\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{imu_8py_source_l00012}{12}} of file \mbox{\hyperlink{imu_8py_source}{imu.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/14083/vscode\+\_\+python/\mbox{\hyperlink{imu_8py}{imu.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['c_0',['C',['../classobserver_1_1observer.html#aecab18d5a3aab286cab104dfc810bf51',1,'observer::observer']]],
+  ['c_5fstate_1',['c_state',['../classbump__task_1_1_bump___task.html#a79e0a6c06834b0418218c76e6d325846',1,'bump_task.Bump_Task.c_state'],['../classcontrol__task_1_1control__task.html#afc723cc3b7f74bbe43ef8d5d72ef0149',1,'control_task.control_task.c_state'],['../classpathing__plan__task_1_1pathing__plan.html#acbccb9a71dd80a13c13fc310eebda0bd',1,'pathing_plan_task.pathing_plan.c_state'],['../classui_1_1ui.html#a757fe3373c9de05362ac1422ef443b40',1,'ui.ui.c_state'],['../namespacemain.html#ac9aa3742bf811161f86b2729bcde262a',1,'main.c_state']]],
+  ['calib_5fcoeff_5fstart_2',['CALIB_COEFF_START',['../classimu_1_1_i_m_u_1_1reg.html#a275729dce726513bcda34c546ec530a8',1,'imu::IMU::reg']]],
+  ['calib_5fcoeff_5fstop_3',['CALIB_COEFF_STOP',['../classimu_1_1_i_m_u_1_1reg.html#ac801de0b1570c414287176dfb7453639',1,'imu::IMU::reg']]],
+  ['calib_5fstat_4',['CALIB_STAT',['../classimu_1_1_i_m_u_1_1reg.html#a0481f6b382c3c2d8207300e843f1cf02',1,'imu::IMU::reg']]],
+  ['calibrated_5',['calibrated',['../classimu__task_1_1imu__task.html#a71d3631fd4bf86172d31652192868037',1,'imu_task.imu_task.calibrated'],['../classir__sensor_1_1_i_r___sensor.html#a724b0aca441dee0436d10179cafae7ec',1,'ir_sensor.IR_Sensor.calibrated'],['../classline__sensor_1_1_line___sensor.html#a2e726fdf0bd2684dc43d0495646e51e6',1,'line_sensor.Line_Sensor.calibrated']]],
+  ['centroid_6',['centroid',['../classcontrol__task_1_1control__task.html#adeb3a821915b9101d6709b6d2978086e',1,'control_task.control_task.centroid'],['../classline__task_1_1line__task.html#a5e919e7a5d97d28abf4cfa7767433d36',1,'line_task.line_task.centroid'],['../namespacemain.html#a8b15ea7517862858439b40920f900d12',1,'main.centroid']]],
+  ['centroid_5fgoal_7',['centroid_goal',['../classcontrol__task_1_1control__task.html#a998e2f1d35dd40e1b4de41ac5df313bf',1,'control_task.control_task.centroid_goal'],['../classpathing__plan__task_1_1pathing__plan.html#a4f93c869bce694c024134b1281a55273',1,'pathing_plan_task.pathing_plan.centroid_goal'],['../namespacemain.html#a95526cf034eba9abcaaa13dbcd520b08',1,'main.centroid_goal']]],
+  ['config_5fflag_8',['config_flag',['../classimu__task_1_1imu__task.html#a57ece875d8e6d2aaaed2a6775e534272',1,'imu_task::imu_task']]],
+  ['control_5ftask_5fobj_9',['control_task_obj',['../namespacemain.html#ac646bb576e00ee76cdd3bc1d21a34a06',1,'main']]],
+  ['controller_5fleft_10',['controller_left',['../classcontrol__task_1_1control__task.html#af0537c6f043829e29462fa0b749a5cab',1,'control_task::control_task']]],
+  ['controller_5fobj_5fleft_11',['controller_obj_left',['../namespacemain.html#aee99cac7f4acb57da2b9968b92a3cba8',1,'main']]],
+  ['controller_5fobj_5fline_12',['controller_obj_line',['../namespacemain.html#a3d4633e5f3eda96154ec1465a66e34a9',1,'main']]],
+  ['controller_5fobj_5fright_13',['controller_obj_right',['../namespacemain.html#a8f4ca823f5b6469c131c11bc172929e5',1,'main']]],
+  ['controller_5fobj_5fyaw_14',['controller_obj_yaw',['../namespacemain.html#a87781fe2ab720e23763c73b2bcb5e523',1,'main']]],
+  ['controller_5fright_15',['controller_right',['../classcontrol__task_1_1control__task.html#a2320d288cb6735cb6e630de3cef9d389',1,'control_task::control_task']]],
+  ['controller_5fyaw_16',['controller_yaw',['../classcontrol__task_1_1control__task.html#aa98683dfb98ce321d55c93cb98f09336',1,'control_task::control_task']]],
+  ['count_17',['count',['../classimu__task_1_1imu__task.html#a2c289f39fb2088889a3e676df1cd4ff5',1,'imu_task::imu_task']]],
+  ['current_5ftime_18',['current_time',['../classencoder_1_1_encoder.html#a8c4603cfdb3af028e50395ab86136410',1,'encoder::Encoder']]]
+];

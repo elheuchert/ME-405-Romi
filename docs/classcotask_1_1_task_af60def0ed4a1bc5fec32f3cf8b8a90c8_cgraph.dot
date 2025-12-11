@@ -1,0 +1,11 @@
+digraph "cotask.Task.schedule"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="cotask.Task.schedule",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="This method is called by the scheduler; it attempts to run this task."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="cotask.Task.ready",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcotask_1_1_task.html#a6102bc35d7cb1ce292abc85d4ddc23e1",tooltip="This method checks if the task is ready to run."];
+}

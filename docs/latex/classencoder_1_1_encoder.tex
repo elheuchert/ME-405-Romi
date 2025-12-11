@@ -1,0 +1,244 @@
+\doxysection{encoder.\+Encoder Class Reference}
+\hypertarget{classencoder_1_1_encoder}{}\label{classencoder_1_1_encoder}\index{encoder.Encoder@{encoder.Encoder}}
+
+
+add description here  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a2e52fdaba61b82c32c4e3d737a4d4c40}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classencoder_1_1_encoder_a6d34277d78f0f528aeb8b4d8901356b7}{tim}}, ch\+A\+\_\+pin, ch\+B\+\_\+pin)
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_aa49b0c5f3a84989bbd9500f1d25f81aa}{update}} (self)
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a5e1f45bde021fbdb806bfda8a17ded47}{get\+\_\+position}} (self)
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a5f5175f8d031309051acea0f25710e3d}{get\+\_\+velocity}} (self)
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_ab79017405d71f96cb2363307a1f04c88}{zero}} (self)
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a972289ba941b6dff15f960fe79da2c47}{get\+\_\+dt}} (self)
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_ada0eb6236b545b232280989fc5a03378}{set\+\_\+offset}} (self, \mbox{\hyperlink{classencoder_1_1_encoder_aa5b347ca0eb88735da5e1dd75245aa82}{offset}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classencoder_1_1_encoder_a8a6c252ededbb8cff1a29c6ef1d70683}{position}} = 0
+\item 
+int \mbox{\hyperlink{classencoder_1_1_encoder_ae97b9cbf3c0b6b6ba1a6b2db4a5eaf68}{prev\+\_\+count}} = 0
+\item 
+int \mbox{\hyperlink{classencoder_1_1_encoder_ad3c110d78ce1b5e97ce08efd20b41040}{delta}} = 0
+\item 
+int \mbox{\hyperlink{classencoder_1_1_encoder_ae5edf4b3cd1456c3997c25fd0d83380f}{dt}} = 0
+\item 
+int \mbox{\hyperlink{classencoder_1_1_encoder_a6fcb5e84009e0bada53204413afe1657}{last\+\_\+time}} = 0
+\item 
+int \mbox{\hyperlink{classencoder_1_1_encoder_a8c4603cfdb3af028e50395ab86136410}{current\+\_\+time}} = 0
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a6d34277d78f0f528aeb8b4d8901356b7}{tim}} = tim
+\item 
+int \mbox{\hyperlink{classencoder_1_1_encoder_aa5b347ca0eb88735da5e1dd75245aa82}{offset}} = 0
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a0671dbfe93c6bfa4373236c0f9113cc8}{tim\+Ch\+\_\+A}} = tim.\+channel(1, pin=ch\+A\+\_\+pin, mode=Timer.\+ENC\+\_\+A)
+\item 
+\mbox{\hyperlink{classencoder_1_1_encoder_a4ec7f18a41bf6d7c247d9e9769454537}{tim\+Ch\+\_\+B}} = tim.\+channel(2, pin=ch\+B\+\_\+pin, mode=Timer.\+ENC\+\_\+B)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+add description here 
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00004}{4}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classencoder_1_1_encoder_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classencoder_1_1_encoder_a2e52fdaba61b82c32c4e3d737a4d4c40}\index{encoder.Encoder@{encoder.Encoder}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a2e52fdaba61b82c32c4e3d737a4d4c40} 
+encoder.\+Encoder.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{tim}{, }\item[{}]{ch\+A\+\_\+pin}{, }\item[{}]{ch\+B\+\_\+pin}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00007}{7}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classencoder_1_1_encoder_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classencoder_1_1_encoder_a972289ba941b6dff15f960fe79da2c47}\index{encoder.Encoder@{encoder.Encoder}!get\_dt@{get\_dt}}
+\index{get\_dt@{get\_dt}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_dt()}{get\_dt()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a972289ba941b6dff15f960fe79da2c47} 
+encoder.\+Encoder.\+get\+\_\+dt (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00056}{56}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_a5e1f45bde021fbdb806bfda8a17ded47}\index{encoder.Encoder@{encoder.Encoder}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a5e1f45bde021fbdb806bfda8a17ded47} 
+encoder.\+Encoder.\+get\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00041}{41}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_a5f5175f8d031309051acea0f25710e3d}\index{encoder.Encoder@{encoder.Encoder}!get\_velocity@{get\_velocity}}
+\index{get\_velocity@{get\_velocity}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{get\_velocity()}{get\_velocity()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a5f5175f8d031309051acea0f25710e3d} 
+encoder.\+Encoder.\+get\+\_\+velocity (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00045}{45}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_ada0eb6236b545b232280989fc5a03378}\index{encoder.Encoder@{encoder.Encoder}!set\_offset@{set\_offset}}
+\index{set\_offset@{set\_offset}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{set\_offset()}{set\_offset()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ada0eb6236b545b232280989fc5a03378} 
+encoder.\+Encoder.\+set\+\_\+offset (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{offset}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00059}{59}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_aa49b0c5f3a84989bbd9500f1d25f81aa}\index{encoder.Encoder@{encoder.Encoder}!update@{update}}
+\index{update@{update}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_aa49b0c5f3a84989bbd9500f1d25f81aa} 
+encoder.\+Encoder.\+update (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00022}{22}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_ab79017405d71f96cb2363307a1f04c88}\index{encoder.Encoder@{encoder.Encoder}!zero@{zero}}
+\index{zero@{zero}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{zero()}{zero()}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ab79017405d71f96cb2363307a1f04c88} 
+encoder.\+Encoder.\+zero (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00050}{50}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classencoder_1_1_encoder_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classencoder_1_1_encoder_a8c4603cfdb3af028e50395ab86136410}\index{encoder.Encoder@{encoder.Encoder}!current\_time@{current\_time}}
+\index{current\_time@{current\_time}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{current\_time}{current\_time}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a8c4603cfdb3af028e50395ab86136410} 
+int encoder.\+Encoder.\+current\+\_\+time = 0}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00015}{15}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_ad3c110d78ce1b5e97ce08efd20b41040}\index{encoder.Encoder@{encoder.Encoder}!delta@{delta}}
+\index{delta@{delta}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ad3c110d78ce1b5e97ce08efd20b41040} 
+int encoder.\+Encoder.\+delta = 0}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00011}{11}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_ae5edf4b3cd1456c3997c25fd0d83380f}\index{encoder.Encoder@{encoder.Encoder}!dt@{dt}}
+\index{dt@{dt}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ae5edf4b3cd1456c3997c25fd0d83380f} 
+encoder.\+Encoder.\+dt = 0}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00012}{12}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_a6fcb5e84009e0bada53204413afe1657}\index{encoder.Encoder@{encoder.Encoder}!last\_time@{last\_time}}
+\index{last\_time@{last\_time}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{last\_time}{last\_time}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a6fcb5e84009e0bada53204413afe1657} 
+int encoder.\+Encoder.\+last\+\_\+time = 0}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00014}{14}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_aa5b347ca0eb88735da5e1dd75245aa82}\index{encoder.Encoder@{encoder.Encoder}!offset@{offset}}
+\index{offset@{offset}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_aa5b347ca0eb88735da5e1dd75245aa82} 
+int encoder.\+Encoder.\+offset = 0}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00017}{17}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_a8a6c252ededbb8cff1a29c6ef1d70683}\index{encoder.Encoder@{encoder.Encoder}!position@{position}}
+\index{position@{position}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a8a6c252ededbb8cff1a29c6ef1d70683} 
+int encoder.\+Encoder.\+position = 0}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00009}{9}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_ae97b9cbf3c0b6b6ba1a6b2db4a5eaf68}\index{encoder.Encoder@{encoder.Encoder}!prev\_count@{prev\_count}}
+\index{prev\_count@{prev\_count}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{prev\_count}{prev\_count}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_ae97b9cbf3c0b6b6ba1a6b2db4a5eaf68} 
+int encoder.\+Encoder.\+prev\+\_\+count = 0}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00010}{10}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_a6d34277d78f0f528aeb8b4d8901356b7}\index{encoder.Encoder@{encoder.Encoder}!tim@{tim}}
+\index{tim@{tim}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{tim}{tim}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a6d34277d78f0f528aeb8b4d8901356b7} 
+encoder.\+Encoder.\+tim = tim}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00016}{16}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_a0671dbfe93c6bfa4373236c0f9113cc8}\index{encoder.Encoder@{encoder.Encoder}!timCh\_A@{timCh\_A}}
+\index{timCh\_A@{timCh\_A}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{timCh\_A}{timCh\_A}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a0671dbfe93c6bfa4373236c0f9113cc8} 
+encoder.\+Encoder.\+tim\+Ch\+\_\+A = tim.\+channel(1, pin=ch\+A\+\_\+pin, mode=Timer.\+ENC\+\_\+A)}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00019}{19}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+\Hypertarget{classencoder_1_1_encoder_a4ec7f18a41bf6d7c247d9e9769454537}\index{encoder.Encoder@{encoder.Encoder}!timCh\_B@{timCh\_B}}
+\index{timCh\_B@{timCh\_B}!encoder.Encoder@{encoder.Encoder}}
+\doxysubsubsection{\texorpdfstring{timCh\_B}{timCh\_B}}
+{\footnotesize\ttfamily \label{classencoder_1_1_encoder_a4ec7f18a41bf6d7c247d9e9769454537} 
+encoder.\+Encoder.\+tim\+Ch\+\_\+B = tim.\+channel(2, pin=ch\+B\+\_\+pin, mode=Timer.\+ENC\+\_\+B)}
+
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00020}{20}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/14083/vscode\+\_\+python/\mbox{\hyperlink{encoder_8py}{encoder.\+py}}\end{DoxyCompactItemize}

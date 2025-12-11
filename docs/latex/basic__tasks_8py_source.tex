@@ -1,0 +1,98 @@
+\doxysection{basic\+\_\+tasks.\+py}
+\hypertarget{basic__tasks_8py_source}{}\label{basic__tasks_8py_source}\index{C:/Users/14083/vscode\_python/basic\_tasks.py@{C:/Users/14083/vscode\_python/basic\_tasks.py}}
+\mbox{\hyperlink{basic__tasks_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00001}\mbox{\hyperlink{namespacebasic__tasks}{00001}}\ \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00002}00002\ \textcolor{stringliteral}{@file\ basic\_tasks.py}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00003}00003\ \textcolor{stringliteral}{\ \ \ \ This\ file\ contains\ a\ demonstration\ program\ that\ runs\ some\ tasks,\ an}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00004}00004\ \textcolor{stringliteral}{\ \ \ \ inter-\/task\ shared\ variable,\ and\ a\ queue.\ The\ tasks\ don't\ really\ @b\ do}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00005}00005\ \textcolor{stringliteral}{\ \ \ \ anything;\ the\ example\ just\ shows\ how\ these\ elements\ are\ created\ and\ run.}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00006}00006\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00007}00007\ \textcolor{stringliteral}{@author\ JR\ Ridgely}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00008}00008\ \textcolor{stringliteral}{@date\ \ \ 2021-\/Dec-\/15\ JRR\ Created\ from\ the\ remains\ of\ previous\ example}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00009}00009\ \textcolor{stringliteral}{@copyright\ (c)\ 2015-\/2021\ by\ JR\ Ridgely\ and\ released\ under\ the\ GNU}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00010}00010\ \textcolor{stringliteral}{\ \ \ \ Public\ License,\ Version\ 2.\ }}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00011}00011\ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00013}00013\ \textcolor{keyword}{import}\ gc}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00014}00014\ \textcolor{keyword}{import}\ pyb}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00015}00015\ \textcolor{keyword}{import}\ cotask}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00016}00016\ \textcolor{keyword}{import}\ task\_share}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00019}\mbox{\hyperlink{namespacebasic__tasks_a2cfa0375797ee6e18e6d847b021d49e9}{00019}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacebasic__tasks_a2cfa0375797ee6e18e6d847b021d49e9}{task1\_fun}}(shares):}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00020}00020\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00021}00021\ \textcolor{stringliteral}{\ \ \ \ Task\ which\ puts\ things\ into\ a\ share\ and\ a\ queue.}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00022}00022\ \textcolor{stringliteral}{\ \ \ \ @param\ shares\ A\ list\ holding\ the\ share\ and\ queue\ used\ by\ this\ task}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00023}00023\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00024}00024\ \ \ \ \ \textcolor{comment}{\#\ Get\ references\ to\ the\ share\ and\ queue\ which\ have\ been\ passed\ to\ this\ task}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00025}00025\ \ \ \ \ my\_share,\ my\_queue\ =\ shares}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00027}00027\ \ \ \ \ counter\ =\ 0}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00029}00029\ \ \ \ \ \ \ \ \ my\_share.put(counter)}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00030}00030\ \ \ \ \ \ \ \ \ my\_queue.put(counter)}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00031}00031\ \ \ \ \ \ \ \ \ counter\ +=\ 1}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 0}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00036}\mbox{\hyperlink{namespacebasic__tasks_ac9b609ada143731e1645155540a53965}{00036}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacebasic__tasks_ac9b609ada143731e1645155540a53965}{task2\_fun}}(shares):}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00037}00037\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}!}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00038}00038\ \textcolor{stringliteral}{\ \ \ \ Task\ which\ takes\ things\ out\ of\ a\ queue\ and\ share\ and\ displays\ them.}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00039}00039\ \textcolor{stringliteral}{\ \ \ \ @param\ shares\ A\ tuple\ of\ a\ share\ and\ queue\ from\ which\ this\ task\ gets\ data}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00040}00040\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00041}00041\ \ \ \ \ \textcolor{comment}{\#\ Get\ references\ to\ the\ share\ and\ queue\ which\ have\ been\ passed\ to\ this\ task}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00042}00042\ \ \ \ \ the\_share,\ the\_queue\ =\ shares}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Show\ everything\ currently\ in\ the\ queue\ and\ the\ value\ in\ the\ share}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ print(f\textcolor{stringliteral}{"{}Share:\ \{the\_share.get\ ()\},\ Queue:\ "{}},\ end=\textcolor{stringliteral}{''})}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ q0.any():}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ print(f\textcolor{stringliteral}{"{}\{the\_queue.get\ ()\}\ "{}},\ end=\textcolor{stringliteral}{''})}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{''})}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 0}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00054}00054\ \textcolor{comment}{\#\ This\ code\ creates\ a\ share,\ a\ queue,\ and\ two\ tasks,\ then\ starts\ the\ tasks.\ The}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00055}00055\ \textcolor{comment}{\#\ tasks\ run\ until\ somebody\ presses\ ENTER,\ at\ which\ time\ the\ scheduler\ stops\ and}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00056}00056\ \textcolor{comment}{\#\ printouts\ show\ diagnostic\ information\ about\ the\ tasks,\ share,\ and\ queue.}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00057}00057\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00058}00058\ \ \ \ \ print(\textcolor{stringliteral}{"{}Testing\ ME405\ stuff\ in\ cotask.py\ and\ task\_share.py\(\backslash\)r\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Press\ Ctrl-\/C\ to\ stop\ and\ show\ diagnostics."{}})}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00061}00061\ \ \ \ \ \textcolor{comment}{\#\ Create\ a\ share\ and\ a\ queue\ to\ test\ function\ and\ diagnostic\ printouts}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00062}\mbox{\hyperlink{namespacebasic__tasks_a5e57826dfa518c88be513bb2d009f69a}{00062}}\ \ \ \ \ share0\ =\ \mbox{\hyperlink{classtask__share_1_1_share}{task\_share.Share}}(\textcolor{stringliteral}{'h'},\ thread\_protect=\textcolor{keyword}{False},\ name=\textcolor{stringliteral}{"{}Share\ 0"{}})}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00063}\mbox{\hyperlink{namespacebasic__tasks_a01bc6affced1a04bea251ea226442014}{00063}}\ \ \ \ \ q0\ =\ \mbox{\hyperlink{classtask__share_1_1_queue}{task\_share.Queue}}(\textcolor{stringliteral}{'L'},\ 16,\ thread\_protect=\textcolor{keyword}{False},\ overwrite=\textcolor{keyword}{False},}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{"{}Queue\ 0"{}})}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00066}00066\ \ \ \ \ \textcolor{comment}{\#\ Create\ the\ tasks.\ If\ trace\ is\ enabled\ for\ any\ task,\ memory\ will\ be}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00067}00067\ \ \ \ \ \textcolor{comment}{\#\ allocated\ for\ state\ transition\ tracing,\ and\ the\ application\ will\ run\ out}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00068}00068\ \ \ \ \ \textcolor{comment}{\#\ of\ memory\ after\ a\ while\ and\ quit.\ Therefore,\ use\ tracing\ only\ for\ }}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00069}00069\ \ \ \ \ \textcolor{comment}{\#\ debugging\ and\ set\ trace\ to\ False\ when\ it's\ not\ needed}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00070}\mbox{\hyperlink{namespacebasic__tasks_a512968d7007686bc14b9a23c3238d34c}{00070}}\ \ \ \ \ task1\ =\ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(task1\_fun,\ name=\textcolor{stringliteral}{"{}Task\_1"{}},\ priority=1,\ period=400,}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ profile=\textcolor{keyword}{True},\ trace=\textcolor{keyword}{False},\ shares=(share0,\ q0))}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00072}\mbox{\hyperlink{namespacebasic__tasks_a43a58f09d457ac7d8466f8b12c587e93}{00072}}\ \ \ \ \ task2\ =\ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(task2\_fun,\ name=\textcolor{stringliteral}{"{}Task\_2"{}},\ priority=2,\ period=1500,}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ profile=\textcolor{keyword}{True},\ trace=\textcolor{keyword}{False},\ shares=(share0,\ q0))}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00074}00074\ \ \ \ \ cotask.task\_list.append(task1)}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00075}00075\ \ \ \ \ cotask.task\_list.append(task2)}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00077}00077\ \ \ \ \ \textcolor{comment}{\#\ Run\ the\ memory\ garbage\ collector\ to\ ensure\ memory\ is\ as\ defragmented\ as}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00078}00078\ \ \ \ \ \textcolor{comment}{\#\ possible\ before\ the\ real-\/time\ scheduler\ is\ started}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00079}00079\ \ \ \ \ gc.collect()}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00081}00081\ \ \ \ \ \textcolor{comment}{\#\ Run\ the\ scheduler\ with\ the\ chosen\ scheduling\ algorithm.\ Quit\ if\ \string^C\ pressed}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ cotask.task\_list.pri\_sched()}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{except}\ KeyboardInterrupt:}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00088}00088\ \ \ \ \ \textcolor{comment}{\#\ Print\ a\ table\ of\ task\ data\ and\ a\ table\ of\ shared\ information\ data}}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00089}00089\ \ \ \ \ print(\textcolor{stringliteral}{'\(\backslash\)n'}\ +\ str\ (cotask.task\_list))}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00090}00090\ \ \ \ \ print(\mbox{\hyperlink{namespacetask__share_ad6aea1db68be1a10f72039a5ac9e9dd4}{task\_share.show\_all}}())}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00091}00091\ \ \ \ \ print(task1.get\_trace())}
+\DoxyCodeLine{\Hypertarget{basic__tasks_8py_source_l00092}00092\ \ \ \ \ print(\textcolor{stringliteral}{''})}
+
+\end{DoxyCode}

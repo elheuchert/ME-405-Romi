@@ -1,0 +1,126 @@
+\doxysection{basic\+\_\+tasks Namespace Reference}
+\hypertarget{namespacebasic__tasks}{}\label{namespacebasic__tasks}\index{basic\_tasks@{basic\_tasks}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebasic__tasks_a2cfa0375797ee6e18e6d847b021d49e9}{task1\+\_\+fun}} (shares)
+\begin{DoxyCompactList}\small\item\em Task which puts things into a share and a queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacebasic__tasks_ac9b609ada143731e1645155540a53965}{task2\+\_\+fun}} (shares)
+\begin{DoxyCompactList}\small\item\em Task which takes things out of a queue and share and displays them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebasic__tasks_a5e57826dfa518c88be513bb2d009f69a}{share0}} = \mbox{\hyperlink{classtask__share_1_1_share}{task\+\_\+share.\+Share}}(\textquotesingle{}h\textquotesingle{}, thread\+\_\+protect=False, name="{}Share 0"{})
+\item 
+\mbox{\hyperlink{namespacebasic__tasks_a01bc6affced1a04bea251ea226442014}{q0}}
+\item 
+\mbox{\hyperlink{namespacebasic__tasks_a512968d7007686bc14b9a23c3238d34c}{task1}}
+\item 
+\mbox{\hyperlink{namespacebasic__tasks_a43a58f09d457ac7d8466f8b12c587e93}{task2}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacebasic__tasks_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacebasic__tasks_a2cfa0375797ee6e18e6d847b021d49e9}\index{basic\_tasks@{basic\_tasks}!task1\_fun@{task1\_fun}}
+\index{task1\_fun@{task1\_fun}!basic\_tasks@{basic\_tasks}}
+\doxysubsubsection{\texorpdfstring{task1\_fun()}{task1\_fun()}}
+{\footnotesize\ttfamily \label{namespacebasic__tasks_a2cfa0375797ee6e18e6d847b021d49e9} 
+basic\+\_\+tasks.\+task1\+\_\+fun (\begin{DoxyParamCaption}\item[{}]{shares}{}\end{DoxyParamCaption})}
+
+
+
+Task which puts things into a share and a queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shares} & A list holding the share and queue used by this task \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{basic__tasks_8py_source_l00019}{19}} of file \mbox{\hyperlink{basic__tasks_8py_source}{basic\+\_\+tasks.\+py}}.
+
+\Hypertarget{namespacebasic__tasks_ac9b609ada143731e1645155540a53965}\index{basic\_tasks@{basic\_tasks}!task2\_fun@{task2\_fun}}
+\index{task2\_fun@{task2\_fun}!basic\_tasks@{basic\_tasks}}
+\doxysubsubsection{\texorpdfstring{task2\_fun()}{task2\_fun()}}
+{\footnotesize\ttfamily \label{namespacebasic__tasks_ac9b609ada143731e1645155540a53965} 
+basic\+\_\+tasks.\+task2\+\_\+fun (\begin{DoxyParamCaption}\item[{}]{shares}{}\end{DoxyParamCaption})}
+
+
+
+Task which takes things out of a queue and share and displays them. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shares} & A tuple of a share and queue from which this task gets data \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{basic__tasks_8py_source_l00036}{36}} of file \mbox{\hyperlink{basic__tasks_8py_source}{basic\+\_\+tasks.\+py}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacebasic__tasks_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacebasic__tasks_a01bc6affced1a04bea251ea226442014}\index{basic\_tasks@{basic\_tasks}!q0@{q0}}
+\index{q0@{q0}!basic\_tasks@{basic\_tasks}}
+\doxysubsubsection{\texorpdfstring{q0}{q0}}
+{\footnotesize\ttfamily \label{namespacebasic__tasks_a01bc6affced1a04bea251ea226442014} 
+basic\+\_\+tasks.\+q0}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \mbox{\hyperlink{classtask__share_1_1_queue}{task\_share.Queue}}(\textcolor{stringliteral}{'L'},\ 16,\ thread\_protect=\textcolor{keyword}{False},\ overwrite=\textcolor{keyword}{False},}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{"{}Queue\ 0"{}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{basic__tasks_8py_source_l00063}{63}} of file \mbox{\hyperlink{basic__tasks_8py_source}{basic\+\_\+tasks.\+py}}.
+
+\Hypertarget{namespacebasic__tasks_a5e57826dfa518c88be513bb2d009f69a}\index{basic\_tasks@{basic\_tasks}!share0@{share0}}
+\index{share0@{share0}!basic\_tasks@{basic\_tasks}}
+\doxysubsubsection{\texorpdfstring{share0}{share0}}
+{\footnotesize\ttfamily \label{namespacebasic__tasks_a5e57826dfa518c88be513bb2d009f69a} 
+basic\+\_\+tasks.\+share0 = \mbox{\hyperlink{classtask__share_1_1_share}{task\+\_\+share.\+Share}}(\textquotesingle{}h\textquotesingle{}, thread\+\_\+protect=False, name="{}Share 0"{})}
+
+
+
+Definition at line \mbox{\hyperlink{basic__tasks_8py_source_l00062}{62}} of file \mbox{\hyperlink{basic__tasks_8py_source}{basic\+\_\+tasks.\+py}}.
+
+\Hypertarget{namespacebasic__tasks_a512968d7007686bc14b9a23c3238d34c}\index{basic\_tasks@{basic\_tasks}!task1@{task1}}
+\index{task1@{task1}!basic\_tasks@{basic\_tasks}}
+\doxysubsubsection{\texorpdfstring{task1}{task1}}
+{\footnotesize\ttfamily \label{namespacebasic__tasks_a512968d7007686bc14b9a23c3238d34c} 
+basic\+\_\+tasks.\+task1}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(task1\_fun,\ name=\textcolor{stringliteral}{"{}Task\_1"{}},\ priority=1,\ period=400,}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ profile=\textcolor{keyword}{True},\ trace=\textcolor{keyword}{False},\ shares=(share0,\ q0))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{basic__tasks_8py_source_l00070}{70}} of file \mbox{\hyperlink{basic__tasks_8py_source}{basic\+\_\+tasks.\+py}}.
+
+\Hypertarget{namespacebasic__tasks_a43a58f09d457ac7d8466f8b12c587e93}\index{basic\_tasks@{basic\_tasks}!task2@{task2}}
+\index{task2@{task2}!basic\_tasks@{basic\_tasks}}
+\doxysubsubsection{\texorpdfstring{task2}{task2}}
+{\footnotesize\ttfamily \label{namespacebasic__tasks_a43a58f09d457ac7d8466f8b12c587e93} 
+basic\+\_\+tasks.\+task2}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(task2\_fun,\ name=\textcolor{stringliteral}{"{}Task\_2"{}},\ priority=2,\ period=1500,}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ profile=\textcolor{keyword}{True},\ trace=\textcolor{keyword}{False},\ shares=(share0,\ q0))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{basic__tasks_8py_source_l00072}{72}} of file \mbox{\hyperlink{basic__tasks_8py_source}{basic\+\_\+tasks.\+py}}.
+

@@ -1,0 +1,330 @@
+\doxysection{pc\+\_\+micro\+\_\+reader Namespace Reference}
+\hypertarget{namespacepc__micro__reader}{}\label{namespacepc__micro__reader}\index{pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a61b3bc501899026e36fc605a6fed1130}{save\+Headers}} ()
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a495968f7788cbecaba157e8418b4c3dd}{save\+Data}} ()
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a6c36a96380dc2e9cadbc802da68a0c83}{plot\+Data}} (times, data, thead, dhead, legend)
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a83f2d707d8774200860c8381fe8cf691}{average}} (data\+\_\+list)
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_af634fea1113a6d6d43939bda4184dfa8}{time\+Constant}} (data)
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_acf44c95250ceef79f406a03153e4a6c1}{motor\+Gain}} (test\+\_\+num, data)
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a3e8589b64e5dbab76806cd5444669217}{get\+\_\+test\+\_\+plots}} ()
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a655f0691de284c647de6b361a16ab76e}{run\+\_\+tests}} ()
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a62ffc212a77940ea819bc6e47052b803}{line\+\_\+test}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacepc__micro__reader_aeece9822afcfdad50c8c67b91cb010ac}{NUMBERS\+\_\+\+OF\+\_\+\+TESTS}} = 10
+\item 
+int \mbox{\hyperlink{namespacepc__micro__reader_a2f77ce1e64de4463d37a2699982aa169}{VALUES\+\_\+\+SENT}} = 50
+\item 
+int \mbox{\hyperlink{namespacepc__micro__reader_ae943c5d65f7dc18a03307599b11d251a}{period}} = 13/1000
+\item 
+list \mbox{\hyperlink{namespacepc__micro__reader_a3bca3094622dd65cc7e99dfefc434c5c}{motor\+\_\+gains\+\_\+l}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacepc__micro__reader_a5518aa0fd374fc60c0ba435b984a6982}{time\+\_\+constnats\+\_\+l}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacepc__micro__reader_a1f8b29c683377536b30229920eae916f}{motor\+\_\+gains\+\_\+r}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespacepc__micro__reader_ad32e90c0f8a66e4c959250be5d973949}{time\+\_\+constnats\+\_\+r}} = \mbox{[}$\,$\mbox{]}
+\item 
+int \mbox{\hyperlink{namespacepc__micro__reader_aabdba5a5b9d5d013650256d5927f6793}{test\+\_\+end}} = 1
+\item 
+int \mbox{\hyperlink{namespacepc__micro__reader_ac47225dabefc5f5d851098829e9a476b}{arc\+\_\+lim}} = 100
+\item 
+int \mbox{\hyperlink{namespacepc__micro__reader_a0b64d9deda4bf5bdbb8232a2b574b12e}{velo\+\_\+lim}} = 300
+\item 
+int \mbox{\hyperlink{namespacepc__micro__reader_a3f91bca5e55b080d1c2b23379d87830f}{angular\+\_\+lim}} = 10
+\item 
+bool \mbox{\hyperlink{namespacepc__micro__reader_a4fb4b6dff356fa7cf23835c4a2a5542f}{test\+\_\+done}} = True
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_af6d915c11bc703c86a3d26254d0a3190}{port}}
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a7ffe13548d71cb347fd6bc35df9ee01b}{baudrate}}
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a2fecc023a54ac50fe98df03e586b95ba}{timeout}}
+\item 
+\mbox{\hyperlink{namespacepc__micro__reader_a1f9f969e87a1f48dad34e0213042e73e}{user\+\_\+input}} = input("{}press c for calibrate, t for step \mbox{\hyperlink{namespacetest}{test}}, q to quit, g to go, i for \mbox{\hyperlink{namespaceimu}{imu}} data"{})
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacepc__micro__reader_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacepc__micro__reader_a83f2d707d8774200860c8381fe8cf691}\index{pc\_micro\_reader@{pc\_micro\_reader}!average@{average}}
+\index{average@{average}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a83f2d707d8774200860c8381fe8cf691} 
+pc\+\_\+micro\+\_\+reader.\+average (\begin{DoxyParamCaption}\item[{}]{data\+\_\+list}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00037}{37}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a3e8589b64e5dbab76806cd5444669217}\index{pc\_micro\_reader@{pc\_micro\_reader}!get\_test\_plots@{get\_test\_plots}}
+\index{get\_test\_plots@{get\_test\_plots}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{get\_test\_plots()}{get\_test\_plots()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a3e8589b64e5dbab76806cd5444669217} 
+pc\+\_\+micro\+\_\+reader.\+get\+\_\+test\+\_\+plots (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00060}{60}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{namespacepc__micro__reader_a62ffc212a77940ea819bc6e47052b803}\index{pc\_micro\_reader@{pc\_micro\_reader}!line\_test@{line\_test}}
+\index{line\_test@{line\_test}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{line\_test()}{line\_test()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a62ffc212a77940ea819bc6e47052b803} 
+pc\+\_\+micro\+\_\+reader.\+line\+\_\+test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00269}{269}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_acf44c95250ceef79f406a03153e4a6c1}\index{pc\_micro\_reader@{pc\_micro\_reader}!motorGain@{motorGain}}
+\index{motorGain@{motorGain}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{motorGain()}{motorGain()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_acf44c95250ceef79f406a03153e4a6c1} 
+pc\+\_\+micro\+\_\+reader.\+motor\+Gain (\begin{DoxyParamCaption}\item[{}]{test\+\_\+num}{, }\item[{}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00052}{52}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a6c36a96380dc2e9cadbc802da68a0c83}\index{pc\_micro\_reader@{pc\_micro\_reader}!plotData@{plotData}}
+\index{plotData@{plotData}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{plotData()}{plotData()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a6c36a96380dc2e9cadbc802da68a0c83} 
+pc\+\_\+micro\+\_\+reader.\+plot\+Data (\begin{DoxyParamCaption}\item[{}]{times}{, }\item[{}]{data}{, }\item[{}]{thead}{, }\item[{}]{dhead}{, }\item[{}]{legend}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00032}{32}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{namespacepc__micro__reader_a655f0691de284c647de6b361a16ab76e}\index{pc\_micro\_reader@{pc\_micro\_reader}!run\_tests@{run\_tests}}
+\index{run\_tests@{run\_tests}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{run\_tests()}{run\_tests()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a655f0691de284c647de6b361a16ab76e} 
+pc\+\_\+micro\+\_\+reader.\+run\+\_\+tests (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00136}{136}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{namespacepc__micro__reader_a495968f7788cbecaba157e8418b4c3dd}\index{pc\_micro\_reader@{pc\_micro\_reader}!saveData@{saveData}}
+\index{saveData@{saveData}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{saveData()}{saveData()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a495968f7788cbecaba157e8418b4c3dd} 
+pc\+\_\+micro\+\_\+reader.\+save\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00027}{27}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{namespacepc__micro__reader_a61b3bc501899026e36fc605a6fed1130}\index{pc\_micro\_reader@{pc\_micro\_reader}!saveHeaders@{saveHeaders}}
+\index{saveHeaders@{saveHeaders}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{saveHeaders()}{saveHeaders()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a61b3bc501899026e36fc605a6fed1130} 
+pc\+\_\+micro\+\_\+reader.\+save\+Headers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00021}{21}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{namespacepc__micro__reader_af634fea1113a6d6d43939bda4184dfa8}\index{pc\_micro\_reader@{pc\_micro\_reader}!timeConstant@{timeConstant}}
+\index{timeConstant@{timeConstant}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{timeConstant()}{timeConstant()}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_af634fea1113a6d6d43939bda4184dfa8} 
+pc\+\_\+micro\+\_\+reader.\+time\+Constant (\begin{DoxyParamCaption}\item[{}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00043}{43}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacepc__micro__reader_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacepc__micro__reader_a3f91bca5e55b080d1c2b23379d87830f}\index{pc\_micro\_reader@{pc\_micro\_reader}!angular\_lim@{angular\_lim}}
+\index{angular\_lim@{angular\_lim}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{angular\_lim}{angular\_lim}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a3f91bca5e55b080d1c2b23379d87830f} 
+int pc\+\_\+micro\+\_\+reader.\+angular\+\_\+lim = 10}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00017}{17}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_ac47225dabefc5f5d851098829e9a476b}\index{pc\_micro\_reader@{pc\_micro\_reader}!arc\_lim@{arc\_lim}}
+\index{arc\_lim@{arc\_lim}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{arc\_lim}{arc\_lim}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_ac47225dabefc5f5d851098829e9a476b} 
+int pc\+\_\+micro\+\_\+reader.\+arc\+\_\+lim = 100}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00015}{15}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a7ffe13548d71cb347fd6bc35df9ee01b}\index{pc\_micro\_reader@{pc\_micro\_reader}!baudrate@{baudrate}}
+\index{baudrate@{baudrate}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{baudrate}{baudrate}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a7ffe13548d71cb347fd6bc35df9ee01b} 
+pc\+\_\+micro\+\_\+reader.\+baudrate}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00299}{299}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a3bca3094622dd65cc7e99dfefc434c5c}\index{pc\_micro\_reader@{pc\_micro\_reader}!motor\_gains\_l@{motor\_gains\_l}}
+\index{motor\_gains\_l@{motor\_gains\_l}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{motor\_gains\_l}{motor\_gains\_l}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a3bca3094622dd65cc7e99dfefc434c5c} 
+list pc\+\_\+micro\+\_\+reader.\+motor\+\_\+gains\+\_\+l = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00010}{10}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a1f8b29c683377536b30229920eae916f}\index{pc\_micro\_reader@{pc\_micro\_reader}!motor\_gains\_r@{motor\_gains\_r}}
+\index{motor\_gains\_r@{motor\_gains\_r}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{motor\_gains\_r}{motor\_gains\_r}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a1f8b29c683377536b30229920eae916f} 
+list pc\+\_\+micro\+\_\+reader.\+motor\+\_\+gains\+\_\+r = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00012}{12}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_aeece9822afcfdad50c8c67b91cb010ac}\index{pc\_micro\_reader@{pc\_micro\_reader}!NUMBERS\_OF\_TESTS@{NUMBERS\_OF\_TESTS}}
+\index{NUMBERS\_OF\_TESTS@{NUMBERS\_OF\_TESTS}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{NUMBERS\_OF\_TESTS}{NUMBERS\_OF\_TESTS}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_aeece9822afcfdad50c8c67b91cb010ac} 
+int pc\+\_\+micro\+\_\+reader.\+NUMBERS\+\_\+\+OF\+\_\+\+TESTS = 10}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00007}{7}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_ae943c5d65f7dc18a03307599b11d251a}\index{pc\_micro\_reader@{pc\_micro\_reader}!period@{period}}
+\index{period@{period}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{period}{period}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_ae943c5d65f7dc18a03307599b11d251a} 
+int pc\+\_\+micro\+\_\+reader.\+period = 13/1000}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00009}{9}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_af6d915c11bc703c86a3d26254d0a3190}\index{pc\_micro\_reader@{pc\_micro\_reader}!port@{port}}
+\index{port@{port}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_af6d915c11bc703c86a3d26254d0a3190} 
+pc\+\_\+micro\+\_\+reader.\+port}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00299}{299}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a4fb4b6dff356fa7cf23835c4a2a5542f}\index{pc\_micro\_reader@{pc\_micro\_reader}!test\_done@{test\_done}}
+\index{test\_done@{test\_done}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{test\_done}{test\_done}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a4fb4b6dff356fa7cf23835c4a2a5542f} 
+bool pc\+\_\+micro\+\_\+reader.\+test\+\_\+done = True}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00018}{18}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_aabdba5a5b9d5d013650256d5927f6793}\index{pc\_micro\_reader@{pc\_micro\_reader}!test\_end@{test\_end}}
+\index{test\_end@{test\_end}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{test\_end}{test\_end}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_aabdba5a5b9d5d013650256d5927f6793} 
+int pc\+\_\+micro\+\_\+reader.\+test\+\_\+end = 1}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00014}{14}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a5518aa0fd374fc60c0ba435b984a6982}\index{pc\_micro\_reader@{pc\_micro\_reader}!time\_constnats\_l@{time\_constnats\_l}}
+\index{time\_constnats\_l@{time\_constnats\_l}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{time\_constnats\_l}{time\_constnats\_l}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a5518aa0fd374fc60c0ba435b984a6982} 
+list pc\+\_\+micro\+\_\+reader.\+time\+\_\+constnats\+\_\+l = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00011}{11}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_ad32e90c0f8a66e4c959250be5d973949}\index{pc\_micro\_reader@{pc\_micro\_reader}!time\_constnats\_r@{time\_constnats\_r}}
+\index{time\_constnats\_r@{time\_constnats\_r}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{time\_constnats\_r}{time\_constnats\_r}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_ad32e90c0f8a66e4c959250be5d973949} 
+list pc\+\_\+micro\+\_\+reader.\+time\+\_\+constnats\+\_\+r = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00013}{13}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a2fecc023a54ac50fe98df03e586b95ba}\index{pc\_micro\_reader@{pc\_micro\_reader}!timeout@{timeout}}
+\index{timeout@{timeout}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{timeout}{timeout}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a2fecc023a54ac50fe98df03e586b95ba} 
+pc\+\_\+micro\+\_\+reader.\+timeout}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00299}{299}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a1f9f969e87a1f48dad34e0213042e73e}\index{pc\_micro\_reader@{pc\_micro\_reader}!user\_input@{user\_input}}
+\index{user\_input@{user\_input}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{user\_input}{user\_input}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a1f9f969e87a1f48dad34e0213042e73e} 
+pc\+\_\+micro\+\_\+reader.\+user\+\_\+input = input("{}press c for calibrate, t for step \mbox{\hyperlink{namespacetest}{test}}, q to quit, g to go, i for \mbox{\hyperlink{namespaceimu}{imu}} data"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00300}{300}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a2f77ce1e64de4463d37a2699982aa169}\index{pc\_micro\_reader@{pc\_micro\_reader}!VALUES\_SENT@{VALUES\_SENT}}
+\index{VALUES\_SENT@{VALUES\_SENT}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{VALUES\_SENT}{VALUES\_SENT}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a2f77ce1e64de4463d37a2699982aa169} 
+int pc\+\_\+micro\+\_\+reader.\+VALUES\+\_\+\+SENT = 50}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00008}{8}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
+\Hypertarget{namespacepc__micro__reader_a0b64d9deda4bf5bdbb8232a2b574b12e}\index{pc\_micro\_reader@{pc\_micro\_reader}!velo\_lim@{velo\_lim}}
+\index{velo\_lim@{velo\_lim}!pc\_micro\_reader@{pc\_micro\_reader}}
+\doxysubsubsection{\texorpdfstring{velo\_lim}{velo\_lim}}
+{\footnotesize\ttfamily \label{namespacepc__micro__reader_a0b64d9deda4bf5bdbb8232a2b574b12e} 
+int pc\+\_\+micro\+\_\+reader.\+velo\+\_\+lim = 300}
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00016}{16}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+
