@@ -7,5 +7,6 @@ var searchData=
   ['reference_4',['reference',['../classcontroller_1_1_controller.html#a377569fff3a8f305c007bc232c26f4cf',1,'controller::Controller']]],
   ['right_5fpos_5',['right_pos',['../classobserver_1_1observer.html#ab45caa4354bb6d850fe5b7a0f0d95d38',1,'observer::observer']]],
   ['right_5fvel_6',['right_vel',['../classobserver_1_1observer.html#afaf67737277de18fdd2e0e26ab3a2f0d',1,'observer::observer']]],
-  ['right_5fvoltage_7',['right_voltage',['../classobserver_1_1observer.html#ad20db868f2fbd1a51eee63b5bbc98d76',1,'observer::observer']]]
+  ['right_5fvoltage_7',['right_voltage',['../classobserver_1_1observer.html#ad20db868f2fbd1a51eee63b5bbc98d76',1,'observer::observer']]],
+  ['run_5fto_5fline_8',['RUN_TO_LINE',['../namespacepathing__plan__task.html#a4920f267449ab11b6ac53068168de143',1,'pathing_plan_task']]]
 ];

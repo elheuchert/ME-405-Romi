@@ -2,16 +2,16 @@
 \hypertarget{classbump____sensor_1_1_bump___sensor}{}\label{classbump____sensor_1_1_bump___sensor}\index{bump\_\_sensor.Bump\_Sensor@{bump\_\_sensor.Bump\_Sensor}}
 
 
-add description here  
+Initializes Bump sensors.  
 
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classbump____sensor_1_1_bump___sensor_a3307689cdb353416b150200de5623732}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, p1, p2, p3)
-\item 
+\begin{DoxyCompactList}\small\item\em This initializes the Pins to input pins and enables internal pull-\/ups for one set of bump sensors (three switches). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classbump____sensor_1_1_bump___sensor_a69ec7aa9d6a27ea7f142406a6430cf63}{is\+\_\+pressed}} (self)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function tests if any one of three sensors has been pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,9 +24,13 @@ add description here
 
 
 \doxysubsection{Detailed Description}
-add description here 
+Initializes Bump sensors. 
 
-Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00003}{3}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
+This class manages bump sensors for romi, to detect any collisions.
+
+The bump sensor we are using is made specifically for the Pololu Romi, and is placed on the front of the chassis board. The sensors should be connected to digital input pins, with their internal pull ups enabled. This means that the lines will be floating up and will be pulled down when a switch is pressed. 
+
+Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00007}{7}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
 
 
 
@@ -41,7 +45,20 @@ bump\+\_\+\+\_\+sensor.\+Bump\+\_\+\+Sensor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin
 
 
 
-Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00005}{5}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
+This initializes the Pins to input pins and enables internal pull-\/ups for one set of bump sensors (three switches). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P1} & Pin Object \\
+\hline
+{\em P2} & Pin Object \\
+\hline
+{\em P3} & Pin Object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00012}{12}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
 
 
 
@@ -56,7 +73,13 @@ bump\+\_\+\+\_\+sensor.\+Bump\+\_\+\+Sensor.\+is\+\_\+pressed (\begin{DoxyParamC
 
 
 
-Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00011}{11}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
+This function tests if any one of three sensors has been pressed. 
+
+{\bfseries{ Returns }} \begin{quote}
+True if a sensor is pressed \end{quote}
+
+
+Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00023}{23}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
 
 
 
@@ -71,7 +94,7 @@ bump\+\_\+\+\_\+sensor.\+Bump\+\_\+\+Sensor.\+Pin\+\_\+A = Pin(p1,mode=Pin.\+IN,
 
 
 
-Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00006}{6}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
+Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00014}{14}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
 
 \Hypertarget{classbump____sensor_1_1_bump___sensor_acdfdeb0a2087ec9dd9254ef86cd76495}\index{bump\_\_sensor.Bump\_Sensor@{bump\_\_sensor.Bump\_Sensor}!Pin\_B@{Pin\_B}}
 \index{Pin\_B@{Pin\_B}!bump\_\_sensor.Bump\_Sensor@{bump\_\_sensor.Bump\_Sensor}}
@@ -81,7 +104,7 @@ bump\+\_\+\+\_\+sensor.\+Bump\+\_\+\+Sensor.\+Pin\+\_\+B = Pin(p2,mode=Pin.\+IN,
 
 
 
-Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00007}{7}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
+Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00015}{15}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
 
 \Hypertarget{classbump____sensor_1_1_bump___sensor_a944854805265e5a9b7b460f65a38be10}\index{bump\_\_sensor.Bump\_Sensor@{bump\_\_sensor.Bump\_Sensor}!Pin\_C@{Pin\_C}}
 \index{Pin\_C@{Pin\_C}!bump\_\_sensor.Bump\_Sensor@{bump\_\_sensor.Bump\_Sensor}}
@@ -91,7 +114,7 @@ bump\+\_\+\+\_\+sensor.\+Bump\+\_\+\+Sensor.\+Pin\+\_\+C = Pin(p3,mode=Pin.\+IN,
 
 
 
-Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00008}{8}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
+Definition at line \mbox{\hyperlink{bump____sensor_8py_source_l00016}{16}} of file \mbox{\hyperlink{bump____sensor_8py_source}{bump\+\_\+\+\_\+sensor.\+py}}.
 
 
 

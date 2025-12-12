@@ -160,7 +160,7 @@ $(function(){initNavTree('ui_8py_source.html','',''); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="comment">#self.uart.write(b&quot;still running rn&quot;)</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">if</span> self.<a class="code hl_variable" href="classui_1_1ui.html#a288d7995a2c901af5768c5168671ffd0">uart</a>.any():</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    print(<span class="stringliteral">&quot;waiting&quot;</span>)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    char_in = self.<a class="code hl_variable" href="classui_1_1ui.html#a288d7995a2c901af5768c5168671ffd0">uart</a>.read(1).decode()</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    <span class="comment"># char_in = self.uart.read(1).decode()</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    <span class="comment"># Full motor step response test </span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    <span class="keywordflow">if</span> char_in == <span class="stringliteral">&quot;s&quot;</span>:</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        self.<a class="code hl_variable" href="classui_1_1ui.html#a577487ab95eea041009593952c25b66c">state</a>=1</div>

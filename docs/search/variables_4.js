@@ -11,5 +11,6 @@ var searchData=
   ['dev_5faddr_8',['DEV_ADDR',['../classimu_1_1_i_m_u.html#ac0b14415aa948f8da749133084ebab28',1,'imu::IMU']]],
   ['dir_9',['dir',['../classmotor_1_1_motor.html#af72e376c286ba10e9cd1148cba8478da',1,'motor::Motor']]],
   ['direction_10',['direction',['../classpathing__plan__task_1_1pathing__plan.html#ac69576519b4ed2fc84a45cb6d3242893',1,'pathing_plan_task::pathing_plan']]],
-  ['dt_11',['dt',['../classencoder_1_1_encoder.html#ae5edf4b3cd1456c3997c25fd0d83380f',1,'encoder::Encoder']]]
+  ['dist_11',['dist',['../classpathing__plan__task_1_1pathing__plan.html#ae442e5d1eef7bdf96e9d9153e02112ed',1,'pathing_plan_task::pathing_plan']]],
+  ['dt_12',['dt',['../classencoder_1_1_encoder.html#ae5edf4b3cd1456c3997c25fd0d83380f',1,'encoder::Encoder']]]
 ];

@@ -102,7 +102,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afdc5715b2647cb1fe291cb542f25e686" id="r_afdc5715b2647cb1fe291cb542f25e686"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdc5715b2647cb1fe291cb542f25e686">line_following</a> (self, final_dist, next_state)</td></tr>
 <tr class="memitem:a7cabe7403a1b005a063a5fd59b557e8e" id="r_a7cabe7403a1b005a063a5fd59b557e8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cabe7403a1b005a063a5fd59b557e8e">alignment_goal</a> (self, <a class="el" href="#a51be1d30bc9417f40801cbd9e713c485">yaw_goal</a>, rot_direction, next_state)</td></tr>
 <tr class="memitem:a29b99a247d490f7e9d969d3622cd4500" id="r_a29b99a247d490f7e9d969d3622cd4500"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29b99a247d490f7e9d969d3622cd4500">alignment_control</a> (self, next_state)</td></tr>
-<tr class="memitem:a2846b46235f46f34c45cb0d19f18619c" id="r_a2846b46235f46f34c45cb0d19f18619c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2846b46235f46f34c45cb0d19f18619c">free_traverse</a> (self, final_dist, next_state)</td></tr>
+<tr class="memitem:aa2e83fa62bb08fdfc4c34e9ab2c8f0f4" id="r_aa2e83fa62bb08fdfc4c34e9ab2c8f0f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2e83fa62bb08fdfc4c34e9ab2c8f0f4">free_traverse</a> (self, final_dist, next_state, ref)</td></tr>
 <tr class="memitem:a50ae901bf0f81f3057545b804b84b2a4" id="r_a50ae901bf0f81f3057545b804b84b2a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50ae901bf0f81f3057545b804b84b2a4">run</a> (self)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -120,14 +120,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a937263f8369bcfc879238dca1922003f" id="r_a937263f8369bcfc879238dca1922003f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a937263f8369bcfc879238dca1922003f">bump_on</a> = bump_on</td></tr>
 <tr class="memitem:ae15a11ebb17ec4dedacf57d2c5610ce0" id="r_ae15a11ebb17ec4dedacf57d2c5610ce0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae15a11ebb17ec4dedacf57d2c5610ce0">bump_flg</a> = bump_flg</td></tr>
 <tr class="memitem:a52e8874ddec1618d5c70406f0bc82809" id="r_a52e8874ddec1618d5c70406f0bc82809"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52e8874ddec1618d5c70406f0bc82809">bump_off</a> = 0</td></tr>
-<tr class="memitem:aba13ed6b1dbd968077802f5e583d61da" id="r_aba13ed6b1dbd968077802f5e583d61da"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba13ed6b1dbd968077802f5e583d61da">iteration</a> = 0</td></tr>
+<tr class="memitem:a6bb6c2b8bb880f7a77eb1f8d0752b5f5" id="r_a6bb6c2b8bb880f7a77eb1f8d0752b5f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bb6c2b8bb880f7a77eb1f8d0752b5f5">iteration</a> = 0</td></tr>
 <tr class="memitem:a45e990ffaaa72445aa8c548b099e6d03" id="r_a45e990ffaaa72445aa8c548b099e6d03"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45e990ffaaa72445aa8c548b099e6d03">yaw_goals_5</a> = [<a class="el" href="namespacepathing__plan__task.html#a94fc6cb9a3d19d2ecae8521dd7b00e7a">YAWGOAL5</a>, <a class="el" href="namespacepathing__plan__task.html#a462abb6155995221c3a5dabafc80a75a">EXPYAWGOAL1</a>, <a class="el" href="namespacepathing__plan__task.html#ae7aa7713bf1c1a2649970e8b2ec6ae77">EXPYAWGOAL2</a>, <a class="el" href="namespacepathing__plan__task.html#a763bab3ba47e74415f4ebb41113eb389">EXPYAWGOAL3</a>]</td></tr>
-<tr class="memitem:ac69576519b4ed2fc84a45cb6d3242893" id="r_ac69576519b4ed2fc84a45cb6d3242893"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac69576519b4ed2fc84a45cb6d3242893">direction</a> = [1,-1,-1,-1]</td></tr>
+<tr class="memitem:ac69576519b4ed2fc84a45cb6d3242893" id="r_ac69576519b4ed2fc84a45cb6d3242893"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac69576519b4ed2fc84a45cb6d3242893">direction</a> = [1,1,-1,1]</td></tr>
+<tr class="memitem:ae442e5d1eef7bdf96e9d9153e02112ed" id="r_ae442e5d1eef7bdf96e9d9153e02112ed"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae442e5d1eef7bdf96e9d9153e02112ed">dist</a> = [<a class="el" href="namespacepathing__plan__task.html#a61128550890e7a95b80dd41adce8b5f6">CP4_GARAGE</a>, 3600, 3800, 4000]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>add description here </p>
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00059">59</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00066">66</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a38b6d3f0f49f0dd291b72ed599b9964a" name="a38b6d3f0f49f0dd291b72ed599b9964a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38b6d3f0f49f0dd291b72ed599b9964a">&#9670;&#160;</a></span>__init__()</h2>
@@ -193,7 +194,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00062">62</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00069">69</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -217,7 +218,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00113">113</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00121">121</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -255,7 +256,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00098">98</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00106">106</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -269,8 +270,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2846b46235f46f34c45cb0d19f18619c" name="a2846b46235f46f34c45cb0d19f18619c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2846b46235f46f34c45cb0d19f18619c">&#9670;&#160;</a></span>free_traverse()</h2>
+<a id="aa2e83fa62bb08fdfc4c34e9ab2c8f0f4" name="aa2e83fa62bb08fdfc4c34e9ab2c8f0f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e83fa62bb08fdfc4c34e9ab2c8f0f4">&#9670;&#160;</a></span>free_traverse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,16 +289,21 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>next_state</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>next_state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ref</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00120">120</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00128">128</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classpathing__plan__task_1_1pathing__plan_a2846b46235f46f34c45cb0d19f18619c_icgraph.png" border="0" usemap="#aclasspathing__plan__task_1_1pathing__plan_a2846b46235f46f34c45cb0d19f18619c_icgraph" loading="lazy" alt=""/></div>
+<div class="center"><img src="classpathing__plan__task_1_1pathing__plan_aa2e83fa62bb08fdfc4c34e9ab2c8f0f4_icgraph.png" border="0" usemap="#aclasspathing__plan__task_1_1pathing__plan_aa2e83fa62bb08fdfc4c34e9ab2c8f0f4_icgraph" loading="lazy" alt=""/></div>
 </div>
 
 </div>
@@ -326,12 +332,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00088">88</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classpathing__plan__task_1_1pathing__plan_afdc5715b2647cb1fe291cb542f25e686_cgraph.png" border="0" usemap="#aclasspathing__plan__task_1_1pathing__plan_afdc5715b2647cb1fe291cb542f25e686_cgraph" loading="lazy" alt=""/></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00096">96</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -355,7 +356,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00130">130</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00138">138</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -383,7 +384,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00080">80</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00088">88</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -405,7 +406,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00065">65</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00072">72</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -421,7 +422,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00074">74</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00081">81</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -437,7 +438,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00075">75</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00082">82</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -453,7 +454,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00073">73</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00080">80</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -469,7 +470,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00066">66</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00073">73</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -485,7 +486,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00071">71</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00078">78</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -496,12 +497,28 @@ Here is the caller graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">list pathing_plan_task.pathing_plan.direction = [1,-1,-1,-1]</td>
+          <td class="memname">list pathing_plan_task.pathing_plan.direction = [1,1,-1,1]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00078">78</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00085">85</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+
+</div>
+</div>
+<a id="ae442e5d1eef7bdf96e9d9153e02112ed" name="ae442e5d1eef7bdf96e9d9153e02112ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae442e5d1eef7bdf96e9d9153e02112ed">&#9670;&#160;</a></span>dist</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">list pathing_plan_task.pathing_plan.dist = [<a class="el" href="namespacepathing__plan__task.html#a61128550890e7a95b80dd41adce8b5f6">CP4_GARAGE</a>, 3600, 3800, 4000]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00086">86</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -517,23 +534,23 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00067">67</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00074">74</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
-<a id="aba13ed6b1dbd968077802f5e583d61da" name="aba13ed6b1dbd968077802f5e583d61da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba13ed6b1dbd968077802f5e583d61da">&#9670;&#160;</a></span>iteration</h2>
+<a id="a6bb6c2b8bb880f7a77eb1f8d0752b5f5" name="a6bb6c2b8bb880f7a77eb1f8d0752b5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb6c2b8bb880f7a77eb1f8d0752b5f5">&#9670;&#160;</a></span>iteration</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pathing_plan_task.pathing_plan.iteration = 0</td>
+          <td class="memname">int pathing_plan_task.pathing_plan.iteration = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00076">76</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00083">83</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -549,7 +566,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00070">70</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00077">77</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -565,7 +582,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00063">63</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00070">70</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -581,7 +598,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00064">64</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00071">71</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -597,7 +614,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00068">68</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00075">75</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -613,7 +630,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00072">72</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00079">79</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -629,7 +646,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00077">77</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00084">84</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>
@@ -645,7 +662,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00069">69</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pathing__plan__task_8py_source.html#l00076">76</a> of file <a class="el" href="pathing__plan__task_8py_source.html">pathing_plan_task.py</a>.</p>
 
 </div>
 </div>

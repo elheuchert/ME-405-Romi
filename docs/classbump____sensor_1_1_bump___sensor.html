@@ -92,13 +92,15 @@ $(function(){initNavTree('classbump____sensor_1_1_bump___sensor.html','','classb
 </div><!--header-->
 <div class="contents">
 
-<p>add description here  
+<p>Initializes Bump sensors.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3307689cdb353416b150200de5623732" id="r_a3307689cdb353416b150200de5623732"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3307689cdb353416b150200de5623732">__init__</a> (self, p1, p2, p3)</td></tr>
+<tr class="memdesc:a3307689cdb353416b150200de5623732"><td class="mdescLeft">&#160;</td><td class="mdescRight">This initializes the Pins to input pins and enables internal pull-ups for one set of bump sensors (three switches).  <br /></td></tr>
 <tr class="memitem:a69ec7aa9d6a27ea7f142406a6430cf63" id="r_a69ec7aa9d6a27ea7f142406a6430cf63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69ec7aa9d6a27ea7f142406a6430cf63">is_pressed</a> (self)</td></tr>
+<tr class="memdesc:a69ec7aa9d6a27ea7f142406a6430cf63"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function tests if any one of three sensors has been pressed.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -107,9 +109,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a944854805265e5a9b7b460f65a38be10" id="r_a944854805265e5a9b7b460f65a38be10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a944854805265e5a9b7b460f65a38be10">Pin_C</a> = Pin(p3,mode=Pin.IN, pull=Pin.PULL_UP)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>add description here </p>
+<div class="textblock"><p>Initializes Bump sensors. </p>
+<p>This class manages bump sensors for romi, to detect any collisions.</p>
+<p>The bump sensor we are using is made specifically for the Pololu Romi, and is placed on the front of the chassis board. The sensors should be connected to digital input pins, with their internal pull ups enabled. This means that the lines will be floating up and will be pulled down when a switch is pressed. </p>
 
-<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00003">3</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00007">7</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3307689cdb353416b150200de5623732" name="a3307689cdb353416b150200de5623732"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3307689cdb353416b150200de5623732">&#9670;&#160;</a></span>__init__()</h2>
@@ -140,7 +144,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00005">5</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
+<p>This initializes the Pins to input pins and enables internal pull-ups for one set of bump sensors (three switches). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td>Pin Object </td></tr>
+    <tr><td class="paramname">P2</td><td>Pin Object </td></tr>
+    <tr><td class="paramname">P3</td><td>Pin Object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00012">12</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
 
 </div>
 </div>
@@ -160,7 +174,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00011">11</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
+<p>This function tests if any one of three sensors has been pressed. </p>
+<p><b> Returns </b> </p><blockquote class="doxtable">
+<p>True if a sensor is pressed </p>
+</blockquote>
+
+<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00023">23</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
 
 </div>
 </div>
@@ -177,7 +196,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00006">6</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00014">14</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
 
 </div>
 </div>
@@ -193,7 +212,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00007">7</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00015">15</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
 
 </div>
 </div>
@@ -209,7 +228,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00008">8</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump____sensor_8py_source.html#l00016">16</a> of file <a class="el" href="bump____sensor_8py_source.html">bump__sensor.py</a>.</p>
 
 </div>
 </div>

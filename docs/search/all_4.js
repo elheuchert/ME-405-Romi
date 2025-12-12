@@ -14,7 +14,8 @@ var searchData=
   ['dir_11',['dir',['../classmotor_1_1_motor.html#af72e376c286ba10e9cd1148cba8478da',1,'motor::Motor']]],
   ['direction_12',['direction',['../classpathing__plan__task_1_1pathing__plan.html#ac69576519b4ed2fc84a45cb6d3242893',1,'pathing_plan_task::pathing_plan']]],
   ['disable_13',['disable',['../classmotor_1_1_motor.html#af791b20dd99b0a34d48b0178dc11fcb0',1,'motor::Motor']]],
-  ['docs_5fmain_2edox_14',['docs_main.dox',['../docs__main_8dox.html',1,'']]],
-  ['documentation_15',['ME405 Library Documentation',['../index.html',1,'']]],
-  ['dt_16',['dt',['../classencoder_1_1_encoder.html#ae5edf4b3cd1456c3997c25fd0d83380f',1,'encoder::Encoder']]]
+  ['dist_14',['dist',['../classpathing__plan__task_1_1pathing__plan.html#ae442e5d1eef7bdf96e9d9153e02112ed',1,'pathing_plan_task::pathing_plan']]],
+  ['docs_5fmain_2edox_15',['docs_main.dox',['../docs__main_8dox.html',1,'']]],
+  ['documentation_16',['ME405 Library Documentation',['../index.html',1,'']]],
+  ['dt_17',['dt',['../classencoder_1_1_encoder.html#ae5edf4b3cd1456c3997c25fd0d83380f',1,'encoder::Encoder']]]
 ];

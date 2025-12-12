@@ -137,94 +137,95 @@
 \DoxyCodeLine{\Hypertarget{control__task_8py_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}\ ==\ 6:}
 \DoxyCodeLine{\Hypertarget{control__task_8py_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a82b0da3f64fc6013f66d5de92022d6ba}{need\_Calibrate}}.get()\ ==\ 0:}
 \DoxyCodeLine{\Hypertarget{control__task_8py_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}\ =\ 5}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 6}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00137}00137\ }
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}\ ==7:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Yaw\ alignment\ state}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yaw\_actuation\ =\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_aa98683dfb98ce321d55c93cb98f09336}{controller\_yaw}}.pi\_Control(self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a5dcbaa9f6050fb4e7b72f49b96b88e83}{yaw\_goal}}.get(),\ 15)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_af0537c6f043829e29462fa0b749a5cab}{controller\_left}}.change\_Ref(-\/yaw\_actuation)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a2320d288cb6735cb6e630de3cef9d389}{controller\_right}}.change\_Ref(yaw\_actuation)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(yaw\_actuation)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_afc723cc3b7f74bbe43ef8d5d72ef0149}{c\_state}}.get()\ ==\ 4:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}\ =\ 4}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ yaw\_actuation\ <=\ .5:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a5dcbaa9f6050fb4e7b72f49b96b88e83}{yaw\_goal}}.put(0)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_af0537c6f043829e29462fa0b749a5cab}{controller\_left}}.change\_Ref(0)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a2320d288cb6735cb6e630de3cef9d389}{controller\_right}}.change\_Ref(0)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 7}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ For\ Proportional\ Tests}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#cntrl\_l\ =\ self.controller\_left.proportional\_Control(self.velocity\_l.get())}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#cntrl\_r\ =\ self.controller\_right.proportional\_Control(self.velocity\_r.get())}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}cntrl\_l\ :\ \{cntrl\_l\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}cntrl\_r\ :\ \{cntrl\_r\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_l.put(cntrl\_l)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.m\_state\_l.put(2)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_r.put(cntrl\_r)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.m\_state\_r.put(2)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ For\ PI\ Tests\ }}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ new\_left\_pwm\ =\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_af0537c6f043829e29462fa0b749a5cab}{controller\_left}}.pi\_Control(self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a9a2d1980a838f00da777fc7c7351089e}{velocity\_l}}.get(),\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a43d224a88b976c0e6d9ce6d561ff5ff2}{enc\_L}}.get\_dt())}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ new\_right\_pwm\ =\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a2320d288cb6735cb6e630de3cef9d389}{controller\_right}}.pi\_Control(self.\mbox{\hyperlink{classcontrol__task_1_1control__task_abf2f8701fda5f3ddaaec344266e1b392}{velocity\_r}}.get(),\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ac4780cb28d1d07c19f6600456aa79067}{enc\_R}}.get\_dt())}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00167}00167\ }
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}new\_right\ \{new\_right\_pwm\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}new\_left\ \ \{new\_left\_pwm\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_l.put(new\_left\_pwm)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_r.put(new\_right\_pwm)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}new\_left\ after\ filter\ \{self.PWM\_l.get()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ new\_left\_pwm\ >\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ >\ 0:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Both\ positive}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(new\_left\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(new\_right\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ <\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ <\ 0:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Both\ negative}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(new\_left\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(new\_right\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ >\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ <\ 0:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Left\ positive,\ right\ negative}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Flipping\ them\ 1"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(-\/new\_left\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(-\/new\_right\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ <\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ >\ 0:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Left\ negative,\ right\ positive}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Flipping\ them\ 2"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(-\/new\_left\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(-\/new\_right\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ !=\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Left\ non\ zero,\ right\ zero}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Flipping\ them\ 3"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(-\/new\_left\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(0)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ ==\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ !=\ 0:}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Left\ zero,\ right\ non\ zero}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Flipping\ them\ 4"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(0)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(new\_right\_pwm)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}new\_right\ after\ filter\ \{self.PWM\_l.get()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_l.put(self.controller\_left.pi\_Control(self.velocity\_l.get(),\ self.enc\_L.get\_dt()))}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_l.put(0)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Left\ PWM\{self.PWM\_l.get()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.PWM\_l.get())}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Left\ V:\ \{self.velocity\_l.get()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Right\ V:\ \{self.velocity\_r.get()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Left\ Reference\ \{self.enc\_L.get\_dt()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Right\ Reference\ \{self.enc\_R.get\_dt()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Left\ Reference\ \{self.controller\_left.get\_Ref()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Right\ Reference\ \{self.controller\_right.get\_Ref()\}"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.velocity\_l.get())}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Left\ Set\ Point"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.controller\_left.get\_Ref())}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_r.put(self.controller\_right.pi\_Control(self.velocity\_r.get(),\ self.enc\_R.get\_dt()))}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_r.put(-\/50)}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Right\ PWM"{})}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.PWM\_r.get())}}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a06e2665b1914e29b2be215ad5e720a4e}{m\_state\_l}}.put(2)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22e19188155b52664b2bd271b4118400}{m\_state\_r}}.put(2)}
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}CALIBRATED"{}})}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 6}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}\ ==7:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Yaw\ alignment\ state}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yaw\_actuation\ =\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_aa98683dfb98ce321d55c93cb98f09336}{controller\_yaw}}.pi\_Control(self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a5dcbaa9f6050fb4e7b72f49b96b88e83}{yaw\_goal}}.get(),\ 15)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_af0537c6f043829e29462fa0b749a5cab}{controller\_left}}.change\_Ref(-\/yaw\_actuation)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a2320d288cb6735cb6e630de3cef9d389}{controller\_right}}.change\_Ref(yaw\_actuation)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(yaw\_actuation)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_afc723cc3b7f74bbe43ef8d5d72ef0149}{c\_state}}.get()\ ==\ 4:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}\ =\ 4}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ yaw\_actuation\ <=\ .5:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a5dcbaa9f6050fb4e7b72f49b96b88e83}{yaw\_goal}}.put(0)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_af0537c6f043829e29462fa0b749a5cab}{controller\_left}}.change\_Ref(0)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a2320d288cb6735cb6e630de3cef9d389}{controller\_right}}.change\_Ref(0)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 7}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ For\ Proportional\ Tests}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#cntrl\_l\ =\ self.controller\_left.proportional\_Control(self.velocity\_l.get())}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#cntrl\_r\ =\ self.controller\_right.proportional\_Control(self.velocity\_r.get())}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}cntrl\_l\ :\ \{cntrl\_l\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}cntrl\_r\ :\ \{cntrl\_r\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_l.put(cntrl\_l)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.m\_state\_l.put(2)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_r.put(cntrl\_r)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.m\_state\_r.put(2)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ For\ PI\ Tests\ }}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ new\_left\_pwm\ =\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_af0537c6f043829e29462fa0b749a5cab}{controller\_left}}.pi\_Control(self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a9a2d1980a838f00da777fc7c7351089e}{velocity\_l}}.get(),\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a43d224a88b976c0e6d9ce6d561ff5ff2}{enc\_L}}.get\_dt())}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ new\_right\_pwm\ =\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a2320d288cb6735cb6e630de3cef9d389}{controller\_right}}.pi\_Control(self.\mbox{\hyperlink{classcontrol__task_1_1control__task_abf2f8701fda5f3ddaaec344266e1b392}{velocity\_r}}.get(),\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ac4780cb28d1d07c19f6600456aa79067}{enc\_R}}.get\_dt())}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}new\_right\ \{new\_right\_pwm\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}new\_left\ \ \{new\_left\_pwm\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_l.put(new\_left\_pwm)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_r.put(new\_right\_pwm)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}new\_left\ after\ filter\ \{self.PWM\_l.get()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ new\_left\_pwm\ >\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ >\ 0:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Both\ positive}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(new\_left\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(new\_right\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ <\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ <\ 0:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Both\ negative}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(new\_left\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(new\_right\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ >\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ <\ 0:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Left\ positive,\ right\ negative}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Flipping\ them\ 1"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(-\/new\_left\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(-\/new\_right\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ <\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ >\ 0:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Left\ negative,\ right\ positive}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Flipping\ them\ 2"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(-\/new\_left\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(-\/new\_right\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ !=\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Left\ non\ zero,\ right\ zero}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Flipping\ them\ 3"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(-\/new\_left\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(0)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ new\_left\_pwm\ ==\ 0\ \textcolor{keywordflow}{and}\ new\_right\_pwm\ !=\ 0:}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Left\ zero,\ right\ non\ zero}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Flipping\ them\ 4"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22f63c65efb48fbb32a29c269fcdfdca}{PWM\_l}}.put(0)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_adac704f9c38ac44bb24fd69d3d071571}{PWM\_r}}.put(new\_right\_pwm)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f"{}new\_right\ after\ filter\ \{self.PWM\_l.get()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ self.PWM\_l.put(self.controller\_left.pi\_Control(self.velocity\_l.get(),\ self.enc\_L.get\_dt()))}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_l.put(0)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f"{}Left\ PWM\{self.PWM\_l.get()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.PWM\_l.get())}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Left\ V:\ \{self.velocity\_l.get()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Right\ V:\ \{self.velocity\_r.get()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Left\ Reference\ \{self.enc\_L.get\_dt()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Right\ Reference\ \{self.enc\_R.get\_dt()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Left\ Reference\ \{self.controller\_left.get\_Ref()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}Right\ Reference\ \{self.controller\_right.get\_Ref()\}"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.velocity\_l.get())}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Left\ Set\ Point"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.controller\_left.get\_Ref())}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_r.put(self.controller\_right.pi\_Control(self.velocity\_r.get(),\ self.enc\_R.get\_dt()))}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.PWM\_r.put(-\/50)}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Right\ PWM"{})}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.PWM\_r.get())}}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a06e2665b1914e29b2be215ad5e720a4e}{m\_state\_l}}.put(2)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_a22e19188155b52664b2bd271b4118400}{m\_state\_r}}.put(2)}
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{control__task_8py_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classcontrol__task_1_1control__task_ada23fbf679e7a4019cfd89f4e2c3e978}{state}}}
 
 \end{DoxyCode}

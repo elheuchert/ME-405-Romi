@@ -92,13 +92,15 @@ $(function(){initNavTree('classbump__task_1_1_bump___task.html','','classbump__t
 </div><!--header-->
 <div class="contents">
 
-<p>add description here  
+<p>Collision detector for cooperative scheduler.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6dfdb590345525eadc8cbb7403f7a93b" id="r_a6dfdb590345525eadc8cbb7403f7a93b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dfdb590345525eadc8cbb7403f7a93b">__init__</a> (self, <a class="el" href="#a79e0a6c06834b0418218c76e6d325846">c_state</a>, <a class="el" href="#a159e9258cb67e57e4110370e4a34e897">bump_sensor_right</a>, <a class="el" href="#acbf3fcf274ae50263268a8c61f0a8b61">bump_sensor_left</a>, <a class="el" href="#a3cdbcb63b3ca6ba7bf7251d991088713">bump_on_off</a>, <a class="el" href="#af52e41e92bcbdfbea4d795a0da623d0c">bump_flg</a>)</td></tr>
+<tr class="memdesc:a6dfdb590345525eadc8cbb7403f7a93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shares are passed as parameters, used to communicate between tasks in the cooperative scheduler.  <br /></td></tr>
 <tr class="memitem:a57094853d75bd3ef68317f34a207701a" id="r_a57094853d75bd3ef68317f34a207701a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57094853d75bd3ef68317f34a207701a">run</a> (self)</td></tr>
+<tr class="memdesc:a57094853d75bd3ef68317f34a207701a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function runs via the cooperative scheduler.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -110,9 +112,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af52e41e92bcbdfbea4d795a0da623d0c" id="r_af52e41e92bcbdfbea4d795a0da623d0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af52e41e92bcbdfbea4d795a0da623d0c">bump_flg</a> = bump_flg</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>add description here </p>
+<div class="textblock"><p>Collision detector for cooperative scheduler. </p>
+<p>This class runs continuously, setting flags that are shared with other tasks.</p>
+<p>The Bump task uses two sensor objects, for left and right side of the Romi. Any collision with either side will be treated the same. </p>
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00003">3</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00007">7</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6dfdb590345525eadc8cbb7403f7a93b" name="a6dfdb590345525eadc8cbb7403f7a93b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6dfdb590345525eadc8cbb7403f7a93b">&#9670;&#160;</a></span>__init__()</h2>
@@ -153,7 +157,20 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00005">5</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p>Shares are passed as parameters, used to communicate between tasks in the cooperative scheduler. </p>
+<p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c_state</td><td>A flag used to tell which control state is desired </td></tr>
+    <tr><td class="paramname">bump_sensor_right</td><td>The right bump Sensor Object </td></tr>
+    <tr><td class="paramname">bump_sensor_left</td><td>The left bump Sensor Object </td></tr>
+    <tr><td class="paramname">bump_on_off</td><td>A flag to tell <a class="el" href="namespacebump__task.html">bump_task</a> to read if the sensors are pressed </td></tr>
+    <tr><td class="paramname">bump_flg</td><td>A flag set if a sensor was pressed while being read </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00014">14</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 
 </div>
 </div>
@@ -173,7 +190,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00015">15</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p>This function runs via the cooperative scheduler. </p>
+<p><b> State 1 </b> Not reading sensors</p>
+<p><b> State 1 </b> Reading sensors</p>
+<p><b> Effects </b> </p><blockquote class="doxtable">
+<p>Sets bump_flg to 1 when a sensor is pressed from left or right side </p>
+</blockquote>
+
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00032">32</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 
 </div>
 </div>
@@ -190,7 +214,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00011">11</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00020">20</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 
 </div>
 </div>
@@ -206,7 +230,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00010">10</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00019">19</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 
 </div>
 </div>
@@ -222,7 +246,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00008">8</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00017">17</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 
 </div>
 </div>
@@ -238,7 +262,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00007">7</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00016">16</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 
 </div>
 </div>
@@ -254,7 +278,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00006">6</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00015">15</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 
 </div>
 </div>
@@ -270,7 +294,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00009">9</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bump__task_8py_source.html#l00018">18</a> of file <a class="el" href="bump__task_8py_source.html">bump_task.py</a>.</p>
 
 </div>
 </div>
