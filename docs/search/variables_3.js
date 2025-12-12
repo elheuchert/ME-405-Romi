@@ -24,7 +24,8 @@ var searchData=
   ['cp2_5fpivot_5f2_21',['CP2_PIVOT_2',['../namespacepathing__plan__task.html#a45784129a114bc5a0cf4dc2ec86428b8',1,'pathing_plan_task']]],
   ['cp3_5fcp4_22',['CP3_CP4',['../namespacepathing__plan__task.html#a034309efc9a737cfabb2077de1020a00',1,'pathing_plan_task']]],
   ['cp4_5fgarage_23',['CP4_GARAGE',['../namespacepathing__plan__task.html#a61128550890e7a95b80dd41adce8b5f6',1,'pathing_plan_task']]],
-  ['cup_24',['CUP',['../namespacepathing__plan__task.html#a51945bde88de908ecfea61e1f76bd2e2',1,'pathing_plan_task']]],
-  ['cup_5fcp3_5fdist_25',['CUP_CP3_DIST',['../namespacepathing__plan__task.html#a067b1b1978242cfb4df7efcb849db6b8',1,'pathing_plan_task']]],
-  ['current_5ftime_26',['current_time',['../classencoder_1_1_encoder.html#a8c4603cfdb3af028e50395ab86136410',1,'encoder::Encoder']]]
+  ['cp4_5fline_24',['CP4_LINE',['../namespacepathing__plan__task.html#a3b05a8bd5d3ea77f0a5a5c153d844c58',1,'pathing_plan_task']]],
+  ['cup_25',['CUP',['../namespacepathing__plan__task.html#a51945bde88de908ecfea61e1f76bd2e2',1,'pathing_plan_task']]],
+  ['cup_5fcp3_5fdist_26',['CUP_CP3_DIST',['../namespacepathing__plan__task.html#a067b1b1978242cfb4df7efcb849db6b8',1,'pathing_plan_task']]],
+  ['current_5ftime_27',['current_time',['../classencoder_1_1_encoder.html#a8c4603cfdb3af028e50395ab86136410',1,'encoder::Encoder']]]
 ];

@@ -10,5 +10,8 @@ digraph "pathing_plan_task.pathing_plan.wrapper"
   Node2 [id="Node000002",label="pathing_plan_task.pathing\l_plan.alignment_goal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classpathing__plan__task_1_1pathing__plan.html#a7cabe7403a1b005a063a5fd59b557e8e",tooltip=" "];
   Node2 -> Node3 [id="edge2_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="pathing_plan_task.pathing\l_plan.run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classpathing__plan__task_1_1pathing__plan.html#a50ae901bf0f81f3057545b804b84b2a4",tooltip=" "];
-  Node1 -> Node3 [id="edge3_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="pathing_plan_task.pathing\l_plan.line_following",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classpathing__plan__task_1_1pathing__plan.html#afdc5715b2647cb1fe291cb542f25e686",tooltip=" "];
+  Node4 -> Node3 [id="edge4_Node000004_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node3 [id="edge5_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
 }

@@ -13,11 +13,14 @@ var classpathing__plan__task_1_1pathing__plan =
     [ "bump_on", "classpathing__plan__task_1_1pathing__plan.html#a937263f8369bcfc879238dca1922003f", null ],
     [ "c_state", "classpathing__plan__task_1_1pathing__plan.html#acbccb9a71dd80a13c13fc310eebda0bd", null ],
     [ "centroid_goal", "classpathing__plan__task_1_1pathing__plan.html#a4f93c869bce694c024134b1281a55273", null ],
+    [ "direction", "classpathing__plan__task_1_1pathing__plan.html#ac69576519b4ed2fc84a45cb6d3242893", null ],
     [ "fwd_ref", "classpathing__plan__task_1_1pathing__plan.html#af0ae95dd8213d368e752fa9c7791dcfd", null ],
+    [ "iteration", "classpathing__plan__task_1_1pathing__plan.html#aba13ed6b1dbd968077802f5e583d61da", null ],
     [ "piv_ref", "classpathing__plan__task_1_1pathing__plan.html#a7fb18bad7cfd09bb560c7fd72924c55f", null ],
     [ "state", "classpathing__plan__task_1_1pathing__plan.html#a1d72985cc982ceb82ef7b26d13b8ad2d", null ],
     [ "total_dist", "classpathing__plan__task_1_1pathing__plan.html#abff51fcfeaf60454f26345295c001e2c", null ],
     [ "yaw", "classpathing__plan__task_1_1pathing__plan.html#a583a8c2f5f08dee13cad6bb6a66a5c3f", null ],
     [ "yaw_goal", "classpathing__plan__task_1_1pathing__plan.html#a51be1d30bc9417f40801cbd9e713c485", null ],
+    [ "yaw_goals_5", "classpathing__plan__task_1_1pathing__plan.html#a45e990ffaaa72445aa8c548b099e6d03", null ],
     [ "yaw_init", "classpathing__plan__task_1_1pathing__plan.html#a1253595431c8daad87b2917f0b53214b", null ]
 ];
