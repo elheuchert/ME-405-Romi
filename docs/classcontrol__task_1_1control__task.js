@@ -25,6 +25,7 @@ var classcontrol__task_1_1control__task =
     [ "PWM_l", "classcontrol__task_1_1control__task.html#a22f63c65efb48fbb32a29c269fcdfdca", null ],
     [ "PWM_r", "classcontrol__task_1_1control__task.html#adac704f9c38ac44bb24fd69d3d071571", null ],
     [ "real_yaw", "classcontrol__task_1_1control__task.html#a91ce4710f21c2adfcb7f11f52f0bc1b6", null ],
+    [ "startup", "classcontrol__task_1_1control__task.html#a2b9aa2713efd226883accf5ff68a39f9", null ],
     [ "state", "classcontrol__task_1_1control__task.html#ada23fbf679e7a4019cfd89f4e2c3e978", null ],
     [ "velocity_l", "classcontrol__task_1_1control__task.html#a9a2d1980a838f00da777fc7c7351089e", null ],
     [ "velocity_r", "classcontrol__task_1_1control__task.html#abf2f8701fda5f3ddaaec344266e1b392", null ],

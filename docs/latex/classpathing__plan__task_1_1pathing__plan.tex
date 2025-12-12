@@ -8,16 +8,24 @@ add description here
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a90a87ccefc7d5f39c373ebb9e0940a70}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_abff51fcfeaf60454f26345295c001e2c}{total\+\_\+dist}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_aaa34ec5c7e9681cf64e98c73a2f2d497}{automatic\+\_\+mode}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_acbccb9a71dd80a13c13fc310eebda0bd}{c\+\_\+state}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_af0ae95dd8213d368e752fa9c7791dcfd}{fwd\+\_\+ref}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a7fb18bad7cfd09bb560c7fd72924c55f}{piv\+\_\+ref}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a583a8c2f5f08dee13cad6bb6a66a5c3f}{yaw}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a4f93c869bce694c024134b1281a55273}{centroid\+\_\+goal}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a51be1d30bc9417f40801cbd9e713c485}{yaw\+\_\+goal}})
+\mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a38b6d3f0f49f0dd291b72ed599b9964a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_abff51fcfeaf60454f26345295c001e2c}{total\+\_\+dist}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_aaa34ec5c7e9681cf64e98c73a2f2d497}{automatic\+\_\+mode}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_acbccb9a71dd80a13c13fc310eebda0bd}{c\+\_\+state}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_af0ae95dd8213d368e752fa9c7791dcfd}{fwd\+\_\+ref}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a7fb18bad7cfd09bb560c7fd72924c55f}{piv\+\_\+ref}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a583a8c2f5f08dee13cad6bb6a66a5c3f}{yaw}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a4f93c869bce694c024134b1281a55273}{centroid\+\_\+goal}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a51be1d30bc9417f40801cbd9e713c485}{yaw\+\_\+goal}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a937263f8369bcfc879238dca1922003f}{bump\+\_\+on}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_ae15a11ebb17ec4dedacf57d2c5610ce0}{bump\+\_\+flg}})
 \item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_ad08c3360eb952dab07e98c69169c43b5}{wrapper}} (self, val)
+\item 
+\mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_afdc5715b2647cb1fe291cb542f25e686}{line\+\_\+following}} (self, final\+\_\+dist, next\+\_\+state)
+\item 
+\mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a7cabe7403a1b005a063a5fd59b557e8e}{alignment\+\_\+goal}} (self, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a51be1d30bc9417f40801cbd9e713c485}{yaw\+\_\+goal}}, rot\+\_\+direction, next\+\_\+state)
+\item 
+\mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a29b99a247d490f7e9d969d3622cd4500}{alignment\+\_\+control}} (self, next\+\_\+state)
+\item 
+\mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a2846b46235f46f34c45cb0d19f18619c}{free\+\_\+traverse}} (self, final\+\_\+dist, next\+\_\+state)
 \item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a50ae901bf0f81f3057545b804b84b2a4}{run}} (self)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a1d72985cc982ceb82ef7b26d13b8ad2d}{state}} = 0
+int \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a1d72985cc982ceb82ef7b26d13b8ad2d}{state}} = \mbox{\hyperlink{namespacepathing__plan__task_a01d13917567445a34dbb2933c4492bdb}{LINE\+\_\+\+FOLLOW\+\_\+\+STATE\+\_\+0}}
 \item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_abff51fcfeaf60454f26345295c001e2c}{total\+\_\+dist}} = total\+\_\+dist
 \item 
@@ -36,34 +44,90 @@ int \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a1253595431c8daad
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a4f93c869bce694c024134b1281a55273}{centroid\+\_\+goal}} = centroid\+\_\+goal
 \item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a51be1d30bc9417f40801cbd9e713c485}{yaw\+\_\+goal}} = yaw\+\_\+goal
+\item 
+\mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a937263f8369bcfc879238dca1922003f}{bump\+\_\+on}} = bump\+\_\+on
+\item 
+int \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_ae15a11ebb17ec4dedacf57d2c5610ce0}{bump\+\_\+flg}} = bump\+\_\+flg
+\item 
+int \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a52e8874ddec1618d5c70406f0bc82809}{bump\+\_\+off}} = 0
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 add description here 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00005}{5}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00053}{53}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 
 
 \label{doc-constructors}
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classpathing__plan__task_1_1pathing__plan_a90a87ccefc7d5f39c373ebb9e0940a70}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!\_\_init\_\_@{\_\_init\_\_}}
+\Hypertarget{classpathing__plan__task_1_1pathing__plan_a38b6d3f0f49f0dd291b72ed599b9964a}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!\_\_init\_\_@{\_\_init\_\_}}
 \index{\_\_init\_\_@{\_\_init\_\_}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
 \doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
-{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_a90a87ccefc7d5f39c373ebb9e0940a70} 
-pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{total\+\_\+dist}{, }\item[{}]{automatic\+\_\+mode}{, }\item[{}]{c\+\_\+state}{, }\item[{}]{fwd\+\_\+ref}{, }\item[{}]{piv\+\_\+ref}{, }\item[{}]{yaw}{, }\item[{}]{centroid\+\_\+goal}{, }\item[{}]{yaw\+\_\+goal}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_a38b6d3f0f49f0dd291b72ed599b9964a} 
+pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{total\+\_\+dist}{, }\item[{}]{automatic\+\_\+mode}{, }\item[{}]{c\+\_\+state}{, }\item[{}]{fwd\+\_\+ref}{, }\item[{}]{piv\+\_\+ref}{, }\item[{}]{yaw}{, }\item[{}]{centroid\+\_\+goal}{, }\item[{}]{yaw\+\_\+goal}{, }\item[{}]{bump\+\_\+on}{, }\item[{}]{bump\+\_\+flg}{}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00008}{8}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00056}{56}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 
 
 \label{doc-func-members}
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classpathing__plan__task_1_1pathing__plan_a29b99a247d490f7e9d969d3622cd4500}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!alignment\_control@{alignment\_control}}
+\index{alignment\_control@{alignment\_control}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
+\doxysubsubsection{\texorpdfstring{alignment\_control()}{alignment\_control()}}
+{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_a29b99a247d490f7e9d969d3622cd4500} 
+pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+alignment\+\_\+control (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{next\+\_\+state}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00102}{102}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{classpathing__plan__task_1_1pathing__plan_a7cabe7403a1b005a063a5fd59b557e8e}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!alignment\_goal@{alignment\_goal}}
+\index{alignment\_goal@{alignment\_goal}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
+\doxysubsubsection{\texorpdfstring{alignment\_goal()}{alignment\_goal()}}
+{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_a7cabe7403a1b005a063a5fd59b557e8e} 
+pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+alignment\+\_\+goal (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{yaw\+\_\+goal}{, }\item[{}]{rot\+\_\+direction}{, }\item[{}]{next\+\_\+state}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00087}{87}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{classpathing__plan__task_1_1pathing__plan_a2846b46235f46f34c45cb0d19f18619c}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!free\_traverse@{free\_traverse}}
+\index{free\_traverse@{free\_traverse}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
+\doxysubsubsection{\texorpdfstring{free\_traverse()}{free\_traverse()}}
+{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_a2846b46235f46f34c45cb0d19f18619c} 
+pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+free\+\_\+traverse (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{final\+\_\+dist}{, }\item[{}]{next\+\_\+state}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00109}{109}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{classpathing__plan__task_1_1pathing__plan_afdc5715b2647cb1fe291cb542f25e686}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!line\_following@{line\_following}}
+\index{line\_following@{line\_following}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
+\doxysubsubsection{\texorpdfstring{line\_following()}{line\_following()}}
+{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_afdc5715b2647cb1fe291cb542f25e686} 
+pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+line\+\_\+following (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{final\+\_\+dist}{, }\item[{}]{next\+\_\+state}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00079}{79}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a50ae901bf0f81f3057545b804b84b2a4}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!run@{run}}
 \index{run@{run}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
@@ -72,10 +136,10 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+run (\begin{DoxyParamCaption}\
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00028}{28}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00119}{119}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 Here is the call graph for this function\+:
-% FIG 0
+% FIG 5
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_ad08c3360eb952dab07e98c69169c43b5}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!wrapper@{wrapper}}
 \index{wrapper@{wrapper}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
 \doxysubsubsection{\texorpdfstring{wrapper()}{wrapper()}}
@@ -84,10 +148,10 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+wrapper (\begin{DoxyParamCapti
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00020}{20}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00071}{71}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 Here is the caller graph for this function\+:
-% FIG 1
+% FIG 6
 
 
 \label{doc-variable-members}
@@ -101,7 +165,37 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+automatic\+\_\+mode = automati
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00011}{11}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00059}{59}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+
+\Hypertarget{classpathing__plan__task_1_1pathing__plan_ae15a11ebb17ec4dedacf57d2c5610ce0}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!bump\_flg@{bump\_flg}}
+\index{bump\_flg@{bump\_flg}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
+\doxysubsubsection{\texorpdfstring{bump\_flg}{bump\_flg}}
+{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_ae15a11ebb17ec4dedacf57d2c5610ce0} 
+int pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+bump\+\_\+flg = bump\+\_\+flg}
+
+
+
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00068}{68}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+
+\Hypertarget{classpathing__plan__task_1_1pathing__plan_a52e8874ddec1618d5c70406f0bc82809}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!bump\_off@{bump\_off}}
+\index{bump\_off@{bump\_off}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
+\doxysubsubsection{\texorpdfstring{bump\_off}{bump\_off}}
+{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_a52e8874ddec1618d5c70406f0bc82809} 
+int pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+bump\+\_\+off = 0}
+
+
+
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00069}{69}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+
+\Hypertarget{classpathing__plan__task_1_1pathing__plan_a937263f8369bcfc879238dca1922003f}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!bump\_on@{bump\_on}}
+\index{bump\_on@{bump\_on}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
+\doxysubsubsection{\texorpdfstring{bump\_on}{bump\_on}}
+{\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_a937263f8369bcfc879238dca1922003f} 
+pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+bump\+\_\+on = bump\+\_\+on}
+
+
+
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00067}{67}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_acbccb9a71dd80a13c13fc310eebda0bd}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!c\_state@{c\_state}}
 \index{c\_state@{c\_state}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -111,7 +205,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+c\+\_\+state = c\+\_\+state}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00012}{12}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00060}{60}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a4f93c869bce694c024134b1281a55273}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!centroid\_goal@{centroid\_goal}}
 \index{centroid\_goal@{centroid\_goal}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -121,7 +215,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+centroid\+\_\+goal = centroid\
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00017}{17}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00065}{65}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_af0ae95dd8213d368e752fa9c7791dcfd}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!fwd\_ref@{fwd\_ref}}
 \index{fwd\_ref@{fwd\_ref}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -131,7 +225,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+fwd\+\_\+ref = fwd\+\_\+ref}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00013}{13}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00061}{61}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a7fb18bad7cfd09bb560c7fd72924c55f}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!piv\_ref@{piv\_ref}}
 \index{piv\_ref@{piv\_ref}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -141,17 +235,17 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+piv\+\_\+ref = piv\+\_\+ref}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00016}{16}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00064}{64}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a1d72985cc982ceb82ef7b26d13b8ad2d}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!state@{state}}
 \index{state@{state}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
 \doxysubsubsection{\texorpdfstring{state}{state}}
 {\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_a1d72985cc982ceb82ef7b26d13b8ad2d} 
-int pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+state = 0}
+int pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+state = \mbox{\hyperlink{namespacepathing__plan__task_a01d13917567445a34dbb2933c4492bdb}{LINE\+\_\+\+FOLLOW\+\_\+\+STATE\+\_\+0}}}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00009}{9}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00057}{57}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_abff51fcfeaf60454f26345295c001e2c}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!total\_dist@{total\_dist}}
 \index{total\_dist@{total\_dist}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -161,7 +255,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+total\+\_\+dist = total\+\_\+d
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00010}{10}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00058}{58}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a583a8c2f5f08dee13cad6bb6a66a5c3f}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!yaw@{yaw}}
 \index{yaw@{yaw}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -171,7 +265,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+yaw = yaw}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00014}{14}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00062}{62}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a51be1d30bc9417f40801cbd9e713c485}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!yaw\_goal@{yaw\_goal}}
 \index{yaw\_goal@{yaw\_goal}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -181,7 +275,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+yaw\+\_\+goal = yaw\+\_\+goal}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00018}{18}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00066}{66}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a1253595431c8daad87b2917f0b53214b}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!yaw\_init@{yaw\_init}}
 \index{yaw\_init@{yaw\_init}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -191,7 +285,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+yaw\+\_\+init = 0}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00015}{15}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00063}{63}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 
 

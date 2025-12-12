@@ -1,9 +1,16 @@
 var classpathing__plan__task_1_1pathing__plan =
 [
-    [ "__init__", "classpathing__plan__task_1_1pathing__plan.html#a90a87ccefc7d5f39c373ebb9e0940a70", null ],
+    [ "__init__", "classpathing__plan__task_1_1pathing__plan.html#a38b6d3f0f49f0dd291b72ed599b9964a", null ],
+    [ "alignment_control", "classpathing__plan__task_1_1pathing__plan.html#a29b99a247d490f7e9d969d3622cd4500", null ],
+    [ "alignment_goal", "classpathing__plan__task_1_1pathing__plan.html#a7cabe7403a1b005a063a5fd59b557e8e", null ],
+    [ "free_traverse", "classpathing__plan__task_1_1pathing__plan.html#a2846b46235f46f34c45cb0d19f18619c", null ],
+    [ "line_following", "classpathing__plan__task_1_1pathing__plan.html#afdc5715b2647cb1fe291cb542f25e686", null ],
     [ "run", "classpathing__plan__task_1_1pathing__plan.html#a50ae901bf0f81f3057545b804b84b2a4", null ],
     [ "wrapper", "classpathing__plan__task_1_1pathing__plan.html#ad08c3360eb952dab07e98c69169c43b5", null ],
     [ "automatic_mode", "classpathing__plan__task_1_1pathing__plan.html#aaa34ec5c7e9681cf64e98c73a2f2d497", null ],
+    [ "bump_flg", "classpathing__plan__task_1_1pathing__plan.html#ae15a11ebb17ec4dedacf57d2c5610ce0", null ],
+    [ "bump_off", "classpathing__plan__task_1_1pathing__plan.html#a52e8874ddec1618d5c70406f0bc82809", null ],
+    [ "bump_on", "classpathing__plan__task_1_1pathing__plan.html#a937263f8369bcfc879238dca1922003f", null ],
     [ "c_state", "classpathing__plan__task_1_1pathing__plan.html#acbccb9a71dd80a13c13fc310eebda0bd", null ],
     [ "centroid_goal", "classpathing__plan__task_1_1pathing__plan.html#a4f93c869bce694c024134b1281a55273", null ],
     [ "fwd_ref", "classpathing__plan__task_1_1pathing__plan.html#af0ae95dd8213d368e752fa9c7791dcfd", null ],

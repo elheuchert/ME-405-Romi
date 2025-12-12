@@ -7,9 +7,13 @@ var searchData=
   ['left_5fpos_4',['left_pos',['../classobserver_1_1observer.html#a4d7061522c61727df6161a08d0590de5',1,'observer::observer']]],
   ['left_5fvel_5',['left_vel',['../classobserver_1_1observer.html#a20feb00aff7dcdcf22d0416bf240f6bd',1,'observer::observer']]],
   ['left_5fvoltage_6',['left_voltage',['../classobserver_1_1observer.html#a00792ce0720e666b0174806fe76b4010',1,'observer::observer']]],
-  ['line_5fcontroller_7',['line_controller',['../classcontrol__task_1_1control__task.html#a44ebb940abd914ffeb21e05ad202f0ea',1,'control_task::control_task']]],
-  ['line_5fsensor_8',['line_sensor',['../classcontrol__task_1_1control__task.html#a665f91f9874675f6048b639504bd39b9',1,'control_task::control_task']]],
-  ['line_5fsensor_5fobj_9',['line_sensor_obj',['../namespacemain.html#ac673c452d9679261476593362e4f0560',1,'main']]],
-  ['line_5ftask_5fobj_10',['line_task_obj',['../namespacemain.html#a70035bf0b12c07b2c9779fbb73ff0f02',1,'main']]],
-  ['linesensor_11',['lineSensor',['../classline__task_1_1line__task.html#ab4bdcda5bb99d1207e9b8d952cee99d3',1,'line_task::line_task']]]
+  ['lf2_5fdist_7',['LF2_DIST',['../namespacepathing__plan__task.html#afb00225647785bb8f471d49d826dd4c8',1,'pathing_plan_task']]],
+  ['line_5fcontroller_8',['line_controller',['../classcontrol__task_1_1control__task.html#a44ebb940abd914ffeb21e05ad202f0ea',1,'control_task::control_task']]],
+  ['line_5ffollow_5f3_9',['LINE_FOLLOW_3',['../namespacepathing__plan__task.html#a91c66f2818d966584468ee018c5376e8',1,'pathing_plan_task']]],
+  ['line_5ffollow_5fstate_5f0_10',['LINE_FOLLOW_STATE_0',['../namespacepathing__plan__task.html#a01d13917567445a34dbb2933c4492bdb',1,'pathing_plan_task']]],
+  ['line_5ffollowing_5f2_11',['LINE_FOLLOWING_2',['../namespacepathing__plan__task.html#ad8f4c7b684f7abfd7c4fd144fd10a04f',1,'pathing_plan_task']]],
+  ['line_5fsensor_12',['line_sensor',['../classcontrol__task_1_1control__task.html#a665f91f9874675f6048b639504bd39b9',1,'control_task::control_task']]],
+  ['line_5fsensor_5fobj_13',['line_sensor_obj',['../namespacemain.html#ac673c452d9679261476593362e4f0560',1,'main']]],
+  ['line_5ftask_5fobj_14',['line_task_obj',['../namespacemain.html#a70035bf0b12c07b2c9779fbb73ff0f02',1,'main']]],
+  ['linesensor_15',['lineSensor',['../classline__task_1_1line__task.html#ab4bdcda5bb99d1207e9b8d952cee99d3',1,'line_task::line_task']]]
 ];

@@ -8,5 +8,11 @@ var searchData=
   ['yaw_5frate_5',['yaw_rate',['../classcontrol__task_1_1control__task.html#a8a4de7e80cf94239f6b85005d4e5fc40',1,'control_task::control_task']]],
   ['yaw_5fvelocity_6',['yaw_velocity',['../classimu__task_1_1imu__task.html#a455797d2fcf00398b91cf8c69988765e',1,'imu_task.imu_task.yaw_velocity'],['../classobserver_1_1observer.html#a970dd87c702ee5f8c767165f157273de',1,'observer.observer.yaw_velocity'],['../namespacemain.html#a5b2cdd7e2035cf286341c4ded5106f51',1,'main.yaw_velocity']]],
   ['yawgoal1_7',['YAWGOAL1',['../namespacepathing__plan__task.html#a4af5904c6abc692a7a63cd8f3a2bb2df',1,'pathing_plan_task']]],
-  ['yawgoal2_8',['YAWGOAL2',['../namespacepathing__plan__task.html#af36fe2f5cae134ca3330823bdc2d300c',1,'pathing_plan_task']]]
+  ['yawgoal2_8',['YAWGOAL2',['../namespacepathing__plan__task.html#af36fe2f5cae134ca3330823bdc2d300c',1,'pathing_plan_task']]],
+  ['yawgoal3_9',['YAWGOAL3',['../namespacepathing__plan__task.html#aafa3a6d0016a78eec8659f9287d277ff',1,'pathing_plan_task']]],
+  ['yawgoal4_10',['YAWGOAL4',['../namespacepathing__plan__task.html#a2dbc38312760e825d343f93b5f19a674',1,'pathing_plan_task']]],
+  ['yawgoal5_11',['YAWGOAL5',['../namespacepathing__plan__task.html#a94fc6cb9a3d19d2ecae8521dd7b00e7a',1,'pathing_plan_task']]],
+  ['yawgoal6_12',['YAWGOAL6',['../namespacepathing__plan__task.html#a4d0515529e285d83e523ef9524074b61',1,'pathing_plan_task']]],
+  ['yawgoal7_13',['YAWGOAL7',['../namespacepathing__plan__task.html#a3b588b09bd63202221026cc2091dad0c',1,'pathing_plan_task']]],
+  ['yawgoal8_14',['YAWGOAL8',['../namespacepathing__plan__task.html#a8de72c45cb38a04f9371a37582326ef1',1,'pathing_plan_task']]]
 ];

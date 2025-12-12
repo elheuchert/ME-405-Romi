@@ -105,14 +105,14 @@
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00101}\mbox{\hyperlink{namespacemain_a6a1040f681e6e6cbff54f303267e8d9d}{00101}}\ my\_motor\_Right\ =\ \mbox{\hyperlink{classmotor_1_1_motor}{Motor}}(Pin.cpu.B6,\ Pin.cpu.B10,\ Pin.cpu.A10,\ tim4,\ 2)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00102}\mbox{\hyperlink{namespacemain_a1d9f6bc7fe75d611a4d7bb7b13d62661}{00102}}\ encoder\_Left\ =\ \mbox{\hyperlink{classencoder_1_1_encoder}{Encoder}}(tim1,\ Pin.cpu.A8,\ Pin.cpu.A9)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00103}00103\ }
-\DoxyCodeLine{\Hypertarget{main_8py_source_l00104}\mbox{\hyperlink{namespacemain_a409564ebc279aa9c826a6312bb917605}{00104}}\ bump\_sensor\_left\ =\ \mbox{\hyperlink{classbump____sensor_1_1_bump___sensor}{Bump\_Sensor}}(Pin.cpu.A0,\ Pin.cpu.A1,\ Pin.cpu.A2)}
-\DoxyCodeLine{\Hypertarget{main_8py_source_l00105}\mbox{\hyperlink{namespacemain_aec8238828938ea6fab75f87203c93296}{00105}}\ bump\_sensor\_right\ =\ \mbox{\hyperlink{classbump____sensor_1_1_bump___sensor}{Bump\_Sensor}}(Pin.cpu.A0,\ Pin.cpu.A1,\ Pin.cpu.A2)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00104}\mbox{\hyperlink{namespacemain_aec8238828938ea6fab75f87203c93296}{00104}}\ bump\_sensor\_right\ =\ \mbox{\hyperlink{classbump____sensor_1_1_bump___sensor}{Bump\_Sensor}}(Pin.cpu.B13,\ Pin.cpu.B3,\ Pin.cpu.B5)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00105}\mbox{\hyperlink{namespacemain_a409564ebc279aa9c826a6312bb917605}{00105}}\ bump\_sensor\_left\ =\ \mbox{\hyperlink{classbump____sensor_1_1_bump___sensor}{Bump\_Sensor}}(Pin.cpu.B11,\ Pin.cpu.B15,\ Pin.cpu.B14)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00106}00106\ }
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00107}00107\ }
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00108}\mbox{\hyperlink{namespacemain_aee99cac7f4acb57da2b9968b92a3cba8}{00108}}\ controller\_obj\_left\ =\ \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.2,1.95,1,\ ERR\_SAT\_LEFT,\ EFF\_SAT\_LEFT)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00109}\mbox{\hyperlink{namespacemain_a8f4ca823f5b6469c131c11bc172929e5}{00109}}\ controller\_obj\_right\ =\ \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.2,1.95,1,\ ERR\_SAT\_RIGHT,\ EFF\_SAT\_RIGHT)}
-\DoxyCodeLine{\Hypertarget{main_8py_source_l00110}\mbox{\hyperlink{namespacemain_a3d4633e5f3eda96154ec1465a66e34a9}{00110}}\ controller\_obj\_line\ =\ \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(150,\ 5,\ 1,\ ERR\_SAT\_LINE,\ EFF\_SAT\_LINE)}
-\DoxyCodeLine{\Hypertarget{main_8py_source_l00111}\mbox{\hyperlink{namespacemain_a87781fe2ab720e23763c73b2bcb5e523}{00111}}\ controller\_obj\_yaw\ =\ \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.1,0,1,\ ERR\_SAT\_YAW,\ EFF\_SAT\_YAW)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00110}\mbox{\hyperlink{namespacemain_a3d4633e5f3eda96154ec1465a66e34a9}{00110}}\ controller\_obj\_line\ =\ \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(150,\ 10,\ 1,\ ERR\_SAT\_LINE,\ EFF\_SAT\_LINE)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00111}\mbox{\hyperlink{namespacemain_a87781fe2ab720e23763c73b2bcb5e523}{00111}}\ controller\_obj\_yaw\ =\ \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.8,.3,1,\ ERR\_SAT\_YAW,\ EFF\_SAT\_YAW)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00112}00112\ }
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00113}\mbox{\hyperlink{namespacemain_a8af061094bb28aa807fdc9cda5451322}{00113}}\ ir1\ =\ \mbox{\hyperlink{classir__sensor_1_1_i_r___sensor}{IR\_Sensor}}(Pin.cpu.A6)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00114}\mbox{\hyperlink{namespacemain_abb79dc8dbdbff394690b7a63bbd5673b}{00114}}\ ir2\ =\ \mbox{\hyperlink{classir__sensor_1_1_i_r___sensor}{IR\_Sensor}}(Pin.cpu.A7)}
@@ -147,8 +147,8 @@
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00143}\mbox{\hyperlink{namespacemain_a70035bf0b12c07b2c9779fbb73ff0f02}{00143}}\ line\_task\_obj\ =\ \mbox{\hyperlink{classline__task_1_1line__task}{line\_task}}(line\_sensor\_obj,\ l\_state,\ need\_Calibrate,\ ready\_Black,\ ready\_White,centroid)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00144}\mbox{\hyperlink{namespacemain_aa9f86271ab69a7d9e6ba933a96537814}{00144}}\ imu\_task\_obj\ =\ \mbox{\hyperlink{classimu__task_1_1imu__task}{imu\_task}}(imu\_obj,\ imu\_flg,\ yaw,\ yaw\_velocity)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00145}\mbox{\hyperlink{namespacemain_a196f04a5513f96e98cd81160157b5368}{00145}}\ observer\_obj\ =\ \mbox{\hyperlink{classobserver_1_1observer}{observer}}(position\_l,\ position\_r,\ yaw,\ yaw\_velocity,\ PWM\_l,\ PWM\_r,\ velocity\_l,\ velocity\_r,\ total\_dist)}
-\DoxyCodeLine{\Hypertarget{main_8py_source_l00146}\mbox{\hyperlink{namespacemain_a412a99a7a88335eea87ee30741938fbd}{00146}}\ pathing\_obj\ =\ \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan}{pathing\_plan}}(total\_dist,\ automatic\_mode,\ c\_state,\ fwd\_ref,\ piv\_ref,\ yaw,\ centroid\_goal,\ yaw\_goal)}
-\DoxyCodeLine{\Hypertarget{main_8py_source_l00147}00147\ \textcolor{comment}{\#bump\_obj\ =\ Bump\_Task(c\_state,\ bump\_sensor\_right,\ bump\_sensor\_left,\ bump\_on\_off,\ bump\_flg)}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00146}\mbox{\hyperlink{namespacemain_a412a99a7a88335eea87ee30741938fbd}{00146}}\ pathing\_obj\ =\ \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan}{pathing\_plan}}(total\_dist,\ automatic\_mode,\ c\_state,\ fwd\_ref,\ piv\_ref,\ yaw,\ centroid\_goal,\ yaw\_goal,\ bump\_on\_off,\ bump\_flg)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00147}\mbox{\hyperlink{namespacemain_ae2f2cc9924cb987f58aad0b2fd1e6471}{00147}}\ bump\_obj\ =\ \mbox{\hyperlink{classbump__task_1_1_bump___task}{Bump\_Task}}(c\_state,\ bump\_sensor\_right,\ bump\_sensor\_left,\ bump\_on\_off,\ bump\_flg)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00148}00148\ }
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00149}00149\ \textcolor{comment}{\#\ Create\ task\ objects\ with\ the\ task\ class\ objects}}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00150}\mbox{\hyperlink{namespacemain_af4b8f4290f8d32e70654f6deb864787f}{00150}}\ task1\ =\ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(data\_collector\_obj.run,\ name=\textcolor{stringliteral}{"{}data\_collector"{}},\ priority=2,\ period=18,\ profile=\textcolor{keyword}{True},\ trace=\textcolor{keyword}{False},\ shares=())}
@@ -160,7 +160,7 @@
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00156}\mbox{\hyperlink{namespacemain_aebef59d830c2aef562d9b0f73bb4c0b3}{00156}}\ task7\ =\ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(imu\_task\_obj.run,\ name\ =\ \textcolor{stringliteral}{"{}imu\_task"{}},\ priority\ =\ 6,\ period\ =\ 20,\ profile=\ \textcolor{keyword}{True},\ trace=\ \textcolor{keyword}{False},\ shares\ =\ ())}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00157}\mbox{\hyperlink{namespacemain_afebbdaf4ea6b66c789a7221ce2b6de1a}{00157}}\ task8\ =\ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(observer\_obj.run,\ name\ =\ \textcolor{stringliteral}{"{}observer"{}},\ priority\ =\ 4,\ period\ =\ 20,\ profile\ =\ \textcolor{keyword}{True},\ trace\ =\ \textcolor{keyword}{False},\ shares\ =\ ())}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00158}\mbox{\hyperlink{namespacemain_ad4e8471940a5aad6ed1733bf026d7611}{00158}}\ task9\ =\ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(pathing\_obj.run,\ name=\ \textcolor{stringliteral}{"{}pathing"{}},\ priority\ =\ 3,\ period\ =\ 30,\ profile\ =\ \textcolor{keyword}{True},\ trace\ =\ \textcolor{keyword}{False},\ shares\ =\ ())}
-\DoxyCodeLine{\Hypertarget{main_8py_source_l00159}00159\ \textcolor{comment}{\#task10\ =\ cotask.Task(bump\_obj,\ name\ =\ "{}bump\ task"{},\ priority\ =\ 4,\ period\ =\ 25,\ profile\ =\ True,\ trace\ =\ False,\ shares=())}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00159}\mbox{\hyperlink{namespacemain_a1877282db2c93fa5a8f3ceff8db174df}{00159}}\ task10\ =\ \mbox{\hyperlink{classcotask_1_1_task}{cotask.Task}}(bump\_obj.run,\ name\ =\ \textcolor{stringliteral}{"{}bump\ task"{}},\ priority\ =\ 2,\ period\ =\ 50,\ profile\ =\ \textcolor{keyword}{True},\ trace\ =\ \textcolor{keyword}{False},\ shares=())}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00160}00160\ }
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00161}00161\ \textcolor{comment}{\#\ Add\ tasks\ to\ the\ scheduler\ }}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00162}00162\ cotask.task\_list.append(task1)}
@@ -172,7 +172,7 @@
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00168}00168\ cotask.task\_list.append(task7)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00169}00169\ cotask.task\_list.append(task8)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00170}00170\ cotask.task\_list.append(task9)}
-\DoxyCodeLine{\Hypertarget{main_8py_source_l00171}00171\ \textcolor{comment}{\#cotask.task\_list.append(task10)}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00171}00171\ cotask.task\_list.append(task10)}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00172}00172\ }
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00173}00173\ \textcolor{comment}{\#\ Run\ scheduler}}
 \DoxyCodeLine{\Hypertarget{main_8py_source_l00174}00174\ \textcolor{keywordflow}{try}:}

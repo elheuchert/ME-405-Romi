@@ -1,5 +1,6 @@
 var index =
 [
-    [ "Introduction", "index.html#intro", null ],
-    [ "hardware", "index.html#hardware", null ]
+    [ "Introduction", "index.html#intro", [
+      [ "Hardware", "index.html#hardware", null ]
+    ] ]
 ];
