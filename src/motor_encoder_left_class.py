@@ -1,10 +1,23 @@
 from motor import Motor
 from encoder import Encoder
 from pyb import Timer, Pin
-# yield the state it completed
-## @brief add description here
+## @brief Left Motor Encoder Class 
+#
+# This task class which contains a generator finite state machine that runs multiple functions.
+#  
+# It drives the motor, reads the encoder and runs continuously, setting flags that are shared with other tasks.  
 class motor_encoder_left_class:   
     
+    ## @brief User Interface
+    # @param 1 Motor Object
+    # @param 2 Encoder Object
+    # @param 3 Left Motor State in UI
+    # @param 4 Left Encoder Position
+    # @param 5 Left Motor Position
+    # @param 6 Left Motor Velocity
+    # @param 7 Times
+    # @param 8 Left Motor PWM
+    # @param 9 Delay
     def __init__(self, motor, encoder, m_state_l, position_l, velocity_l, times, PWM_l, delay):
         self.my_motor_Left = motor
         self.encoder_Left = encoder
@@ -16,6 +29,20 @@ class motor_encoder_left_class:
         self.delay_count = 0
         self.state = 0
         self.delay=delay
+    
+    ## @brief Encoder Left Run
+    #
+    # <b> State 0 </b> Enable The Left Motor
+    #
+    # <b> State 1 </b> Wait to get a different command from UI
+    #
+    # <b> State 2 </b> Set Effort
+    #
+    # <b> State 3 </b> Disable Motor
+    #
+    # <b> State 4 </b> Enable Motor and Wait State
+    #
+    # <b> State 5 </b> Stop the Motor and Zero the Encoder Ticks
 
     def run(self):
         while True:
