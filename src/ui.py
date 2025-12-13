@@ -6,7 +6,7 @@ from pyb import UART
 #  
 # This class runs continuously, setting flags that are shared with other tasks. 
 class ui:
-    ## @brief User Interface
+    ## @brief User Interface Initialization
     # @param P1 Testing Flag
     # @param P2 Left Motor State
     # @param P3 RIght Motor State
@@ -66,7 +66,7 @@ class ui:
         self.automatic_mode = automatic_mode
         self.imu_flg = imu_flg
     
-    ## @brief UI Run
+    ## @brief Runs the various tasks in UI
     #
     # <b> State 0 </b> Checking for Bluetooth Command
     #
