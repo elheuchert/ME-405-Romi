@@ -4,6 +4,9 @@ from pyb import Pin, Timer, ADC
 # This class runs continuously, setting flags that are shared with other tasks.
 #
 # The Bump task uses two sensor objects, for left and right side of the Romi. Any collision with either side will be treated the same.
+#  @author Alex Power, Lucas Heuchert, Erik Heuchert
+#  @date   2025-Dec-8 Approximate date of creation of file
+#  @date   2025-Dec-12 Final alterations made
 class Bump_Task:
     ## @brief Shares are passed as parameters, used to communicate between tasks in the cooperative scheduler.  
     # @param c_state A flag used to tell which control state is desired
@@ -22,7 +25,7 @@ class Bump_Task:
 
     ## @brief This function runs via the cooperative scheduler.
     # 
-    # <b> State 1 </b> Not reading sensors
+    # <b> State 0 </b> Not reading sensors
     #
     # <b> State 1 </b> Reading sensors
     #
