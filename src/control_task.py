@@ -1,5 +1,66 @@
-## @brief add description here
+## @file control_task.py
+#  This file contains a class to create a control_task object which is compatible with
+#  the cotask scheduler to run as a cooperative task. 
+#
+#  The active control_task object uses a finite state machine design to control the motion of
+#  the Pololu ROMI kit used in ME 405, Fall 2025. The task is given 4 PI controllers made in main
+#  that are linked to the left wheel, right wheel, the centroid of the line sensor, and the heading of
+#  the IMU sensor. Each state sets the appropriate set point of each controller according the expected 
+#  motion of the bot. 
+# 
+#  @author Alex Power, Lucas Heuchert, Erik Heuchert
+#  @author ChatGPT5 was used for debugging purposes but not to generate this code
+#  @date   2025-Nov-10 Approximate date of creation of file
+#  @date   2025-Dec-12 Final alterations made
+# 
+
 class control_task: 
+## @brief __init__ is the control_task object initializer which takes 25 arguments. 
+#         The arguments are a mix of controllers, data shares, and flag shares.
+#  @param fwd_ref : fwd_ref is an integer share that holds the expected forward reference speed of ROMI in mm.s.
+#                   It is set by the UI task for testing purposes or by pathing plan task for course navigation. 
+#  @param arc_ref : arc_ref is an integer share that holds the expected turning arc of ROMI in mm of arc radius. 
+#                   It is set by the UI task for testing purposes. 
+#  @param piv_ref : piv_ref is a float share that holds the expected pivoting reference angular speed of ROMI in rad/s.
+#                   It is set by the UI task for testing purposes or by pathing plan task for course navigation. 
+#  @param c_state : c_state is an integer share flag that holds the expected state of control_task. 
+#                   It is set by UI or pathing plan to tell control_task the expected motion of ROMI. 
+#  @param my_controller_left : my_controller_left is a controller object made in main that has gains for controlling
+#                              the motion of the left wheel. 
+#  @param my_controller_right: my_controller_right is a controller object made in main that has gains for controlling
+#                              the motion of the right wheel. 
+
+#  @param position_l: position_l is a float share that the left motor and encoder class fills with the current left motor position.
+#  @param velocity_l: velocity_l is a float share that the left motor and encoder class fills with the current left motor velocity.
+#  @param position_r: position_r is a float share that the right motor and encoder class fills with the current right motor position.
+#  @param velocity_r: velocity_r is a float share that the right motor and encoder class fills with the current right motor velocity.
+
+#  @param PWM_l : PWM_l is a float share that control_task sets to a value -100 to 100 as the duty cycle of the left wheel's enable pin.
+#                 The motor_encoder_left_class will use it. 
+#  @param PWM_r : PWM_r is a float share that control_task sets to a value -100 to 100 as the duty cycle of the right wheel's enable pin.
+#                 The motor_encoder_right_class will use it. 
+#  @param encoder_Right: encoder_Right is an encoder object attached to the right encoder. It is used here to save an offset and zero the encoders
+#                        for accurate observer behavior. It is also used to get the dt between runs for the integral sums in the motor controllers. 
+#  @param encoder_Left :encoder_Left is an encoder object attached to the left encoder. It is used here to save an offset and zero the encoders
+#                        for accurate observer behavior. It is also used to get the dt between runs for the integral sums in the motor controllers. 
+#  @param m_state_l : m_state_l is an integer share flag used by control task to tell the left motor encoder class which state the left motor needs to be in. 
+#  @param m_state_r : m_state_r is an integer share flag used by control task to tell the right motor encoder class which state the right motor needs to be in. 
+
+#  @param centroid : centroid is a float share that the line sensor task fills with the current location of the line that ROMI is following. It is used for the
+#                    automatic line following mode in control task. 
+#  @param line_controller : line_controller is a controller object made in main that has gains for changing the set point of the wheel controllers slightly to move
+#                           the centroid of the line to a certain point. 
+#  @param automatic_mode :  automatic_mode is an integer share flag that is set to tell control_task that it should start automatically following a line. 
+#                           It is set by UI for testing or pathing plan for course navigation.
+#  @param line_sensor : line_sensor is the line_sensor object made in main. It is not used in control task's current implementation but was used before for debugging the line following. 
+#  @param need_Calibrate : need_Calibrate is an integer share flag that tells control task whether the IR sensors are calibrated and control task is ok to start
+#                          line following. It is set by the line sensor task. 
+#  @param real_yaw : real_yaw is a float share that the IMU task fills with the current yaw of ROMI. control_task uses it for heading control. 
+#  @param centroid_goal: centroid_goal is a float share that the pathing plan task sets. It is then used as the line following centroid controller set point. 
+#  @param yaw_goal : yaw_goal is a float share that is the set point of the heading control. It is the angle ROMI should turn to on the course and is set by
+#                    pathing plan for course navigation. 
+#  @param controller_yaw : controller_yaw is a controller object made in main. It looks at the current yaw of ROMI to get new wheel speeds for pivoting towards the yaw_goal. 
+#                          It is set by the pathing plan for course navigation. 
 
     def __init__(self, fwd_ref, arc_ref, piv_ref, c_state, my_controller_left, my_controller_right, 
                  position_l, velocity_l, position_r, velocity_r, PWM_l, PWM_r, encoder_Right, encoder_Left, 
@@ -34,13 +95,36 @@ class control_task:
         self.controller_yaw = controller_yaw
         self.idx = 0
         self.startup = 0
+## @brief run is the generator that the cotask scheduler will run since our tasks are objects. All shares it needs are already given to 
+#         the task object on initialization. The generator will only run one state at a time on each run of the task, but it will always 
+#         update the PWM of the motors to their expected set point on every loop. 
+#  @detail The finite state machine for control_task has 8 states. 
+#          State 0: Hub State. This state waits for either automatic_mode to be set or c_state to be set for a state change to active controls.
+#          State 1: Forward State. If c_state == 1, control task will use the fwd_ref to drive the wheels forward at that speed in mm/s
+#          State 2: Turn State. If c_state == 2, control task will use the arc_ref to drive the wheels to that turn radius in mm
+#          State 3: Pivot State. If c_state == 3, control task will use the piv_ref to drive the wheels to pivot in place at that angular speed in rad/s
+#          State 4: Disable State. If c_state ==4, control task will turn both motors off and clear all references then return to hub
+#          State 5: Automatic Control State. If automatic_mode == 1 and the line sensor is calibrated, control task will drive forward at a set 100 mm/s
+#                   and made small adjustments to each wheel to place the centroid at centroid_goal based off of the centroid controllers values.
+#          State 6: Calibrate Check State. If automatic_mode == 1, control task will check the line sensor is calibrated before following the line. 
+#          State 7: Heading Control State. If c_state == 7, control task will use the yaw controller to get a reference pivoting speed to move the motors
+#                   unitl the yaw matches close to yaw_goal. 
+#          Always : Every loop runs the control loops on the motors to keep them up to date on their reference speeds. 
+#
+#          Note   : Many of the comments at the bottom of the file are to comment out print statements for debugging purposes
+#
+#          IMPORTANT PWM Logic Filtering:
+#          Unknown why to the authors but testing found that giving both wheels the same sign on PWM will have expected behavior.
+#          If either PWM is 0 or the PWM values have different signs the motors will spin in the opposite direction of the sign of the PWM. 
+#          The if logic at the bottom of the generator handles this but it is unknown if this is required if a different piece of ROMI hardware was used
+#          or if this is a software issue. If wheels immediately saturate on turning it is likely this issue does not exist for users hardware. 
 
     def run(self):
         
         while(True):
             
             if self.state == 0:
-
+            # Hub State
                 if self.automatic_mode.get() == 1:
                     print("going dark")
                     self.state = 6
@@ -88,6 +172,7 @@ class control_task:
                 #self.state = 0
                 #self.c_state.put(0)
                 yield 3
+            # Disable State
             elif self.state == 4:
                 print("I tried to turn them off")
                 self.controller_left.change_Ref(0)
@@ -122,12 +207,8 @@ class control_task:
                 #print(self.line_controller.get_Error())
                 #print(self.yaw_rate)
                 #print(f" centroid= {self.centroid.get()}")
-                #if self.yaw_rate > 0.3 or self.yaw_rate < -0.3: 
                 self.controller_left.change_Ref(100-self.yaw_rate)
                 self.controller_right.change_Ref(100+self.yaw_rate)
-                #else:
-                #self.controller_left.change_Ref(75)
-                #self.controller_right.change_Ref(75)
                 yield 5
 
             elif self.state == 6:
@@ -162,6 +243,7 @@ class control_task:
             #self.m_state_l.put(2)
             #self.PWM_r.put(cntrl_r)
             #self.m_state_r.put(2)
+
             # For PI Tests 
             new_left_pwm = self.controller_left.pi_Control(self.velocity_l.get(), self.enc_L.get_dt())
             new_right_pwm = self.controller_right.pi_Control(self.velocity_r.get(), self.enc_R.get_dt())
@@ -172,6 +254,8 @@ class control_task:
             #self.PWM_r.put(new_right_pwm)
             
             #print(f"new_left after filter {self.PWM_l.get()}")
+
+            #IMPORTANT LOGIC CHECKS READ @detail
             if new_left_pwm > 0 and new_right_pwm > 0:
                 # Both positive
                 self.PWM_l.put(new_left_pwm)
@@ -201,7 +285,6 @@ class control_task:
                 self.PWM_l.put(0)
                 self.PWM_r.put(new_right_pwm)
             # print(f"new_right after filter {self.PWM_l.get()}")
-            
             # self.PWM_l.put(self.controller_left.pi_Control(self.velocity_l.get(), self.enc_L.get_dt()))
             #self.PWM_l.put(0)
             # print(f"Left PWM{self.PWM_l.get()}")
@@ -219,6 +302,8 @@ class control_task:
             #self.PWM_r.put(-50)
             #print("Right PWM")
             #print(self.PWM_r.get())
+            
+            #Ask motors to update their PWM every task cycle
             self.m_state_l.put(2)
             self.m_state_r.put(2)
             
