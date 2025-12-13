@@ -5,9 +5,9 @@ digraph "observer.observer.calc_output"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="RL";
-  Node1 [id="Node000001",label="observer.observer.calc\l_output",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [id="Node000001",label="observer.observer.calc\l_output",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Calculates the output vector using the continuous model with no feedback."];
   Node1 -> Node2 [id="edge3_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="observer.observer.RK4\l_solver",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classobserver_1_1observer.html#a429157926e4792d19d5af7a59bcdcab2",tooltip=" "];
+  Node2 [id="Node000002",label="observer.observer.RK4\l_solver",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classobserver_1_1observer.html#a429157926e4792d19d5af7a59bcdcab2",tooltip="RK4_solver is an implementation of the RK4 algorithm used to estimate the state when using a continuo..."];
   Node2 -> Node3 [id="edge4_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="observer.observer.run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classobserver_1_1observer.html#adc38055d5537a80ed9aea905f27d0428",tooltip=" "];
+  Node3 [id="Node000003",label="observer.observer.run",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classobserver_1_1observer.html#adc38055d5537a80ed9aea905f27d0428",tooltip="Generator that the cotask scheduler will run since our tasks are objects."];
 }

@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['calc_5fderivative_0',['calc_derivative',['../namespaceobserver.html#a345a90f5d63d54a21190facff3eb2b4e',1,'observer']]],
-  ['calc_5fdiscrete_5foutput_1',['calc_discrete_output',['../namespaceobserver.html#aa0ba8bfb71c9be1d30e8173079c0b1b4',1,'observer']]],
-  ['calc_5fdiscrete_5fstate_2',['calc_discrete_state',['../namespaceobserver.html#a6242b332b9bad573532d0120f46bac25',1,'observer']]],
-  ['calc_5foutput_3',['calc_output',['../namespaceobserver.html#a7537934c5ae4a728fca68bb8df7280ec',1,'observer']]],
+  ['calc_5fderivative_0',['calc_derivative',['../classobserver_1_1observer.html#ad221ff3384370e0845c8d603ac270957',1,'observer::observer']]],
+  ['calc_5fdiscrete_5foutput_1',['calc_discrete_output',['../classobserver_1_1observer.html#a920f96f59a2a7421bf959ff669959f3d',1,'observer::observer']]],
+  ['calc_5fdiscrete_5fstate_2',['calc_discrete_state',['../classobserver_1_1observer.html#aae8e6119f533f85576c4df6e37280709',1,'observer::observer']]],
+  ['calc_5foutput_3',['calc_output',['../classobserver_1_1observer.html#ad4b8e50df7f308f88216b5ddd9bc08c0',1,'observer::observer']]],
   ['calibrate_4',['calibrate',['../classline__sensor_1_1_line___sensor.html#a7202b671d570b088b85de2e57b64fcf0',1,'line_sensor::Line_Sensor']]],
   ['calibration_5fcheck_5',['calibration_check',['../classimu_1_1_i_m_u.html#a611190325ea22dc5e7ec5b333a19c95b',1,'imu::IMU']]],
   ['calibration_5fcheck_5faccel_6',['calibration_check_accel',['../classimu_1_1_i_m_u.html#acea538246f0be91fbf2bffbf8a4a444b',1,'imu::IMU']]],

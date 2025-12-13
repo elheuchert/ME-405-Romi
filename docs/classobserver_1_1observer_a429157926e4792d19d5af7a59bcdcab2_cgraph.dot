@@ -5,9 +5,9 @@ digraph "observer.observer.RK4_solver"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node1 [id="Node000001",label="observer.observer.RK4\l_solver",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [id="Node000001",label="observer.observer.RK4\l_solver",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="RK4_solver is an implementation of the RK4 algorithm used to estimate the state when using a continuo..."];
   Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="observer.observer.calc\l_derivative",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classobserver_1_1observer.html#ad221ff3384370e0845c8d603ac270957",tooltip=" "];
+  Node2 [id="Node000002",label="observer.observer.calc\l_derivative",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classobserver_1_1observer.html#ad221ff3384370e0845c8d603ac270957",tooltip="Calculates the derivative state vector using the continuous model with no feedback."];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="observer.observer.calc\l_output",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classobserver_1_1observer.html#ad4b8e50df7f308f88216b5ddd9bc08c0",tooltip=" "];
+  Node3 [id="Node000003",label="observer.observer.calc\l_output",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classobserver_1_1observer.html#ad4b8e50df7f308f88216b5ddd9bc08c0",tooltip="Calculates the output vector using the continuous model with no feedback."];
 }

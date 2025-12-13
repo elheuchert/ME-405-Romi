@@ -92,62 +92,18 @@ $(function(){initNavTree('observer_8py.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>This file contains a class to create a observer object which is compatible with the cotask scheduler to run as a cooperative task.  
-<a href="#details">More...</a></p>
-
 <p><a href="observer_8py_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:observer_2Eobserver" id="r_observer_2Eobserver"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classobserver_1_1observer.html">observer.observer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">observer class that can be initialized to be run with the cotask scheduler.  <a href="classobserver_1_1observer.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Observer task object compatible with the cotask scheduler.  <a href="classobserver_1_1observer.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:observer" id="r_observer"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html">observer</a></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a841a69a03d1c2403f91297ce768526fb" id="r_a841a69a03d1c2403f91297ce768526fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#a841a69a03d1c2403f91297ce768526fb">observer.update_x</a> (self)</td></tr>
-<tr class="memdesc:a841a69a03d1c2403f91297ce768526fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">update_x updates the state vector with real values and the last guess total distance  <br /></td></tr>
-<tr class="memitem:a8c3aef460dd18b304705dbf0c8fae8bb" id="r_a8c3aef460dd18b304705dbf0c8fae8bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#a8c3aef460dd18b304705dbf0c8fae8bb">observer.update_u</a> (self)</td></tr>
-<tr class="memdesc:a8c3aef460dd18b304705dbf0c8fae8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">update_u updates the input vector with real values assuming full battery voltage  <br /></td></tr>
-<tr class="memitem:ad67aa1863a9e1c0810028b2f05d7712e" id="r_ad67aa1863a9e1c0810028b2f05d7712e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#ad67aa1863a9e1c0810028b2f05d7712e">observer.update_y</a> (self)</td></tr>
-<tr class="memdesc:ad67aa1863a9e1c0810028b2f05d7712e"><td class="mdescLeft">&#160;</td><td class="mdescRight">update_y updates the output vector with real values  <br /></td></tr>
-<tr class="memitem:adfb5029006db8f540249f2e100eafd87" id="r_adfb5029006db8f540249f2e100eafd87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#adfb5029006db8f540249f2e100eafd87">observer.update_u_star</a> (self)</td></tr>
-<tr class="memdesc:adfb5029006db8f540249f2e100eafd87"><td class="mdescLeft">&#160;</td><td class="mdescRight">update_u_star updates the discetized combined input and output vectors  <br /></td></tr>
-<tr class="memitem:a345a90f5d63d54a21190facff3eb2b4e" id="r_a345a90f5d63d54a21190facff3eb2b4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#a345a90f5d63d54a21190facff3eb2b4e">observer.calc_derivative</a> (self, x, u)</td></tr>
-<tr class="memdesc:a345a90f5d63d54a21190facff3eb2b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">calc_derivative calculates the derivative state vector using the continuous model with no feedback  <br /></td></tr>
-<tr class="memitem:a7537934c5ae4a728fca68bb8df7280ec" id="r_a7537934c5ae4a728fca68bb8df7280ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#a7537934c5ae4a728fca68bb8df7280ec">observer.calc_output</a> (self, x, u)</td></tr>
-<tr class="memdesc:a7537934c5ae4a728fca68bb8df7280ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">calc_output calculates the output vector using the continuous model with no feedback  <br /></td></tr>
-<tr class="memitem:a6242b332b9bad573532d0120f46bac25" id="r_a6242b332b9bad573532d0120f46bac25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#a6242b332b9bad573532d0120f46bac25">observer.calc_discrete_state</a> (self, x, u_star)</td></tr>
-<tr class="memdesc:a6242b332b9bad573532d0120f46bac25"><td class="mdescLeft">&#160;</td><td class="mdescRight">calc_discrete_state calculates the next state vector using the discretized model  <br /></td></tr>
-<tr class="memitem:aa0ba8bfb71c9be1d30e8173079c0b1b4" id="r_aa0ba8bfb71c9be1d30e8173079c0b1b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#aa0ba8bfb71c9be1d30e8173079c0b1b4">observer.calc_discrete_output</a> (self, x)</td></tr>
-<tr class="memdesc:aa0ba8bfb71c9be1d30e8173079c0b1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">calc_discrete_state calculates the current output vector using the discretized model  <br /></td></tr>
-<tr class="memitem:a9f5db79182e18cf79d49294f13b2de7f" id="r_a9f5db79182e18cf79d49294f13b2de7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#a9f5db79182e18cf79d49294f13b2de7f">observer.RK4_solver</a> (self, x, t_step, u)</td></tr>
-<tr class="memdesc:a9f5db79182e18cf79d49294f13b2de7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">RK4_solver is an implementation of the RK4_solver algorithm that will be used to estimate the state if using a continuous model.  <br /></td></tr>
-<tr class="memitem:a34127165f976f5a7012bc0cadc169c2c" id="r_a34127165f976f5a7012bc0cadc169c2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#a34127165f976f5a7012bc0cadc169c2c">observer.run</a> (self)</td></tr>
-<tr class="memdesc:a34127165f976f5a7012bc0cadc169c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">run is the generator that the cotask scheduler will run since our tasks are objects.  <br /></td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ac224e91e9bc9bcfbd70637307bc26f8a" id="r_ac224e91e9bc9bcfbd70637307bc26f8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#ac224e91e9bc9bcfbd70637307bc26f8a">observer.state</a> = 0:</td></tr>
-<tr class="memitem:aa881c0e1eb17816a9a63ded104decdd6" id="r_aa881c0e1eb17816a9a63ded104decdd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#aa881c0e1eb17816a9a63ded104decdd6">observer.feedback</a> = 0:</td></tr>
-<tr class="memitem:ae1ff6e6437ad64a76aa92be2abff7d0a" id="r_ae1ff6e6437ad64a76aa92be2abff7d0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#ae1ff6e6437ad64a76aa92be2abff7d0a">observer.x_estimated</a></td></tr>
-<tr class="memitem:a733d71895534e303d6821f34dce35034" id="r_a733d71895534e303d6821f34dce35034"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceobserver.html#a733d71895534e303d6821f34dce35034">observer.y_estimated</a> = self.RK4_solver(self.x, .02, self.u)</td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file contains a class to create a observer object which is compatible with the cotask scheduler to run as a cooperative task. </p>
-<p>This task always estimates the state of ROMI given its sensor inputs using a discretized state space model.</p>
-<p>NOTE: These values have errors and the errors get worse as ROMI runs it is only an estimation.</p>
-<p>IMPORTANT: This observer will reach a null space if the encoder values and yaw value are not possible with each other. If the encoder positions can't equal the yaw value of the sensors this will fail. This happens on start because the encoders start at zero but the yaw does not necessarily start at 0 as well. The correction for this is in state 0 of the control task where the encoders are given an offset to make them match whatever the starting yaw is.</p>
-<dl class="section author"><dt>Author</dt><dd>Alex Power, Lucas Heuchert, Erik Heuchert </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2025-Nov-11 Approximate date of creation of file </dd>
-<dd>
-2025-Dec-12 Final alterations made </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
