@@ -1,22 +1,38 @@
+## @file pathing_plan_task.py
+#  This file contains a class to create a pathing_plan_task object which is compatible with
+#  the cotask scheduler to run as a cooperative task. 
+#
+#  The pathing_plan object uses a finite state machine design to dictate the motion of
+#  the Pololu ROMI kit used in ME 405, Fall 2025 to follow the term project course. The task
+#  sets share flags and goals to order how control task moves the ROMI to reach the 6 checkpoints 
+#  and the two bonus cups on the course. A long list of defines are used at the beginning to make tuning
+#  path simpler. The state names are used to make adding new states inbetween states easier so that the file
+#  reads in the order of how ROMI will move. The goal defines are what are tuned for the course. When moving forward
+#  the task uses the total distance travelled as found by the observer to know when it needs to change states. 
+#  When turning, the task waits for the yaw from the IMU to be within an acceptable range to change states. 
+#
+#  NOTE: The intention of the angle goals was to be done in a global sense where 0 is the direction ROMI faces 
+#        at the start. However, the IMU has a lot of drift as ROMI goes through the course so these values are found
+#        experimentally and start to lose meaning when read in the code until you see how ROMI actually moves. 
+#  NOTE: Yaw drift is inconsistent so this path is not consistent do not run ROMI unsupervised. 
+# 
+#  @author Alex Power, Lucas Heuchert, Erik Heuchert
+#  @author ChatGPT5 was used for debugging purposes but not to generate this code
+#  @date   2025-Nov-10 Approximate date of creation of file
+#  @date   2025-Dec-12 Final alterations made
+# 
+#Yaw Goal Defines
 PI = 3.1415
 YAWGOAL1 = (82)*(PI/180) #Fork angle
 YAWGOAL2 = (329)*(PI/180)#CP1 to CP2
 YAWGOAL3 = (90)*(PI/180)#CP2 to Cup 
 YAWGOAL4 = (166)*(PI/180)#CP3 to CP4
 YAWGOAL5 = (163.5)*(PI/180)#CP4 to garage
-# #With yaw resets
-# YAWGOAL6 = (88)*(PI/180)#Garage to CP5
-# YAWGOAL7 = (178)*(PI/180)#Wall to Cup
-# YAWGOAL8 = (88)*(PI/180)#Cup to Finish
-
 YAWGOAL6 = (255)*(PI/180)#Garage to CP5
 YAWGOAL7 = (345)*(PI/180)#Wall to Cup
 YAWGOAL8 = (240)*(PI/180)#Cup to Finish
 
-EXPYAWGOAL1 = 167
-EXPYAWGOAL2 = 167
-EXPYAWGOAL3 = 167
-
+#State Names in Order
 LINE_FOLLOW_STATE_0 = 0
 CENTROID_OFFSET_STATE = 1
 ALIGNMENT_GOAL_1 = 2
@@ -25,6 +41,8 @@ FORK = 4
 ALIGNMENT_GOAL_2 = 5
 ALIGNMENT_CONTROL_2 = 6
 FREE_TRAVERSE_1 = 7
+CP2_PIVOT_1 = 29
+CP2_PIVOT_2 = 31
 LINE_FOLLOWING_2 = 8
 ALIGNMENT_GOAL_3 = 9
 ALIGNMENT_CONTROL_3 = 10
@@ -33,6 +51,7 @@ LINE_FOLLOW_3 = 12
 ALIGNMENT_GOAL_4 = 13
 ALIGNMENT_CONTROL_4 = 14
 FREE_TRAVERSE_3 = 15
+LINE_FOLLOW_GRG = 32
 ALIGNMENT_GOAL_5 = 16
 ALIGNMENT_CONTROL_5 = 17
 FREE_TRAVERSE_4 = 18
@@ -45,15 +64,13 @@ ALIGNMENT_CONTROL_7 = 24
 CUP = 25
 ALIGNMENT_GOAL_8 = 26
 ALIGNMENT_CONTROL_8 = 27
-FINISH = 28
-CP2_PIVOT_1 = 29
-CP2_PIVOT_2 = 31
-LINE_FOLLOW_GRG = 32
 FINISH_LINE = 33
+FINISH = 28
 
 STOP = 40
 TESTING = 30
 
+#Total Distance Check Points 
 CP1_2_DISTANCE = 1800
 LF2_DIST = 2025
 CUP_CP3_DIST = 2725
@@ -66,10 +83,26 @@ TO_CUP = 4300
 RUN_TO_LINE = 4500
 FINISH_DIST = 5000
 
-## @brief add description here
+## @brief pathing_plan class that can be initialized to be run with the cotask scheduler. See run for behavior. 
 class pathing_plan:
-
-
+## @brief __init__ is the pathing_plan_task object initializer which takes 10 arguments. 
+#         The arguments are a mix of data shares and flag shares.
+#  @param total_dist : total_dist is a float share that the observer sets with how far ROMI has travelled. It is used to 
+#                      figure out when ROMI reaches checkpoints. It does go negative when ROMI reverses which is handled in the WALL state. 
+#  @param automatic_mode :  automatic_mode is an integer share flag that is set to tell control_task that it should start automatically following a line. 
+#                           pathing plan sets this whenever it wants to line follow. 
+#  @param c_state : c_state is an integer share flag that holds the expected state of control_task. 
+#                   It is set by UI or pathing plan to tell control_task the expected motion of ROMI. 
+#  @param fwd_ref : fwd_ref is an integer share that holds the expected forward reference speed of ROMI in mm.s.
+#                   It is set by the UI task for testing purposes or by pathing plan task for course navigation. 
+#  @param piv_ref : piv_ref is a float share that holds the expected pivoting reference angular speed of ROMI in rad/s.
+#                   It is set by the UI task for testing purposes or by pathing plan task for course navigation. 
+#  @param yaw : yaw is a float share that the IMU task fills with the current yaw of ROMI. pathing_plan uses it for setting correct yaw goals. 
+#  @param centroid_goal: centroid_goal is a float share that the pathing plan task sets. The control task will  use it as the line following centroid controller set point. 
+#  @param yaw_goal : yaw_goal is a float share that is the set point of the heading control. It is the angle ROMI should turn to on the course and is set by
+#                    pathing plan for course navigation. 
+#  @param bump_on : bump_on is a integer share flag that pathing plan task sets to turn on the bump sensors.
+#  @param bump_flg : bump_flg is an integer share flag that the bump task will set if it is on and the bump sensors touch something. It is used for detecting the wall. 
     def __init__(self, total_dist, automatic_mode, c_state, fwd_ref, piv_ref, yaw, centroid_goal, yaw_goal, bump_on, bump_flg):
         self.state = LINE_FOLLOW_STATE_0
         self.total_dist = total_dist
@@ -88,7 +121,9 @@ class pathing_plan:
         self.yaw_goals_5 = [YAWGOAL5, EXPYAWGOAL1, EXPYAWGOAL2, EXPYAWGOAL3]
         self.direction = [1,1,-1,1]
         self.dist = [CP4_GARAGE, 3600, 3800, 4000]
-
+## @brief wrapper will take a yaw value that is typically a goal to be set and wrap it around the 0-2PI range the IMU uses. This stops goals from being 
+#         negative or larger than the yaw reading will ever be. 
+#  @param val : val is the yaw that is being wrapped
     def wrapper(self, val):
         if val > 2*PI:
             return val-2*PI
@@ -96,7 +131,10 @@ class pathing_plan:
             return 2*PI + val
         else:
             return val
-        
+## @brief line_following sets all flags necessary to put control task into a line following mode and it checks if ROMI has moved far enough. 
+#         It returns True if ROMI has moved far enough and sets the next state, and it returns False if ROMI has further to go. 
+#  @param final_dist : final_dist is the value to compare the total distance to to see if its time to go to the next state
+#  @param next_state : next_state is the state number of the next_state for pathing plan to go to
     def line_following(self, final_dist, next_state):
         #real_yaw = self.wrapper(self.yaw.get() - self.yaw_init)
         #print(f"Real Yaw {real_yaw}")
@@ -106,7 +144,12 @@ class pathing_plan:
             self.state = next_state
             return True
         return False
-    
+## @brief alignment_goal sets all flags necessary to put control task into a pivoting mode to make large inaccurate turns.
+#         It returns True if ROMI if within 0.5 rad of the goal and sets the next state, and the yaw_goal for alignment control
+#         and it returns False if ROMI has to turn more
+#  @param yaw_goal : yaw_goal is the yaw value that is checked to see if pathing plan should go to the next state
+#  @param rot_direction : rot_direction should be either 1 or -1 to set which direction to turn ROMI. 1 is CCW, -1 is CW
+#  @param next_state : next_state is the state number of the next_state for pathing plan to go to 
     def alignment_goal(self, yaw_goal, rot_direction, next_state):
         self.c_state.put(3)
         self.piv_ref.put(0.75*rot_direction)
@@ -121,14 +164,21 @@ class pathing_plan:
             self.automatic_mode.put(0)
             return True
         return False
-    
+## @brief alignment_control sets all flags necessary to put control task into a controlled turning mode for minute, accurate yaw changes. 
+#         It returns True if control_task says that the yaw is aligned properly, and it will set the next state. It is expected to be used after alignment_goal. 
+#         It will not set the yaw_goal itself.
+#  @param next_state : next_state is the state number of the next_state for pathing plan to go to 
     def alignment_control(self, next_state):
         self.c_state.put(7)
         if self.yaw_goal.get() == 0:
             self.state = next_state
             return True
         return False
-    
+## @brief free_traverse sets all flags necessary to put control task into a forward motion mode and it checks if ROMI has moved far enough. 
+#         It returns True if ROMI has moved far enough and sets the next state, and it returns False if ROMI has further to go. 
+#  @param final_dist : final_dist is the value to compare the total distance to to see if its time to go to the next state
+#  @param next_state : next_state is the state number of the next_state for pathing plan to go to  
+#  @param ref : ref is the reference speed for ROMI to traverse at in mm/s
     def free_traverse(self, final_dist, next_state, ref):
         self.c_state.put(1)
         self.fwd_ref.put(ref)
@@ -138,7 +188,26 @@ class pathing_plan:
             self.state = next_state
             return True
         return False
-
+## @brief run is the generator that the cotask scheduler will run since our tasks are objects. All shares it needs are already given to 
+#         the task object on initialization. The generator will only run one state at a time on each run of the task. 
+#  @detail The finite state machine for control_task has 34 states. These states always go in order. Each state runs once and is never returned to. 
+#          The order of states is as follows:
+#          LINE_FOLLOW_STATE_0, CENTROID_OFFSET_STATE, ALIGNMENT_GOAL_1, ALIGNMENT_CONTROL_1, FORK, ALIGNMENT_GOAL_2, ALIGNMENT_CONTROL_2, FREE_TRAVERSE_1, CP2_PIVOT_1, CP2_PIVOT_2, 
+#          LINE_FOLLOWING_2, ALIGNMENT_GOAL_3, ALIGNMENT_CONTROL_3, FREE_TRAVERSE_2, LINE_FOLLOW_3, ALIGNMENT_GOAL_4, ALIGNMENT_CONTROL_4, FREE_TRAVERSE_3, LINE_FOLLOW_GRG, 
+#          ALIGNMENT_GOAL_5, ALIGNMENT_CONTROL_5, FREE_TRAVERSE_4, ALIGNMENT_GOAL_6, ALIGNMENT_CONTROL_6, FREE_TRAVERSE_5, WALL, ALIGNMENT_GOAL_7, ALIGNMENT_CONTROL_7, CUP, 
+#          ALIGNMENT_GOAL_8, ALIGNMENT_CONTROL_8, FINISH, FINISH_LINE
+#
+#          Fulling describing each state's exact behavior will probably be more confusing than helpful but here's a general overview of the path:
+#
+#          Start line following to the Y, move the centroid to the left a bit to keep right, face CP1, drive directly there, face CP2, drive directly there, line follow a bit, 
+#          turn to CP3, drive there pushing cup out of the way, turn to CP4, drive there and line follow a bit at the end to align, align at garage entrance, drive through, 
+#          turn towards wall, drive out, hit wall and backup, turn towards cup, drive over it, turn towards finish, drive back to the line, use line following to get into
+#          CP6. 
+#
+#          Note: The way alignments are done is with a goal state then a control state. The goal states makes large turns at set pivoting speeds. The control state uses
+#          a controller to get precise alignment with our goal heading. Goals are set by the goal state though so a controller align must always be ran after a goal align. 
+#
+#          Note: Yaw drift is inconsistent so this path is not consistent do not run ROMI unsupervised. 
     def run(self):
         while (True):
 
