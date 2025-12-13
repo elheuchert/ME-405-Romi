@@ -96,9 +96,132 @@ Introduction</h1>
 <p>sgtgeojg</p>
 <h1 class="doxsection"><a class="anchor" id="hardware"></a>
 Hardware</h1>
-<p>sdfsdfs </p>
-<h2 class="doxsection"><a class="anchor" id="hardware"></a>
-Hardware</h2>
+<h2 class="doxsection"><a class="anchor" id="motors"></a>
+Motors</h2>
+<p>We used Romi, which has two H-bridge motor drivers.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Purpose  </th><th class="markdownTableHeadNone">Pin Selection  </th><th class="markdownTableHeadNone">Function  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Motor Enable Left  </td><td class="markdownTableBodyNone">PA10  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Motor Direction Left  </td><td class="markdownTableBodyNone">PB10  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Motor Effort Left  </td><td class="markdownTableBodyNone">PB6  </td><td class="markdownTableBodyNone">TIM4_CH1  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Motor Enable Right  </td><td class="markdownTableBodyNone">PC14  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Motor Direction Right  </td><td class="markdownTableBodyNone">PC13  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Motor Effort Right  </td><td class="markdownTableBodyNone">PB7  </td><td class="markdownTableBodyNone">TIM4_CH2  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="encoders"></a>
+Encoders</h2>
+<p>We used Romi, which has two encoders for their respective motors, allowing us to perform motor control.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Purpose  </th><th class="markdownTableHeadNone">Pin Selection  </th><th class="markdownTableHeadNone">Function  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Encoder Left 1  </td><td class="markdownTableBodyNone">PA0  </td><td class="markdownTableBodyNone">TIM2_CH1  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Encoder Left 2  </td><td class="markdownTableBodyNone">PA1  </td><td class="markdownTableBodyNone">TIM2_CH2  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Encoder Right 1  </td><td class="markdownTableBodyNone">PC6  </td><td class="markdownTableBodyNone">TIM3_CH1  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Encoder Right 2  </td><td class="markdownTableBodyNone">PC7  </td><td class="markdownTableBodyNone">TIM3_CH2  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="bluetooth"></a>
+Bluetooth</h2>
+<p>We used a bluetooth module to send user instructions, as well as receive data for various tests, including step response tests. We attached this to the top of our Romi robit.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Purpose  </th><th class="markdownTableHeadNone">Pin Selection  </th><th class="markdownTableHeadNone">Function  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5v  </td><td class="markdownTableBodyNone">E5v  </td><td class="markdownTableBodyNone">-  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">-  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">UART Tx  </td><td class="markdownTableBodyNone">C12  </td><td class="markdownTableBodyNone">UART5_TX  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">UART Rx  </td><td class="markdownTableBodyNone">D12  </td><td class="markdownTableBodyNone">UART5_RX  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="imu"></a>
+IMU</h2>
+<p>We used a adafruit bno055, which we configured to IMU mode. This allowed us to things like yaw, pitch, roll and angular velocity. We attached this to the bottom of the Romi robot.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Purpose  </th><th class="markdownTableHeadNone">Pin Selection  </th><th class="markdownTableHeadNone">Function  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">IMU  </td><td class="markdownTableBodyNone">PB9  </td><td class="markdownTableBodyNone">SDA  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">IMU  </td><td class="markdownTableBodyNone">PB8  </td><td class="markdownTableBodyNone">SCL  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">IMU REST  </td><td class="markdownTableBodyNone">PC8  </td><td class="markdownTableBodyNone">REST  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="linesensor"></a>
+Line Sensors</h2>
+<p>We used a 13 channel reflectance sensor array, with analog output. This allows us to read a line, which we can then use make our Romi robot follow a line. We attached this using 3D printed supports to the front of the robot.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Purpose  </th><th class="markdownTableHeadNone">Pin Selection  </th><th class="markdownTableHeadNone">Function  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Analog Pin 1  </td><td class="markdownTableBodyNone">PA6  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Analog Pin 2  </td><td class="markdownTableBodyNone">PA7  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Analog Pin 3  </td><td class="markdownTableBodyNone">PC4  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Analog Pin 4  </td><td class="markdownTableBodyNone">PA0  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Analog Pin 5  </td><td class="markdownTableBodyNone">PA1  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Analog Pin 6  </td><td class="markdownTableBodyNone">PA4  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Analog Pin 7  </td><td class="markdownTableBodyNone">PB0  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Analog Pin 8  </td><td class="markdownTableBodyNone">PC1  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Analog Pin 9  </td><td class="markdownTableBodyNone">PC0  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Analog Pin 10  </td><td class="markdownTableBodyNone">PC2  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Analog Pin 11  </td><td class="markdownTableBodyNone">PC3  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Analog Pin 12  </td><td class="markdownTableBodyNone">PC5  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Analog Pin 13  </td><td class="markdownTableBodyNone">PB1  </td><td class="markdownTableBodyNone">Analog  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">VCC  </td><td class="markdownTableBodyNone">5v  </td><td class="markdownTableBodyNone">-  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">-  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">CTRL EVN  </td><td class="markdownTableBodyNone">PH1  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">CTRL ODD  </td><td class="markdownTableBodyNone">PH0  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="bump"></a>
+Bump Sensors</h2>
+<p>We used bump sensors made for Romi, using both left and right modules. These bump sensors are used to detect collision, which will tell Romi the next steps. We attached these to the front of the Romi robot.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Purpose  </th><th class="markdownTableHeadNone">Pin Selection  </th><th class="markdownTableHeadNone">Function  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Bump 0  </td><td class="markdownTableBodyNone">PA12  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Bump 1  </td><td class="markdownTableBodyNone">PA11  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Bump 2  </td><td class="markdownTableBodyNone">PB12  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Bump 3  </td><td class="markdownTableBodyNone">PB11  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Bump 4  </td><td class="markdownTableBodyNone">PB15  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Bump 5  </td><td class="markdownTableBodyNone">PB14  </td><td class="markdownTableBodyNone">GPIO  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">-  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">-  </td></tr>
+</table>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

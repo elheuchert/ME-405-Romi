@@ -5,7 +5,7 @@ digraph "pc_micro_reader.get_test_plots"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="RL";
-  Node1 [id="Node000001",label="pc_micro_reader.get\l_test_plots",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [id="Node000001",label="pc_micro_reader.get\l_test_plots",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="brief Saves and creates test plots  Effects"];
   Node1 -> Node2 [id="edge2_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="pc_micro_reader.run\l_tests",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacepc__micro__reader.html#a655f0691de284c647de6b361a16ab76e",tooltip=" "];
+  Node2 [id="Node000002",label="pc_micro_reader.run\l_tests",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacepc__micro__reader.html#a655f0691de284c647de6b361a16ab76e",tooltip="brief Runs the User tests"];
 }

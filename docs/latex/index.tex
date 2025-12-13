@@ -2,4 +2,87 @@
 \hypertarget{index}{}\label{index}\index{ME405 Library Documentation@{ME405 Library Documentation}}
 \hypertarget{index_intro}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_intro}
 sgtgeojg\hypertarget{index_hardware}{}\doxysection{\texorpdfstring{Hardware}{Hardware}}\label{index_hardware}
-sdfsdfs \hypertarget{index_hardware}{}\doxysubsection{\texorpdfstring{Hardware}{Hardware}}\label{index_hardware}
+\hypertarget{index_motors}{}\doxysubsection{\texorpdfstring{Motors}{Motors}}\label{index_motors}
+We used Romi, which has two H-\/bridge motor drivers.
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Purpose  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Pin Selection  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Function  \\
+Motor Enable Left  &PA10  &GPIO  \\
+Motor Direction Left  &PB10  &GPIO  \\
+Motor Effort Left  &PB6  &TIM4\+\_\+\+CH1  \\
+Motor Enable Right  &PC14  &GPIO  \\
+Motor Direction Right  &PC13  &GPIO  \\
+Motor Effort Right  &PB7  &TIM4\+\_\+\+CH2  \\
+\end{DoxyTable}
+\hypertarget{index_encoders}{}\doxysubsection{\texorpdfstring{Encoders}{Encoders}}\label{index_encoders}
+We used Romi, which has two encoders for their respective motors, allowing us to perform motor control.
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Purpose  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Pin Selection  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Function  \\
+Encoder Left 1  &PA0  &TIM2\+\_\+\+CH1  \\
+Encoder Left 2  &PA1  &TIM2\+\_\+\+CH2  \\
+Encoder Right 1  &PC6  &TIM3\+\_\+\+CH1  \\
+Encoder Right 2  &PC7  &TIM3\+\_\+\+CH2  \\
+\end{DoxyTable}
+\hypertarget{index_bluetooth}{}\doxysubsection{\texorpdfstring{Bluetooth}{Bluetooth}}\label{index_bluetooth}
+We used a bluetooth module to send user instructions, as well as receive data for various tests, including step response tests. We attached this to the top of our Romi robit.
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Purpose  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Pin Selection  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Function  \\
+5v  &E5v  &-\/  \\
+GND  &GND  &-\/  \\
+UART Tx  &C12  &UART5\+\_\+\+TX  \\
+UART Rx  &D12  &UART5\+\_\+\+RX  \\
+\end{DoxyTable}
+\hypertarget{index_imu}{}\doxysubsection{\texorpdfstring{IMU}{IMU}}\label{index_imu}
+We used a adafruit bno055, which we configured to IMU mode. This allowed us to things like yaw, pitch, roll and angular velocity. We attached this to the bottom of the Romi robot.
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Purpose  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Pin Selection  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Function  \\
+IMU  &PB9  &SDA  \\
+IMU  &PB8  &SCL  \\
+IMU REST  &PC8  &REST  \\
+\end{DoxyTable}
+\hypertarget{index_linesensor}{}\doxysubsection{\texorpdfstring{Line Sensors}{Line Sensors}}\label{index_linesensor}
+We used a 13 channel reflectance sensor array, with analog output. This allows us to read a line, which we can then use make our Romi robot follow a line. We attached this using 3D printed supports to the front of the robot.
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Purpose  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Pin Selection  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Function  \\
+Analog Pin 1  &PA6  &Analog  \\
+Analog Pin 2  &PA7  &Analog  \\
+Analog Pin 3  &PC4  &Analog  \\
+Analog Pin 4  &PA0  &Analog  \\
+Analog Pin 5  &PA1  &Analog  \\
+Analog Pin 6  &PA4  &Analog  \\
+Analog Pin 7  &PB0  &Analog  \\
+Analog Pin 8  &PC1  &Analog  \\
+Analog Pin 9  &PC0  &Analog  \\
+Analog Pin 10  &PC2  &Analog  \\
+Analog Pin 11  &PC3  &Analog  \\
+Analog Pin 12  &PC5  &Analog  \\
+Analog Pin 13  &PB1  &Analog  \\
+VCC  &5v  &-\/  \\
+GND  &GND  &-\/  \\
+CTRL EVN  &PH1  &GPIO  \\
+CTRL ODD  &PH0  &GPIO  \\
+\end{DoxyTable}
+\hypertarget{index_bump}{}\doxysubsection{\texorpdfstring{Bump Sensors}{Bump Sensors}}\label{index_bump}
+We used bump sensors made for Romi, using both left and right modules. These bump sensors are used to detect collision, which will tell Romi the next steps. We attached these to the front of the Romi robot.
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Purpose  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Pin Selection  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Function  \\
+Bump 0  &PA12  &GPIO  \\
+Bump 1  &PA11  &GPIO  \\
+Bump 2  &PB12  &GPIO  \\
+Bump 3  &PB11  &GPIO  \\
+Bump 4  &PB15  &GPIO  \\
+Bump 5  &PB14  &GPIO  \\
+GND  &GND  &-\/  \\
+GND  &GND  &-\/  \\
+\end{DoxyTable}

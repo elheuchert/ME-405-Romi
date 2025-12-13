@@ -2,7 +2,7 @@ var searchData=
 [
   ['i2c_5fobj_0',['i2c_obj',['../namespacemain.html#a553e1604692e0ca13ff99d35b89e2674',1,'main']]],
   ['idx_1',['idx',['../classcontrol__task_1_1control__task.html#af38213d76e3f7ba0b31e5afa59d6d4fc',1,'control_task::control_task']]],
-  ['imu_2',['IMU',['../classimu_1_1_i_m_u.html',1,'imu']]],
+  ['imu_2',['IMU',['../classimu_1_1_i_m_u.html',1,'imu.IMU'],['../index.html#imu',1,'IMU']]],
   ['imu_3',['imu',['../namespaceimu.html',1,'imu'],['../classimu__task_1_1imu__task.html#abcdbd6733c60dbb2c34d0b0d1b557671',1,'imu_task.imu_task.imu']]],
   ['imu_2epy_4',['imu.py',['../imu_8py.html',1,'']]],
   ['imu_5fflg_5',['imu_flg',['../classimu__task_1_1imu__task.html#a2f50ac58b2eeded2bfe9f390b9ece44a',1,'imu_task.imu_task.imu_flg'],['../classui_1_1ui.html#a58392f37e76b5f2415f4224076221d27',1,'ui.ui.imu_flg'],['../namespacemain.html#a385b1a6837d560101976fd381570e1a1',1,'main.imu_flg']]],

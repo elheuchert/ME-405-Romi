@@ -28,140 +28,142 @@
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{True}):}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#init}}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.change\_mode(0x00)}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mode,)\ =\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.\_read\_reg(self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.reg.OPR\_MODE)}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(f\textcolor{stringliteral}{'mode:\ \{hex(mode)\}'})}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.write\_calibration\_coeff(pack(\textcolor{stringliteral}{'<h'},-\/47),\ pack(\textcolor{stringliteral}{'<h'},166),pack(\textcolor{stringliteral}{'<h'},-\/34),\ pack(\textcolor{stringliteral}{'<h'},-\/341),}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pack(\textcolor{stringliteral}{'<h'},481),\ pack(\textcolor{stringliteral}{'<h'},480),\ pack(\textcolor{stringliteral}{'<h'},-\/2),\ pack(\textcolor{stringliteral}{'<h'},-\/3),}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pack(\textcolor{stringliteral}{'<h'},0),pack(\textcolor{stringliteral}{'<h'},1000),\ pack(\textcolor{stringliteral}{'<h'},480))}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.change\_mode(0x0C)}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mode,)\ =\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.\_read\_reg(self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.reg.OPR\_MODE)}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(f\textcolor{stringliteral}{'mode:\ \{hex(mode)\}'})}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ =\ 1}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 0}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ ==\ 1:}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a3048c6f34a7dbbeb58425ecd891fe85a}{yaw}}.put(self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.get\_Euler\_x())}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a455797d2fcf00398b91cf8c69988765e}{yaw\_velocity}}.put(self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.get\_Roll\_Velocity())}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#if\ self.imu\_flg.get()==1:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print("{}imu\ flag\ true"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ (self.sys,self.gyro,self.accel,self.mag)\ =\ self.imu.calibration\_check()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print("{}checked\ calibration"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(self.sys,\ self.gyro,\ self.accel,\ self.mag)}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}yaw:\ \{self.yaw\}"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}yawvelo:\ \{self.yaw\_velocity\}"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ fusion\ mode\ =\ 0C}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ imu\ mode\ =08}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.change\_mode(0x08)}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (mode,)\ =\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.\_read\_reg(self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.reg.OPR\_MODE)}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(f\textcolor{stringliteral}{'mode:\ \{hex(mode)\}'})}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 0}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ ==\ 1:}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a3048c6f34a7dbbeb58425ecd891fe85a}{yaw}}.put(self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.get\_Euler\_x())}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a455797d2fcf00398b91cf8c69988765e}{yaw\_velocity}}.put(self.\mbox{\hyperlink{classimu__task_1_1imu__task_abcdbd6733c60dbb2c34d0b0d1b557671}{imu}}.get\_Roll\_Velocity())}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#if\ self.imu\_flg.get()==1:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print("{}imu\ flag\ true"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ (self.sys,self.gyro,self.accel,self.mag)\ =\ self.imu.calibration\_check()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print("{}checked\ calibration"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(self.sys,\ self.gyro,\ self.accel,\ self.mag)}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}yaw:\ \{self.yaw\}"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(f"{}yawvelo:\ \{self.yaw\_velocity\}"{})}}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ if\ self.accel==3\ and\ self.gyro==3\ and\ self.mag==3:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.config\_flag\ =\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.imu.change\_mode(0x00)}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00065}00065\ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ if\ self.config\_flag\ ==\ 1:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ (self.acc\_x,\ self.acc\_y,\ self.acc\_z,self.mag\_x,\ self.mag\_y,\ self.mag\_z,self.gyr\_x,\ self.gyr\_y,\ self.gyr\_z,\ self.acc\_rad,\ self.mag\_rad)=self.imu.get\_calibration\_coeff()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ print(self.acc\_x,\ self.acc\_y,\ self.acc\_z,self.mag\_x,\ self.mag\_y,\ self.mag\_z,self.gyr\_x,\ self.gyr\_y,\ self.gyr\_z,\ self.acc\_rad,\ self.mag\_rad)}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ (mode,)\ =\ self.imu.\_read\_reg(self.imu.reg.OPR\_MODE)}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ print(f'fusion\ mode:\ \{hex(mode)\}')}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ if\ self.substate==0:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.sys,\ self.gyry,self.acc,\ self.mag=self.imu.calibration\_check()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==1:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \#self.mag=self.imu.calibration\_check\_mag()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==2:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \#self.acc=self.imu.calibration\_check\_accel()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==3:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \#self.gyr=self.imu.calibration\_check\_gyro()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==4:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.acc\_coeff=self.imu.get\_calibration\_coeff\_accel()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==5:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.gyr\_coeff=self.imu.get\_calibration\_coeff\_gyro()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==6:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.mag\_coeff=self.imu.get\_calibration\_coeff\_mag()}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==7:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ print(f"{}calib\ check:\ \{self.sys\},\{self.gyr\},\{self.acc\},\{self.mag\}"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ print(f"{}calib\ coeff:\ \{self.gyr\_coeff\},\{self.acc\_coeff\},\{self.mag\_coeff\}"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.imu\_flg.put(0)}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate=0}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 1}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ else:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ if\ gyr\ ==\ 3:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ if\ self.calibrated\ ==\ 1:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ print("{}gyro\ calibrated"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ else:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.calibrated\ =\ 1}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.state\ =\ 2}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ if\ mag\ ==\ 3:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ if\ self.calibrated\ ==\ 2:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ print("{}mag\ calibrated"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.calibrated\ =\ 2}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.state\ =\ 2}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ if\ acc\ ==\ 3:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ if\ self.calibrated\ ==\ 3:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print("{}acc\ calibrated"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ self.calibrated\ =\ 3}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ self.state\ =\ 2}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ if\ sys\ ==\ 3:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ self.calibrated\ ==\ 3:}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print("{}sys\ calibrated"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.calibrated\ =\ 4}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.state\ =\ 2}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.calibrated\ =\ True}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00137}00137\ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f"{}check\ calb:\ \{sys\},\{mag\},\{acc\},\{gyr\}"{})}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ msg\ =\ "{}calib:\{\},\{\},\{\},\{\}"{}.format(}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ sys,\ gyro,\ accel,\ mag}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ )}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00143}00143\ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(msg)}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ if\ self.accel==3\ and\ self.gyro==3\ and\ self.mag==3:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.config\_flag\ =\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.imu.change\_mode(0x00)}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ if\ self.config\_flag\ ==\ 1:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ (self.acc\_x,\ self.acc\_y,\ self.acc\_z,self.mag\_x,\ self.mag\_y,\ self.mag\_z,self.gyr\_x,\ self.gyr\_y,\ self.gyr\_z,\ self.acc\_rad,\ self.mag\_rad)=self.imu.get\_calibration\_coeff()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ print(self.acc\_x,\ self.acc\_y,\ self.acc\_z,self.mag\_x,\ self.mag\_y,\ self.mag\_z,self.gyr\_x,\ self.gyr\_y,\ self.gyr\_z,\ self.acc\_rad,\ self.mag\_rad)}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ (mode,)\ =\ self.imu.\_read\_reg(self.imu.reg.OPR\_MODE)}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ print(f'fusion\ mode:\ \{hex(mode)\}')}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ if\ self.substate==0:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.sys,\ self.gyry,self.acc,\ self.mag=self.imu.calibration\_check()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==1:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \#self.mag=self.imu.calibration\_check\_mag()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==2:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \#self.acc=self.imu.calibration\_check\_accel()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==3:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \#self.gyr=self.imu.calibration\_check\_gyro()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==4:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.acc\_coeff=self.imu.get\_calibration\_coeff\_accel()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==5:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.gyr\_coeff=self.imu.get\_calibration\_coeff\_gyro()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==6:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.mag\_coeff=self.imu.get\_calibration\_coeff\_mag()}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate+=1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ elif\ self.substate==7:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ print(f"{}calib\ check:\ \{self.sys\},\{self.gyr\},\{self.acc\},\{self.mag\}"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ print(f"{}calib\ coeff:\ \{self.gyr\_coeff\},\{self.acc\_coeff\},\{self.mag\_coeff\}"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.imu\_flg.put(0)}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ self.substate=0}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 1}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ else:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ yield\ 1\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ if\ gyr\ ==\ 3:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ if\ self.calibrated\ ==\ 1:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ print("{}gyro\ calibrated"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ else:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.calibrated\ =\ 1}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.state\ =\ 2}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ if\ mag\ ==\ 3:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ if\ self.calibrated\ ==\ 2:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ print("{}mag\ calibrated"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.calibrated\ =\ 2}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ self.state\ =\ 2}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ if\ acc\ ==\ 3:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ if\ self.calibrated\ ==\ 3:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print("{}acc\ calibrated"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ self.calibrated\ =\ 3}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ self.state\ =\ 2}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ if\ sys\ ==\ 3:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ self.calibrated\ ==\ 3:}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print("{}sys\ calibrated"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.calibrated\ =\ 4}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.state\ =\ 2}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.calibrated\ =\ True}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f"{}check\ calb:\ \{sys\},\{mag\},\{acc\},\{gyr\}"{})}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ msg\ =\ "{}calib:\{\},\{\},\{\},\{\}"{}.format(}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ sys,\ gyro,\ accel,\ mag}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ )}}
 \DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00145}00145\ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f'calib:\ \{self.imu.calibration\_check()\}')}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f'calib\ coeff:\ \{self.imu.get\_calibration\_coeff()\}')}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#\ print(f'euler\ heading:\ \{self.imu.get\_Euler\_Heading()\}')}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f'euler\ yaw:\ \{self.imu.get\_Euler\_Heading()\}')}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#(mode,)\ =\ self.imu.\_read\_reg(self.imu.reg.OPR\_MODE)}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#print(f'fusion\ mode:\ \{hex(mode)\}')}}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00152}00152\ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ ==\ 2:}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a2c289f39fb2088889a3e676df1cd4ff5}{count}}\ +=\ 1}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a2c289f39fb2088889a3e676df1cd4ff5}{count}}\ ==\ 1000:}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a2c289f39fb2088889a3e676df1cd4ff5}{count}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ =\ 1}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
-\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(msg)}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f'calib:\ \{self.imu.calibration\_check()\}')}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f'calib\ coeff:\ \{self.imu.get\_calibration\_coeff()\}')}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#\ print(f'euler\ heading:\ \{self.imu.get\_Euler\_Heading()\}')}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ print(f'euler\ yaw:\ \{self.imu.get\_Euler\_Heading()\}')}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#(mode,)\ =\ self.imu.\_read\_reg(self.imu.reg.OPR\_MODE)}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#print(f'fusion\ mode:\ \{hex(mode)\}')}}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ ==\ 2:}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a2c289f39fb2088889a3e676df1cd4ff5}{count}}\ +=\ 1}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a2c289f39fb2088889a3e676df1cd4ff5}{count}}\ ==\ 1000:}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a2c289f39fb2088889a3e676df1cd4ff5}{count}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
+\DoxyCodeLine{\Hypertarget{imu__task_8py_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classimu__task_1_1imu__task_a03e632626f33b41142ffc3caf229fbfd}{state}}}
 
 \end{DoxyCode}

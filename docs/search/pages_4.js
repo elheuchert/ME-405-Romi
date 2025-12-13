@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['me405_20library_20documentation_0',['ME405 Library Documentation',['../index.html',1,'']]]
+  ['imu_0',['IMU',['../index.html#imu',1,'']]],
+  ['introduction_1',['Introduction',['../index.html#intro',1,'']]]
 ];

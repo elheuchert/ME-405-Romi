@@ -4,28 +4,28 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespacepc__micro__reader_a61b3bc501899026e36fc605a6fed1130}{save\+Headers}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em brief Reads the header line from the data \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacepc__micro__reader_a495968f7788cbecaba157e8418b4c3dd}{save\+Data}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em brief Saves the data sent from a single test \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacepc__micro__reader_a6c36a96380dc2e9cadbc802da68a0c83}{plot\+Data}} (times, data, thead, dhead, legend)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Plots passed data \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacepc__micro__reader_a83f2d707d8774200860c8381fe8cf691}{average}} (data\+\_\+list)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Averages data \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacepc__micro__reader_af634fea1113a6d6d43939bda4184dfa8}{time\+Constant}} (data)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Returns time cosntant of motor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacepc__micro__reader_acf44c95250ceef79f406a03153e4a6c1}{motor\+Gain}} (test\+\_\+num, data)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Returns motor gain of motor \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacepc__micro__reader_a3e8589b64e5dbab76806cd5444669217}{get\+\_\+test\+\_\+plots}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em brief Saves and creates test plots {\bfseries{ Effects }} \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacepc__micro__reader_a655f0691de284c647de6b361a16ab76e}{run\+\_\+tests}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em brief Runs the User tests \end{DoxyCompactList}\item 
 \mbox{\hyperlink{namespacepc__micro__reader_a62ffc212a77940ea819bc6e47052b803}{line\+\_\+test}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{namespacepc__micro__reader_aeece9822afcfdad50c8c67b91cb010ac}{NUMBERS\+\_\+\+OF\+\_\+\+TESTS}} = 10
-\item 
+\begin{DoxyCompactList}\small\item\em User tests. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepc__micro__reader_a2f77ce1e64de4463d37a2699982aa169}{VALUES\+\_\+\+SENT}} = 50
 \item 
 int \mbox{\hyperlink{namespacepc__micro__reader_ae943c5d65f7dc18a03307599b11d251a}{period}} = 13/1000
@@ -69,7 +69,18 @@ pc\+\_\+micro\+\_\+reader.\+average (\begin{DoxyParamCaption}\item[{}]{data\+\_\
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00037}{37}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+brief Averages data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+list} & data list {\bfseries{ Returns }} \begin{quote}
+average of data being passed \end{quote}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00049}{49}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a3e8589b64e5dbab76806cd5444669217}\index{pc\_micro\_reader@{pc\_micro\_reader}!get\_test\_plots@{get\_test\_plots}}
 \index{get\_test\_plots@{get\_test\_plots}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -79,7 +90,13 @@ pc\+\_\+micro\+\_\+reader.\+get\+\_\+test\+\_\+plots (\begin{DoxyParamCaption}{}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00060}{60}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+brief Saves and creates test plots {\bfseries{ Effects }} 
+
+\begin{quote}
+Plots and saves plots to computer \end{quote}
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00084}{84}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 Here is the call graph for this function\+:
 % FIG 0
@@ -93,7 +110,7 @@ pc\+\_\+micro\+\_\+reader.\+line\+\_\+test (\begin{DoxyParamCaption}{}{}\end{Dox
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00269}{269}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00296}{296}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_acf44c95250ceef79f406a03153e4a6c1}\index{pc\_micro\_reader@{pc\_micro\_reader}!motorGain@{motorGain}}
 \index{motorGain@{motorGain}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -103,7 +120,20 @@ pc\+\_\+micro\+\_\+reader.\+motor\+Gain (\begin{DoxyParamCaption}\item[{}]{test\
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00052}{52}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+brief Returns motor gain of motor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em test\+\_\+num,number} & of tests \\
+\hline
+{\em data} & data from tests {\bfseries{ Returns }} \begin{quote}
+Motor gain \end{quote}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00073}{73}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a6c36a96380dc2e9cadbc802da68a0c83}\index{pc\_micro\_reader@{pc\_micro\_reader}!plotData@{plotData}}
 \index{plotData@{plotData}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -113,7 +143,24 @@ pc\+\_\+micro\+\_\+reader.\+plot\+Data (\begin{DoxyParamCaption}\item[{}]{times}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00032}{32}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+brief Plots passed data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em times} & time data \\
+\hline
+{\em data} & data being passed \\
+\hline
+{\em thead} & timer header text \\
+\hline
+{\em dhead} & distance header text \\
+\hline
+{\em legend} & legend text \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00040}{40}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 Here is the caller graph for this function\+:
 % FIG 2
@@ -125,7 +172,11 @@ pc\+\_\+micro\+\_\+reader.\+run\+\_\+tests (\begin{DoxyParamCaption}{}{}\end{Dox
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00136}{136}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+brief Runs the User tests 
+
+Promts user to select which tests to perform These commands are\+: "{}\+Send a command\+: s=full motor step response, t=test, 0=stop romi, 1=straight, 2=\+Arc turn, 3= pivot, q=quit\+: "{} 
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00163}{163}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 Here is the call graph for this function\+:
 % FIG 3
@@ -137,7 +188,11 @@ pc\+\_\+micro\+\_\+reader.\+save\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyPar
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00027}{27}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+brief Saves the data sent from a single test 
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00030}{30}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 Here is the caller graph for this function\+:
 % FIG 4
@@ -149,7 +204,11 @@ pc\+\_\+micro\+\_\+reader.\+save\+Headers (\begin{DoxyParamCaption}{}{}\end{Doxy
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00021}{21}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+brief Reads the header line from the data 
+
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00024}{24}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 Here is the caller graph for this function\+:
 % FIG 5
@@ -161,7 +220,18 @@ pc\+\_\+micro\+\_\+reader.\+time\+Constant (\begin{DoxyParamCaption}\item[{}]{da
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00043}{43}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+brief Returns time cosntant of motor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & data from tests {\bfseries{ Returns }} \begin{quote}
+time constant value \end{quote}
+\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00059}{59}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 
 
@@ -176,7 +246,7 @@ int pc\+\_\+micro\+\_\+reader.\+angular\+\_\+lim = 10}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00017}{17}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00020}{20}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_ac47225dabefc5f5d851098829e9a476b}\index{pc\_micro\_reader@{pc\_micro\_reader}!arc\_lim@{arc\_lim}}
 \index{arc\_lim@{arc\_lim}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -186,7 +256,7 @@ int pc\+\_\+micro\+\_\+reader.\+arc\+\_\+lim = 100}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00015}{15}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00018}{18}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a7ffe13548d71cb347fd6bc35df9ee01b}\index{pc\_micro\_reader@{pc\_micro\_reader}!baudrate@{baudrate}}
 \index{baudrate@{baudrate}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -196,7 +266,7 @@ pc\+\_\+micro\+\_\+reader.\+baudrate}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00299}{299}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00326}{326}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a3bca3094622dd65cc7e99dfefc434c5c}\index{pc\_micro\_reader@{pc\_micro\_reader}!motor\_gains\_l@{motor\_gains\_l}}
 \index{motor\_gains\_l@{motor\_gains\_l}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -206,7 +276,7 @@ list pc\+\_\+micro\+\_\+reader.\+motor\+\_\+gains\+\_\+l = \mbox{[}$\,$\mbox{]}}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00010}{10}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00013}{13}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a1f8b29c683377536b30229920eae916f}\index{pc\_micro\_reader@{pc\_micro\_reader}!motor\_gains\_r@{motor\_gains\_r}}
 \index{motor\_gains\_r@{motor\_gains\_r}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -216,7 +286,7 @@ list pc\+\_\+micro\+\_\+reader.\+motor\+\_\+gains\+\_\+r = \mbox{[}$\,$\mbox{]}}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00012}{12}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00015}{15}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_aeece9822afcfdad50c8c67b91cb010ac}\index{pc\_micro\_reader@{pc\_micro\_reader}!NUMBERS\_OF\_TESTS@{NUMBERS\_OF\_TESTS}}
 \index{NUMBERS\_OF\_TESTS@{NUMBERS\_OF\_TESTS}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -226,7 +296,11 @@ int pc\+\_\+micro\+\_\+reader.\+NUMBERS\+\_\+\+OF\+\_\+\+TESTS = 10}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00007}{7}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+User tests. 
+
+Project that allows user to select which tests to perform. Can perform step tests, and Romi motion tests. This project allows the user to connect to the Romi via bluetooth and communicate with the UI task. 
+
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00010}{10}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_ae943c5d65f7dc18a03307599b11d251a}\index{pc\_micro\_reader@{pc\_micro\_reader}!period@{period}}
 \index{period@{period}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -236,7 +310,7 @@ int pc\+\_\+micro\+\_\+reader.\+period = 13/1000}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00009}{9}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00012}{12}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_af6d915c11bc703c86a3d26254d0a3190}\index{pc\_micro\_reader@{pc\_micro\_reader}!port@{port}}
 \index{port@{port}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -246,7 +320,7 @@ pc\+\_\+micro\+\_\+reader.\+port}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00299}{299}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00326}{326}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a4fb4b6dff356fa7cf23835c4a2a5542f}\index{pc\_micro\_reader@{pc\_micro\_reader}!test\_done@{test\_done}}
 \index{test\_done@{test\_done}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -256,7 +330,7 @@ bool pc\+\_\+micro\+\_\+reader.\+test\+\_\+done = True}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00018}{18}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00021}{21}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_aabdba5a5b9d5d013650256d5927f6793}\index{pc\_micro\_reader@{pc\_micro\_reader}!test\_end@{test\_end}}
 \index{test\_end@{test\_end}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -266,7 +340,7 @@ int pc\+\_\+micro\+\_\+reader.\+test\+\_\+end = 1}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00014}{14}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00017}{17}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a5518aa0fd374fc60c0ba435b984a6982}\index{pc\_micro\_reader@{pc\_micro\_reader}!time\_constnats\_l@{time\_constnats\_l}}
 \index{time\_constnats\_l@{time\_constnats\_l}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -276,7 +350,7 @@ list pc\+\_\+micro\+\_\+reader.\+time\+\_\+constnats\+\_\+l = \mbox{[}$\,$\mbox{
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00011}{11}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00014}{14}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_ad32e90c0f8a66e4c959250be5d973949}\index{pc\_micro\_reader@{pc\_micro\_reader}!time\_constnats\_r@{time\_constnats\_r}}
 \index{time\_constnats\_r@{time\_constnats\_r}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -286,7 +360,7 @@ list pc\+\_\+micro\+\_\+reader.\+time\+\_\+constnats\+\_\+r = \mbox{[}$\,$\mbox{
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00013}{13}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00016}{16}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a2fecc023a54ac50fe98df03e586b95ba}\index{pc\_micro\_reader@{pc\_micro\_reader}!timeout@{timeout}}
 \index{timeout@{timeout}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -296,7 +370,7 @@ pc\+\_\+micro\+\_\+reader.\+timeout}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00299}{299}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00326}{326}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a1f9f969e87a1f48dad34e0213042e73e}\index{pc\_micro\_reader@{pc\_micro\_reader}!user\_input@{user\_input}}
 \index{user\_input@{user\_input}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -306,7 +380,7 @@ pc\+\_\+micro\+\_\+reader.\+user\+\_\+input = input("{}press c for calibrate, t 
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00300}{300}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00327}{327}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a2f77ce1e64de4463d37a2699982aa169}\index{pc\_micro\_reader@{pc\_micro\_reader}!VALUES\_SENT@{VALUES\_SENT}}
 \index{VALUES\_SENT@{VALUES\_SENT}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -316,7 +390,7 @@ int pc\+\_\+micro\+\_\+reader.\+VALUES\+\_\+\+SENT = 50}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00008}{8}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00011}{11}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 
 \Hypertarget{namespacepc__micro__reader_a0b64d9deda4bf5bdbb8232a2b574b12e}\index{pc\_micro\_reader@{pc\_micro\_reader}!velo\_lim@{velo\_lim}}
 \index{velo\_lim@{velo\_lim}!pc\_micro\_reader@{pc\_micro\_reader}}
@@ -326,5 +400,5 @@ int pc\+\_\+micro\+\_\+reader.\+velo\+\_\+lim = 300}
 
 
 
-Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00016}{16}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
+Definition at line \mbox{\hyperlink{pc__micro__reader_8py_source_l00019}{19}} of file \mbox{\hyperlink{pc__micro__reader_8py_source}{pc\+\_\+micro\+\_\+reader.\+py}}.
 

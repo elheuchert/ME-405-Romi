@@ -5,11 +5,11 @@ digraph "pc_micro_reader.get_test_plots"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node1 [id="Node000001",label="pc_micro_reader.get\l_test_plots",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [id="Node000001",label="pc_micro_reader.get\l_test_plots",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="brief Saves and creates test plots  Effects"];
   Node1 -> Node2 [id="edge4_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="pc_micro_reader.plotData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacepc__micro__reader.html#a6c36a96380dc2e9cadbc802da68a0c83",tooltip=" "];
+  Node2 [id="Node000002",label="pc_micro_reader.plotData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacepc__micro__reader.html#a6c36a96380dc2e9cadbc802da68a0c83",tooltip="brief Plots passed data"];
   Node1 -> Node3 [id="edge5_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="pc_micro_reader.saveData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacepc__micro__reader.html#a495968f7788cbecaba157e8418b4c3dd",tooltip=" "];
+  Node3 [id="Node000003",label="pc_micro_reader.saveData",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacepc__micro__reader.html#a495968f7788cbecaba157e8418b4c3dd",tooltip="brief Saves the data sent from a single test"];
   Node1 -> Node4 [id="edge6_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
-  Node4 [id="Node000004",label="pc_micro_reader.saveHeaders",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacepc__micro__reader.html#a61b3bc501899026e36fc605a6fed1130",tooltip=" "];
+  Node4 [id="Node000004",label="pc_micro_reader.saveHeaders",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$namespacepc__micro__reader.html#a61b3bc501899026e36fc605a6fed1130",tooltip="brief Reads the header line from the data"];
 }
