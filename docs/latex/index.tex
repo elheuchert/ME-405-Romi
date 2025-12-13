@@ -1,7 +1,20 @@
 \chapter{ME405 Library Documentation }
 \hypertarget{index}{}\label{index}\index{ME405 Library Documentation@{ME405 Library Documentation}}
 \hypertarget{index_intro}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{index_intro}
-sgtgeojg\hypertarget{index_hardware}{}\doxysection{\texorpdfstring{Hardware}{Hardware}}\label{index_hardware}
+Our goal for this project was to run and tune our Romi robot so that it could follow a course provided by our instructor. To achieve autonomous navigation, we used many sensor systems, starting with quadrature encoders that provided motor feedback for control through PD control. Reflectance sensors enabled us to detect lines on the track surface, allowing for line-\/following. The IMU supplied orientation data for state estimation and heading correction. A Bluetooth module allowed for wireless data transfer, helpful for running tests. Finally, Bump sensors provided collision detection for obstacle detection.
+
+This Documentation includes information about\+:
+\begin{DoxyItemize}
+\item Hardware
+\item Software architecture
+\begin{DoxyItemize}
+\item Namespaces
+\item Classes
+\item Task information
+\end{DoxyItemize}
+\item Test results and performance
+\item Key takeaways
+\end{DoxyItemize}\hypertarget{index_hardware}{}\doxysection{\texorpdfstring{Hardware}{Hardware}}\label{index_hardware}
 \hypertarget{index_motors}{}\doxysubsection{\texorpdfstring{Motors}{Motors}}\label{index_motors}
 We used Romi, which has two H-\/bridge motor drivers.
 
@@ -86,3 +99,23 @@ Bump 5  &PB14  &GPIO  \\
 GND  &GND  &-\/  \\
 GND  &GND  &-\/  \\
 \end{DoxyTable}
+\hypertarget{index_results}{}\doxysection{\texorpdfstring{Test Results and Performance}{Test Results and Performance}}\label{index_results}
+\hypertarget{index_test}{}\doxysubsection{\texorpdfstring{Test Results}{Test Results}}\label{index_test}
+{\bfseries{Velocity Plots testing}}
+
+After pressing the go command “s”, we have the Romi go through 4 tests, each consisting of 10 step response tests. Those 4 tests are velocity for the left and right motor, and position for the left and right motor. These data points are automatically given to the user when running the PC script and plotted accordingly. The results are shown below in Figures 1-\/4.
+
+ Figure 1. Left Motor Velocity Step Response  Figure 2. Right Motor Velocity Step Response  Figure 3. Left Motor Position Step Response  Figure 4. Right Motor Position Step Response
+
+Based on these velocity graphs, it seems that our chosen frequencies were sufficient as it portrays a step response. Using the CSV files we obtained, we can then generate a time constant for both the left and right motors for the control theory task to be applied next week.
+
+{\bfseries{Closed Loop Control Testing}}
+
+To tune Romi’s performance, we used our automatic data collection to run driving forward tests via our PC script. We started with only proportional control, running the motor at 200 mm/s, with K\+\_\+P being the same for both motors, with Figure 5 being our first test. The next tests with Figures 6-\/7 are tests where we changed the Kp values, resulting in Figure 7, where we found a sufficient Kp value for this test period.
+
+ Figure 5. Velocity of both motors with Kpr = 0.\+25 and Kpl = 0.\+25  Figure 6. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15  Figure 7. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15 and Vref = 300 mm/s
+
+After obtaining a relatively sufficient Kp, next we included integral control, controlling the Kp and Ki. Implementing both started of beneficial, as seen in Figure 8. We then raised Ki, in the next two Figures, 9 and 10, but it behaved erratically. Seeing as it was too much gain, we lowered Ki, but it still behaved erratically, so we were unsure where to continue from there.
+
+ Figure 8. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 0.\+5 and Kil = 0.\+5  Figure 9. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2 and Kil = 2  Figure 10. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2.\+5 and Kil = 2.\+5  Figure 11. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2.\+1 and Kil = 2.\+1\hypertarget{index_performance}{}\doxysubsection{\texorpdfstring{Track Performance}{Track Performance}}\label{index_performance}
+\hypertarget{index_key}{}\doxysection{\texorpdfstring{Key takeaways}{Key takeaways}}\label{index_key}

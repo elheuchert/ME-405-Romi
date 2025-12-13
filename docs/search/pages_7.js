@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sensors_0',['Sensors',['../index.html#bump',1,'Bump Sensors'],['../index.html#linesensor',1,'Line Sensors']]]
+  ['library_20documentation_0',['ME405 Library Documentation',['../index.html',1,'']]],
+  ['line_20sensors_1',['Line Sensors',['../index.html#linesensor',1,'']]]
 ];

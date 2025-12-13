@@ -123,8 +123,12 @@ var NAVTREEINDEX3 =
 "index.html#hardware":[0,1],
 "index.html#imu":[0,1,3],
 "index.html#intro":[0,0],
+"index.html#key":[0,3],
 "index.html#linesensor":[0,1,4],
 "index.html#motors":[0,1,0],
+"index.html#performance":[0,2,1],
+"index.html#results":[0,2],
+"index.html#test":[0,2,0],
 "ir__sensor_8py.html":[3,0,0,10],
 "ir__sensor_8py_source.html":[3,0,0,10],
 "line__sensor_8py.html":[3,0,0,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX3 =
 "namespacemain.html#adda0bef0c5f610ffcc8392437981f576":[1,0,13,83],
 "namespacemain.html#adf148624a4a395a18607935e7ce468fd":[1,0,13,44],
 "namespacemain.html#ae25c8a638d528f443138685401a18212":[1,0,13,88],
-"namespacemain.html#ae2f2cc9924cb987f58aad0b2fd1e6471":[1,0,13,4],
-"namespacemain.html#ae651c740514675bddea83d3310163a4b":[1,0,13,61],
-"namespacemain.html#ae9e583c6d55b6164ddb1e42b0231b7fa":[1,0,13,2],
-"namespacemain.html#aebef59d830c2aef562d9b0f73bb4c0b3":[1,0,13,76],
-"namespacemain.html#aec8238828938ea6fab75f87203c93296":[1,0,13,7]
+"namespacemain.html#ae2f2cc9924cb987f58aad0b2fd1e6471":[1,0,13,4]
 };

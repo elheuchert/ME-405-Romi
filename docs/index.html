@@ -93,7 +93,18 @@ $(function(){initNavTree('index.html','',''); });
 <div class="contents">
 <div class="textblock"><h1 class="doxsection"><a class="anchor" id="intro"></a>
 Introduction</h1>
-<p>sgtgeojg</p>
+<p>Our goal for this project was to run and tune our Romi robot so that it could follow a course provided by our instructor. To achieve autonomous navigation, we used many sensor systems, starting with quadrature encoders that provided motor feedback for control through PD control. Reflectance sensors enabled us to detect lines on the track surface, allowing for line-following. The IMU supplied orientation data for state estimation and heading correction. A Bluetooth module allowed for wireless data transfer, helpful for running tests. Finally, Bump sensors provided collision detection for obstacle detection.</p>
+<p>This Documentation includes information about:</p><ul>
+<li>Hardware</li>
+<li>Software architecture<ul>
+<li>Namespaces</li>
+<li>Classes</li>
+<li>Task information</li>
+</ul>
+</li>
+<li>Test results and performance</li>
+<li>Key takeaways</li>
+</ul>
 <h1 class="doxsection"><a class="anchor" id="hardware"></a>
 Hardware</h1>
 <h2 class="doxsection"><a class="anchor" id="motors"></a>
@@ -222,6 +233,56 @@ Bump Sensors</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">-  </td></tr>
 </table>
+<h1 class="doxsection"><a class="anchor" id="results"></a>
+Test Results and Performance</h1>
+<h2 class="doxsection"><a class="anchor" id="test"></a>
+Test Results</h2>
+<p><b>Velocity Plots testing</b></p>
+<p>After pressing the go command “s”, we have the Romi go through 4 tests, each consisting of 10 step response tests. Those 4 tests are velocity for the left and right motor, and position for the left and right motor. These data points are automatically given to the user when running the PC script and plotted accordingly. The results are shown below in Figures 1-4.</p>
+<div class="image">
+<img src="Plot_1.png" alt=""/>
+</div>
+<p> Figure 1. Left Motor Velocity Step Response </p><div class="image">
+<img src="Plot_2.png" alt=""/>
+</div>
+<p> Figure 2. Right Motor Velocity Step Response </p><div class="image">
+<img src="Plot_3.png" alt=""/>
+</div>
+<p> Figure 3. Left Motor Position Step Response </p><div class="image">
+<img src="Plot_4.png" alt=""/>
+</div>
+<p> Figure 4. Right Motor Position Step Response</p>
+<p>Based on these velocity graphs, it seems that our chosen frequencies were sufficient as it portrays a step response. Using the CSV files we obtained, we can then generate a time constant for both the left and right motors for the control theory task to be applied next week.</p>
+<p><b>Closed Loop Control Testing</b></p>
+<p>To tune Romi’s performance, we used our automatic data collection to run driving forward tests via our PC script. We started with only proportional control, running the motor at 200 mm/s, with K_P being the same for both motors, with Figure 5 being our first test. The next tests with Figures 6-7 are tests where we changed the Kp values, resulting in Figure 7, where we found a sufficient Kp value for this test period.</p>
+<div class="image">
+<img src="Plot_5.png" alt=""/>
+</div>
+<p> Figure 5. Velocity of both motors with Kpr = 0.25 and Kpl = 0.25 </p><div class="image">
+<img src="Plot_6.png" alt=""/>
+</div>
+<p> Figure 6. Velocity of both motors with Kpr = 0.1 and Kpl = 0.15 </p><div class="image">
+<img src="Plot_7.png" alt=""/>
+</div>
+<p> Figure 7. Velocity of both motors with Kpr = 0.1 and Kpl = 0.15 and Vref = 300 mm/s</p>
+<p>After obtaining a relatively sufficient Kp, next we included integral control, controlling the Kp and Ki. Implementing both started of beneficial, as seen in Figure 8. We then raised Ki, in the next two Figures, 9 and 10, but it behaved erratically. Seeing as it was too much gain, we lowered Ki, but it still behaved erratically, so we were unsure where to continue from there.</p>
+<div class="image">
+<img src="Plot_8.png" alt=""/>
+</div>
+<p> Figure 8. Velocity of both motors with Kpr = 0.1 and Kpl = 0.15, Kir = 0.5 and Kil = 0.5 </p><div class="image">
+<img src="Plot_9.png" alt=""/>
+</div>
+<p> Figure 9. Velocity of both motors with Kpr = 0.1 and Kpl = 0.15, Kir = 2 and Kil = 2 </p><div class="image">
+<img src="Plot_10.png" alt=""/>
+</div>
+<p> Figure 10. Velocity of both motors with Kpr = 0.1 and Kpl = 0.15, Kir = 2.5 and Kil = 2.5 </p><div class="image">
+<img src="Plot_11.png" alt=""/>
+</div>
+<p> Figure 11. Velocity of both motors with Kpr = 0.1 and Kpl = 0.15, Kir = 2.1 and Kil = 2.1</p>
+<h2 class="doxsection"><a class="anchor" id="performance"></a>
+Track Performance</h2>
+<h1 class="doxsection"><a class="anchor" id="key"></a>
+Key takeaways</h1>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

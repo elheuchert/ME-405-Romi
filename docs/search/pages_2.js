@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['encoders_0',['Encoders',['../index.html#encoders',1,'']]]
+  ['documentation_0',['ME405 Library Documentation',['../index.html',1,'']]]
 ];

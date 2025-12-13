@@ -23,11 +23,12 @@ var searchData=
   ['alignment_5fgoal_5f6_20',['ALIGNMENT_GOAL_6',['../namespacepathing__plan__task.html#afb1ff89d602fe696c8a69cd6d18db113',1,'pathing_plan_task']]],
   ['alignment_5fgoal_5f7_21',['ALIGNMENT_GOAL_7',['../namespacepathing__plan__task.html#ab8f87e653c53e3d4d1e5ab5a144229b2',1,'pathing_plan_task']]],
   ['alignment_5fgoal_5f8_22',['ALIGNMENT_GOAL_8',['../namespacepathing__plan__task.html#ade0c044ffc96082c1722ab2a4d9872ac',1,'pathing_plan_task']]],
-  ['angular_5flim_23',['angular_lim',['../namespacepc__micro__reader.html#a3f91bca5e55b080d1c2b23379d87830f',1,'pc_micro_reader']]],
-  ['any_24',['any',['../classtask__share_1_1_queue.html#ac9552672266377c23011552e9df15a63',1,'task_share::Queue']]],
-  ['append_25',['append',['../classcotask_1_1_task_list.html#ab6aaf44123a285f4355919a5a8229c39',1,'cotask::TaskList']]],
-  ['arc_5flim_26',['arc_lim',['../namespacepc__micro__reader.html#ac47225dabefc5f5d851098829e9a476b',1,'pc_micro_reader']]],
-  ['arc_5fref_27',['arc_ref',['../classcontrol__task_1_1control__task.html#af4f9e965ac941c0922596f8b3ad27f79',1,'control_task.control_task.arc_ref'],['../classui_1_1ui.html#afd1a969404e0291812e1104556bae52b',1,'ui.ui.arc_ref'],['../namespacemain.html#aad217a48167d9e8460e52b8cb58f1d5c',1,'main.arc_ref']]],
-  ['automatic_5fmode_28',['automatic_mode',['../classcontrol__task_1_1control__task.html#a3bcbe88e750f7c29c094596141c2051e',1,'control_task.control_task.automatic_mode'],['../classpathing__plan__task_1_1pathing__plan.html#aaa34ec5c7e9681cf64e98c73a2f2d497',1,'pathing_plan_task.pathing_plan.automatic_mode'],['../classui_1_1ui.html#a4e33e8d9bd212d6352bf7bcb5064881f',1,'ui.ui.automatic_mode'],['../namespacemain.html#a65307c9f5bd7b6c97280321b38722ad7',1,'main.automatic_mode']]],
-  ['average_29',['average',['../namespacepc__micro__reader.html#a83f2d707d8774200860c8381fe8cf691',1,'pc_micro_reader']]]
+  ['and_20performance_23',['Test Results and Performance',['../index.html#results',1,'']]],
+  ['angular_5flim_24',['angular_lim',['../namespacepc__micro__reader.html#a3f91bca5e55b080d1c2b23379d87830f',1,'pc_micro_reader']]],
+  ['any_25',['any',['../classtask__share_1_1_queue.html#ac9552672266377c23011552e9df15a63',1,'task_share::Queue']]],
+  ['append_26',['append',['../classcotask_1_1_task_list.html#ab6aaf44123a285f4355919a5a8229c39',1,'cotask::TaskList']]],
+  ['arc_5flim_27',['arc_lim',['../namespacepc__micro__reader.html#ac47225dabefc5f5d851098829e9a476b',1,'pc_micro_reader']]],
+  ['arc_5fref_28',['arc_ref',['../classcontrol__task_1_1control__task.html#af4f9e965ac941c0922596f8b3ad27f79',1,'control_task.control_task.arc_ref'],['../classui_1_1ui.html#afd1a969404e0291812e1104556bae52b',1,'ui.ui.arc_ref'],['../namespacemain.html#aad217a48167d9e8460e52b8cb58f1d5c',1,'main.arc_ref']]],
+  ['automatic_5fmode_29',['automatic_mode',['../classcontrol__task_1_1control__task.html#a3bcbe88e750f7c29c094596141c2051e',1,'control_task.control_task.automatic_mode'],['../classpathing__plan__task_1_1pathing__plan.html#aaa34ec5c7e9681cf64e98c73a2f2d497',1,'pathing_plan_task.pathing_plan.automatic_mode'],['../classui_1_1ui.html#a4e33e8d9bd212d6352bf7bcb5064881f',1,'ui.ui.automatic_mode'],['../namespacemain.html#a65307c9f5bd7b6c97280321b38722ad7',1,'main.automatic_mode']]],
+  ['average_30',['average',['../namespacepc__micro__reader.html#a83f2d707d8774200860c8381fe8cf691',1,'pc_micro_reader']]]
 ];
