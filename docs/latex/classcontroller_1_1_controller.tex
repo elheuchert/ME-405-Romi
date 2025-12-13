@@ -2,29 +2,13 @@
 \hypertarget{classcontroller_1_1_controller}{}\label{classcontroller_1_1_controller}\index{controller.Controller@{controller.Controller}}
 
 
-add description here  
+This file contains a class to create a PID \doxylink{classcontroller_1_1_controller}{Controller} object.  
 
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classcontroller_1_1_controller_a14469e0d83a24cd2b365db8c1c639fff}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classcontroller_1_1_controller_a6147d7f8aa12e56ef01036ddd2b55ee9}{K\+\_\+p}}, \mbox{\hyperlink{classcontroller_1_1_controller_aa9c1f5ee49f9a2ac080bfe502e4c0e93}{K\+\_\+i}}, \mbox{\hyperlink{classcontroller_1_1_controller_ae3f041523ee38097fcd9ded21d8c44f9}{K\+\_\+d}}, \mbox{\hyperlink{classcontroller_1_1_controller_adb2b7c2aaa78f50e338dfa3e16ef8dad}{err\+\_\+sat}}, eff\+\_\+sat)
-\item 
-\mbox{\hyperlink{classcontroller_1_1_controller_a66a4bfaee27723153d3fe8a39f9360e7}{change\+\_\+\+Ref}} (self, \mbox{\hyperlink{classcontroller_1_1_controller_a377569fff3a8f305c007bc232c26f4cf}{reference}})
-\item 
-\mbox{\hyperlink{classcontroller_1_1_controller_ab2a6d86b32398fcf791cf05f0f1ab42f}{get\+\_\+\+Ref}} (self)
-\item 
-\mbox{\hyperlink{classcontroller_1_1_controller_a639f0e83f6d104da568491a68f559a65}{get\+\_\+\+Error}} (self)
-\item 
-\mbox{\hyperlink{classcontroller_1_1_controller_a7ede797cb360286ad5ff6fd2055e383f}{proportional\+\_\+\+Control}} (self, measure)
-\item 
-\mbox{\hyperlink{classcontroller_1_1_controller_af400a49e24b076dcfddada663601571e}{pi\+\_\+\+Control}} (self, measure, dt)
-\item 
-\mbox{\hyperlink{classcontroller_1_1_controller_add6b42b187f2c2b3e6a9fdb9da517c8e}{error\+\_\+sat}} (self, err)
-\item 
-\mbox{\hyperlink{classcontroller_1_1_controller_a6bf8ed8f5fa2a5a3d0db372775b854c5}{effort\+\_\+sat}} (self, eff)
-\item 
-\mbox{\hyperlink{classcontroller_1_1_controller_ac01cc52c1543eba556bdb47431b240f2}{change\+\_\+\+Gains}} (self, k\+\_\+p, k\+\_\+i, k\+\_\+d)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -46,9 +30,38 @@ int \mbox{\hyperlink{classcontroller_1_1_controller_a377569fff3a8f305c007bc232c2
 
 
 \doxysubsection{Detailed Description}
-add description here 
+This file contains a class to create a PID \doxylink{classcontroller_1_1_controller}{Controller} object. 
 
-Definition at line \mbox{\hyperlink{controller_8py_source_l00002}{2}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+These objects are always initialized as PID controllers but can be ran as any combination of P, I, and D controllers. They are to be treated as classical controls single input, single output controllers.
+
+The controller object has gains that are given to it on initialization. The object holds a set point and will use classical control theory of errors from the setpoint for return values when asking for control. The object also handles saturating the integral error sum and the output effort as set on initialization.
+
+\begin{DoxyAuthor}{Author}
+Alex Power, Lucas Heuchert, Erik Heuchert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/Sept-\/28 Approximate date of creation of file 
+
+2025-\/Dec-\/12 Final alterations made
+\end{DoxyDate}
+The \doxylink{classcontroller_1_1_controller}{Controller} class is a classical PID controller that implements single input, single output control when called to. The user gives it gains and setpoints and calls the control function for efforts.
+
+{\bfseries{init}} is the \doxylink{classcontroller_1_1_controller}{Controller} object initializer which takes 5 arguments. The arguments the gains and saturation points of the classical controller. 
+\begin{DoxyParams}{Parameters}
+{\em K\+\_\+p} & \+: K\+\_\+p is the proportional gain. \\
+\hline
+{\em K\+\_\+i} & \+: K\+\_\+i is the integral gain. \\
+\hline
+{\em K\+\_\+d} & K\+\_\+d is the derivative gain, but it is not implemented as it was not used in the project. \\
+\hline
+{\em err\+\_\+sat} & \+: err\+\_\+sat is the saturation point for the integral of the error to stop I control from becoming unstable. \\
+\hline
+{\em eff\+\_\+sat} & \+: eff\+\_\+sat is the saturation point for the output effort. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00019}{19}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
 
 
 
@@ -63,41 +76,85 @@ controller.\+Controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\i
 
 
 
-Definition at line \mbox{\hyperlink{controller_8py_source_l00004}{4}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+Definition at line \mbox{\hyperlink{controller_8py_source_l00021}{21}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
 
 
 
-\label{doc-func-members}
-\Hypertarget{classcontroller_1_1_controller_doc-func-members}
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classcontroller_1_1_controller_ac01cc52c1543eba556bdb47431b240f2}\index{controller.Controller@{controller.Controller}!change\_Gains@{change\_Gains}}
-\index{change\_Gains@{change\_Gains}!controller.Controller@{controller.Controller}}
-\doxysubsubsection{\texorpdfstring{change\_Gains()}{change\_Gains()}}
-{\footnotesize\ttfamily \label{classcontroller_1_1_controller_ac01cc52c1543eba556bdb47431b240f2} 
-controller.\+Controller.\+change\+\_\+\+Gains (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{k\+\_\+p}{, }\item[{}]{k\+\_\+i}{, }\item[{}]{k\+\_\+d}{}\end{DoxyParamCaption})}
+\label{doc-variable-members}
+\Hypertarget{classcontroller_1_1_controller_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcontroller_1_1_controller_ad045f05ef9d715d39a46d318fbe4f850}\index{controller.Controller@{controller.Controller}!effort\_saturation@{effort\_saturation}}
+\index{effort\_saturation@{effort\_saturation}!controller.Controller@{controller.Controller}}
+\doxysubsubsection{\texorpdfstring{effort\_saturation}{effort\_saturation}}
+{\footnotesize\ttfamily \label{classcontroller_1_1_controller_ad045f05ef9d715d39a46d318fbe4f850} 
+controller.\+Controller.\+effort\+\_\+saturation = eff\+\_\+sat}
 
 
 
-Definition at line \mbox{\hyperlink{controller_8py_source_l00061}{61}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+Definition at line \mbox{\hyperlink{controller_8py_source_l00028}{28}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
 
-\Hypertarget{classcontroller_1_1_controller_a66a4bfaee27723153d3fe8a39f9360e7}\index{controller.Controller@{controller.Controller}!change\_Ref@{change\_Ref}}
-\index{change\_Ref@{change\_Ref}!controller.Controller@{controller.Controller}}
-\doxysubsubsection{\texorpdfstring{change\_Ref()}{change\_Ref()}}
-{\footnotesize\ttfamily \label{classcontroller_1_1_controller_a66a4bfaee27723153d3fe8a39f9360e7} 
-controller.\+Controller.\+change\+\_\+\+Ref (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{reference}{}\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{controller_8py_source_l00013}{13}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
-
-\Hypertarget{classcontroller_1_1_controller_a6bf8ed8f5fa2a5a3d0db372775b854c5}\index{controller.Controller@{controller.Controller}!effort\_sat@{effort\_sat}}
-\index{effort\_sat@{effort\_sat}!controller.Controller@{controller.Controller}}
-\doxysubsubsection{\texorpdfstring{effort\_sat()}{effort\_sat()}}
-{\footnotesize\ttfamily \label{classcontroller_1_1_controller_a6bf8ed8f5fa2a5a3d0db372775b854c5} 
-controller.\+Controller.\+effort\+\_\+sat (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{eff}{}\end{DoxyParamCaption})}
+\Hypertarget{classcontroller_1_1_controller_adb2b7c2aaa78f50e338dfa3e16ef8dad}\index{controller.Controller@{controller.Controller}!err\_sat@{err\_sat}}
+\index{err\_sat@{err\_sat}!controller.Controller@{controller.Controller}}
+\doxysubsubsection{\texorpdfstring{err\_sat}{err\_sat}}
+{\footnotesize\ttfamily \label{classcontroller_1_1_controller_adb2b7c2aaa78f50e338dfa3e16ef8dad} 
+controller.\+Controller.\+err\+\_\+sat = err\+\_\+sat}
 
 
 
-Definition at line \mbox{\hyperlink{controller_8py_source_l00053}{53}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+Definition at line \mbox{\hyperlink{controller_8py_source_l00027}{27}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
 
-Here is the caller graph for this function\+:
+\Hypertarget{classcontroller_1_1_controller_ae3f041523ee38097fcd9ded21d8c44f9}\index{controller.Controller@{controller.Controller}!K\_d@{K\_d}}
+\index{K\_d@{K\_d}!controller.Controller@{controller.Controller}}
+\doxysubsubsection{\texorpdfstring{K\_d}{K\_d}}
+{\footnotesize\ttfamily \label{classcontroller_1_1_controller_ae3f041523ee38097fcd9ded21d8c44f9} 
+controller.\+Controller.\+K\+\_\+d = K\+\_\+d}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00024}{24}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{classcontroller_1_1_controller_aa9c1f5ee49f9a2ac080bfe502e4c0e93}\index{controller.Controller@{controller.Controller}!K\_i@{K\_i}}
+\index{K\_i@{K\_i}!controller.Controller@{controller.Controller}}
+\doxysubsubsection{\texorpdfstring{K\_i}{K\_i}}
+{\footnotesize\ttfamily \label{classcontroller_1_1_controller_aa9c1f5ee49f9a2ac080bfe502e4c0e93} 
+controller.\+Controller.\+K\+\_\+i = K\+\_\+i}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00023}{23}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{classcontroller_1_1_controller_a6147d7f8aa12e56ef01036ddd2b55ee9}\index{controller.Controller@{controller.Controller}!K\_p@{K\_p}}
+\index{K\_p@{K\_p}!controller.Controller@{controller.Controller}}
+\doxysubsubsection{\texorpdfstring{K\_p}{K\_p}}
+{\footnotesize\ttfamily \label{classcontroller_1_1_controller_a6147d7f8aa12e56ef01036ddd2b55ee9} 
+controller.\+Controller.\+K\+\_\+p = K\+\_\+p}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00022}{22}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{classcontroller_1_1_controller_a377569fff3a8f305c007bc232c26f4cf}\index{controller.Controller@{controller.Controller}!reference@{reference}}
+\index{reference@{reference}!controller.Controller@{controller.Controller}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily \label{classcontroller_1_1_controller_a377569fff3a8f305c007bc232c26f4cf} 
+int controller.\+Controller.\+reference = 0}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00026}{26}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{classcontroller_1_1_controller_a5784a365448f4942ea8faaf246a25c6b}\index{controller.Controller@{controller.Controller}!summed\_errors@{summed\_errors}}
+\index{summed\_errors@{summed\_errors}!controller.Controller@{controller.Controller}}
+\doxysubsubsection{\texorpdfstring{summed\_errors}{summed\_errors}}
+{\footnotesize\ttfamily \label{classcontroller_1_1_controller_a5784a365448f4942ea8faaf246a25c6b} 
+int controller.\+Controller.\+summed\+\_\+errors = 0}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00025}{25}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/14083/vscode\+\_\+python/\mbox{\hyperlink{controller_8py}{controller.\+py}}\end{DoxyCompactItemize}

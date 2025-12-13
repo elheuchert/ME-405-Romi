@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['wall_0',['WALL',['../namespacepathing__plan__task.html#ad5a702328bb19e0d6417b61a8ce01a8a',1,'pathing_plan_task']]],
-  ['which_5ftest_1',['which_test',['../classui_1_1ui.html#a5c20b9c3faae2715b2f19f9f11578167',1,'ui::ui']]],
-  ['white_2',['white',['../classline__sensor_1_1_line___sensor.html#a1434956ef465afe9948655e8ae5210e7',1,'line_sensor::Line_Sensor']]],
-  ['white_5fdata_3',['white_data',['../classline__task_1_1line__task.html#ac41f900575b1236c0449cd4f9de9483d',1,'line_task::line_task']]],
-  ['white_5fref_4',['white_ref',['../classir__sensor_1_1_i_r___sensor.html#a51781e379b3d39e058d6ea0c8b36be2f',1,'ir_sensor::IR_Sensor']]],
-  ['wrapper_5',['wrapper',['../classpathing__plan__task_1_1pathing__plan.html#ad08c3360eb952dab07e98c69169c43b5',1,'pathing_plan_task::pathing_plan']]],
-  ['write_5fcalibration_5fcoeff_6',['write_calibration_coeff',['../classimu_1_1_i_m_u.html#a1186b18bfa64be37260606cff40a1af1',1,'imu::IMU']]]
+  ['values_5fsent_0',['VALUES_SENT',['../namespacepc__micro__reader.html#a2f77ce1e64de4463d37a2699982aa169',1,'pc_micro_reader']]],
+  ['velo_5flim_1',['velo_lim',['../namespacepc__micro__reader.html#a0b64d9deda4bf5bdbb8232a2b574b12e',1,'pc_micro_reader']]],
+  ['velocity_2',['velocity',['../classdata__collector_1_1data__collector.html#acf532d8c1db3d51f296983a50de6f28b',1,'data_collector.data_collector.velocity'],['../classui_1_1ui.html#acc2e933d24839fd64eb692e5762d37c5',1,'ui.ui.velocity'],['../namespacemain.html#ae25c8a638d528f443138685401a18212',1,'main.velocity']]],
+  ['velocity2_3',['velocity2',['../classdata__collector_1_1data__collector.html#a152ee123c4161eab9aa8120a8518a0a4',1,'data_collector.data_collector.velocity2'],['../classui_1_1ui.html#a213173cffeabf6851fa0e4dc0bf25cc0',1,'ui.ui.velocity2'],['../namespacemain.html#a8fcb9b42d30b9eb6eaeb3e41273ace3a',1,'main.velocity2']]],
+  ['velocity_5fl_4',['velocity_l',['../classcontrol__task_1_1control__task.html#a9a2d1980a838f00da777fc7c7351089e',1,'control_task.control_task.velocity_l'],['../classdata__collector_1_1data__collector.html#a874f17873b6ee5f0dabfa38c9ce0e3bd',1,'data_collector.data_collector.velocity_l'],['../classmotor__encoder__left__class_1_1motor__encoder__left__class.html#aba73cc739146815ad000e954f95539a9',1,'motor_encoder_left_class.motor_encoder_left_class.velocity_l'],['../namespacemain.html#acee89f759dd79682420e3b828c6f62a6',1,'main.velocity_l']]],
+  ['velocity_5fr_5',['velocity_r',['../classcontrol__task_1_1control__task.html#abf2f8701fda5f3ddaaec344266e1b392',1,'control_task.control_task.velocity_r'],['../classdata__collector_1_1data__collector.html#a5b27c225e3ed4578648334993b9f809c',1,'data_collector.data_collector.velocity_r'],['../classmotor__encoder__right__class_1_1motor__encoder__right__class.html#a22d0aab2b777ecb2e5771cd847dd1c22',1,'motor_encoder_right_class.motor_encoder_right_class.velocity_r'],['../namespacemain.html#afb9e2572f7bb55c812880ae7346cff88',1,'main.velocity_r']]]
 ];

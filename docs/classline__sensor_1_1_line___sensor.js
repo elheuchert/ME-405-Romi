@@ -6,7 +6,6 @@ var classline__sensor_1_1_line___sensor =
     [ "check_Indv", "classline__sensor_1_1_line___sensor.html#a623841e77106df7a2ff88e75303b11f5", null ],
     [ "check_Line", "classline__sensor_1_1_line___sensor.html#add57a95efa8921429594174f855a6d51", null ],
     [ "getCentroid", "classline__sensor_1_1_line___sensor.html#a25a9eedababc48fb82aa224db46048c4", null ],
-    [ "getCentroidCut", "classline__sensor_1_1_line___sensor.html#ad0749f4cf34cdc34d9723a2e8a086f2f", null ],
     [ "read_Calibrate_Data", "classline__sensor_1_1_line___sensor.html#a09d60a2207c745bc320df4f83a7aadb1", null ],
     [ "readSensors", "classline__sensor_1_1_line___sensor.html#a0de5339139823f8953a8433b0371e328", null ],
     [ "act_data", "classline__sensor_1_1_line___sensor.html#a864d7261c69d1f015c6e104eefbe98bb", null ],

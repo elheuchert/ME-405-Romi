@@ -20,8 +20,5 @@ var searchData=
   ['eul_5fdata_5fz_17',['EUL_Data_Z',['../classimu_1_1_i_m_u_1_1reg.html#adc9ec7bbd5c5122a66cedb0ee37166c1',1,'imu::IMU::reg']]],
   ['eul_5fheading_18',['EUL_HEADING',['../classimu_1_1_i_m_u_1_1reg.html#a0d314b1a511f2a0b8f7ca9a5fe00c31f',1,'imu::IMU::reg']]],
   ['eul_5fheading_5flsb_19',['EUL_HEADING_LSB',['../classimu_1_1_i_m_u_1_1reg.html#a70f532551713e61c764156db5c63c857',1,'imu::IMU::reg']]],
-  ['eul_5fheading_5fmsb_20',['EUL_HEADING_MSB',['../classimu_1_1_i_m_u_1_1reg.html#a17f20c3be63a8574e2488039496d1207',1,'imu::IMU::reg']]],
-  ['expyawgoal1_21',['EXPYAWGOAL1',['../namespacepathing__plan__task.html#a462abb6155995221c3a5dabafc80a75a',1,'pathing_plan_task']]],
-  ['expyawgoal2_22',['EXPYAWGOAL2',['../namespacepathing__plan__task.html#ae7aa7713bf1c1a2649970e8b2ec6ae77',1,'pathing_plan_task']]],
-  ['expyawgoal3_23',['EXPYAWGOAL3',['../namespacepathing__plan__task.html#a763bab3ba47e74415f4ebb41113eb389',1,'pathing_plan_task']]]
+  ['eul_5fheading_5fmsb_20',['EUL_HEADING_MSB',['../classimu_1_1_i_m_u_1_1reg.html#a17f20c3be63a8574e2488039496d1207',1,'imu::IMU::reg']]]
 ];

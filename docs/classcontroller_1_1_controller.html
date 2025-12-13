@@ -92,20 +92,12 @@ $(function(){initNavTree('classcontroller_1_1_controller.html','','classcontroll
 </div><!--header-->
 <div class="contents">
 
-<p>add description here  
+<p>This file contains a class to create a PID <a class="el" href="classcontroller_1_1_controller.html" title="This file contains a class to create a PID Controller object.">Controller</a> object.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a14469e0d83a24cd2b365db8c1c639fff" id="r_a14469e0d83a24cd2b365db8c1c639fff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14469e0d83a24cd2b365db8c1c639fff">__init__</a> (self, <a class="el" href="#a6147d7f8aa12e56ef01036ddd2b55ee9">K_p</a>, <a class="el" href="#aa9c1f5ee49f9a2ac080bfe502e4c0e93">K_i</a>, <a class="el" href="#ae3f041523ee38097fcd9ded21d8c44f9">K_d</a>, <a class="el" href="#adb2b7c2aaa78f50e338dfa3e16ef8dad">err_sat</a>, eff_sat)</td></tr>
-<tr class="memitem:a66a4bfaee27723153d3fe8a39f9360e7" id="r_a66a4bfaee27723153d3fe8a39f9360e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a4bfaee27723153d3fe8a39f9360e7">change_Ref</a> (self, <a class="el" href="#a377569fff3a8f305c007bc232c26f4cf">reference</a>)</td></tr>
-<tr class="memitem:ab2a6d86b32398fcf791cf05f0f1ab42f" id="r_ab2a6d86b32398fcf791cf05f0f1ab42f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2a6d86b32398fcf791cf05f0f1ab42f">get_Ref</a> (self)</td></tr>
-<tr class="memitem:a639f0e83f6d104da568491a68f559a65" id="r_a639f0e83f6d104da568491a68f559a65"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a639f0e83f6d104da568491a68f559a65">get_Error</a> (self)</td></tr>
-<tr class="memitem:a7ede797cb360286ad5ff6fd2055e383f" id="r_a7ede797cb360286ad5ff6fd2055e383f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ede797cb360286ad5ff6fd2055e383f">proportional_Control</a> (self, measure)</td></tr>
-<tr class="memitem:af400a49e24b076dcfddada663601571e" id="r_af400a49e24b076dcfddada663601571e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af400a49e24b076dcfddada663601571e">pi_Control</a> (self, measure, dt)</td></tr>
-<tr class="memitem:add6b42b187f2c2b3e6a9fdb9da517c8e" id="r_add6b42b187f2c2b3e6a9fdb9da517c8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add6b42b187f2c2b3e6a9fdb9da517c8e">error_sat</a> (self, err)</td></tr>
-<tr class="memitem:a6bf8ed8f5fa2a5a3d0db372775b854c5" id="r_a6bf8ed8f5fa2a5a3d0db372775b854c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bf8ed8f5fa2a5a3d0db372775b854c5">effort_sat</a> (self, eff)</td></tr>
-<tr class="memitem:ac01cc52c1543eba556bdb47431b240f2" id="r_ac01cc52c1543eba556bdb47431b240f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac01cc52c1543eba556bdb47431b240f2">change_Gains</a> (self, k_p, k_i, k_d)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -118,9 +110,26 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad045f05ef9d715d39a46d318fbe4f850" id="r_ad045f05ef9d715d39a46d318fbe4f850"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad045f05ef9d715d39a46d318fbe4f850">effort_saturation</a> = eff_sat</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>add description here </p>
+<div class="textblock"><p>This file contains a class to create a PID <a class="el" href="classcontroller_1_1_controller.html" title="This file contains a class to create a PID Controller object.">Controller</a> object. </p>
+<p>These objects are always initialized as PID controllers but can be ran as any combination of P, I, and D controllers. They are to be treated as classical controls single input, single output controllers.</p>
+<p>The controller object has gains that are given to it on initialization. The object holds a set point and will use classical control theory of errors from the setpoint for return values when asking for control. The object also handles saturating the integral error sum and the output effort as set on initialization.</p>
+<dl class="section author"><dt>Author</dt><dd>Alex Power, Lucas Heuchert, Erik Heuchert </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025-Sept-28 Approximate date of creation of file </dd>
+<dd>
+2025-Dec-12 Final alterations made</dd></dl>
+<p>The <a class="el" href="classcontroller_1_1_controller.html" title="This file contains a class to create a PID Controller object.">Controller</a> class is a classical PID controller that implements single input, single output control when called to. The user gives it gains and setpoints and calls the control function for efforts.</p>
+<p><b>init</b> is the <a class="el" href="classcontroller_1_1_controller.html" title="This file contains a class to create a PID Controller object.">Controller</a> object initializer which takes 5 arguments. The arguments the gains and saturation points of the classical controller. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">K_p</td><td>: K_p is the proportional gain. </td></tr>
+    <tr><td class="paramname">K_i</td><td>: K_i is the integral gain. </td></tr>
+    <tr><td class="paramname">K_d</td><td>K_d is the derivative gain, but it is not implemented as it was not used in the project. </td></tr>
+    <tr><td class="paramname">err_sat</td><td>: err_sat is the saturation point for the integral of the error to stop I control from becoming unstable. </td></tr>
+    <tr><td class="paramname">eff_sat</td><td>: eff_sat is the saturation point for the output effort. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00002">2</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00019">19</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a14469e0d83a24cd2b365db8c1c639fff" name="a14469e0d83a24cd2b365db8c1c639fff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a14469e0d83a24cd2b365db8c1c639fff">&#9670;&#160;</a></span>__init__()</h2>
@@ -161,214 +170,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00004">4</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ac01cc52c1543eba556bdb47431b240f2" name="ac01cc52c1543eba556bdb47431b240f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac01cc52c1543eba556bdb47431b240f2">&#9670;&#160;</a></span>change_Gains()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">controller.Controller.change_Gains </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>k_p</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>k_i</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>k_d</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00061">61</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
-
-</div>
-</div>
-<a id="a66a4bfaee27723153d3fe8a39f9360e7" name="a66a4bfaee27723153d3fe8a39f9360e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66a4bfaee27723153d3fe8a39f9360e7">&#9670;&#160;</a></span>change_Ref()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">controller.Controller.change_Ref </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>reference</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00013">13</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
-
-</div>
-</div>
-<a id="a6bf8ed8f5fa2a5a3d0db372775b854c5" name="a6bf8ed8f5fa2a5a3d0db372775b854c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bf8ed8f5fa2a5a3d0db372775b854c5">&#9670;&#160;</a></span>effort_sat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">controller.Controller.effort_sat </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>eff</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00053">53</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcontroller_1_1_controller_a6bf8ed8f5fa2a5a3d0db372775b854c5_icgraph.png" border="0" usemap="#aclasscontroller_1_1_controller_a6bf8ed8f5fa2a5a3d0db372775b854c5_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="add6b42b187f2c2b3e6a9fdb9da517c8e" name="add6b42b187f2c2b3e6a9fdb9da517c8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add6b42b187f2c2b3e6a9fdb9da517c8e">&#9670;&#160;</a></span>error_sat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">controller.Controller.error_sat </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00045">45</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcontroller_1_1_controller_add6b42b187f2c2b3e6a9fdb9da517c8e_icgraph.png" border="0" usemap="#aclasscontroller_1_1_controller_add6b42b187f2c2b3e6a9fdb9da517c8e_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a639f0e83f6d104da568491a68f559a65" name="a639f0e83f6d104da568491a68f559a65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a639f0e83f6d104da568491a68f559a65">&#9670;&#160;</a></span>get_Error()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">controller.Controller.get_Error </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 <p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00021">21</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
-
-</div>
-</div>
-<a id="ab2a6d86b32398fcf791cf05f0f1ab42f" name="ab2a6d86b32398fcf791cf05f0f1ab42f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2a6d86b32398fcf791cf05f0f1ab42f">&#9670;&#160;</a></span>get_Ref()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">controller.Controller.get_Ref </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00018">18</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
-
-</div>
-</div>
-<a id="af400a49e24b076dcfddada663601571e" name="af400a49e24b076dcfddada663601571e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af400a49e24b076dcfddada663601571e">&#9670;&#160;</a></span>pi_Control()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">controller.Controller.pi_Control </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>measure</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dt</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00035">35</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classcontroller_1_1_controller_af400a49e24b076dcfddada663601571e_cgraph.png" border="0" usemap="#aclasscontroller_1_1_controller_af400a49e24b076dcfddada663601571e_cgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a7ede797cb360286ad5ff6fd2055e383f" name="a7ede797cb360286ad5ff6fd2055e383f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ede797cb360286ad5ff6fd2055e383f">&#9670;&#160;</a></span>proportional_Control()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">controller.Controller.proportional_Control </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>measure</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00024">24</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -385,7 +187,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00011">11</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00028">28</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -401,7 +203,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00010">10</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00027">27</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -417,7 +219,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00007">7</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00024">24</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -433,7 +235,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00006">6</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00023">23</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -449,7 +251,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00005">5</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00022">22</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -465,7 +267,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00009">9</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00026">26</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -481,7 +283,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00008">8</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00025">25</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>

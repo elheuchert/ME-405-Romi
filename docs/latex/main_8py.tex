@@ -1,5 +1,10 @@
 \doxysection{C\+:/\+Users/14083/vscode\+\_\+python/main.py File Reference}
 \hypertarget{main_8py}{}\label{main_8py}\index{C:/Users/14083/vscode\_python/main.py@{C:/Users/14083/vscode\_python/main.py}}
+
+
+This file contains creates all shares, queues, hardware driver constants, controllers, and task objects for the ROMI program.  
+
+
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -106,14 +111,6 @@ int \mbox{\hyperlink{namespacemain_a00637a80e94e4b1b52d641dff7c85a41}{main.\+EFF
 \item 
 \mbox{\hyperlink{namespacemain_a409564ebc279aa9c826a6312bb917605}{main.\+bump\+\_\+sensor\+\_\+left}} = \mbox{\hyperlink{classbump____sensor_1_1_bump___sensor}{Bump\+\_\+\+Sensor}}(Pin.\+cpu.\+B11, Pin.\+cpu.\+B15, Pin.\+cpu.\+B14)
 \item 
-\mbox{\hyperlink{namespacemain_aee99cac7f4acb57da2b9968b92a3cba8}{main.\+controller\+\_\+obj\+\_\+left}} = \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.\+2,1.\+95,1, \mbox{\hyperlink{namespacemain_a0340fe0e382348c46d8399a152b546b1}{ERR\+\_\+\+SAT\+\_\+\+LEFT}}, \mbox{\hyperlink{namespacemain_add4cb1704104aef9e37c4eed56cf24e1}{EFF\+\_\+\+SAT\+\_\+\+LEFT}})
-\item 
-\mbox{\hyperlink{namespacemain_a8f4ca823f5b6469c131c11bc172929e5}{main.\+controller\+\_\+obj\+\_\+right}} = \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.\+2,1.\+95,1, \mbox{\hyperlink{namespacemain_abdd1f1248ee5564a4e25b10adaf907e9}{ERR\+\_\+\+SAT\+\_\+\+RIGHT}}, \mbox{\hyperlink{namespacemain_a542cd5a9348a2601958c4bf4328787c9}{EFF\+\_\+\+SAT\+\_\+\+RIGHT}})
-\item 
-\mbox{\hyperlink{namespacemain_a3d4633e5f3eda96154ec1465a66e34a9}{main.\+controller\+\_\+obj\+\_\+line}} = \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(150, 10, 1, \mbox{\hyperlink{namespacemain_a704b77755d5fdeaef4fd71e26700eee5}{ERR\+\_\+\+SAT\+\_\+\+LINE}}, \mbox{\hyperlink{namespacemain_a76eac0ede37c34e0cb19f466942946ae}{EFF\+\_\+\+SAT\+\_\+\+LINE}})
-\item 
-\mbox{\hyperlink{namespacemain_a87781fe2ab720e23763c73b2bcb5e523}{main.\+controller\+\_\+obj\+\_\+yaw}} = \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.\+8,.\+3,1, \mbox{\hyperlink{namespacemain_a15893a87d2e6252d730798913ebfeda3}{ERR\+\_\+\+SAT\+\_\+\+YAW}}, \mbox{\hyperlink{namespacemain_a00637a80e94e4b1b52d641dff7c85a41}{EFF\+\_\+\+SAT\+\_\+\+YAW}})
-\item 
 \mbox{\hyperlink{namespacemain_a8af061094bb28aa807fdc9cda5451322}{main.\+ir1}} = \mbox{\hyperlink{classir__sensor_1_1_i_r___sensor}{IR\+\_\+\+Sensor}}(Pin.\+cpu.\+A6)
 \item 
 \mbox{\hyperlink{namespacemain_abb79dc8dbdbff394690b7a63bbd5673b}{main.\+ir2}} = \mbox{\hyperlink{classir__sensor_1_1_i_r___sensor}{IR\+\_\+\+Sensor}}(Pin.\+cpu.\+A7)
@@ -158,6 +155,14 @@ int \mbox{\hyperlink{namespacemain_a00637a80e94e4b1b52d641dff7c85a41}{main.\+EFF
 \item 
 \mbox{\hyperlink{namespacemain_a4d389d7060c1c531ea913a329ee981c7}{main.\+imu\+\_\+obj}} = \mbox{\hyperlink{classimu_1_1_i_m_u}{IMU}}(\mbox{\hyperlink{namespacemain_a553e1604692e0ca13ff99d35b89e2674}{i2c\+\_\+obj}})
 \item 
+\mbox{\hyperlink{namespacemain_aee99cac7f4acb57da2b9968b92a3cba8}{main.\+controller\+\_\+obj\+\_\+left}} = \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.\+2,1.\+95,1, \mbox{\hyperlink{namespacemain_a0340fe0e382348c46d8399a152b546b1}{ERR\+\_\+\+SAT\+\_\+\+LEFT}}, \mbox{\hyperlink{namespacemain_add4cb1704104aef9e37c4eed56cf24e1}{EFF\+\_\+\+SAT\+\_\+\+LEFT}})
+\item 
+\mbox{\hyperlink{namespacemain_a8f4ca823f5b6469c131c11bc172929e5}{main.\+controller\+\_\+obj\+\_\+right}} = \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.\+2,1.\+95,1, \mbox{\hyperlink{namespacemain_abdd1f1248ee5564a4e25b10adaf907e9}{ERR\+\_\+\+SAT\+\_\+\+RIGHT}}, \mbox{\hyperlink{namespacemain_a542cd5a9348a2601958c4bf4328787c9}{EFF\+\_\+\+SAT\+\_\+\+RIGHT}})
+\item 
+\mbox{\hyperlink{namespacemain_a3d4633e5f3eda96154ec1465a66e34a9}{main.\+controller\+\_\+obj\+\_\+line}} = \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(150, 10, 1, \mbox{\hyperlink{namespacemain_a704b77755d5fdeaef4fd71e26700eee5}{ERR\+\_\+\+SAT\+\_\+\+LINE}}, \mbox{\hyperlink{namespacemain_a76eac0ede37c34e0cb19f466942946ae}{EFF\+\_\+\+SAT\+\_\+\+LINE}})
+\item 
+\mbox{\hyperlink{namespacemain_a87781fe2ab720e23763c73b2bcb5e523}{main.\+controller\+\_\+obj\+\_\+yaw}} = \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}(.\+8,.\+3,1, \mbox{\hyperlink{namespacemain_a15893a87d2e6252d730798913ebfeda3}{ERR\+\_\+\+SAT\+\_\+\+YAW}}, \mbox{\hyperlink{namespacemain_a00637a80e94e4b1b52d641dff7c85a41}{EFF\+\_\+\+SAT\+\_\+\+YAW}})
+\item 
 \mbox{\hyperlink{namespacemain_aa67da6b6e37dea82b7d1f427829b7d06}{main.\+motor\+\_\+\+Left\+\_\+class}} = \mbox{\hyperlink{classmotor__encoder__left__class_1_1motor__encoder__left__class}{motor\+\_\+encoder\+\_\+left\+\_\+class}}(\mbox{\hyperlink{namespacemain_acf3ac06c5aae223302debce1c1e9ffb2}{my\+\_\+motor\+\_\+\+Left}}, \mbox{\hyperlink{namespacemain_a1d9f6bc7fe75d611a4d7bb7b13d62661}{encoder\+\_\+\+Left}}, \mbox{\hyperlink{namespacemain_a443c527be030e1932e7d96ea75e2631a}{m\+\_\+state\+\_\+l}}, \mbox{\hyperlink{namespacemain_a4193d6e6b22917e44d707877025efa4e}{position\+\_\+l}}, \mbox{\hyperlink{namespacemain_acee89f759dd79682420e3b828c6f62a6}{velocity\+\_\+l}}, \mbox{\hyperlink{namespacemain_af8431d6398800a2aec4259c666b1c9eb}{times}}, \mbox{\hyperlink{namespacemain_a455199d75d5aaa4c353df8b6b91a20c6}{PWM\+\_\+l}}, \mbox{\hyperlink{namespacemain_aafb6c51fc28a87c9d8fe153e614c65ee}{delay}})
 \item 
 \mbox{\hyperlink{namespacemain_aedd875d95ac7b33d7630ad0a8ef556c0}{main.\+motor\+\_\+\+Right\+\_\+class}} = \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class}{motor\+\_\+encoder\+\_\+right\+\_\+class}}(\mbox{\hyperlink{namespacemain_a6a1040f681e6e6cbff54f303267e8d9d}{my\+\_\+motor\+\_\+\+Right}}, \mbox{\hyperlink{namespacemain_a28f3d2471fda449f932d11b8b7a4652c}{encoder\+\_\+\+Right}}, \mbox{\hyperlink{namespacemain_a8e690f593e5794c9b20b0a550db15284}{m\+\_\+state\+\_\+r}}, \mbox{\hyperlink{namespacemain_ac34a71cc29c09eb35974cfbc8cf6e5a5}{position\+\_\+r}}, \mbox{\hyperlink{namespacemain_afb9e2572f7bb55c812880ae7346cff88}{velocity\+\_\+r}}, \mbox{\hyperlink{namespacemain_af8431d6398800a2aec4259c666b1c9eb}{times}}, \mbox{\hyperlink{namespacemain_a4e6d70c1812428f9b8e65861cb309188}{PWM\+\_\+r}}, \mbox{\hyperlink{namespacemain_aafb6c51fc28a87c9d8fe153e614c65ee}{delay}})
@@ -198,3 +203,24 @@ int \mbox{\hyperlink{namespacemain_a00637a80e94e4b1b52d641dff7c85a41}{main.\+EFF
 \item 
 \mbox{\hyperlink{namespacemain_a1877282db2c93fa5a8f3ceff8db174df}{main.\+task10}} = \mbox{\hyperlink{classcotask_1_1_task}{cotask.\+Task}}(bump\+\_\+obj.\+run, name = "{}bump task"{}, priority = 2, period = 50, profile = True, trace = False, shares=())
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains creates all shares, queues, hardware driver constants, controllers, and task objects for the ROMI program. 
+
+It also starts the scheduler from cotask.
+
+In order main imports all files, sets defines, creates all shares, creates all queues, creates all hardware driver objects, creates all task class objects, creates all tasks, adds all tasks to the scheduler, and runs the scheduler.
+
+\begin{DoxyAuthor}{Author}
+Alex Power, Lucas Heuchert, Erik Heuchert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/Nov-\/10 Approximate date of creation of file 
+
+2025-\/Dec-\/12 Final alterations made 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+

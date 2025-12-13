@@ -25,11 +25,11 @@
 var NAVTREE =
 [
   [ "ME 405 Romi", "index.html", [
-    [ "ME405 Library Documentation", "index.html", "index" ],
+    [ "ME 405 Documentation", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
+        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
@@ -53,10 +53,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classencoder_1_1_encoder.html#aa5b347ca0eb88735da5e1dd75245aa82",
-"classmotor__encoder__left__class_1_1motor__encoder__left__class.html#a7114da130501fb1d785a6a2c41fc7ef5",
-"classui_1_1ui.html#a577487ab95eea041009593952c25b66c",
-"namespacemain.html#ae2f2cc9924cb987f58aad0b2fd1e6471"
+"classimu_1_1_i_m_u.html#a1186b18bfa64be37260606cff40a1af1",
+"classmotor__encoder__right__class_1_1motor__encoder__right__class.html#a094cb4819233b4a456590641381648d5",
+"classui_1_1ui.html#a995f2970b96bc314b783779e0b7c744a",
+"namespacemain.html#aebef59d830c2aef562d9b0f73bb4c0b3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

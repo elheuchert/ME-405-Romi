@@ -6,19 +6,18 @@ var searchData=
   ['get_5fcalibration_5fcoeff_5fgyro_3',['get_calibration_coeff_gyro',['../classimu_1_1_i_m_u.html#a9b924b34a82cb1eccef23b0100e0fc5f',1,'imu::IMU']]],
   ['get_5fcalibration_5fcoeff_5fmag_4',['get_calibration_coeff_mag',['../classimu_1_1_i_m_u.html#a928a807b936a16058c8c5e582920ee8b',1,'imu::IMU']]],
   ['get_5fdt_5',['get_dt',['../classencoder_1_1_encoder.html#a972289ba941b6dff15f960fe79da2c47',1,'encoder::Encoder']]],
-  ['get_5ferror_6',['get_Error',['../classcontroller_1_1_controller.html#a639f0e83f6d104da568491a68f559a65',1,'controller::Controller']]],
+  ['get_5ferror_6',['get_Error',['../namespacecontroller.html#abde1c290bc7fe6e8bfa897da45e4d016',1,'controller']]],
   ['get_5feuler_5fx_7',['get_Euler_x',['../classimu_1_1_i_m_u.html#a3ac6fc32a370c62c1d5101895f8548f0',1,'imu::IMU']]],
   ['get_5feuler_5fy_8',['get_Euler_y',['../classimu_1_1_i_m_u.html#af77d640901260a5a9c8ecd80f61d4502',1,'imu::IMU']]],
   ['get_5feuler_5fz_9',['get_Euler_z',['../classimu_1_1_i_m_u.html#a68bb59c57ed454ce07e7130691beb500',1,'imu::IMU']]],
   ['get_5fpitch_5fvelocity_10',['get_Pitch_Velocity',['../classimu_1_1_i_m_u.html#a3f9f9f49c405b5360cf1331afbeff416',1,'imu::IMU']]],
   ['get_5fposition_11',['get_position',['../classencoder_1_1_encoder.html#a5e1f45bde021fbdb806bfda8a17ded47',1,'encoder::Encoder']]],
-  ['get_5fref_12',['get_Ref',['../classcontroller_1_1_controller.html#ab2a6d86b32398fcf791cf05f0f1ab42f',1,'controller::Controller']]],
+  ['get_5fref_12',['get_Ref',['../namespacecontroller.html#ab50cfb36be80ca8ca97b6ba05b647eba',1,'controller']]],
   ['get_5froll_5fvelocity_13',['get_Roll_Velocity',['../classimu_1_1_i_m_u.html#a8df912354018c699a2f35dc72eaded0f',1,'imu::IMU']]],
   ['get_5ftest_5fplots_14',['get_test_plots',['../namespacepc__micro__reader.html#a3e8589b64e5dbab76806cd5444669217',1,'pc_micro_reader']]],
   ['get_5ftrace_15',['get_trace',['../classcotask_1_1_task.html#a51c5df87e0e707f9e3c02d9765fcbee1',1,'cotask::Task']]],
   ['get_5fvelocity_16',['get_velocity',['../classencoder_1_1_encoder.html#a5f5175f8d031309051acea0f25710e3d',1,'encoder::Encoder']]],
   ['get_5fyaw_5fvelocity_17',['get_Yaw_Velocity',['../classimu_1_1_i_m_u.html#aaced4aad6bd7f309c900b28a754e34c4',1,'imu::IMU']]],
   ['getcentroid_18',['getCentroid',['../classline__sensor_1_1_line___sensor.html#a25a9eedababc48fb82aa224db46048c4',1,'line_sensor::Line_Sensor']]],
-  ['getcentroidcut_19',['getCentroidCut',['../classline__sensor_1_1_line___sensor.html#ad0749f4cf34cdc34d9723a2e8a086f2f',1,'line_sensor::Line_Sensor']]],
-  ['go_20',['go',['../classcotask_1_1_task.html#a8066da53e82716dc9f0495b28a89b781',1,'cotask::Task']]]
+  ['go_19',['go',['../classcotask_1_1_task.html#a8066da53e82716dc9f0495b28a89b781',1,'cotask::Task']]]
 ];

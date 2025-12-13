@@ -1,10 +1,15 @@
 \doxysection{C\+:/\+Users/14083/vscode\+\_\+python/line\+\_\+sensor.py File Reference}
 \hypertarget{line__sensor_8py}{}\label{line__sensor_8py}\index{C:/Users/14083/vscode\_python/line\_sensor.py@{C:/Users/14083/vscode\_python/line\_sensor.py}}
+
+
+This file contains a class to create a line sensor object.  
+
+
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classline__sensor_1_1_line___sensor}{line\+\_\+sensor.\+Line\+\_\+\+Sensor}}
-\begin{DoxyCompactList}\small\item\em add description here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{classline__sensor_1_1_line___sensor}{Line\+\_\+\+Sensor} class which will calibrate the sensors, read data from the entire line, and find the centroid of the darkest spot. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,3 +22,28 @@ int \mbox{\hyperlink{namespaceline__sensor_af00d0226f531138da1d20a979415f6f1}{li
 \item 
 int \mbox{\hyperlink{namespaceline__sensor_a9701a9aa7ad43fee5774c6d60fcdb552}{line\+\_\+sensor.\+PITCH}} = 8
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a class to create a line sensor object. 
+
+The object can be used for calibrating the sensor and reading the centroid location of the darkest spot the sensors see.
+
+NOTE\+: The outer 2 ir sensors are turned off by setting the corresponding self.\+sens\+\_\+dist value to 0. Helped with line following lines that split.
+
+IMPORTANT\+: Calibrating the sensor requires a text file name IR\+\_\+cal.\+txt. This calibration will write that file but the user will need to stop ROMI, pull the file off onto a local computer and reflash it to the ROMI. If you do not, ROMI will not recognize the new file and will not calibrate.
+
+\begin{DoxyAuthor}{Author}
+Alex Power, Lucas Heuchert, Erik Heuchert 
+
+Help from Chat\+GPT5 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/Nov-\/11 Approximate date of creation of file 
+
+2025-\/Dec-\/12 Final alterations made 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{line__sensor_8py_source}{line\+\_\+sensor.\+py}}.
+

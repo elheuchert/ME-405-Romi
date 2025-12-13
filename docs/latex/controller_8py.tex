@@ -4,9 +4,41 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classcontroller_1_1_controller}{controller.\+Controller}}
-\begin{DoxyCompactList}\small\item\em add description here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This file contains a class to create a PID \doxylink{classcontroller_1_1_controller}{Controller} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespacecontroller}{controller}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecontroller_a1c1adb1c32c5839adde4691994fbb657}{controller.\+change\+\_\+\+Ref}} (self, \mbox{\hyperlink{namespacecontroller_a07ea75ee58ec4976bdcf7c925f223e8a}{reference}})
+\begin{DoxyCompactList}\small\item\em change\+\_\+\+Ref changes the set point of the controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_ab50cfb36be80ca8ca97b6ba05b647eba}{controller.\+get\+\_\+\+Ref}} (self)
+\begin{DoxyCompactList}\small\item\em get\+\_\+\+Ref returns the current set point of the controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_abde1c290bc7fe6e8bfa897da45e4d016}{controller.\+get\+\_\+\+Error}} (self)
+\begin{DoxyCompactList}\small\item\em get\+\_\+\+Error returns the current Riemann Sum integral of the errors of the controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_a6e7bec40144d5aacb7f61206a3c5b90c}{controller.\+proportional\+\_\+\+Control}} (self, measure)
+\begin{DoxyCompactList}\small\item\em proportional\+\_\+\+Control returns a saturated effort value based on the error of the system from the set point using proportional control only. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_a89356bf8ada344869e1e23fe8e4c805b}{controller.\+pi\+\_\+\+Control}} (self, measure, dt)
+\begin{DoxyCompactList}\small\item\em pi\+\_\+\+Control returns a saturated effort value based on the error of the system from the set point using proportional and integral control only. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_a2ffd165afb4e1ccf1aa4b1affd45ad07}{controller.\+error\+\_\+sat}} (self, err)
+\begin{DoxyCompactList}\small\item\em error\+\_\+sat is a function which returns the saturated integral of the error based on this instance of the controller saturation value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_a08a212b5ada0bbfb4463cbe47e22ef0b}{controller.\+effort\+\_\+sat}} (self, eff)
+\begin{DoxyCompactList}\small\item\em effort\+\_\+sat is a function which returns the saturated effort of the controller based on this instance of the controllers saturation value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_aa8cdcef9a80da5ab61e5e847f59094eb}{controller.\+change\+\_\+\+Gains}} (self, k\+\_\+p, k\+\_\+i, k\+\_\+d)
+\begin{DoxyCompactList}\small\item\em change\+\_\+\+Gains changes this instance\textquotesingle{}s gain values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecontroller_a07ea75ee58ec4976bdcf7c925f223e8a}{controller.\+reference}} = reference
+\item 
+\mbox{\hyperlink{namespacecontroller_a6118da543422dff3ae4ecbc36cda5cf0}{controller.\+summed\+\_\+errors}} = self.\+error\+\_\+sat(self.\+summed\+\_\+errors)
+\item 
+\mbox{\hyperlink{namespacecontroller_ab1986a936cc80fcc1f8d3746dd534357}{controller.\+K\+\_\+p}} = k\+\_\+p
+\item 
+\mbox{\hyperlink{namespacecontroller_aad4feb7d1d0bf837f09d6193e5d380f1}{controller.\+K\+\_\+i}} = k\+\_\+i
+\item 
+\mbox{\hyperlink{namespacecontroller_a6ccbe29f3ff5dc0336853e9cb2177d51}{controller.\+K\+\_\+d}} = k\+\_\+d
 \end{DoxyCompactItemize}

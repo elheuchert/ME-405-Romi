@@ -2,16 +2,16 @@
 \hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class}{}\label{classmotor__encoder__right__class_1_1motor__encoder__right__class}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
 
 
-add description here  
+Right \doxylink{classmotor_1_1_motor}{Motor} \doxylink{classencoder_1_1_encoder}{Encoder} Class.  
 
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class_a8ce7a1b4d44d359680f00e46c5e4aee7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{namespacemotor}{motor}}, \mbox{\hyperlink{namespaceencoder}{encoder}}, \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class_aca19818d3ec7ea7e606c4f1f21d2671f}{m\+\_\+state\+\_\+r}}, \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class_a6900340be9fc4d87c391ca88751d5088}{position\+\_\+r}}, \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class_a22d0aab2b777ecb2e5771cd847dd1c22}{velocity\+\_\+r}}, \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class_a562879297662bb4cad9edc7ea960ab33}{times}}, \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class_a5db0522744e7015ce9690e1189c15ef4}{PWM\+\_\+r}}, \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class_a9f661263af2bfb6fe3d0225ac6fb9cc3}{delay}})
-\item 
+\begin{DoxyCompactList}\small\item\em User Interface. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right__class_ae44a8071b2f0913c1719f1082e5f5fea}{run}} (self)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{classencoder_1_1_encoder}{Encoder} Right Run. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,9 +38,13 @@ int \mbox{\hyperlink{classmotor__encoder__right__class_1_1motor__encoder__right_
 
 
 \doxysubsection{Detailed Description}
-add description here 
+Right \doxylink{classmotor_1_1_motor}{Motor} \doxylink{classencoder_1_1_encoder}{Encoder} Class. 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00005}{5}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+This task class which contains a generator finite state machine that runs multiple functions.
+
+It drives the motor, reads the encoder and runs continuously, setting flags that are shared with other tasks. 
+
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00010}{10}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 
 
@@ -55,7 +59,32 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00007}{7}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+User Interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 1} & \doxylink{classmotor_1_1_motor}{Motor} Object \\
+\hline
+{\em 2} & \doxylink{classencoder_1_1_encoder}{Encoder} Object \\
+\hline
+{\em 3} & Right \doxylink{classmotor_1_1_motor}{Motor} State in UI \\
+\hline
+{\em 4} & Right \doxylink{classencoder_1_1_encoder}{Encoder} Position \\
+\hline
+{\em 5} & Right \doxylink{classmotor_1_1_motor}{Motor} Position \\
+\hline
+{\em 6} & Right \doxylink{classmotor_1_1_motor}{Motor} Velocity \\
+\hline
+{\em 7} & Times \\
+\hline
+{\em 8} & Right \doxylink{classmotor_1_1_motor}{Motor} PWM \\
+\hline
+{\em 9} & Delay \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00022}{22}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 
 
@@ -70,7 +99,21 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00019}{19}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+\doxylink{classencoder_1_1_encoder}{Encoder} Right Run. 
+
+{\bfseries{ State 0 }} Enable The Right \doxylink{classmotor_1_1_motor}{Motor}
+
+{\bfseries{ State 1 }} Wait to get a different command from UI
+
+{\bfseries{ State 2 }} Set Effort
+
+{\bfseries{ State 3 }} Disable \doxylink{classmotor_1_1_motor}{Motor}
+
+{\bfseries{ State 4 }} Enable \doxylink{classmotor_1_1_motor}{Motor} and Wait State
+
+{\bfseries{ State 5 }} Stop the \doxylink{classmotor_1_1_motor}{Motor} and Zero the \doxylink{classencoder_1_1_encoder}{Encoder} Ticks 
+
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00048}{48}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 
 
@@ -85,7 +128,7 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00017}{17}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00032}{32}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_a6989a562383b2cfbd8f773c02b406877}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!delay\_count@{delay\_count}}
 \index{delay\_count@{delay\_count}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -95,7 +138,7 @@ int motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00015}{15}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00030}{30}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_a094cb4819233b4a456590641381648d5}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!encoder\_Right@{encoder\_Right}}
 \index{encoder\_Right@{encoder\_Right}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -105,7 +148,7 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00009}{9}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00024}{24}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_aca19818d3ec7ea7e606c4f1f21d2671f}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!m\_state\_r@{m\_state\_r}}
 \index{m\_state\_r@{m\_state\_r}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -115,7 +158,7 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00010}{10}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00025}{25}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_aa923c2affd776409bb569dba14dbb607}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!my\_motor\_Right@{my\_motor\_Right}}
 \index{my\_motor\_Right@{my\_motor\_Right}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -125,7 +168,7 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00008}{8}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00023}{23}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_a6900340be9fc4d87c391ca88751d5088}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!position\_r@{position\_r}}
 \index{position\_r@{position\_r}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -135,7 +178,7 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00011}{11}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00026}{26}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_a5db0522744e7015ce9690e1189c15ef4}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!PWM\_r@{PWM\_r}}
 \index{PWM\_r@{PWM\_r}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -145,7 +188,7 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00014}{14}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00029}{29}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_a4f54400e3497bf6fddba979275309e22}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!state@{state}}
 \index{state@{state}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -155,7 +198,7 @@ int motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00016}{16}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00031}{31}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_a562879297662bb4cad9edc7ea960ab33}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!times@{times}}
 \index{times@{times}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -165,7 +208,7 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00013}{13}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00028}{28}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 \Hypertarget{classmotor__encoder__right__class_1_1motor__encoder__right__class_a22d0aab2b777ecb2e5771cd847dd1c22}\index{motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}!velocity\_r@{velocity\_r}}
 \index{velocity\_r@{velocity\_r}!motor\_encoder\_right\_class.motor\_encoder\_right\_class@{motor\_encoder\_right\_class.motor\_encoder\_right\_class}}
@@ -175,7 +218,7 @@ motor\+\_\+encoder\+\_\+right\+\_\+class.\+motor\+\_\+encoder\+\_\+right\+\_\+cl
 
 
 
-Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00012}{12}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
+Definition at line \mbox{\hyperlink{motor__encoder__right__class_8py_source_l00027}{27}} of file \mbox{\hyperlink{motor__encoder__right__class_8py_source}{motor\+\_\+encoder\+\_\+right\+\_\+class.\+py}}.
 
 
 

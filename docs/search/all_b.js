@@ -1,28 +1,7 @@
 var searchData=
 [
-  ['l_0',['L',['../classobserver_1_1observer.html#a2e4bb6516d7b7167b60c85ddbb5d8150',1,'observer::observer']]],
-  ['l_5fstate_1',['l_state',['../classline__task_1_1line__task.html#a7660f7398f0dabb102e3bdc91509ac5c',1,'line_task.line_task.l_state'],['../namespacemain.html#a8551eaeee09a4eedcafd79aa8b197a8c',1,'main.l_state']]],
-  ['last_5ftest_2',['last_test',['../classui_1_1ui.html#aa6e40ac305068558806e886e5bd69988',1,'ui::ui']]],
-  ['last_5ftime_3',['last_time',['../classencoder_1_1_encoder.html#a6fcb5e84009e0bada53204413afe1657',1,'encoder::Encoder']]],
-  ['left_5fpos_4',['left_pos',['../classobserver_1_1observer.html#a4d7061522c61727df6161a08d0590de5',1,'observer::observer']]],
-  ['left_5fvel_5',['left_vel',['../classobserver_1_1observer.html#a20feb00aff7dcdcf22d0416bf240f6bd',1,'observer::observer']]],
-  ['left_5fvoltage_6',['left_voltage',['../classobserver_1_1observer.html#a00792ce0720e666b0174806fe76b4010',1,'observer::observer']]],
-  ['lf2_5fdist_7',['LF2_DIST',['../namespacepathing__plan__task.html#afb00225647785bb8f471d49d826dd4c8',1,'pathing_plan_task']]],
-  ['library_20documentation_8',['ME405 Library Documentation',['../index.html',1,'']]],
-  ['line_20sensors_9',['Line Sensors',['../index.html#linesensor',1,'']]],
-  ['line_5fcontroller_10',['line_controller',['../classcontrol__task_1_1control__task.html#a44ebb940abd914ffeb21e05ad202f0ea',1,'control_task::control_task']]],
-  ['line_5ffollow_5f3_11',['LINE_FOLLOW_3',['../namespacepathing__plan__task.html#a91c66f2818d966584468ee018c5376e8',1,'pathing_plan_task']]],
-  ['line_5ffollow_5fgrg_12',['LINE_FOLLOW_GRG',['../namespacepathing__plan__task.html#a36ab4bf708c4c3a930f73396ef7d4cde',1,'pathing_plan_task']]],
-  ['line_5ffollow_5fstate_5f0_13',['LINE_FOLLOW_STATE_0',['../namespacepathing__plan__task.html#a01d13917567445a34dbb2933c4492bdb',1,'pathing_plan_task']]],
-  ['line_5ffollowing_14',['line_following',['../classpathing__plan__task_1_1pathing__plan.html#afdc5715b2647cb1fe291cb542f25e686',1,'pathing_plan_task::pathing_plan']]],
-  ['line_5ffollowing_5f2_15',['LINE_FOLLOWING_2',['../namespacepathing__plan__task.html#ad8f4c7b684f7abfd7c4fd144fd10a04f',1,'pathing_plan_task']]],
-  ['line_5fsensor_16',['Line_Sensor',['../classline__sensor_1_1_line___sensor.html',1,'line_sensor']]],
-  ['line_5fsensor_17',['line_sensor',['../namespaceline__sensor.html',1,'line_sensor'],['../classcontrol__task_1_1control__task.html#a665f91f9874675f6048b639504bd39b9',1,'control_task.control_task.line_sensor']]],
-  ['line_5fsensor_2epy_18',['line_sensor.py',['../line__sensor_8py.html',1,'']]],
-  ['line_5fsensor_5fobj_19',['line_sensor_obj',['../namespacemain.html#ac673c452d9679261476593362e4f0560',1,'main']]],
-  ['line_5ftask_20',['line_task',['../classline__task_1_1line__task.html',1,'line_task.line_task'],['../namespaceline__task.html',1,'line_task']]],
-  ['line_5ftask_2epy_21',['line_task.py',['../line__task_8py.html',1,'']]],
-  ['line_5ftask_5fobj_22',['line_task_obj',['../namespacemain.html#a70035bf0b12c07b2c9779fbb73ff0f02',1,'main']]],
-  ['line_5ftest_23',['line_test',['../namespacepc__micro__reader.html#a62ffc212a77940ea819bc6e47052b803',1,'pc_micro_reader']]],
-  ['linesensor_24',['lineSensor',['../classline__task_1_1line__task.html#ab4bdcda5bb99d1207e9b8d952cee99d3',1,'line_task::line_task']]]
+  ['k_5fd_0',['K_d',['../classcontroller_1_1_controller.html#ae3f041523ee38097fcd9ded21d8c44f9',1,'controller.Controller.K_d'],['../namespacecontroller.html#a6ccbe29f3ff5dc0336853e9cb2177d51',1,'controller.K_d']]],
+  ['k_5fi_1',['K_i',['../classcontroller_1_1_controller.html#aa9c1f5ee49f9a2ac080bfe502e4c0e93',1,'controller.Controller.K_i'],['../namespacecontroller.html#aad4feb7d1d0bf837f09d6193e5d380f1',1,'controller.K_i']]],
+  ['k_5fp_2',['K_p',['../classcontroller_1_1_controller.html#a6147d7f8aa12e56ef01036ddd2b55ee9',1,'controller.Controller.K_p'],['../namespacecontroller.html#ab1986a936cc80fcc1f8d3746dd534357',1,'controller.K_p']]],
+  ['key_20takeaways_3',['Key takeaways',['../index.html#key',1,'']]]
 ];

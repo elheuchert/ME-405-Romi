@@ -1,9 +1,21 @@
 var searchData=
 [
-  ['values_5fsent_0',['VALUES_SENT',['../namespacepc__micro__reader.html#a2f77ce1e64de4463d37a2699982aa169',1,'pc_micro_reader']]],
-  ['velo_5flim_1',['velo_lim',['../namespacepc__micro__reader.html#a0b64d9deda4bf5bdbb8232a2b574b12e',1,'pc_micro_reader']]],
-  ['velocity_2',['velocity',['../classdata__collector_1_1data__collector.html#acf532d8c1db3d51f296983a50de6f28b',1,'data_collector.data_collector.velocity'],['../classui_1_1ui.html#acc2e933d24839fd64eb692e5762d37c5',1,'ui.ui.velocity'],['../namespacemain.html#ae25c8a638d528f443138685401a18212',1,'main.velocity']]],
-  ['velocity2_3',['velocity2',['../classdata__collector_1_1data__collector.html#a152ee123c4161eab9aa8120a8518a0a4',1,'data_collector.data_collector.velocity2'],['../classui_1_1ui.html#a213173cffeabf6851fa0e4dc0bf25cc0',1,'ui.ui.velocity2'],['../namespacemain.html#a8fcb9b42d30b9eb6eaeb3e41273ace3a',1,'main.velocity2']]],
-  ['velocity_5fl_4',['velocity_l',['../classcontrol__task_1_1control__task.html#a9a2d1980a838f00da777fc7c7351089e',1,'control_task.control_task.velocity_l'],['../classdata__collector_1_1data__collector.html#a874f17873b6ee5f0dabfa38c9ce0e3bd',1,'data_collector.data_collector.velocity_l'],['../classmotor__encoder__left__class_1_1motor__encoder__left__class.html#aba73cc739146815ad000e954f95539a9',1,'motor_encoder_left_class.motor_encoder_left_class.velocity_l'],['../namespacemain.html#acee89f759dd79682420e3b828c6f62a6',1,'main.velocity_l']]],
-  ['velocity_5fr_5',['velocity_r',['../classcontrol__task_1_1control__task.html#abf2f8701fda5f3ddaaec344266e1b392',1,'control_task.control_task.velocity_r'],['../classdata__collector_1_1data__collector.html#a5b27c225e3ed4578648334993b9f809c',1,'data_collector.data_collector.velocity_r'],['../classmotor__encoder__right__class_1_1motor__encoder__right__class.html#a22d0aab2b777ecb2e5771cd847dd1c22',1,'motor_encoder_right_class.motor_encoder_right_class.velocity_r'],['../namespacemain.html#afb9e2572f7bb55c812880ae7346cff88',1,'main.velocity_r']]]
+  ['u_0',['u',['../classobserver_1_1observer.html#a23d8875c1e404acaede499c343192e92',1,'observer::observer']]],
+  ['u_5festimated_1',['u_estimated',['../classobserver_1_1observer.html#abf819097abbb576581fb2942be484ec5',1,'observer::observer']]],
+  ['u_5fstar_2',['u_star',['../classobserver_1_1observer.html#ac2158e2e4b6d6a7c8e33ba3ddb8f5a17',1,'observer::observer']]],
+  ['u_5fstar_5festimated_3',['u_star_estimated',['../classobserver_1_1observer.html#ab6a81816983756818fc0ecd8c8f89ff0',1,'observer::observer']]],
+  ['uart_4',['uart',['../classui_1_1ui.html#a288d7995a2c901af5768c5168671ffd0',1,'ui::ui']]],
+  ['uart_5fobj_5',['uart_obj',['../namespacemain.html#aa1490d0ea9bbd76daa20b3160e124fc5',1,'main']]],
+  ['ui_6',['ui',['../classui_1_1ui.html',1,'ui.ui'],['../namespaceui.html',1,'ui'],['../namespaceui__old.html#aa1480ff287afc8d0a81edba3d53b83d6',1,'ui_old.ui()']]],
+  ['ui_2epy_7',['ui.py',['../ui_8py.html',1,'']]],
+  ['ui_5fdelay_8',['ui_delay',['../classui_1_1ui.html#af4ab69d57304b42cbcd9529f1ee8fbae',1,'ui::ui']]],
+  ['ui_5fobj_9',['ui_obj',['../namespacemain.html#a75b28dd00d88b3efb687fdb61c6e227f',1,'main']]],
+  ['ui_5fold_10',['ui_old',['../namespaceui__old.html',1,'']]],
+  ['ui_5fold_2epy_11',['ui_old.py',['../ui__old_8py.html',1,'']]],
+  ['update_12',['update',['../classencoder_1_1_encoder.html#aa49b0c5f3a84989bbd9500f1d25f81aa',1,'encoder::Encoder']]],
+  ['update_5fu_13',['update_u',['../classobserver_1_1observer.html#a60f8ac475482326dfa70671a71e50d0d',1,'observer::observer']]],
+  ['update_5fu_5fstar_14',['update_u_star',['../classobserver_1_1observer.html#a2ea6ad1691c106d682502bdb9fb03101',1,'observer::observer']]],
+  ['update_5fx_15',['update_x',['../classobserver_1_1observer.html#a55162491b5084a3d3a85f7525cf56929',1,'observer::observer']]],
+  ['update_5fy_16',['update_y',['../classobserver_1_1observer.html#a33a47c9cefc4d5857c234793960d49bd',1,'observer::observer']]],
+  ['user_5finput_17',['user_input',['../namespacepc__micro__reader.html#a1f9f969e87a1f48dad34e0213042e73e',1,'pc_micro_reader']]]
 ];

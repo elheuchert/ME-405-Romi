@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['key_20takeaways_0',['Key takeaways',['../index.html#key',1,'']]]
+  ['imu_0',['IMU',['../index.html#imu',1,'']]],
+  ['introduction_1',['Introduction',['../index.html#intro',1,'']]]
 ];

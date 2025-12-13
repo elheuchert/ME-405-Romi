@@ -92,20 +92,27 @@ $(function(){initNavTree('classline__sensor_1_1_line___sensor.html','','classlin
 </div><!--header-->
 <div class="contents">
 
-<p>add description here  
+<p><a class="el" href="classline__sensor_1_1_line___sensor.html" title="Line_Sensor class which will calibrate the sensors, read data from the entire line,...">Line_Sensor</a> class which will calibrate the sensors, read data from the entire line, and find the centroid of the darkest spot.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a35eef1d657d1d474d871b0ca333a2db1" id="r_a35eef1d657d1d474d871b0ca333a2db1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35eef1d657d1d474d871b0ca333a2db1">__init__</a> (self, <a class="el" href="#a79a63a1151608e3745d115b87360a399">ir1</a>, <a class="el" href="#a924ea90b2d9256a083455a1903eb684c">ir2</a>, <a class="el" href="#a2b30ac5168680417c83d8a2a3ffb5a7a">ir3</a>, <a class="el" href="#aef2c66c4b87410d643ec2772b67620fd">ir4</a>, <a class="el" href="#abaf69e5c6be8284402469611bc2a9628">ir5</a>, <a class="el" href="#a11aaac65a96b8b0c10a346920a7e13a7">ir6</a>, <a class="el" href="#a39a0bb0dc29a46de9c490827460a9041">ir7</a>, <a class="el" href="#ad0481850e3b2e4b37fccc7b7942b7851">ir8</a>, <a class="el" href="#aea8bb5826f598bb30f23487e88785db6">ir9</a>, <a class="el" href="#a59102cccaad969d44025c7ad86a968d1">ir10</a>, <a class="el" href="#a4e37b3512ecfdef1e910816bcf4dd292">ir11</a>, <a class="el" href="#a088b9159df4877202ac7859b3edf4de1">ir12</a>, <a class="el" href="#a5d5ad128c83650b800899c194a99d8d8">ir13</a>)</td></tr>
+<tr class="memdesc:a35eef1d657d1d474d871b0ca333a2db1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>init</b> is the <a class="el" href="classline__sensor_1_1_line___sensor.html" title="Line_Sensor class which will calibrate the sensors, read data from the entire line,...">Line_Sensor</a> object initializer which takes 13 arguments.  <br /></td></tr>
 <tr class="memitem:aef15d67d9d6269643b845345452cc690" id="r_aef15d67d9d6269643b845345452cc690"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef15d67d9d6269643b845345452cc690">check_Calibrate</a> (self)</td></tr>
+<tr class="memdesc:aef15d67d9d6269643b845345452cc690"><td class="mdescLeft">&#160;</td><td class="mdescRight">check_Calibrate returns the status of the calibration variable.  <br /></td></tr>
 <tr class="memitem:a7202b671d570b088b85de2e57b64fcf0" id="r_a7202b671d570b088b85de2e57b64fcf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7202b671d570b088b85de2e57b64fcf0">calibrate</a> (self)</td></tr>
+<tr class="memdesc:a7202b671d570b088b85de2e57b64fcf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">calibrate will try to read the calibration text IR_cal.txt and return whether or not the file exists.  <br /></td></tr>
 <tr class="memitem:a25a9eedababc48fb82aa224db46048c4" id="r_a25a9eedababc48fb82aa224db46048c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25a9eedababc48fb82aa224db46048c4">getCentroid</a> (self)</td></tr>
-<tr class="memitem:ad0749f4cf34cdc34d9723a2e8a086f2f" id="r_ad0749f4cf34cdc34d9723a2e8a086f2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0749f4cf34cdc34d9723a2e8a086f2f">getCentroidCut</a> (self, start, end)</td></tr>
+<tr class="memdesc:a25a9eedababc48fb82aa224db46048c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">getCentroid will return the value of the centroid of the darkest spot the sensors can see along the length of the line.  <br /></td></tr>
 <tr class="memitem:a0de5339139823f8953a8433b0371e328" id="r_a0de5339139823f8953a8433b0371e328"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0de5339139823f8953a8433b0371e328">readSensors</a> (self)</td></tr>
+<tr class="memdesc:a0de5339139823f8953a8433b0371e328"><td class="mdescLeft">&#160;</td><td class="mdescRight">readSensors will read every ir sensor with a time multi read and then normalize with the calibration data.  <br /></td></tr>
 <tr class="memitem:a09d60a2207c745bc320df4f83a7aadb1" id="r_a09d60a2207c745bc320df4f83a7aadb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09d60a2207c745bc320df4f83a7aadb1">read_Calibrate_Data</a> (self)</td></tr>
+<tr class="memdesc:a09d60a2207c745bc320df4f83a7aadb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">readSensors will read every ir sensor with a time multi read but will return the raw unnormalized data to be saved as calibration data.  <br /></td></tr>
 <tr class="memitem:add57a95efa8921429594174f855a6d51" id="r_add57a95efa8921429594174f855a6d51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add57a95efa8921429594174f855a6d51">check_Line</a> (self)</td></tr>
+<tr class="memdesc:add57a95efa8921429594174f855a6d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">check_Line is a debugging function to check that the line sensor is correctly setup with all the sensors.  <br /></td></tr>
 <tr class="memitem:a623841e77106df7a2ff88e75303b11f5" id="r_a623841e77106df7a2ff88e75303b11f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a623841e77106df7a2ff88e75303b11f5">check_Indv</a> (self, which_sensor)</td></tr>
+<tr class="memdesc:a623841e77106df7a2ff88e75303b11f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">check_Indv is a debugging function to look at the data from a single IR sensor if you think it is reading poorly.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -147,9 +154,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1434956ef465afe9948655e8ae5210e7" id="r_a1434956ef465afe9948655e8ae5210e7"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1434956ef465afe9948655e8ae5210e7">white</a> = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>add description here </p>
+<div class="textblock"><p><a class="el" href="classline__sensor_1_1_line___sensor.html" title="Line_Sensor class which will calibrate the sensors, read data from the entire line,...">Line_Sensor</a> class which will calibrate the sensors, read data from the entire line, and find the centroid of the darkest spot. </p>
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00008">8</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00027">27</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a35eef1d657d1d474d871b0ca333a2db1" name="a35eef1d657d1d474d871b0ca333a2db1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35eef1d657d1d474d871b0ca333a2db1">&#9670;&#160;</a></span>__init__()</h2>
@@ -230,7 +237,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00013">13</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p><b>init</b> is the <a class="el" href="classline__sensor_1_1_line___sensor.html" title="Line_Sensor class which will calibrate the sensors, read data from the entire line,...">Line_Sensor</a> object initializer which takes 13 arguments. </p>
+<p>The arguments the 13 IR sensor objects. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">irX</td><td>: irX is IR sensor object X on the physical line. Must be passed in order they appear on sensor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00033">33</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -250,7 +265,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00066">66</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p>calibrate will try to read the calibration text IR_cal.txt and return whether or not the file exists. </p>
+<p>It will set the calibration status variable.</p>
+<p>Attempts to open a file name IR_cal.txt. If it can't find it, it will return False. When it does find it, it assumes the file is a file with calibration constants of the form "BLACK_CALIBRATION_VAL,WHITE_CALIBRATION_VAL". Each row should be one IR sensor's data in the order of the ir sensors as passed to the class init. </p>
+
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00091">91</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -269,7 +288,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00063">63</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p>check_Calibrate returns the status of the calibration variable. </p>
+<p>True is sensor is calibrated. </p>
+
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00085">85</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -292,7 +314,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00147">147</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p>check_Indv is a debugging function to look at the data from a single IR sensor if you think it is reading poorly. </p>
+
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00168">168</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -311,7 +335,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00139">139</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p>check_Line is a debugging function to check that the line sensor is correctly setup with all the sensors. </p>
+
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00159">159</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -335,44 +361,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00088">88</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p>getCentroid will return the value of the centroid of the darkest spot the sensors can see along the length of the line. </p>
+<p>This will read the latest data saved and do a basic centroid calculation on it. Right now it divides by idx-2 because 2 sensors are turned off. </p>
+
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00116">116</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classline__sensor_1_1_line___sensor_a25a9eedababc48fb82aa224db46048c4_cgraph.png" border="0" usemap="#aclassline__sensor_1_1_line___sensor_a25a9eedababc48fb82aa224db46048c4_cgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ad0749f4cf34cdc34d9723a2e8a086f2f" name="ad0749f4cf34cdc34d9723a2e8a086f2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0749f4cf34cdc34d9723a2e8a086f2f">&#9670;&#160;</a></span>getCentroidCut()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">line_sensor.Line_Sensor.getCentroidCut </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00099">99</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classline__sensor_1_1_line___sensor_ad0749f4cf34cdc34d9723a2e8a086f2f_cgraph.png" border="0" usemap="#aclassline__sensor_1_1_line___sensor_ad0749f4cf34cdc34d9723a2e8a086f2f_cgraph" loading="lazy" alt=""/></div>
 </div>
 
 </div>
@@ -392,7 +388,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00128">128</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p>readSensors will read every ir sensor with a time multi read but will return the raw unnormalized data to be saved as calibration data. </p>
+<p>It will save this and return it. </p>
+
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00146">146</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -411,7 +410,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00110">110</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p>readSensors will read every ir sensor with a time multi read and then normalize with the calibration data. </p>
+<p>It will save that data in the class and return it. </p>
+
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00128">128</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -433,7 +435,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00053">53</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00074">74</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -449,7 +451,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00059">59</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00080">80</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -465,7 +467,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00032">32</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00053">53</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -481,7 +483,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00041">41</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00062">62</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -497,7 +499,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00042">42</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00063">63</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -513,7 +515,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00043">43</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00064">64</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -529,7 +531,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00044">44</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00065">65</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -545,7 +547,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00033">33</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00054">54</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -561,7 +563,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00034">34</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00055">55</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -577,7 +579,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00035">35</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00056">56</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -593,7 +595,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00036">36</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00057">57</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -609,7 +611,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00037">37</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00058">58</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -625,7 +627,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00038">38</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00059">59</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -641,7 +643,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00039">39</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00060">60</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -657,7 +659,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00040">40</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00061">61</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -673,7 +675,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00030">30</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00050">50</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -689,7 +691,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00050">50</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00071">71</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -705,7 +707,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00049">49</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00070">70</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -721,7 +723,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00014">14</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00034">34</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -737,7 +739,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00023">23</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00043">43</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -753,7 +755,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00024">24</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00044">44</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -769,7 +771,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00025">25</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00045">45</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -785,7 +787,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00026">26</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00046">46</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -801,7 +803,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00015">15</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00035">35</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -817,7 +819,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00016">16</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00036">36</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -833,7 +835,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00017">17</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00037">37</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -849,7 +851,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00018">18</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00038">38</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -865,7 +867,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00019">19</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00039">39</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -881,7 +883,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00020">20</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00040">40</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -897,7 +899,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00021">21</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00041">41</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -913,7 +915,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00022">22</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00042">42</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -929,7 +931,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00048">48</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00069">69</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -945,7 +947,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00047">47</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00068">68</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -961,7 +963,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00055">55</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00077">77</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -977,7 +979,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00028">28</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00048">48</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>
@@ -993,7 +995,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00060">60</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__sensor_8py_source.html#l00081">81</a> of file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
 
 </div>
 </div>

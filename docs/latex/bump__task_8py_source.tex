@@ -4,40 +4,40 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00001}\mbox{\hyperlink{namespacebump__task}{00001}}\ \textcolor{keyword}{from}\ pyb\ \textcolor{keyword}{import}\ Pin,\ Timer,\ ADC}
 \DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00007}\mbox{\hyperlink{classbump__task_1_1_bump___task}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbump__task_1_1_bump___task}{Bump\_Task}}:}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00008}00008\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00014}\mbox{\hyperlink{classbump__task_1_1_bump___task_a6dfdb590345525eadc8cbb7403f7a93b}{00014}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classbump__task_1_1_bump___task_a6dfdb590345525eadc8cbb7403f7a93b}{\_\_init\_\_}}(self,\ c\_state,\ bump\_sensor\_right,\ bump\_sensor\_left,bump\_on\_off,\ bump\_flg):}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00015}\mbox{\hyperlink{classbump__task_1_1_bump___task_a79e0a6c06834b0418218c76e6d325846}{00015}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a79e0a6c06834b0418218c76e6d325846}{c\_state}}\ =\ c\_state}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00016}\mbox{\hyperlink{classbump__task_1_1_bump___task_a159e9258cb67e57e4110370e4a34e897}{00016}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a159e9258cb67e57e4110370e4a34e897}{bump\_sensor\_right}}=bump\_sensor\_right}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00017}\mbox{\hyperlink{classbump__task_1_1_bump___task_acbf3fcf274ae50263268a8c61f0a8b61}{00017}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_acbf3fcf274ae50263268a8c61f0a8b61}{bump\_sensor\_left}}=bump\_sensor\_left}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00018}\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{00018}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}=0}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00019}\mbox{\hyperlink{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}{00019}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}{bump\_on\_off}}=bump\_on\_off}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00020}\mbox{\hyperlink{classbump__task_1_1_bump___task_af52e41e92bcbdfbea4d795a0da623d0c}{00020}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_af52e41e92bcbdfbea4d795a0da623d0c}{bump\_flg}}=bump\_flg}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00021}00021\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_af52e41e92bcbdfbea4d795a0da623d0c}{bump\_flg}}.put(0)}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00023}00023\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00032}\mbox{\hyperlink{classbump__task_1_1_bump___task_a57094853d75bd3ef68317f34a207701a}{00032}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classbump__task_1_1_bump___task_a57094853d75bd3ef68317f34a207701a}{run}}(self):}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{True}):}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ bump\ sensor\ off}}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}==0:}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}{bump\_on\_off}}.get()\ ==1:}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}=1}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ bump\ sensor\ on}}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}==1:}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}{bump\_on\_off}}.get()\ ==0:}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}=0}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{True}\ \textcolor{keywordflow}{in}\ (self.\mbox{\hyperlink{classbump__task_1_1_bump___task_acbf3fcf274ae50263268a8c61f0a8b61}{bump\_sensor\_left}}.is\_pressed(),\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a159e9258cb67e57e4110370e4a34e897}{bump\_sensor\_right}}.is\_pressed()):}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{'bumped'})}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_af52e41e92bcbdfbea4d795a0da623d0c}{bump\_flg}}.put(1)}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}}
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00010}\mbox{\hyperlink{classbump__task_1_1_bump___task}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbump__task_1_1_bump___task}{Bump\_Task}}:}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00011}00011\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00017}\mbox{\hyperlink{classbump__task_1_1_bump___task_a6dfdb590345525eadc8cbb7403f7a93b}{00017}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classbump__task_1_1_bump___task_a6dfdb590345525eadc8cbb7403f7a93b}{\_\_init\_\_}}(self,\ c\_state,\ bump\_sensor\_right,\ bump\_sensor\_left,bump\_on\_off,\ bump\_flg):}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00018}\mbox{\hyperlink{classbump__task_1_1_bump___task_a79e0a6c06834b0418218c76e6d325846}{00018}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a79e0a6c06834b0418218c76e6d325846}{c\_state}}\ =\ c\_state}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00019}\mbox{\hyperlink{classbump__task_1_1_bump___task_a159e9258cb67e57e4110370e4a34e897}{00019}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a159e9258cb67e57e4110370e4a34e897}{bump\_sensor\_right}}=bump\_sensor\_right}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00020}\mbox{\hyperlink{classbump__task_1_1_bump___task_acbf3fcf274ae50263268a8c61f0a8b61}{00020}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_acbf3fcf274ae50263268a8c61f0a8b61}{bump\_sensor\_left}}=bump\_sensor\_left}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00021}\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{00021}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}=0}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00022}\mbox{\hyperlink{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}{00022}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}{bump\_on\_off}}=bump\_on\_off}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00023}\mbox{\hyperlink{classbump__task_1_1_bump___task_af52e41e92bcbdfbea4d795a0da623d0c}{00023}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_af52e41e92bcbdfbea4d795a0da623d0c}{bump\_flg}}=bump\_flg}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00024}00024\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_af52e41e92bcbdfbea4d795a0da623d0c}{bump\_flg}}.put(0)}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00035}\mbox{\hyperlink{classbump__task_1_1_bump___task_a57094853d75bd3ef68317f34a207701a}{00035}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classbump__task_1_1_bump___task_a57094853d75bd3ef68317f34a207701a}{run}}(self):}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{True}):}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ bump\ sensor\ off}}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}==0:}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}{bump\_on\_off}}.get()\ ==1:}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}=1}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ bump\ sensor\ on}}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}==1:}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}{bump\_on\_off}}.get()\ ==0:}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}=0}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{True}\ \textcolor{keywordflow}{in}\ (self.\mbox{\hyperlink{classbump__task_1_1_bump___task_acbf3fcf274ae50263268a8c61f0a8b61}{bump\_sensor\_left}}.is\_pressed(),\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_a159e9258cb67e57e4110370e4a34e897}{bump\_sensor\_right}}.is\_pressed()):}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{'bumped'})}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_af52e41e92bcbdfbea4d795a0da623d0c}{bump\_flg}}.put(1)}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}{state}}}
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{bump__task_8py_source_l00057}00057\ \ \ \ \ }
 
 \end{DoxyCode}

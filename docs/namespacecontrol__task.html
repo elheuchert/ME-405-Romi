@@ -95,8 +95,93 @@ $(function(){initNavTree('namespacecontrol__task.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:control_5Ftask" id="r_control_5Ftask"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontrol__task_1_1control__task.html">control_task</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">add description here  <a href="classcontrol__task_1_1control__task.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file contains a class to create a <a class="el" href="classcontrol__task_1_1control__task.html" title="This file contains a class to create a control_task object which is compatible with the cotask schedu...">control_task</a> object which is compatible with the cotask scheduler to run as a cooperative task.  <a href="classcontrol__task_1_1control__task.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a67f9d0ed9cb194e871febaf23c6abd95" id="r_a67f9d0ed9cb194e871febaf23c6abd95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67f9d0ed9cb194e871febaf23c6abd95">run</a> (self)</td></tr>
+<tr class="memdesc:a67f9d0ed9cb194e871febaf23c6abd95"><td class="mdescLeft">&#160;</td><td class="mdescRight">run is the generator that the cotask scheduler will run since our tasks are objects.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a644adab5b9f9e0191e832b4b7397d38b" id="r_a644adab5b9f9e0191e832b4b7397d38b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644adab5b9f9e0191e832b4b7397d38b">state</a> = 0:</td></tr>
+<tr class="memitem:a28661107936891f7b5ce64da87de178d" id="r_a28661107936891f7b5ce64da87de178d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28661107936891f7b5ce64da87de178d">startup</a> = 0:</td></tr>
+<tr class="memitem:ad270e5d654c17aaa8c23ca996e1d51cf" id="r_ad270e5d654c17aaa8c23ca996e1d51cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad270e5d654c17aaa8c23ca996e1d51cf">yaw_rate</a> = self.line_controller.pi_Control(self.centroid.get(), 15)</td></tr>
 </table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a67f9d0ed9cb194e871febaf23c6abd95" name="a67f9d0ed9cb194e871febaf23c6abd95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f9d0ed9cb194e871febaf23c6abd95">&#9670;&#160;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">control_task.run </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>run is the generator that the cotask scheduler will run since our tasks are objects. </p>
+<p>All shares it needs are already given to the task object on initialization. The generator will only run one state at a time on each run of the task, but it will always update the PWM of the motors to their expected set point on every loop. @detail The finite state machine for <a class="el" href="classcontrol__task_1_1control__task.html" title="This file contains a class to create a control_task object which is compatible with the cotask schedu...">control_task</a> has 8 states. State 0: Hub State. This state waits for either automatic_mode to be set or c_state to be set for a state change to active controls. State 1: Forward State. If c_state == 1, control task will use the fwd_ref to drive the wheels forward at that speed in mm/s State 2: Turn State. If c_state == 2, control task will use the arc_ref to drive the wheels to that turn radius in mm State 3: Pivot State. If c_state == 3, control task will use the piv_ref to drive the wheels to pivot in place at that angular speed in rad/s State 4: Disable State. If c_state ==4, control task will turn both motors off and clear all references then return to hub State 5: Automatic Control State. If automatic_mode == 1 and the line sensor is calibrated, control task will drive forward at a set 100 mm/s and made small adjustments to each wheel to place the centroid at centroid_goal based off of the centroid controllers values. State 6: Calibrate Check State. If automatic_mode == 1, control task will check the line sensor is calibrated before following the line. State 7: Heading Control State. If c_state == 7, control task will use the yaw controller to get a reference pivoting speed to move the motors unitl the yaw matches close to yaw_goal. Always : Every loop runs the control loops on the motors to keep them up to date on their reference speeds.</p>
+<p>Note : Many of the comments at the bottom of the file are to comment out print statements for debugging purposes</p>
+<p>IMPORTANT PWM Logic Filtering: Unknown why to the authors but testing found that giving both wheels the same sign on PWM will have expected behavior. If either PWM is 0 or the PWM values have different signs the motors will spin in the opposite direction of the sign of the PWM. The if logic at the bottom of the generator handles this but it is unknown if this is required if a different piece of ROMI hardware was used or if this is a software issue. If wheels immediately saturate on turning it is likely this issue does not exist for users hardware. </p>
+
+<p class="definition">Definition at line <a class="el" href="control__task_8py_source.html#l00121">121</a> of file <a class="el" href="control__task_8py_source.html">control_task.py</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a28661107936891f7b5ce64da87de178d" name="a28661107936891f7b5ce64da87de178d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28661107936891f7b5ce64da87de178d">&#9670;&#160;</a></span>startup</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classcontrol__task_1_1control__task.html#a2b9aa2713efd226883accf5ff68a39f9">control_task.startup</a> = 0:</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="control__task_8py_source.html#l00131">131</a> of file <a class="el" href="control__task_8py_source.html">control_task.py</a>.</p>
+
+</div>
+</div>
+<a id="a644adab5b9f9e0191e832b4b7397d38b" name="a644adab5b9f9e0191e832b4b7397d38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644adab5b9f9e0191e832b4b7397d38b">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classcontrol__task_1_1control__task.html#ada23fbf679e7a4019cfd89f4e2c3e978">control_task.state</a> = 0:</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="control__task_8py_source.html#l00125">125</a> of file <a class="el" href="control__task_8py_source.html">control_task.py</a>.</p>
+
+</div>
+</div>
+<a id="ad270e5d654c17aaa8c23ca996e1d51cf" name="ad270e5d654c17aaa8c23ca996e1d51cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad270e5d654c17aaa8c23ca996e1d51cf">&#9670;&#160;</a></span>yaw_rate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcontrol__task_1_1control__task.html#a74f3fcdfa42628cba5787e795e0831eb">control_task.yaw_rate</a> = self.line_controller.pi_Control(self.centroid.get(), 15)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="control__task_8py_source.html#l00203">203</a> of file <a class="el" href="control__task_8py_source.html">control_task.py</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

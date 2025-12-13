@@ -34,9 +34,17 @@ Collision detector for cooperative scheduler.
 
 This class runs continuously, setting flags that are shared with other tasks.
 
-The Bump task uses two sensor objects, for left and right side of the Romi. Any collision with either side will be treated the same. 
+The Bump task uses two sensor objects, for left and right side of the Romi. Any collision with either side will be treated the same. \begin{DoxyAuthor}{Author}
+Alex Power, Lucas Heuchert, Erik Heuchert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/Dec-\/8 Approximate date of creation of file 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00007}{7}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+2025-\/Dec-\/12 Final alterations made 
+\end{DoxyDate}
+
+
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00010}{10}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 
 
@@ -69,7 +77,7 @@ Shares are passed as parameters, used to communicate between tasks in the cooper
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00014}{14}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00017}{17}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 
 
@@ -86,7 +94,7 @@ bump\+\_\+task.\+Bump\+\_\+\+Task.\+run (\begin{DoxyParamCaption}\item[{}]{self}
 
 This function runs via the cooperative scheduler. 
 
-{\bfseries{ State 1 }} Not reading sensors
+{\bfseries{ State 0 }} Not reading sensors
 
 {\bfseries{ State 1 }} Reading sensors
 
@@ -94,7 +102,7 @@ This function runs via the cooperative scheduler.
 Sets bump\+\_\+flg to 1 when a sensor is pressed from left or right side \end{quote}
 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00032}{32}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00035}{35}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 
 
@@ -109,7 +117,7 @@ bump\+\_\+task.\+Bump\+\_\+\+Task.\+bump\+\_\+flg = bump\+\_\+flg}
 
 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00020}{20}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00023}{23}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 \Hypertarget{classbump__task_1_1_bump___task_a3cdbcb63b3ca6ba7bf7251d991088713}\index{bump\_task.Bump\_Task@{bump\_task.Bump\_Task}!bump\_on\_off@{bump\_on\_off}}
 \index{bump\_on\_off@{bump\_on\_off}!bump\_task.Bump\_Task@{bump\_task.Bump\_Task}}
@@ -119,7 +127,7 @@ bump\+\_\+task.\+Bump\+\_\+\+Task.\+bump\+\_\+on\+\_\+off = bump\+\_\+on\+\_\+of
 
 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00019}{19}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00022}{22}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 \Hypertarget{classbump__task_1_1_bump___task_acbf3fcf274ae50263268a8c61f0a8b61}\index{bump\_task.Bump\_Task@{bump\_task.Bump\_Task}!bump\_sensor\_left@{bump\_sensor\_left}}
 \index{bump\_sensor\_left@{bump\_sensor\_left}!bump\_task.Bump\_Task@{bump\_task.Bump\_Task}}
@@ -129,7 +137,7 @@ bump\+\_\+task.\+Bump\+\_\+\+Task.\+bump\+\_\+sensor\+\_\+left = bump\+\_\+senso
 
 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00017}{17}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00020}{20}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 \Hypertarget{classbump__task_1_1_bump___task_a159e9258cb67e57e4110370e4a34e897}\index{bump\_task.Bump\_Task@{bump\_task.Bump\_Task}!bump\_sensor\_right@{bump\_sensor\_right}}
 \index{bump\_sensor\_right@{bump\_sensor\_right}!bump\_task.Bump\_Task@{bump\_task.Bump\_Task}}
@@ -139,7 +147,7 @@ bump\+\_\+task.\+Bump\+\_\+\+Task.\+bump\+\_\+sensor\+\_\+right = bump\+\_\+sens
 
 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00016}{16}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00019}{19}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 \Hypertarget{classbump__task_1_1_bump___task_a79e0a6c06834b0418218c76e6d325846}\index{bump\_task.Bump\_Task@{bump\_task.Bump\_Task}!c\_state@{c\_state}}
 \index{c\_state@{c\_state}!bump\_task.Bump\_Task@{bump\_task.Bump\_Task}}
@@ -149,7 +157,7 @@ bump\+\_\+task.\+Bump\+\_\+\+Task.\+c\+\_\+state = c\+\_\+state}
 
 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00015}{15}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00018}{18}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 \Hypertarget{classbump__task_1_1_bump___task_ae93bb0184d5d977a5d003cdf01438f30}\index{bump\_task.Bump\_Task@{bump\_task.Bump\_Task}!state@{state}}
 \index{state@{state}!bump\_task.Bump\_Task@{bump\_task.Bump\_Task}}
@@ -159,7 +167,7 @@ int bump\+\_\+task.\+Bump\+\_\+\+Task.\+state = 0}
 
 
 
-Definition at line \mbox{\hyperlink{bump__task_8py_source_l00018}{18}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{bump__task_8py_source_l00021}{21}} of file \mbox{\hyperlink{bump__task_8py_source}{bump\+\_\+task.\+py}}.
 
 
 

@@ -92,15 +92,19 @@ $(function(){initNavTree('classmotor_1_1_motor.html','','classmotor_1_1_motor-me
 </div><!--header-->
 <div class="contents">
 
-<p>add description here  
+<p>The <a class="el" href="classmotor_1_1_motor.html" title="The Motor Diver Class.">Motor</a> Diver Class.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d80bd9a89d6648b3ca1822b17732524" id="r_a8d80bd9a89d6648b3ca1822b17732524"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d80bd9a89d6648b3ca1822b17732524">__init__</a> (self, PWM, DIR, <a class="el" href="#a7139b2229ee861cf809a9416ad07b8d7">nSLP</a>, timer, ch)</td></tr>
+<tr class="memdesc:a8d80bd9a89d6648b3ca1822b17732524"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmotor_1_1_motor.html" title="The Motor Diver Class.">Motor</a> Initialization.  <br /></td></tr>
 <tr class="memitem:aacaeae41be4d94273ff9318b5a616b93" id="r_aacaeae41be4d94273ff9318b5a616b93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacaeae41be4d94273ff9318b5a616b93">set_effort</a> (self, effort)</td></tr>
+<tr class="memdesc:aacaeae41be4d94273ff9318b5a616b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Effort Sets the present effort requested from the motor based on an input value between -100 and 100.  <br /></td></tr>
 <tr class="memitem:a9f58c627d1e1d0437921b0eac5b81222" id="r_a9f58c627d1e1d0437921b0eac5b81222"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f58c627d1e1d0437921b0eac5b81222">enable</a> (self)</td></tr>
+<tr class="memdesc:a9f58c627d1e1d0437921b0eac5b81222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable Enables the motor driver by taking it out of sleep mode into brake mode.  <br /></td></tr>
 <tr class="memitem:af791b20dd99b0a34d48b0178dc11fcb0" id="r_af791b20dd99b0a34d48b0178dc11fcb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af791b20dd99b0a34d48b0178dc11fcb0">disable</a> (self)</td></tr>
+<tr class="memdesc:af791b20dd99b0a34d48b0178dc11fcb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable Disables the motor driver by taking it into sleep mode.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -109,9 +113,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a48b2e222bee7514a205890c7726e1277" id="r_a48b2e222bee7514a205890c7726e1277"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48b2e222bee7514a205890c7726e1277">timCH</a> = timer.channel(ch, pin=PWM, mode=Timer.PWM, pulse_width_percent=0)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>add description here </p>
+<div class="textblock"><p>The <a class="el" href="classmotor_1_1_motor.html" title="The Motor Diver Class.">Motor</a> Diver Class. </p>
+<p>A motor driver interface encapsulated in a Python class. Works with motor drivers using separate PWM and direction inputs such as the DRV8838 drivers present on the Romi chassis from Pololu. </p>
 
-<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00004">4</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00008">8</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8d80bd9a89d6648b3ca1822b17732524" name="a8d80bd9a89d6648b3ca1822b17732524"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d80bd9a89d6648b3ca1822b17732524">&#9670;&#160;</a></span>__init__()</h2>
@@ -152,7 +157,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00009">9</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
+<p><a class="el" href="classmotor_1_1_motor.html" title="The Motor Diver Class.">Motor</a> Initialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">P1</td><td><a class="el" href="classmotor_1_1_motor.html" title="The Motor Diver Class.">Motor</a> Effort Pin </td></tr>
+    <tr><td class="paramname">P2</td><td><a class="el" href="classmotor_1_1_motor.html" title="The Motor Diver Class.">Motor</a> Direction Pin </td></tr>
+    <tr><td class="paramname">P3</td><td><a class="el" href="classmotor_1_1_motor.html" title="The Motor Diver Class.">Motor</a> Enable pin </td></tr>
+    <tr><td class="paramname">P4</td><td><a class="el" href="classmotor_1_1_motor.html" title="The Motor Diver Class.">Motor</a> timer channel </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00014">14</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
 
 </div>
 </div>
@@ -172,7 +188,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00031">31</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
+<p>Disable Disables the motor driver by taking it into sleep mode. </p>
+
+<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00037">37</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
 
 </div>
 </div>
@@ -191,7 +209,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00026">26</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
+<p>Enable Enables the motor driver by taking it out of sleep mode into brake mode. </p>
+
+<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00032">32</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
 
 </div>
 </div>
@@ -214,7 +234,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00015">15</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
+<p>Set Effort Sets the present effort requested from the motor based on an input value between -100 and 100. </p>
+
+<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00022">22</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
 
 </div>
 </div>
@@ -231,7 +253,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00012">12</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00017">17</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
 
 </div>
 </div>
@@ -247,7 +269,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00011">11</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00016">16</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
 
 </div>
 </div>
@@ -263,7 +285,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00013">13</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="motor_8py_source.html#l00018">18</a> of file <a class="el" href="motor_8py_source.html">motor.py</a>.</p>
 
 </div>
 </div>

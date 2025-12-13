@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="motor_encoder_right\l_class.motor_encoder\l_right_class",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmotor__encoder__right__class_1_1motor__encoder__right__class.html",tooltip="add description here"];
+  Node0 [id="Node000000",label="motor_encoder_right\l_class.motor_encoder\l_right_class",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmotor__encoder__right__class_1_1motor__encoder__right__class.html",tooltip="Right Motor Encoder Class."];
 }

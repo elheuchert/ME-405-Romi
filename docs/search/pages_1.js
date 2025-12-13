@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bluetooth_0',['Bluetooth',['../index.html#bluetooth',1,'']]],
-  ['bump_20sensors_1',['Bump Sensors',['../index.html#bump',1,'']]]
+  ['and_20performance_0',['Test Results and Performance',['../index.html#results',1,'']]],
+  ['architecture_1',['Software architecture',['../index.html#software',1,'']]]
 ];

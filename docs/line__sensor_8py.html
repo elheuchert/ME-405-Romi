@@ -92,12 +92,15 @@ $(function(){initNavTree('line__sensor_8py.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>This file contains a class to create a line sensor object.  
+<a href="#details">More...</a></p>
+
 <p><a href="line__sensor_8py_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:line_5Fsensor_2ELine_5FSensor" id="r_line_5Fsensor_2ELine_5FSensor"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classline__sensor_1_1_line___sensor.html">line_sensor.Line_Sensor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">add description here  <a href="classline__sensor_1_1_line___sensor.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classline__sensor_1_1_line___sensor.html" title="Line_Sensor class which will calibrate the sensors, read data from the entire line,...">Line_Sensor</a> class which will calibrate the sensors, read data from the entire line, and find the centroid of the darkest spot.  <a href="classline__sensor_1_1_line___sensor.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -108,7 +111,20 @@ Variables</h2></td></tr>
 <tr class="memitem:af00d0226f531138da1d20a979415f6f1" id="r_af00d0226f531138da1d20a979415f6f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__sensor.html#af00d0226f531138da1d20a979415f6f1">line_sensor.DATA_AMT</a> = 5</td></tr>
 <tr class="memitem:a9701a9aa7ad43fee5774c6d60fcdb552" id="r_a9701a9aa7ad43fee5774c6d60fcdb552"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__sensor.html#a9701a9aa7ad43fee5774c6d60fcdb552">line_sensor.PITCH</a> = 8</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file contains a class to create a line sensor object. </p>
+<p>The object can be used for calibrating the sensor and reading the centroid location of the darkest spot the sensors see.</p>
+<p>NOTE: The outer 2 ir sensors are turned off by setting the corresponding self.sens_dist value to 0. Helped with line following lines that split.</p>
+<p>IMPORTANT: Calibrating the sensor requires a text file name IR_cal.txt. This calibration will write that file but the user will need to stop ROMI, pull the file off onto a local computer and reflash it to the ROMI. If you do not, ROMI will not recognize the new file and will not calibrate.</p>
+<dl class="section author"><dt>Author</dt><dd>Alex Power, Lucas Heuchert, Erik Heuchert </dd>
+<dd>
+Help from ChatGPT5 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025-Nov-11 Approximate date of creation of file </dd>
+<dd>
+2025-Dec-12 Final alterations made </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="line__sensor_8py_source.html">line_sensor.py</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

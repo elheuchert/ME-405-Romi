@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['results_0',['Test Results',['../index.html#test',1,'']]],
-  ['results_20and_20performance_1',['Test Results and Performance',['../index.html#results',1,'']]]
+  ['performance_0',['Performance',['../index.html#results',1,'Test Results and Performance'],['../index.html#performance',1,'Track Performance']]]
 ];

@@ -2,20 +2,20 @@
 \hypertarget{classmotor_1_1_motor}{}\label{classmotor_1_1_motor}\index{motor.Motor@{motor.Motor}}
 
 
-add description here  
+The \doxylink{classmotor_1_1_motor}{Motor} Diver Class.  
 
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classmotor_1_1_motor_a8d80bd9a89d6648b3ca1822b17732524}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, PWM, DIR, \mbox{\hyperlink{classmotor_1_1_motor_a7139b2229ee861cf809a9416ad07b8d7}{n\+SLP}}, timer, ch)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{classmotor_1_1_motor}{Motor} Initialization. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmotor_1_1_motor_aacaeae41be4d94273ff9318b5a616b93}{set\+\_\+effort}} (self, effort)
-\item 
+\begin{DoxyCompactList}\small\item\em Set Effort Sets the present effort requested from the motor based on an input value between -\/100 and 100. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmotor_1_1_motor_a9f58c627d1e1d0437921b0eac5b81222}{enable}} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em Enable Enables the motor driver by taking it out of sleep mode into brake mode. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmotor_1_1_motor_af791b20dd99b0a34d48b0178dc11fcb0}{disable}} (self)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Disable Disables the motor driver by taking it into sleep mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,9 +28,11 @@ add description here
 
 
 \doxysubsection{Detailed Description}
-add description here 
+The \doxylink{classmotor_1_1_motor}{Motor} Diver Class. 
 
-Definition at line \mbox{\hyperlink{motor_8py_source_l00004}{4}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
+A motor driver interface encapsulated in a Python class. Works with motor drivers using separate PWM and direction inputs such as the DRV8838 drivers present on the Romi chassis from Pololu. 
+
+Definition at line \mbox{\hyperlink{motor_8py_source_l00008}{8}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
 
 
 
@@ -45,7 +47,22 @@ motor.\+Motor.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{se
 
 
 
-Definition at line \mbox{\hyperlink{motor_8py_source_l00009}{9}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
+\doxylink{classmotor_1_1_motor}{Motor} Initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P1} & \doxylink{classmotor_1_1_motor}{Motor} Effort Pin \\
+\hline
+{\em P2} & \doxylink{classmotor_1_1_motor}{Motor} Direction Pin \\
+\hline
+{\em P3} & \doxylink{classmotor_1_1_motor}{Motor} Enable pin \\
+\hline
+{\em P4} & \doxylink{classmotor_1_1_motor}{Motor} timer channel \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{motor_8py_source_l00014}{14}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
 
 
 
@@ -60,7 +77,11 @@ motor.\+Motor.\+disable (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParam
 
 
 
-Definition at line \mbox{\hyperlink{motor_8py_source_l00031}{31}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
+Disable Disables the motor driver by taking it into sleep mode. 
+
+
+
+Definition at line \mbox{\hyperlink{motor_8py_source_l00037}{37}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
 
 \Hypertarget{classmotor_1_1_motor_a9f58c627d1e1d0437921b0eac5b81222}\index{motor.Motor@{motor.Motor}!enable@{enable}}
 \index{enable@{enable}!motor.Motor@{motor.Motor}}
@@ -70,7 +91,11 @@ motor.\+Motor.\+enable (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamC
 
 
 
-Definition at line \mbox{\hyperlink{motor_8py_source_l00026}{26}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
+Enable Enables the motor driver by taking it out of sleep mode into brake mode. 
+
+
+
+Definition at line \mbox{\hyperlink{motor_8py_source_l00032}{32}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
 
 \Hypertarget{classmotor_1_1_motor_aacaeae41be4d94273ff9318b5a616b93}\index{motor.Motor@{motor.Motor}!set\_effort@{set\_effort}}
 \index{set\_effort@{set\_effort}!motor.Motor@{motor.Motor}}
@@ -80,7 +105,11 @@ motor.\+Motor.\+set\+\_\+effort (\begin{DoxyParamCaption}\item[{}]{self}{, }\ite
 
 
 
-Definition at line \mbox{\hyperlink{motor_8py_source_l00015}{15}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
+Set Effort Sets the present effort requested from the motor based on an input value between -\/100 and 100. 
+
+
+
+Definition at line \mbox{\hyperlink{motor_8py_source_l00022}{22}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
 
 
 
@@ -95,7 +124,7 @@ motor.\+Motor.\+dir = Pin(DIR, mode=Pin.\+OUT\+\_\+\+PP, value=0)}
 
 
 
-Definition at line \mbox{\hyperlink{motor_8py_source_l00012}{12}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
+Definition at line \mbox{\hyperlink{motor_8py_source_l00017}{17}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
 
 \Hypertarget{classmotor_1_1_motor_a7139b2229ee861cf809a9416ad07b8d7}\index{motor.Motor@{motor.Motor}!nSLP@{nSLP}}
 \index{nSLP@{nSLP}!motor.Motor@{motor.Motor}}
@@ -105,7 +134,7 @@ motor.\+Motor.\+n\+SLP = Pin(n\+SLP, mode=Pin.\+OUT\+\_\+\+PP, value=0)}
 
 
 
-Definition at line \mbox{\hyperlink{motor_8py_source_l00011}{11}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
+Definition at line \mbox{\hyperlink{motor_8py_source_l00016}{16}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
 
 \Hypertarget{classmotor_1_1_motor_a48b2e222bee7514a205890c7726e1277}\index{motor.Motor@{motor.Motor}!timCH@{timCH}}
 \index{timCH@{timCH}!motor.Motor@{motor.Motor}}
@@ -115,7 +144,7 @@ motor.\+Motor.\+tim\+CH = timer.\+channel(ch, pin=PWM, mode=Timer.\+PWM, pulse\+
 
 
 
-Definition at line \mbox{\hyperlink{motor_8py_source_l00013}{13}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
+Definition at line \mbox{\hyperlink{motor_8py_source_l00018}{18}} of file \mbox{\hyperlink{motor_8py_source}{motor.\+py}}.
 
 
 

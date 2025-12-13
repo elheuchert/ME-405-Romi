@@ -1,7 +1,6 @@
 var classcontrol__task_1_1control__task =
 [
     [ "__init__", "classcontrol__task_1_1control__task.html#a071b694c808177df6fb0769a4628364e", null ],
-    [ "run", "classcontrol__task_1_1control__task.html#a5c411c6f50451969df1fd18019f34953", null ],
     [ "arc_ref", "classcontrol__task_1_1control__task.html#af4f9e965ac941c0922596f8b3ad27f79", null ],
     [ "automatic_mode", "classcontrol__task_1_1control__task.html#a3bcbe88e750f7c29c094596141c2051e", null ],
     [ "c_state", "classcontrol__task_1_1control__task.html#afc723cc3b7f74bbe43ef8d5d72ef0149", null ],
@@ -30,5 +29,5 @@ var classcontrol__task_1_1control__task =
     [ "velocity_l", "classcontrol__task_1_1control__task.html#a9a2d1980a838f00da777fc7c7351089e", null ],
     [ "velocity_r", "classcontrol__task_1_1control__task.html#abf2f8701fda5f3ddaaec344266e1b392", null ],
     [ "yaw_goal", "classcontrol__task_1_1control__task.html#a5dcbaa9f6050fb4e7b72f49b96b88e83", null ],
-    [ "yaw_rate", "classcontrol__task_1_1control__task.html#a8a4de7e80cf94239f6b85005d4e5fc40", null ]
+    [ "yaw_rate", "classcontrol__task_1_1control__task.html#a74f3fcdfa42628cba5787e795e0831eb", null ]
 ];

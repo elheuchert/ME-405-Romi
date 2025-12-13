@@ -95,8 +95,366 @@ $(function(){initNavTree('namespacecontroller.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:Controller" id="r_Controller"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1_controller.html">Controller</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">add description here  <a href="classcontroller_1_1_controller.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file contains a class to create a PID <a class="el" href="classcontroller_1_1_controller.html" title="This file contains a class to create a PID Controller object.">Controller</a> object.  <a href="classcontroller_1_1_controller.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1c1adb1c32c5839adde4691994fbb657" id="r_a1c1adb1c32c5839adde4691994fbb657"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c1adb1c32c5839adde4691994fbb657">change_Ref</a> (self, <a class="el" href="#a07ea75ee58ec4976bdcf7c925f223e8a">reference</a>)</td></tr>
+<tr class="memdesc:a1c1adb1c32c5839adde4691994fbb657"><td class="mdescLeft">&#160;</td><td class="mdescRight">change_Ref changes the set point of the controller.  <br /></td></tr>
+<tr class="memitem:ab50cfb36be80ca8ca97b6ba05b647eba" id="r_ab50cfb36be80ca8ca97b6ba05b647eba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50cfb36be80ca8ca97b6ba05b647eba">get_Ref</a> (self)</td></tr>
+<tr class="memdesc:ab50cfb36be80ca8ca97b6ba05b647eba"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_Ref returns the current set point of the controller.  <br /></td></tr>
+<tr class="memitem:abde1c290bc7fe6e8bfa897da45e4d016" id="r_abde1c290bc7fe6e8bfa897da45e4d016"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abde1c290bc7fe6e8bfa897da45e4d016">get_Error</a> (self)</td></tr>
+<tr class="memdesc:abde1c290bc7fe6e8bfa897da45e4d016"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_Error returns the current Riemann Sum integral of the errors of the controller.  <br /></td></tr>
+<tr class="memitem:a6e7bec40144d5aacb7f61206a3c5b90c" id="r_a6e7bec40144d5aacb7f61206a3c5b90c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e7bec40144d5aacb7f61206a3c5b90c">proportional_Control</a> (self, measure)</td></tr>
+<tr class="memdesc:a6e7bec40144d5aacb7f61206a3c5b90c"><td class="mdescLeft">&#160;</td><td class="mdescRight">proportional_Control returns a saturated effort value based on the error of the system from the set point using proportional control only.  <br /></td></tr>
+<tr class="memitem:a89356bf8ada344869e1e23fe8e4c805b" id="r_a89356bf8ada344869e1e23fe8e4c805b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89356bf8ada344869e1e23fe8e4c805b">pi_Control</a> (self, measure, dt)</td></tr>
+<tr class="memdesc:a89356bf8ada344869e1e23fe8e4c805b"><td class="mdescLeft">&#160;</td><td class="mdescRight">pi_Control returns a saturated effort value based on the error of the system from the set point using proportional and integral control only.  <br /></td></tr>
+<tr class="memitem:a2ffd165afb4e1ccf1aa4b1affd45ad07" id="r_a2ffd165afb4e1ccf1aa4b1affd45ad07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ffd165afb4e1ccf1aa4b1affd45ad07">error_sat</a> (self, err)</td></tr>
+<tr class="memdesc:a2ffd165afb4e1ccf1aa4b1affd45ad07"><td class="mdescLeft">&#160;</td><td class="mdescRight">error_sat is a function which returns the saturated integral of the error based on this instance of the controller saturation value.  <br /></td></tr>
+<tr class="memitem:a08a212b5ada0bbfb4463cbe47e22ef0b" id="r_a08a212b5ada0bbfb4463cbe47e22ef0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08a212b5ada0bbfb4463cbe47e22ef0b">effort_sat</a> (self, eff)</td></tr>
+<tr class="memdesc:a08a212b5ada0bbfb4463cbe47e22ef0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">effort_sat is a function which returns the saturated effort of the controller based on this instance of the controllers saturation value.  <br /></td></tr>
+<tr class="memitem:aa8cdcef9a80da5ab61e5e847f59094eb" id="r_aa8cdcef9a80da5ab61e5e847f59094eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8cdcef9a80da5ab61e5e847f59094eb">change_Gains</a> (self, k_p, k_i, k_d)</td></tr>
+<tr class="memdesc:aa8cdcef9a80da5ab61e5e847f59094eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">change_Gains changes this instance's gain values.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a07ea75ee58ec4976bdcf7c925f223e8a" id="r_a07ea75ee58ec4976bdcf7c925f223e8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ea75ee58ec4976bdcf7c925f223e8a">reference</a> = reference</td></tr>
+<tr class="memitem:a6118da543422dff3ae4ecbc36cda5cf0" id="r_a6118da543422dff3ae4ecbc36cda5cf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6118da543422dff3ae4ecbc36cda5cf0">summed_errors</a> = self.error_sat(self.summed_errors)</td></tr>
+<tr class="memitem:ab1986a936cc80fcc1f8d3746dd534357" id="r_ab1986a936cc80fcc1f8d3746dd534357"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1986a936cc80fcc1f8d3746dd534357">K_p</a> = k_p</td></tr>
+<tr class="memitem:aad4feb7d1d0bf837f09d6193e5d380f1" id="r_aad4feb7d1d0bf837f09d6193e5d380f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad4feb7d1d0bf837f09d6193e5d380f1">K_i</a> = k_i</td></tr>
+<tr class="memitem:a6ccbe29f3ff5dc0336853e9cb2177d51" id="r_a6ccbe29f3ff5dc0336853e9cb2177d51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ccbe29f3ff5dc0336853e9cb2177d51">K_d</a> = k_d</td></tr>
 </table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="aa8cdcef9a80da5ab61e5e847f59094eb" name="aa8cdcef9a80da5ab61e5e847f59094eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cdcef9a80da5ab61e5e847f59094eb">&#9670;&#160;</a></span>change_Gains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.change_Gains </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>k_p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>k_i</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>k_d</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>change_Gains changes this instance's gain values. </p>
+<p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k_p</td><td>: k_p is the new proportional gain. </td></tr>
+    <tr><td class="paramname">k_i</td><td>: k_i is the new integral gain. </td></tr>
+    <tr><td class="paramname">k_d</td><td>: k_d is the new derivative gain. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00106">106</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="a1c1adb1c32c5839adde4691994fbb657" name="a1c1adb1c32c5839adde4691994fbb657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c1adb1c32c5839adde4691994fbb657">&#9670;&#160;</a></span>change_Ref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.change_Ref </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>reference</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>change_Ref changes the set point of the controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reference</td><td>: reference is the new set point of the controller. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00040">40</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="a08a212b5ada0bbfb4463cbe47e22ef0b" name="a08a212b5ada0bbfb4463cbe47e22ef0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a212b5ada0bbfb4463cbe47e22ef0b">&#9670;&#160;</a></span>effort_sat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.effort_sat </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>eff</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>effort_sat is a function which returns the saturated effort of the controller based on this instance of the controllers saturation value. </p>
+<p><br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eff</td><td>: eff is the effort value being saturated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00094">94</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="a2ffd165afb4e1ccf1aa4b1affd45ad07" name="a2ffd165afb4e1ccf1aa4b1affd45ad07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffd165afb4e1ccf1aa4b1affd45ad07">&#9670;&#160;</a></span>error_sat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.error_sat </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>error_sat is a function which returns the saturated integral of the error based on this instance of the controller saturation value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err</td><td>: err is the error sum value being saturated. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00084">84</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="abde1c290bc7fe6e8bfa897da45e4d016" name="abde1c290bc7fe6e8bfa897da45e4d016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde1c290bc7fe6e8bfa897da45e4d016">&#9670;&#160;</a></span>get_Error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.get_Error </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get_Error returns the current Riemann Sum integral of the errors of the controller. </p>
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00051">51</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="ab50cfb36be80ca8ca97b6ba05b647eba" name="ab50cfb36be80ca8ca97b6ba05b647eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50cfb36be80ca8ca97b6ba05b647eba">&#9670;&#160;</a></span>get_Ref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.get_Ref </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get_Ref returns the current set point of the controller. </p>
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00047">47</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="a89356bf8ada344869e1e23fe8e4c805b" name="a89356bf8ada344869e1e23fe8e4c805b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89356bf8ada344869e1e23fe8e4c805b">&#9670;&#160;</a></span>pi_Control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.pi_Control </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>measure</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>pi_Control returns a saturated effort value based on the error of the system from the set point using proportional and integral control only. </p>
+<p><br  />
+ @detail The integral of the error is done using a simple Riemann sum that looks at how long it has been since the last time the controller was ran. This integral is saturated to stop the integral from making the motors go insane when some unexpected behavior occurs. The effort is also saturated. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">measure</td><td>: measure is the current state of the system being controlled </td></tr>
+    <tr><td class="paramname">dt</td><td>: dt is the time since the last run of pi_Control in ms </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00072">72</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="a6e7bec40144d5aacb7f61206a3c5b90c" name="a6e7bec40144d5aacb7f61206a3c5b90c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7bec40144d5aacb7f61206a3c5b90c">&#9670;&#160;</a></span>proportional_Control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.proportional_Control </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>measure</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>proportional_Control returns a saturated effort value based on the error of the system from the set point using proportional control only. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">measure</td><td>: measure is the current state of the system being controlled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00056">56</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a6ccbe29f3ff5dc0336853e9cb2177d51" name="a6ccbe29f3ff5dc0336853e9cb2177d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ccbe29f3ff5dc0336853e9cb2177d51">&#9670;&#160;</a></span>K_d</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.K_d = k_d</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00109">109</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="aad4feb7d1d0bf837f09d6193e5d380f1" name="aad4feb7d1d0bf837f09d6193e5d380f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4feb7d1d0bf837f09d6193e5d380f1">&#9670;&#160;</a></span>K_i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.K_i = k_i</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00108">108</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="ab1986a936cc80fcc1f8d3746dd534357" name="ab1986a936cc80fcc1f8d3746dd534357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1986a936cc80fcc1f8d3746dd534357">&#9670;&#160;</a></span>K_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.K_p = k_p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00107">107</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="a07ea75ee58ec4976bdcf7c925f223e8a" name="a07ea75ee58ec4976bdcf7c925f223e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ea75ee58ec4976bdcf7c925f223e8a">&#9670;&#160;</a></span>reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.reference = reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00041">41</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a id="a6118da543422dff3ae4ecbc36cda5cf0" name="a6118da543422dff3ae4ecbc36cda5cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6118da543422dff3ae4ecbc36cda5cf0">&#9670;&#160;</a></span>summed_errors</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.summed_errors = self.error_sat(self.summed_errors)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="controller_8py_source.html#l00078">78</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

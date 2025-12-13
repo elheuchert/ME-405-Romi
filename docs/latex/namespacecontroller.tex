@@ -4,4 +4,247 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classcontroller_1_1_controller}{Controller}}
-\begin{DoxyCompactList}\small\item\em add description here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This file contains a class to create a PID \doxylink{classcontroller_1_1_controller}{Controller} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecontroller_a1c1adb1c32c5839adde4691994fbb657}{change\+\_\+\+Ref}} (self, \mbox{\hyperlink{namespacecontroller_a07ea75ee58ec4976bdcf7c925f223e8a}{reference}})
+\begin{DoxyCompactList}\small\item\em change\+\_\+\+Ref changes the set point of the controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_ab50cfb36be80ca8ca97b6ba05b647eba}{get\+\_\+\+Ref}} (self)
+\begin{DoxyCompactList}\small\item\em get\+\_\+\+Ref returns the current set point of the controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_abde1c290bc7fe6e8bfa897da45e4d016}{get\+\_\+\+Error}} (self)
+\begin{DoxyCompactList}\small\item\em get\+\_\+\+Error returns the current Riemann Sum integral of the errors of the controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_a6e7bec40144d5aacb7f61206a3c5b90c}{proportional\+\_\+\+Control}} (self, measure)
+\begin{DoxyCompactList}\small\item\em proportional\+\_\+\+Control returns a saturated effort value based on the error of the system from the set point using proportional control only. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_a89356bf8ada344869e1e23fe8e4c805b}{pi\+\_\+\+Control}} (self, measure, dt)
+\begin{DoxyCompactList}\small\item\em pi\+\_\+\+Control returns a saturated effort value based on the error of the system from the set point using proportional and integral control only. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_a2ffd165afb4e1ccf1aa4b1affd45ad07}{error\+\_\+sat}} (self, err)
+\begin{DoxyCompactList}\small\item\em error\+\_\+sat is a function which returns the saturated integral of the error based on this instance of the controller saturation value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_a08a212b5ada0bbfb4463cbe47e22ef0b}{effort\+\_\+sat}} (self, eff)
+\begin{DoxyCompactList}\small\item\em effort\+\_\+sat is a function which returns the saturated effort of the controller based on this instance of the controllers saturation value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacecontroller_aa8cdcef9a80da5ab61e5e847f59094eb}{change\+\_\+\+Gains}} (self, k\+\_\+p, k\+\_\+i, k\+\_\+d)
+\begin{DoxyCompactList}\small\item\em change\+\_\+\+Gains changes this instance\textquotesingle{}s gain values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecontroller_a07ea75ee58ec4976bdcf7c925f223e8a}{reference}} = reference
+\item 
+\mbox{\hyperlink{namespacecontroller_a6118da543422dff3ae4ecbc36cda5cf0}{summed\+\_\+errors}} = self.\+error\+\_\+sat(self.\+summed\+\_\+errors)
+\item 
+\mbox{\hyperlink{namespacecontroller_ab1986a936cc80fcc1f8d3746dd534357}{K\+\_\+p}} = k\+\_\+p
+\item 
+\mbox{\hyperlink{namespacecontroller_aad4feb7d1d0bf837f09d6193e5d380f1}{K\+\_\+i}} = k\+\_\+i
+\item 
+\mbox{\hyperlink{namespacecontroller_a6ccbe29f3ff5dc0336853e9cb2177d51}{K\+\_\+d}} = k\+\_\+d
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacecontroller_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecontroller_aa8cdcef9a80da5ab61e5e847f59094eb}\index{controller@{controller}!change\_Gains@{change\_Gains}}
+\index{change\_Gains@{change\_Gains}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{change\_Gains()}{change\_Gains()}}
+{\footnotesize\ttfamily \label{namespacecontroller_aa8cdcef9a80da5ab61e5e847f59094eb} 
+controller.\+change\+\_\+\+Gains (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{k\+\_\+p}{, }\item[{}]{k\+\_\+i}{, }\item[{}]{k\+\_\+d}{}\end{DoxyParamCaption})}
+
+
+
+change\+\_\+\+Gains changes this instance\textquotesingle{}s gain values. 
+
+~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em k\+\_\+p} & \+: k\+\_\+p is the new proportional gain. \\
+\hline
+{\em k\+\_\+i} & \+: k\+\_\+i is the new integral gain. \\
+\hline
+{\em k\+\_\+d} & \+: k\+\_\+d is the new derivative gain. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00106}{106}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_a1c1adb1c32c5839adde4691994fbb657}\index{controller@{controller}!change\_Ref@{change\_Ref}}
+\index{change\_Ref@{change\_Ref}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{change\_Ref()}{change\_Ref()}}
+{\footnotesize\ttfamily \label{namespacecontroller_a1c1adb1c32c5839adde4691994fbb657} 
+controller.\+change\+\_\+\+Ref (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{reference}{}\end{DoxyParamCaption})}
+
+
+
+change\+\_\+\+Ref changes the set point of the controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & \+: reference is the new set point of the controller. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00040}{40}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_a08a212b5ada0bbfb4463cbe47e22ef0b}\index{controller@{controller}!effort\_sat@{effort\_sat}}
+\index{effort\_sat@{effort\_sat}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{effort\_sat()}{effort\_sat()}}
+{\footnotesize\ttfamily \label{namespacecontroller_a08a212b5ada0bbfb4463cbe47e22ef0b} 
+controller.\+effort\+\_\+sat (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{eff}{}\end{DoxyParamCaption})}
+
+
+
+effort\+\_\+sat is a function which returns the saturated effort of the controller based on this instance of the controllers saturation value. 
+
+~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em eff} & \+: eff is the effort value being saturated. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00094}{94}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_a2ffd165afb4e1ccf1aa4b1affd45ad07}\index{controller@{controller}!error\_sat@{error\_sat}}
+\index{error\_sat@{error\_sat}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{error\_sat()}{error\_sat()}}
+{\footnotesize\ttfamily \label{namespacecontroller_a2ffd165afb4e1ccf1aa4b1affd45ad07} 
+controller.\+error\+\_\+sat (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{err}{}\end{DoxyParamCaption})}
+
+
+
+error\+\_\+sat is a function which returns the saturated integral of the error based on this instance of the controller saturation value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em err} & \+: err is the error sum value being saturated. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00084}{84}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_abde1c290bc7fe6e8bfa897da45e4d016}\index{controller@{controller}!get\_Error@{get\_Error}}
+\index{get\_Error@{get\_Error}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{get\_Error()}{get\_Error()}}
+{\footnotesize\ttfamily \label{namespacecontroller_abde1c290bc7fe6e8bfa897da45e4d016} 
+controller.\+get\+\_\+\+Error (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+get\+\_\+\+Error returns the current Riemann Sum integral of the errors of the controller. 
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00051}{51}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_ab50cfb36be80ca8ca97b6ba05b647eba}\index{controller@{controller}!get\_Ref@{get\_Ref}}
+\index{get\_Ref@{get\_Ref}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{get\_Ref()}{get\_Ref()}}
+{\footnotesize\ttfamily \label{namespacecontroller_ab50cfb36be80ca8ca97b6ba05b647eba} 
+controller.\+get\+\_\+\+Ref (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+get\+\_\+\+Ref returns the current set point of the controller. 
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00047}{47}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_a89356bf8ada344869e1e23fe8e4c805b}\index{controller@{controller}!pi\_Control@{pi\_Control}}
+\index{pi\_Control@{pi\_Control}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{pi\_Control()}{pi\_Control()}}
+{\footnotesize\ttfamily \label{namespacecontroller_a89356bf8ada344869e1e23fe8e4c805b} 
+controller.\+pi\+\_\+\+Control (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{measure}{, }\item[{}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+pi\+\_\+\+Control returns a saturated effort value based on the error of the system from the set point using proportional and integral control only. 
+
+~\newline
+ @detail The integral of the error is done using a simple Riemann sum that looks at how long it has been since the last time the controller was ran. This integral is saturated to stop the integral from making the motors go insane when some unexpected behavior occurs. The effort is also saturated. 
+\begin{DoxyParams}{Parameters}
+{\em measure} & \+: measure is the current state of the system being controlled \\
+\hline
+{\em dt} & \+: dt is the time since the last run of pi\+\_\+\+Control in ms \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00072}{72}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_a6e7bec40144d5aacb7f61206a3c5b90c}\index{controller@{controller}!proportional\_Control@{proportional\_Control}}
+\index{proportional\_Control@{proportional\_Control}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{proportional\_Control()}{proportional\_Control()}}
+{\footnotesize\ttfamily \label{namespacecontroller_a6e7bec40144d5aacb7f61206a3c5b90c} 
+controller.\+proportional\+\_\+\+Control (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{measure}{}\end{DoxyParamCaption})}
+
+
+
+proportional\+\_\+\+Control returns a saturated effort value based on the error of the system from the set point using proportional control only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em measure} & \+: measure is the current state of the system being controlled \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00056}{56}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespacecontroller_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacecontroller_a6ccbe29f3ff5dc0336853e9cb2177d51}\index{controller@{controller}!K\_d@{K\_d}}
+\index{K\_d@{K\_d}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{K\_d}{K\_d}}
+{\footnotesize\ttfamily \label{namespacecontroller_a6ccbe29f3ff5dc0336853e9cb2177d51} 
+controller.\+K\+\_\+d = k\+\_\+d}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00109}{109}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_aad4feb7d1d0bf837f09d6193e5d380f1}\index{controller@{controller}!K\_i@{K\_i}}
+\index{K\_i@{K\_i}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{K\_i}{K\_i}}
+{\footnotesize\ttfamily \label{namespacecontroller_aad4feb7d1d0bf837f09d6193e5d380f1} 
+controller.\+K\+\_\+i = k\+\_\+i}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00108}{108}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_ab1986a936cc80fcc1f8d3746dd534357}\index{controller@{controller}!K\_p@{K\_p}}
+\index{K\_p@{K\_p}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{K\_p}{K\_p}}
+{\footnotesize\ttfamily \label{namespacecontroller_ab1986a936cc80fcc1f8d3746dd534357} 
+controller.\+K\+\_\+p = k\+\_\+p}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00107}{107}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_a07ea75ee58ec4976bdcf7c925f223e8a}\index{controller@{controller}!reference@{reference}}
+\index{reference@{reference}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily \label{namespacecontroller_a07ea75ee58ec4976bdcf7c925f223e8a} 
+controller.\+reference = reference}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00041}{41}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
+\Hypertarget{namespacecontroller_a6118da543422dff3ae4ecbc36cda5cf0}\index{controller@{controller}!summed\_errors@{summed\_errors}}
+\index{summed\_errors@{summed\_errors}!controller@{controller}}
+\doxysubsubsection{\texorpdfstring{summed\_errors}{summed\_errors}}
+{\footnotesize\ttfamily \label{namespacecontroller_a6118da543422dff3ae4ecbc36cda5cf0} 
+controller.\+summed\+\_\+errors = self.\+error\+\_\+sat(self.\+summed\+\_\+errors)}
+
+
+
+Definition at line \mbox{\hyperlink{controller_8py_source_l00078}{78}} of file \mbox{\hyperlink{controller_8py_source}{controller.\+py}}.
+
