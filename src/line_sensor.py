@@ -21,7 +21,9 @@ import array
 
 DATA_AMT = 5 # Number of samples on multi read to be sampled 
 PITCH = 8 # mm
+
 ## @brief Line_Sensor class which will calibrate the sensors, read data from the entire line, and find the centroid of the darkest spot. 
+#
 class Line_Sensor:
 ## @brief __init__ is the Line_Sensor object initializer which takes 13 arguments. 
 #         The arguments the 13 IR sensor objects. 
