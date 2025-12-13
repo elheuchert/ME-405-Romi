@@ -1,7 +1,7 @@
 from serial import Serial
 from matplotlib import pyplot
 from time import sleep 
-from datetime import datetime
+from datetime import datetime 
 import csv
 ## @brief User tests
 #
