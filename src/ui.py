@@ -9,7 +9,7 @@ class ui:
     ## @brief User Interface Initialization
     # @param P1 Testing Flag
     # @param P2 Left Motor State
-    # @param P3 RIght Motor State
+    # @param P3 Right Motor State
     # @param P4 Position
     # @param P5 Velocity
     # @param P6 Encoder Time

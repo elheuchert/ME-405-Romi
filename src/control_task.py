@@ -1,4 +1,4 @@
-## @file control_task.py
+## @brief
 #  This file contains a class to create a control_task object which is compatible with
 #  the cotask scheduler to run as a cooperative task. 
 #
@@ -29,12 +29,11 @@ class control_task:
 #                              the motion of the left wheel. 
 #  @param my_controller_right: my_controller_right is a controller object made in main that has gains for controlling
 #                              the motion of the right wheel. 
-
 #  @param position_l: position_l is a float share that the left motor and encoder class fills with the current left motor position.
 #  @param velocity_l: velocity_l is a float share that the left motor and encoder class fills with the current left motor velocity.
 #  @param position_r: position_r is a float share that the right motor and encoder class fills with the current right motor position.
 #  @param velocity_r: velocity_r is a float share that the right motor and encoder class fills with the current right motor velocity.
-
+#
 #  @param PWM_l : PWM_l is a float share that control_task sets to a value -100 to 100 as the duty cycle of the left wheel's enable pin.
 #                 The motor_encoder_left_class will use it. 
 #  @param PWM_r : PWM_r is a float share that control_task sets to a value -100 to 100 as the duty cycle of the right wheel's enable pin.
@@ -45,7 +44,7 @@ class control_task:
 #                        for accurate observer behavior. It is also used to get the dt between runs for the integral sums in the motor controllers. 
 #  @param m_state_l : m_state_l is an integer share flag used by control task to tell the left motor encoder class which state the left motor needs to be in. 
 #  @param m_state_r : m_state_r is an integer share flag used by control task to tell the right motor encoder class which state the right motor needs to be in. 
-
+#
 #  @param centroid : centroid is a float share that the line sensor task fills with the current location of the line that ROMI is following. It is used for the
 #                    automatic line following mode in control task. 
 #  @param line_controller : line_controller is a controller object made in main that has gains for changing the set point of the wheel controllers slightly to move

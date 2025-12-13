@@ -1,4 +1,4 @@
-## @file ir_sensor.py
+## @brief
 #  This file contains the IR_sensor class which gets created for each sensor in the line sensor. 
 #  This implementation is reminiscient of an old way we were going to do the sensor so really this 
 #  class just holds the pin reference for the sensor in practice. 

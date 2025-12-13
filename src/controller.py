@@ -1,4 +1,4 @@
-## @file controller.py
+## @brief
 #  This file contains a class to create a PID Controller object. These objects are always
 #  initialized as PID controllers but can be ran as any combination of P, I, and D controllers. 
 #  They are to be treated as classical controls single input, single output controllers. 

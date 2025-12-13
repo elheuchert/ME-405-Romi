@@ -1,109 +1,116 @@
-## @file pathing_plan_task.py
-#  This file contains a class to create a pathing_plan_task object which is compatible with
-#  the cotask scheduler to run as a cooperative task. 
-#
-#  The pathing_plan object uses a finite state machine design to dictate the motion of
-#  the Pololu ROMI kit used in ME 405, Fall 2025 to follow the term project course. The task
-#  sets share flags and goals to order how control task moves the ROMI to reach the 6 checkpoints 
-#  and the two bonus cups on the course. A long list of defines are used at the beginning to make tuning
-#  path simpler. The state names are used to make adding new states inbetween states easier so that the file
-#  reads in the order of how ROMI will move. The goal defines are what are tuned for the course. When moving forward
-#  the task uses the total distance travelled as found by the observer to know when it needs to change states. 
-#  When turning, the task waits for the yaw from the IMU to be within an acceptable range to change states. 
-#
-#  NOTE: The intention of the angle goals was to be done in a global sense where 0 is the direction ROMI faces 
-#        at the start. However, the IMU has a lot of drift as ROMI goes through the course so these values are found
-#        experimentally and start to lose meaning when read in the code until you see how ROMI actually moves. 
-#  NOTE: Yaw drift is inconsistent so this path is not consistent do not run ROMI unsupervised. 
-# 
-#  @author Alex Power, Lucas Heuchert, Erik Heuchert
-#  @author ChatGPT5 was used for debugging purposes but not to generate this code
-#  @date   2025-Nov-10 Approximate date of creation of file
-#  @date   2025-Dec-12 Final alterations made
-# 
-#Yaw Goal Defines
-PI = 3.1415
-YAWGOAL1 = (82)*(PI/180) #Fork angle
-YAWGOAL2 = (329)*(PI/180)#CP1 to CP2
-YAWGOAL3 = (90)*(PI/180)#CP2 to Cup 
-YAWGOAL4 = (166)*(PI/180)#CP3 to CP4
-YAWGOAL5 = (163.5)*(PI/180)#CP4 to garage
-YAWGOAL6 = (255)*(PI/180)#Garage to CP5
-YAWGOAL7 = (345)*(PI/180)#Wall to Cup
-YAWGOAL8 = (240)*(PI/180)#Cup to Finish
+"""!
+@file pathing_plan_task.py
+@brief Pathing plan task for cooperative scheduler
 
-#State Names in Order
-LINE_FOLLOW_STATE_0 = 0
-CENTROID_OFFSET_STATE = 1
-ALIGNMENT_GOAL_1 = 2
-ALIGNMENT_CONTROL_1 = 3
-FORK = 4
-ALIGNMENT_GOAL_2 = 5
-ALIGNMENT_CONTROL_2 = 6
-FREE_TRAVERSE_1 = 7
-CP2_PIVOT_1 = 29
-CP2_PIVOT_2 = 31
-LINE_FOLLOWING_2 = 8
-ALIGNMENT_GOAL_3 = 9
-ALIGNMENT_CONTROL_3 = 10
-FREE_TRAVERSE_2 = 11
-LINE_FOLLOW_3 = 12
-ALIGNMENT_GOAL_4 = 13
-ALIGNMENT_CONTROL_4 = 14
-FREE_TRAVERSE_3 = 15
-LINE_FOLLOW_GRG = 32
-ALIGNMENT_GOAL_5 = 16
-ALIGNMENT_CONTROL_5 = 17
-FREE_TRAVERSE_4 = 18
-ALIGNMENT_GOAL_6 = 19
-ALIGNMENT_CONTROL_6 = 20
-FREE_TRAVERSE_5 = 21
-WALL = 22
-ALIGNMENT_GOAL_7 = 23
-ALIGNMENT_CONTROL_7 = 24
-CUP = 25
-ALIGNMENT_GOAL_8 = 26
-ALIGNMENT_CONTROL_8 = 27
-FINISH_LINE = 33
-FINISH = 28
+This file contains a class to create a pathing_plan_task object which is compatible with
+the cotask scheduler to run as a cooperative task. 
 
-STOP = 40
-TESTING = 30
+The pathing_plan object uses a finite state machine design to dictate the motion of
+the Pololu ROMI kit used in ME 405, Fall 2025 to follow the term project course. The task
+sets share flags and goals to order how control task moves the ROMI to reach the 6 checkpoints 
+and the two bonus cups on the course. A long list of defines are used at the beginning to make tuning
+path simpler. The state names are used to make adding new states inbetween states easier so that the file
+reads in the order of how ROMI will move. The goal defines are what are tuned for the course. When moving forward
+the task uses the total distance travelled as found by the observer to know when it needs to change states. 
+When turning, the task waits for the yaw from the IMU to be within an acceptable range to change states. 
 
-#Total Distance Check Points 
-CP1_2_DISTANCE = 1800
-LF2_DIST = 2025
-CUP_CP3_DIST = 2725
-CP3_CP4 = 3150
-CP4_LINE = 3275
-CP4_GARAGE = 3600
-OUT_GARAGE = 3900
-BACK_UP_DIST = OUT_GARAGE + 100
-TO_CUP = 4300
-RUN_TO_LINE = 4500
-FINISH_DIST = 5000
+@note The intention of the angle goals was to be done in a global sense where 0 is the direction ROMI faces 
+      at the start. However, the IMU has a lot of drift as ROMI goes through the course so these values are found
+      experimentally and start to lose meaning when read in the code until you see how ROMI actually moves. 
+@note Yaw drift is inconsistent so this path is not consistent do not run ROMI unsupervised. 
 
-## @brief pathing_plan class that can be initialized to be run with the cotask scheduler. See run for behavior. 
+@author Alex Power, Lucas Heuchert, Erik Heuchert
+@author ChatGPT5 was used for debugging purposes but not to generate this code
+@date 2025-Nov-10 Approximate date of creation of file
+@date 2025-Dec-12 Final alterations made
+"""
+
+# Yaw Goal Defines
+PI = 3.1415  ##< Pi constant for angle conversions
+YAWGOAL1 = (82)*(PI/180)  ##< Fork angle
+YAWGOAL2 = (329)*(PI/180)  ##< CP1 to CP2
+YAWGOAL3 = (90)*(PI/180)  ##< CP2 to Cup 
+YAWGOAL4 = (166)*(PI/180)  ##< CP3 to CP4
+YAWGOAL5 = (163.5)*(PI/180)  ##< CP4 to garage
+YAWGOAL6 = (255)*(PI/180)  ##< Garage to CP5
+YAWGOAL7 = (345)*(PI/180)  ##< Wall to Cup
+YAWGOAL8 = (240)*(PI/180)  ##< Cup to Finish
+
+# State Names in Order
+LINE_FOLLOW_STATE_0 = 0  ##< Initial line following state
+CENTROID_OFFSET_STATE = 1  ##< Centroid offset adjustment state
+ALIGNMENT_GOAL_1 = 2  ##< First alignment goal state
+ALIGNMENT_CONTROL_1 = 3  ##< First alignment control state
+FORK = 4  ##< Fork navigation state
+ALIGNMENT_GOAL_2 = 5  ##< Second alignment goal state
+ALIGNMENT_CONTROL_2 = 6  ##< Second alignment control state
+FREE_TRAVERSE_1 = 7  ##< First free traverse state
+CP2_PIVOT_1 = 29  ##< CP2 first pivot state
+CP2_PIVOT_2 = 31  ##< CP2 second pivot state
+LINE_FOLLOWING_2 = 8  ##< Second line following state
+ALIGNMENT_GOAL_3 = 9  ##< Third alignment goal state
+ALIGNMENT_CONTROL_3 = 10  ##< Third alignment control state
+FREE_TRAVERSE_2 = 11  ##< Second free traverse state
+LINE_FOLLOW_3 = 12  ##< Third line following state
+ALIGNMENT_GOAL_4 = 13  ##< Fourth alignment goal state
+ALIGNMENT_CONTROL_4 = 14  ##< Fourth alignment control state
+FREE_TRAVERSE_3 = 15  ##< Third free traverse state
+LINE_FOLLOW_GRG = 32  ##< Garage line following state
+ALIGNMENT_GOAL_5 = 16  ##< Fifth alignment goal state
+ALIGNMENT_CONTROL_5 = 17  ##< Fifth alignment control state
+FREE_TRAVERSE_4 = 18  ##< Fourth free traverse state
+ALIGNMENT_GOAL_6 = 19  ##< Sixth alignment goal state
+ALIGNMENT_CONTROL_6 = 20  ##< Sixth alignment control state
+FREE_TRAVERSE_5 = 21  ##< Fifth free traverse state
+WALL = 22  ##< Wall detection state
+ALIGNMENT_GOAL_7 = 23  ##< Seventh alignment goal state
+ALIGNMENT_CONTROL_7 = 24  ##< Seventh alignment control state
+CUP = 25  ##< Cup navigation state
+ALIGNMENT_GOAL_8 = 26  ##< Eighth alignment goal state
+ALIGNMENT_CONTROL_8 = 27  ##< Eighth alignment control state
+FINISH_LINE = 33  ##< Finish line state
+FINISH = 28  ##< Finish state
+
+STOP = 40  ##< Stop state
+TESTING = 30  ##< Testing state
+
+# Total Distance Check Points 
+CP1_2_DISTANCE = 1800  ##< Distance from CP1 to CP2
+LF2_DIST = 2025  ##< Line follow 2 distance
+CUP_CP3_DIST = 2725  ##< Distance from cup to CP3
+CP3_CP4 = 3150  ##< Distance from CP3 to CP4
+CP4_LINE = 3275  ##< Distance to CP4 line
+CP4_GARAGE = 3600  ##< Distance from CP4 to garage
+OUT_GARAGE = 3900  ##< Distance out of garage
+BACK_UP_DIST = OUT_GARAGE + 100  ##< Backup distance
+TO_CUP = 4300  ##< Distance to cup
+RUN_TO_LINE = 4500  ##< Distance to run to line
+FINISH_DIST = 5000  ##< Finish distance
+
+
 class pathing_plan:
-## @brief __init__ is the pathing_plan_task object initializer which takes 10 arguments. 
-#         The arguments are a mix of data shares and flag shares.
-#  @param total_dist : total_dist is a float share that the observer sets with how far ROMI has travelled. It is used to 
-#                      figure out when ROMI reaches checkpoints. It does go negative when ROMI reverses which is handled in the WALL state. 
-#  @param automatic_mode :  automatic_mode is an integer share flag that is set to tell control_task that it should start automatically following a line. 
-#                           pathing plan sets this whenever it wants to line follow. 
-#  @param c_state : c_state is an integer share flag that holds the expected state of control_task. 
-#                   It is set by UI or pathing plan to tell control_task the expected motion of ROMI. 
-#  @param fwd_ref : fwd_ref is an integer share that holds the expected forward reference speed of ROMI in mm.s.
-#                   It is set by the UI task for testing purposes or by pathing plan task for course navigation. 
-#  @param piv_ref : piv_ref is a float share that holds the expected pivoting reference angular speed of ROMI in rad/s.
-#                   It is set by the UI task for testing purposes or by pathing plan task for course navigation. 
-#  @param yaw : yaw is a float share that the IMU task fills with the current yaw of ROMI. pathing_plan uses it for setting correct yaw goals. 
-#  @param centroid_goal: centroid_goal is a float share that the pathing plan task sets. The control task will  use it as the line following centroid controller set point. 
-#  @param yaw_goal : yaw_goal is a float share that is the set point of the heading control. It is the angle ROMI should turn to on the course and is set by
-#                    pathing plan for course navigation. 
-#  @param bump_on : bump_on is a integer share flag that pathing plan task sets to turn on the bump sensors.
-#  @param bump_flg : bump_flg is an integer share flag that the bump task will set if it is on and the bump sensors touch something. It is used for detecting the wall. 
+    """!
+    @brief Pathing plan task class for ROMI navigation
+    
+    This class implements a finite state machine for autonomous navigation of the Pololu ROMI
+    robot through a predefined course with checkpoints and obstacles.
+    """
+    
     def __init__(self, total_dist, automatic_mode, c_state, fwd_ref, piv_ref, yaw, centroid_goal, yaw_goal, bump_on, bump_flg):
+        """!
+        @brief Initialize the pathing_plan_task object
+        
+        @param total_dist Float share containing total distance traveled by ROMI (set by observer)
+        @param automatic_mode Integer share flag to enable automatic line following mode
+        @param c_state Integer share flag holding the expected state of control_task
+        @param fwd_ref Integer share holding forward reference speed in mm/s
+        @param piv_ref Float share holding pivoting reference angular speed in rad/s
+        @param yaw Float share containing current yaw from IMU task
+        @param centroid_goal Float share for line following centroid controller set point
+        @param yaw_goal Float share for heading control set point (target angle)
+        @param bump_on Integer share flag to turn on bump sensors
+        @param bump_flg Integer share flag set by bump task when sensors are triggered
+        """
         self.state = LINE_FOLLOW_STATE_0
         self.total_dist = total_dist
         self.automatic_mode = automatic_mode
@@ -111,7 +118,7 @@ class pathing_plan:
         self.fwd_ref = fwd_ref
         self.yaw = yaw
         self.yaw_init = 0
-        self.piv_ref=piv_ref
+        self.piv_ref = piv_ref
         self.centroid_goal = centroid_goal
         self.yaw_goal = yaw_goal
         self.bump_on = bump_on
@@ -119,67 +126,96 @@ class pathing_plan:
         self.bump_off = 0
         self.iteration = 0
         self.yaw_goals_5 = [YAWGOAL5, EXPYAWGOAL1, EXPYAWGOAL2, EXPYAWGOAL3]
-        self.direction = [1,1,-1,1]
+        self.direction = [1, 1, -1, 1]
         self.dist = [CP4_GARAGE, 3600, 3800, 4000]
-## @brief wrapper will take a yaw value that is typically a goal to be set and wrap it around the 0-2PI range the IMU uses. This stops goals from being 
-#         negative or larger than the yaw reading will ever be. 
-#  @param val : val is the yaw that is being wrapped
+        
     def wrapper(self, val):
+        """!
+        @brief Wrap a yaw value to the 0-2PI range
+        
+        This method ensures yaw values stay within the valid range used by the IMU,
+        preventing negative values or values exceeding 2π.
+        
+        @param val The yaw value to be wrapped
+        @return The wrapped yaw value in the range [0, 2π]
+        """
         if val > 2*PI:
-            return val-2*PI
+            return val - 2*PI
         elif val < 0:
             return 2*PI + val
         else:
             return val
-## @brief line_following sets all flags necessary to put control task into a line following mode and it checks if ROMI has moved far enough. 
-#         It returns True if ROMI has moved far enough and sets the next state, and it returns False if ROMI has further to go. 
-#  @param final_dist : final_dist is the value to compare the total distance to to see if its time to go to the next state
-#  @param next_state : next_state is the state number of the next_state for pathing plan to go to
+            
     def line_following(self, final_dist, next_state):
-        #real_yaw = self.wrapper(self.yaw.get() - self.yaw_init)
-        #print(f"Real Yaw {real_yaw}")
+        """!
+        @brief Configure control task for line following and check progress
+        
+        Sets all necessary flags to put control_task into line following mode and monitors
+        whether ROMI has traveled far enough to transition to the next state.
+        
+        @param final_dist Distance threshold to compare against total distance traveled
+        @param next_state State number to transition to when distance is reached
+        @return True if ROMI has moved far enough and state is updated, False otherwise
+        """
         self.automatic_mode.put(1)
         self.centroid_goal.put(0)
         if self.total_dist.get() >= final_dist:
             self.state = next_state
             return True
         return False
-## @brief alignment_goal sets all flags necessary to put control task into a pivoting mode to make large inaccurate turns.
-#         It returns True if ROMI if within 0.5 rad of the goal and sets the next state, and the yaw_goal for alignment control
-#         and it returns False if ROMI has to turn more
-#  @param yaw_goal : yaw_goal is the yaw value that is checked to see if pathing plan should go to the next state
-#  @param rot_direction : rot_direction should be either 1 or -1 to set which direction to turn ROMI. 1 is CCW, -1 is CW
-#  @param next_state : next_state is the state number of the next_state for pathing plan to go to 
+        
     def alignment_goal(self, yaw_goal, rot_direction, next_state):
+        """!
+        @brief Configure control task for large pivoting turns
+        
+        Sets all necessary flags to put control_task into pivoting mode for making large,
+        inaccurate turns. Transitions to the next state when within 0.5 rad of goal.
+        
+        @param yaw_goal Target yaw value to reach
+        @param rot_direction Direction to turn (1 for CCW, -1 for CW)
+        @param next_state State number to transition to when goal is reached
+        @return True if ROMI is within tolerance and state is updated, False otherwise
+        """
         self.c_state.put(3)
         self.piv_ref.put(0.75*rot_direction)
         real_yaw = self.wrapper(self.yaw.get() - self.yaw_init)
-        #print(f"Real Yaw {real_yaw}")
-        if real_yaw >= yaw_goal and real_yaw <= ((yaw_goal)+.5):
+        if real_yaw >= yaw_goal and real_yaw <= ((yaw_goal) + 0.5):
             self.c_state.put(4)
             self.piv_ref.put(0)
             self.yaw_goal.put(self.wrapper(yaw_goal + self.yaw_init))
-            #print(f"Yaw Goal {self.yaw_goal.get()}")
             self.state = next_state
             self.automatic_mode.put(0)
             return True
         return False
-## @brief alignment_control sets all flags necessary to put control task into a controlled turning mode for minute, accurate yaw changes. 
-#         It returns True if control_task says that the yaw is aligned properly, and it will set the next state. It is expected to be used after alignment_goal. 
-#         It will not set the yaw_goal itself.
-#  @param next_state : next_state is the state number of the next_state for pathing plan to go to 
+        
     def alignment_control(self, next_state):
+        """!
+        @brief Configure control task for precise controlled turning
+        
+        Sets all necessary flags for controlled turning mode to achieve precise yaw alignment.
+        Expected to be used after alignment_goal(). Does not set yaw_goal itself.
+        
+        @param next_state State number to transition to when alignment is complete
+        @return True if control_task indicates proper alignment, False otherwise
+        """
         self.c_state.put(7)
         if self.yaw_goal.get() == 0:
             self.state = next_state
             return True
         return False
-## @brief free_traverse sets all flags necessary to put control task into a forward motion mode and it checks if ROMI has moved far enough. 
-#         It returns True if ROMI has moved far enough and sets the next state, and it returns False if ROMI has further to go. 
-#  @param final_dist : final_dist is the value to compare the total distance to to see if its time to go to the next state
-#  @param next_state : next_state is the state number of the next_state for pathing plan to go to  
-#  @param ref : ref is the reference speed for ROMI to traverse at in mm/s
+        
     def free_traverse(self, final_dist, next_state, ref):
+        """!
+        @brief Configure control task for forward motion and check progress
+        
+        Sets all necessary flags to put control_task into forward motion mode and monitors
+        whether ROMI has traveled far enough to transition to the next state.
+        
+        @param final_dist Distance threshold to compare against total distance traveled
+        @param next_state State number to transition to when distance is reached
+        @param ref Reference speed for ROMI to traverse at in mm/s
+        @return True if ROMI has moved far enough and state is updated, False otherwise
+        """
         self.c_state.put(1)
         self.fwd_ref.put(ref)
         if self.total_dist.get() >= final_dist:
@@ -188,48 +224,58 @@ class pathing_plan:
             self.state = next_state
             return True
         return False
-## @brief run is the generator that the cotask scheduler will run since our tasks are objects. All shares it needs are already given to 
-#         the task object on initialization. The generator will only run one state at a time on each run of the task. 
-#  @detail The finite state machine for control_task has 34 states. These states always go in order. Each state runs once and is never returned to. 
-#          The order of states is as follows:
-#          LINE_FOLLOW_STATE_0, CENTROID_OFFSET_STATE, ALIGNMENT_GOAL_1, ALIGNMENT_CONTROL_1, FORK, ALIGNMENT_GOAL_2, ALIGNMENT_CONTROL_2, FREE_TRAVERSE_1, CP2_PIVOT_1, CP2_PIVOT_2, 
-#          LINE_FOLLOWING_2, ALIGNMENT_GOAL_3, ALIGNMENT_CONTROL_3, FREE_TRAVERSE_2, LINE_FOLLOW_3, ALIGNMENT_GOAL_4, ALIGNMENT_CONTROL_4, FREE_TRAVERSE_3, LINE_FOLLOW_GRG, 
-#          ALIGNMENT_GOAL_5, ALIGNMENT_CONTROL_5, FREE_TRAVERSE_4, ALIGNMENT_GOAL_6, ALIGNMENT_CONTROL_6, FREE_TRAVERSE_5, WALL, ALIGNMENT_GOAL_7, ALIGNMENT_CONTROL_7, CUP, 
-#          ALIGNMENT_GOAL_8, ALIGNMENT_CONTROL_8, FINISH, FINISH_LINE
-#
-#          Fulling describing each state's exact behavior will probably be more confusing than helpful but here's a general overview of the path:
-#
-#          Start line following to the Y, move the centroid to the left a bit to keep right, face CP1, drive directly there, face CP2, drive directly there, line follow a bit, 
-#          turn to CP3, drive there pushing cup out of the way, turn to CP4, drive there and line follow a bit at the end to align, align at garage entrance, drive through, 
-#          turn towards wall, drive out, hit wall and backup, turn towards cup, drive over it, turn towards finish, drive back to the line, use line following to get into
-#          CP6. 
-#
-#          Note: The way alignments are done is with a goal state then a control state. The goal states makes large turns at set pivoting speeds. The control state uses
-#          a controller to get precise alignment with our goal heading. Goals are set by the goal state though so a controller align must always be ran after a goal align. 
-#
-#          Note: Yaw drift is inconsistent so this path is not consistent do not run ROMI unsupervised. 
+        
     def run(self):
+        """!
+        @brief Main task generator for cooperative scheduler
+        
+        Implements a 34-state finite state machine for autonomous course navigation.
+        Each state executes once in sequence and never returns. The generator yields
+        control after processing each state.
+        
+        @details State sequence overview:
+        
+        States execute in the following order: LINE_FOLLOW_STATE_0, CENTROID_OFFSET_STATE, 
+        ALIGNMENT_GOAL_1, ALIGNMENT_CONTROL_1, FORK, ALIGNMENT_GOAL_2, ALIGNMENT_CONTROL_2, 
+        FREE_TRAVERSE_1, CP2_PIVOT_1, CP2_PIVOT_2, LINE_FOLLOWING_2, ALIGNMENT_GOAL_3, 
+        ALIGNMENT_CONTROL_3, FREE_TRAVERSE_2, LINE_FOLLOW_3, ALIGNMENT_GOAL_4, 
+        ALIGNMENT_CONTROL_4, FREE_TRAVERSE_3, LINE_FOLLOW_GRG, ALIGNMENT_GOAL_5, 
+        ALIGNMENT_CONTROL_5, FREE_TRAVERSE_4, ALIGNMENT_GOAL_6, ALIGNMENT_CONTROL_6, 
+        FREE_TRAVERSE_5, WALL, ALIGNMENT_GOAL_7, ALIGNMENT_CONTROL_7, CUP, ALIGNMENT_GOAL_8, 
+        ALIGNMENT_CONTROL_8, FINISH, FINISH_LINE
+        
+        Path overview: Start line following to the Y, move the centroid to the left to keep right,
+        face CP1, drive directly there, face CP2, drive directly there, line follow briefly, 
+        turn to CP3, drive there pushing cup out of the way, turn to CP4, drive there and line 
+        follow at the end to align, align at garage entrance, drive through, turn towards wall, 
+        drive out, hit wall and backup, turn towards cup, drive over it, turn towards finish, 
+        drive back to the line, use line following to get into CP6.
+        
+        @note Alignments use two-stage process: goal state for large turns at set speeds,
+              then control state for precise alignment using controller
+        @note Yaw drift is inconsistent making the path unreliable - do not run unsupervised
+        
+        @return Yields state number after each iteration
+        """
         while (True):
 
-#---------------------------------------------------------#
-#   To CP 1                                               #
-#---------------------------------------------------------#
+            #---------------------------------------------------------#
+            #   To CP 1                                               #
+            #---------------------------------------------------------#
             if self.yaw_init == 0:
                 self.yaw_init = self.yaw.get()
                 print(f"Yaw Offset : {self.yaw_init}")
 
             if self.state == LINE_FOLLOW_STATE_0:
-            # Follow the line to the fork
-                
+                # Follow the line to the fork
                 if self.line_following(550, CENTROID_OFFSET_STATE):
                     print("Going to CENTROID OFFSET STATE")
                 yield 0
 
             elif self.state == CENTROID_OFFSET_STATE:
-            # Follow right fork
+                # Follow right fork
                 self.centroid_goal.put(-0.4)
                 real_yaw = self.wrapper(self.yaw.get() - self.yaw_init)
-                #print(f"Real Yaw {real_yaw}")
                 if self.total_dist.get() >= 950:
                     print("Going to ALIGNMENT GOAL 1")
                     self.centroid_goal.put(0)
@@ -238,54 +284,54 @@ class pathing_plan:
                 yield 1
 
             elif self.state == ALIGNMENT_GOAL_1:
-            # Align to 90 degrees
+                # Align to 90 degrees
                 if self.alignment_goal(YAWGOAL1, -1, ALIGNMENT_CONTROL_1):
                     print("Going to ALIGNMENT CONTROL 1")
                 yield ALIGNMENT_GOAL_1
                 yield 2
 
             elif self.state == ALIGNMENT_CONTROL_1:
-            # Align to 90 degrees
+                # Align to 90 degrees
                 if self.alignment_control(FORK):
                     print("Going to FORK")
                 yield ALIGNMENT_CONTROL_1
 
             elif self.state == FORK:
-            # Traverse the fork to CP 1 
+                # Traverse the fork to CP 1 
                 if self.free_traverse(1175, ALIGNMENT_GOAL_2, 100):
                     print("Going to ALIGNMENT GOAL 2")
                 yield FORK
 
-#---------------------------------------------------------#
-#   To CP 2                                               #
-#---------------------------------------------------------#
+            #---------------------------------------------------------#
+            #   To CP 2                                               #
+            #---------------------------------------------------------#
 
             elif self.state == ALIGNMENT_GOAL_2:
-            # Turn towards CP 2
+                # Turn towards CP 2
                 if self.alignment_goal(YAWGOAL2, 1, ALIGNMENT_CONTROL_2):
                     print("Going to ALIGNMENT CONTROL 2")
                 yield ALIGNMENT_GOAL_2
 
             elif self.state == ALIGNMENT_CONTROL_2:
-            #Controller align to CP 2
+                # Controller align to CP 2
                 if self.alignment_control(FREE_TRAVERSE_1):
                     print("Going to FREE_TRAVERSE_1")
                 yield ALIGNMENT_CONTROL_2
 
             elif self.state == FREE_TRAVERSE_1:
-            # Move to CP 2
+                # Move to CP 2
                 if self.free_traverse(CP1_2_DISTANCE, CP2_PIVOT_1, 100):
                     print("Going to CP2_PIVOT_1")
                 yield FREE_TRAVERSE_1
 
             elif self.state == CP2_PIVOT_1:
-            # Turn towards cup
+                # Turn towards cup
                 if self.alignment_goal(YAWGOAL7, -1, CP2_PIVOT_2):
                     print("Going to CP2_PIVOT_2")
                 yield CP2_PIVOT_1
 
             elif self.state == CP2_PIVOT_2:
-            #Controller align to cup
+                # Controller align to cup
                 if self.alignment_control(LINE_FOLLOWING_2):
                     print("Going to LINE_FOLLOWING_2")
                 yield CP2_PIVOT_2
@@ -298,24 +344,24 @@ class pathing_plan:
                     self.state = ALIGNMENT_GOAL_3
                 yield LINE_FOLLOWING_2
 
-#---------------------------------------------------------#
-#   To CP 3/Cup                                           #
-#---------------------------------------------------------#
+            #---------------------------------------------------------#
+            #   To CP 3/Cup                                           #
+            #---------------------------------------------------------#
 
             elif self.state == ALIGNMENT_GOAL_3:
-            # Turn towards cup
+                # Turn towards cup
                 if self.alignment_goal(YAWGOAL3, -1, ALIGNMENT_CONTROL_3):
                     print("Going to ALIGNMENT CONTROL 3")
                 yield ALIGNMENT_GOAL_3
                 
             elif self.state == ALIGNMENT_CONTROL_3:
-            #Controller align to cup
+                # Controller align to cup
                 if self.alignment_control(FREE_TRAVERSE_2):
                     print("Going to FREE_TRAVERSE_2")
                 yield ALIGNMENT_CONTROL_3
                             
             elif self.state == FREE_TRAVERSE_2:
-            # Run over cup
+                # Run over cup
                 if self.free_traverse(CUP_CP3_DIST, ALIGNMENT_GOAL_4, 100):
                     print("Going to ALIGNMENT_GOAL_4")
                 yield FREE_TRAVERSE_2
@@ -325,89 +371,80 @@ class pathing_plan:
                     print("Going to ALIGNMENT GOAL 4")
                 yield LINE_FOLLOW_3
 
-#---------------------------------------------------------#
-#   To CP 4                                               #
-#---------------------------------------------------------#
+            #---------------------------------------------------------#
+            #   To CP 4                                               #
+            #---------------------------------------------------------#
 
             elif self.state == ALIGNMENT_GOAL_4:
-            # Turn towards CP4
+                # Turn towards CP4
                 if self.alignment_goal(YAWGOAL4, -1, ALIGNMENT_CONTROL_4):
                     print("Going to ALIGNMENT CONTROL 4")
                 yield ALIGNMENT_GOAL_3
 
             elif self.state == ALIGNMENT_CONTROL_4:
-            #Controller align to CP4
+                # Controller align to CP4
                 if self.alignment_control(FREE_TRAVERSE_3):
                     print("Going to FREE_TRAVERSE_3")
                 yield ALIGNMENT_CONTROL_4
 
             elif self.state == FREE_TRAVERSE_3:
-            #Move ot CP 4
+                # Move to CP 4
                 if self.free_traverse(CP3_CP4, LINE_FOLLOW_GRG, 100):
                     print("Going to LINE_FOLLOW_GRG")
                 yield FREE_TRAVERSE_3
             
             elif self.state == LINE_FOLLOW_GRG:
-            #Line follow a bit to CP 4
+                # Line follow a bit to CP 4
                 if self.line_following(CP4_LINE, ALIGNMENT_GOAL_5):
                     print("Going to ALIGNMENT GOAL 5")
                 yield LINE_FOLLOW_GRG
             
-# #---------------------------------------------------------#
-# #   To CP 5                                               #
-# #---------------------------------------------------------#
+            #---------------------------------------------------------#
+            #   To CP 5                                               #
+            #---------------------------------------------------------#
             
             elif self.state == ALIGNMENT_GOAL_5:
-#           # Align into the garage
-                # if self.iteration != 4:
-                #     if self.alignment_goal(self.yaw_goals_5[self.iteration], self.direction[self.iteration], ALIGNMENT_CONTROL_5):
-                #         print("Going to ALIGNMENT CONTROL 5")
-                #         #print(f"iteration: {self.iteration}")
-                #     else:
-                #         self.iteration += 1
-                # else:
-                #     print("Going to ALIGNMENT CONTROL 5")
-                #     self.state = ALIGNMENT_GOAL_6
+                # Align into the garage
                 if self.alignment_goal(YAWGOAL5, 1, ALIGNMENT_CONTROL_5):
                     print("Going to Alignment Control 5")
                 yield ALIGNMENT_GOAL_5
 
             elif self.state == ALIGNMENT_CONTROL_5:
-            #Refine garage align
+                # Refine garage align
                 if self.alignment_control(FREE_TRAVERSE_4):
                     print("Going to FREE_TRAVERSE_4")
                 yield ALIGNMENT_CONTROL_5
             
             elif self.state == FREE_TRAVERSE_4:
-            # Go through garage 
+                # Go through garage 
                 if self.free_traverse(CP4_GARAGE, ALIGNMENT_GOAL_6, 50):
                     print("Going to ALIGNMENT GOAL 5")
                     print(f"Total Dist: {self.total_dist.get()}")
                 yield FREE_TRAVERSE_4   
             
             elif self.state == ALIGNMENT_GOAL_6:
-            # Align into the garage
+                # Align into the garage
                 if self.alignment_goal(YAWGOAL6, -1, ALIGNMENT_CONTROL_6):
                     print("Going to ALIGNMENT CONTROL 6")
                 yield ALIGNMENT_GOAL_6
 
             elif self.state == ALIGNMENT_CONTROL_6:
-            #Refine garage align
+                # Refine garage align
                 if self.alignment_control(FREE_TRAVERSE_5):
                     print("Going to FREE_TRAVERSE_5")
                 yield ALIGNMENT_CONTROL_6
 
             elif self.state == FREE_TRAVERSE_5:
-            # Go through garage to CP 5
+                # Go through garage to CP 5
                 if self.free_traverse(OUT_GARAGE, WALL, 100):
                     print("Going to WALL")
                 yield FREE_TRAVERSE_5
 
-# #---------------------------------------------------------#
-# #   To Finish                                             #
-# #---------------------------------------------------------#
+            #---------------------------------------------------------#
+            #   To Finish                                             #
+            #---------------------------------------------------------#
             elif self.state == WALL:
-                #NEEDS BUMP SENSOR STUFF
+                # Wall detection and backup using bump sensors
                 self.c_state.put(1)
                 if self.bump_off == 0:
                     self.bump_on.put(1)
@@ -418,7 +455,6 @@ class pathing_plan:
                     if now == 0:
                         now = self.total_dist.get()
                     if self.total_dist.get() <= now - 100:
-                        #self.state = ALIGNMENT_GOAL_7
                         self.state = ALIGNMENT_GOAL_7
                         self.bump_on.put(0)
                         self.bump_off = 1
@@ -429,37 +465,37 @@ class pathing_plan:
                 yield WALL
 
             elif self.state == ALIGNMENT_GOAL_7:
-            # Align to the second cup
+                # Align to the second cup
                 if self.alignment_goal(YAWGOAL7, -1, ALIGNMENT_CONTROL_7):
                     print("Going to ALIGNMENT CONTROL 7")
                 yield ALIGNMENT_GOAL_7
 
             elif self.state == ALIGNMENT_CONTROL_7:
-            #Align to the second cup
+                # Align to the second cup
                 if self.alignment_control(CUP):
                     print("Going to CUP")
                 yield ALIGNMENT_CONTROL_7
 
             elif self.state == CUP:
-            # Go to cup
+                # Go to cup
                 if self.free_traverse(TO_CUP, ALIGNMENT_GOAL_8, 100):
                     print("Going to ALIGNMENT GOAL 8")
                 yield CUP
 
             elif self.state == ALIGNMENT_GOAL_8:
-            # Align to the finish
+                # Align to the finish
                 if self.alignment_goal(YAWGOAL8, 1, ALIGNMENT_CONTROL_8):
                     print("Going to ALIGNMENT CONTROL 8")
                 yield ALIGNMENT_GOAL_8
 
             elif self.state == ALIGNMENT_CONTROL_8:
-            #Refine finish align
+                # Refine finish align
                 if self.alignment_control(FINISH):
                     print("Going to FINISH")
                 yield ALIGNMENT_CONTROL_8
 
             elif self.state == FINISH:
-            #Go to the finish
+                # Go to the finish
                 if self.free_traverse(RUN_TO_LINE, FINISH_LINE, 100):
                     print("Going to STOP")
                 yield FINISH
@@ -473,11 +509,11 @@ class pathing_plan:
                 self.c_state.put(4)
                 self.automatic_mode.put(0)
                 yield STOP
+                
             elif self.state == 40:
                 self.c_state.put(3)
-                self.piv_ref.put(.5)
+                self.piv_ref.put(0.5)
                 self.automatic_mode.put(0)
             else:
                 raise ValueError("Not that many states")
             yield self.state
-
