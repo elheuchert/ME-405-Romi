@@ -1,8 +1,17 @@
 from pyb import UART
 from struct import pack
-## @brief add description here
+## @brief Runs the IMU
+#
+# This task class which contains a generator finite state machine that runs multiple functions.
+#  
+# It sets up the IMU and collects data from it using its methods  
 class imu_task:
 
+    ## @brief Initialization
+    # @param P1 IMU object
+    # @param P2 IMU flag
+    # @param P3 Romi Yaw Share
+    # @param P4 Romi Yaw Velocity Share
     def __init__(self, imu, imu_flg, yaw, yaw_velocity):
         
         self.imu=imu
@@ -19,19 +28,27 @@ class imu_task:
         self.yaw = yaw
         self.yaw_velocity = yaw_velocity
 
-
+    ## @brief Encoder Right Run
+    #
+    # <b> State 0 </b> Initialize the IMU by writing to it the coefficients and changing it to the desired fusion mode
+    #
+    # <b> State 1 </b> Put IMU data in shares for other tasks (note commented out code is for obtaining calibration coefficients)
+    #
+    # <b> State 2 </b> Delay
     def run(self):
         while (True):
             #init
             if self.state == 0:
-
+                ## calibration mode
                 self.imu.change_mode(0x00)
                 (mode,) = self.imu._read_reg(self.imu.reg.OPR_MODE)
                 print(f'mode: {hex(mode)}')
                 self.imu.write_calibration_coeff(pack('<h',-47), pack('<h',166),pack('<h',-34), pack('<h',-341),
                                                      pack('<h',481), pack('<h',480), pack('<h',-2), pack('<h',-3),
                                                        pack('<h',0),pack('<h',1000), pack('<h',480))
-                self.imu.change_mode(0x0C)
+                # fusion mode = 0C
+                # imu mode =08
+                self.imu.change_mode(0x08)
                 (mode,) = self.imu._read_reg(self.imu.reg.OPR_MODE)
                 print(f'mode: {hex(mode)}')
                 self.state = 1
