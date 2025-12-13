@@ -1,6 +1,8 @@
-# ME 405 Romi
+# ME 405 Romi Term Project
+
+## Overview
 
 This repository holds code used in ME 405 for the Romi term project.
 
-The portfolio 
-https://elheuchert.github.io/ME-405-Romi/
+## Full Documentation
+**[View Complete Project Documentation] https://elheuchert.github.io/ME-405-Romi/
