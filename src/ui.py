@@ -1,8 +1,32 @@
 from pyb import USB_VCP
 from pyb import UART
-## @brief add description here
+## @brief Initializes User Interface
+#
+# UI task class which contains a generator finite state machine that starts tests and procedures on user input
+#  
+# This class runs continuously, setting flags that are shared with other tasks. 
 class ui:
-    
+    ## @brief User Interface
+    # @param P1 Testing Flag
+    # @param P2 Left Motor State
+    # @param P3 RIght Motor State
+    # @param P4 Position
+    # @param P5 Velocity
+    # @param P6 Encoder Time
+    # @param P7 PWM Left
+    # @param P8 PWM Right
+    # @param P9 Delay Flag
+    # @param P10 UART Object
+    # @param P11 Forward Reference Velocity
+    # @param P12 Arc Reference Velocity
+    # @param P13 Pivot Reference Velocity
+    # @param P14 Controller State
+    # @param P15 Velocity 2
+    # @param P16 Need Calibrate Flag
+    # @param P17 Black Calibration Flag
+    # @param P18 White Calibration Flag
+    # @param P19 Automatic Mode Flag
+    # @param P20 IMU Flag
     def __init__(self, testing_flg, m_state_l, m_state_r, position, velocity, times, PWM_l, PWM_r,
                   delay, uart_obj,fwd_ref, arc_ref, piv_ref, c_state, velocity2, need_Calibrate, ready_Black, 
                   ready_White, automatic_mode, imu_flg):
@@ -41,8 +65,37 @@ class ui:
         self.c_state.put(0)
         self.automatic_mode = automatic_mode
         self.imu_flg = imu_flg
-
-        
+    
+    ## @brief UI Run
+    #
+    # <b> State 0 </b> Checking for Bluetooth Command
+    #
+    # <b> State 1 </b> Motor Step Resposne Test
+    #
+    # <b> State 2 </b> Wating for Test Data To be collected
+    #
+    # <b> State 3 </b> Delay State
+    #
+    # <b> State 4 </b> Move wheels Forward
+    #
+    # <b> State 5 </b> Turn in an arc
+    #
+    # <b> State 6 </b> Pivot in Place
+    #
+    # <b> State 7 </b> Stop wheels
+    #
+    # <b> State 8 </b> Testing Check
+    #
+    # <b> State 9 </b> Waiting for Data to be collected
+    #
+    # <b> State 10 </b> Turn in an arc
+    #
+    # <b> State 11 </b> Wait for Black Calibration Data
+    #
+    # <b> State 12 </b> Wait for White Calibration Data
+    #
+    # <b> State 13 </b> IMU to be used by the user
+    #     
     def run(self):
        
         while True:
