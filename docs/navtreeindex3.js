@@ -82,10 +82,11 @@ var NAVTREEINDEX3 =
 "index.html#hardware":[0,2],
 "index.html#imu":[0,2,3],
 "index.html#intro":[0,0],
-"index.html#key":[0,6],
+"index.html#key":[0,7],
 "index.html#linesensor":[0,2,4],
 "index.html#motors":[0,2,0],
 "index.html#performance":[0,4,1],
+"index.html#prio":[0,6],
 "index.html#results":[0,4],
 "index.html#software":[0,1],
 "index.html#test":[0,4,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "namespacemain.html#afebbdaf4ea6b66c789a7221ce2b6de1a":[1,0,13,77],
 "namespacemain.html#afff8c2a0e2e2e95b89e05ba0e35e00ae":[1,0,13,16],
 "namespacemembers.html":[1,1,0],
-"namespacemembers.html":[1,1,0,0],
-"namespacemembers_b.html":[1,1,0,1]
+"namespacemembers.html":[1,1,0,0]
 };

@@ -16,5 +16,6 @@ var index =
       [ "Track Performance", "index.html#performance", null ]
     ] ],
     [ "Task Diagrams", "index.html#diagrams", null ],
+    [ "Priorities", "index.html#prio", null ],
     [ "Key takeaways", "index.html#key", null ]
 ];

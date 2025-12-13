@@ -56,7 +56,7 @@ var NAVTREEINDEX =
 "classimu_1_1_i_m_u.html#a1186b18bfa64be37260606cff40a1af1",
 "classmotor__encoder__right__class_1_1motor__encoder__right__class.html#a22d0aab2b777ecb2e5771cd847dd1c22",
 "classui_1_1ui.html#afe2c07e9d29ef08db0d5e524dec34058",
-"namespacemembers_c.html"
+"namespacemembers_b.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
