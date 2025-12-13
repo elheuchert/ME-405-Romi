@@ -1,19 +1,63 @@
 \doxysection{C\+:/\+Users/14083/vscode\+\_\+python/line\+\_\+task.py File Reference}
 \hypertarget{line__task_8py}{}\label{line__task_8py}\index{C:/Users/14083/vscode\_python/line\_task.py@{C:/Users/14083/vscode\_python/line\_task.py}}
+
+
+This file contains a class to create a \doxylink{namespaceline__task}{line\+\_\+task} object which is compatible with the cotask scheduler to run as a cooperative task.  
+
+
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classline__task_1_1line__task}{line\+\_\+task.\+line\+\_\+task}}
-\begin{DoxyCompactList}\small\item\em add description here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{classline__task_1_1line__task}{line\+\_\+task} class that can be initialized to be run with the cotask scheduler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespaceline__task}{line\+\_\+task}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceline__task_a8a8769cc8c9b143b0975d12e53bc3920}{line\+\_\+task.\+run}} (self)
+\begin{DoxyCompactList}\small\item\em run is the generator that the cotask scheduler will run since our tasks are objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{namespaceline__task_af424651385a226e59d22204fa75e9d49}{line\+\_\+task.\+SENSOR\+\_\+\+START}} = 0
 \item 
 int \mbox{\hyperlink{namespaceline__task_a2e536a9275c49e1b15f3d87d7b154fa9}{line\+\_\+task.\+SENSOR\+\_\+\+END}} = 12
+\item 
+int \mbox{\hyperlink{namespaceline__task_a58fec441c04de2b6528bb57cf0844248}{line\+\_\+task.\+state}} = 0\+:
+\item 
+\mbox{\hyperlink{namespaceline__task_aa35e9c77700ec20bd9382b2f255ac995}{line\+\_\+task.\+black\+\_\+data}} = list(self.\+line\+Sensor.\+read\+\_\+\+Calibrate\+\_\+\+Data())
+\item 
+bool \mbox{\hyperlink{namespaceline__task_a410f9db0a08df171352e6e55a53e09f6}{line\+\_\+task.\+got\+\_\+black}} = True
+\item 
+\mbox{\hyperlink{namespaceline__task_af21f68396ea8229730469249cef35d78}{line\+\_\+task.\+white\+\_\+data}} = list(self.\+line\+Sensor.\+read\+\_\+\+Calibrate\+\_\+\+Data())
+\item 
+bool \mbox{\hyperlink{namespaceline__task_aa5333efefde52e631f4990baf4aa97ff}{line\+\_\+task.\+got\+\_\+white}} = True
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a class to create a \doxylink{namespaceline__task}{line\+\_\+task} object which is compatible with the cotask scheduler to run as a cooperative task. 
+
+This task is a finite state machine implementation that calibrates the line sensor on startup and then simply reads the centroid of the line sensor forever once its calibrated.
+
+NOTE\+: The outer 2 ir sensors are turned off by setting the corresponding self.\+sens\+\_\+dist value to 0. Helped with line following lines that split.
+
+IMPORTANT\+: Calibrating the sensor requires a text file name IR\+\_\+cal.\+txt. This calibration will write that file but the user will need to stop ROMI, pull the file off onto a local computer and reflash it to the ROMI. If you do not, ROMI will not recognize the new file and will not calibrate. ~\newline
+
+
+\begin{DoxyAuthor}{Author}
+Alex Power, Lucas Heuchert, Erik Heuchert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/Nov-\/11 Approximate date of creation of file 
+
+2025-\/Dec-\/12 Final alterations made 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+

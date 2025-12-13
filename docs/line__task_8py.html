@@ -92,23 +92,48 @@ $(function(){initNavTree('line__task_8py.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>This file contains a class to create a <a class="el" href="namespaceline__task.html">line_task</a> object which is compatible with the cotask scheduler to run as a cooperative task.  
+<a href="#details">More...</a></p>
+
 <p><a href="line__task_8py_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:line_5Ftask_2Eline_5Ftask" id="r_line_5Ftask_2Eline_5Ftask"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classline__task_1_1line__task.html">line_task.line_task</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">add description here  <a href="classline__task_1_1line__task.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classline__task_1_1line__task.html" title="line_task class that can be initialized to be run with the cotask scheduler.">line_task</a> class that can be initialized to be run with the cotask scheduler.  <a href="classline__task_1_1line__task.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:line_5Ftask" id="r_line_5Ftask"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html">line_task</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8a8769cc8c9b143b0975d12e53bc3920" id="r_a8a8769cc8c9b143b0975d12e53bc3920"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html#a8a8769cc8c9b143b0975d12e53bc3920">line_task.run</a> (self)</td></tr>
+<tr class="memdesc:a8a8769cc8c9b143b0975d12e53bc3920"><td class="mdescLeft">&#160;</td><td class="mdescRight">run is the generator that the cotask scheduler will run since our tasks are objects.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:af424651385a226e59d22204fa75e9d49" id="r_af424651385a226e59d22204fa75e9d49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html#af424651385a226e59d22204fa75e9d49">line_task.SENSOR_START</a> = 0</td></tr>
 <tr class="memitem:a2e536a9275c49e1b15f3d87d7b154fa9" id="r_a2e536a9275c49e1b15f3d87d7b154fa9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html#a2e536a9275c49e1b15f3d87d7b154fa9">line_task.SENSOR_END</a> = 12</td></tr>
+<tr class="memitem:a58fec441c04de2b6528bb57cf0844248" id="r_a58fec441c04de2b6528bb57cf0844248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html#a58fec441c04de2b6528bb57cf0844248">line_task.state</a> = 0:</td></tr>
+<tr class="memitem:aa35e9c77700ec20bd9382b2f255ac995" id="r_aa35e9c77700ec20bd9382b2f255ac995"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html#aa35e9c77700ec20bd9382b2f255ac995">line_task.black_data</a> = list(self.lineSensor.read_Calibrate_Data())</td></tr>
+<tr class="memitem:a410f9db0a08df171352e6e55a53e09f6" id="r_a410f9db0a08df171352e6e55a53e09f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html#a410f9db0a08df171352e6e55a53e09f6">line_task.got_black</a> = True</td></tr>
+<tr class="memitem:af21f68396ea8229730469249cef35d78" id="r_af21f68396ea8229730469249cef35d78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html#af21f68396ea8229730469249cef35d78">line_task.white_data</a> = list(self.lineSensor.read_Calibrate_Data())</td></tr>
+<tr class="memitem:aa5333efefde52e631f4990baf4aa97ff" id="r_aa5333efefde52e631f4990baf4aa97ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceline__task.html#aa5333efefde52e631f4990baf4aa97ff">line_task.got_white</a> = True</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file contains a class to create a <a class="el" href="namespaceline__task.html">line_task</a> object which is compatible with the cotask scheduler to run as a cooperative task. </p>
+<p>This task is a finite state machine implementation that calibrates the line sensor on startup and then simply reads the centroid of the line sensor forever once its calibrated.</p>
+<p>NOTE: The outer 2 ir sensors are turned off by setting the corresponding self.sens_dist value to 0. Helped with line following lines that split.</p>
+<p>IMPORTANT: Calibrating the sensor requires a text file name IR_cal.txt. This calibration will write that file but the user will need to stop ROMI, pull the file off onto a local computer and reflash it to the ROMI. If you do not, ROMI will not recognize the new file and will not calibrate. <br  />
+</p>
+<dl class="section author"><dt>Author</dt><dd>Alex Power, Lucas Heuchert, Erik Heuchert </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025-Nov-11 Approximate date of creation of file </dd>
+<dd>
+2025-Dec-12 Final alterations made </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

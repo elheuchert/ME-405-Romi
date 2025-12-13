@@ -1,7 +1,6 @@
 var classline__task_1_1line__task =
 [
     [ "__init__", "classline__task_1_1line__task.html#af3907a101c7220b632db8106ff91747f", null ],
-    [ "run", "classline__task_1_1line__task.html#a25572f4bb2546c1c31f1d3ad89fec333", null ],
     [ "black_data", "classline__task_1_1line__task.html#afe1fee74b27b4cfb0aabf467d7300123", null ],
     [ "centroid", "classline__task_1_1line__task.html#a5e919e7a5d97d28abf4cfa7767433d36", null ],
     [ "got_black", "classline__task_1_1line__task.html#a702791d971e7eee861a123058fa700bf", null ],

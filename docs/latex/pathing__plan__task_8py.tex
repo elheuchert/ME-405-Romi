@@ -1,10 +1,15 @@
 \doxysection{C\+:/\+Users/14083/vscode\+\_\+python/pathing\+\_\+plan\+\_\+task.py File Reference}
 \hypertarget{pathing__plan__task_8py}{}\label{pathing__plan__task_8py}\index{C:/Users/14083/vscode\_python/pathing\_plan\_task.py@{C:/Users/14083/vscode\_python/pathing\_plan\_task.py}}
+
+
+Pathing plan task for cooperative scheduler.  
+
+
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan}{pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pathing plan task class for ROMI navigation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,112 +19,140 @@ namespace \mbox{\hyperlink{namespacepathing__plan__task}{pathing\+\_\+plan\+\_\+
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{pathing\+\_\+plan\+\_\+task.\+PI}} = 3.\+1415
-\begin{DoxyCompactList}\small\item\em Pathing plan task for cooperative scheduler. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Pi constant for angle conversions. \end{DoxyCompactList}\item 
 tuple \mbox{\hyperlink{namespacepathing__plan__task_a4af5904c6abc692a7a63cd8f3a2bb2df}{pathing\+\_\+plan\+\_\+task.\+YAWGOAL1}} = (82)\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{PI}}/180)
-\item 
+\begin{DoxyCompactList}\small\item\em Fork angle. \end{DoxyCompactList}\item 
 tuple \mbox{\hyperlink{namespacepathing__plan__task_af36fe2f5cae134ca3330823bdc2d300c}{pathing\+\_\+plan\+\_\+task.\+YAWGOAL2}} = (329)\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{PI}}/180)
-\item 
+\begin{DoxyCompactList}\small\item\em CP1 to CP2. \end{DoxyCompactList}\item 
 tuple \mbox{\hyperlink{namespacepathing__plan__task_aafa3a6d0016a78eec8659f9287d277ff}{pathing\+\_\+plan\+\_\+task.\+YAWGOAL3}} = (90)\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{PI}}/180)
-\item 
+\begin{DoxyCompactList}\small\item\em CP2 to Cup. \end{DoxyCompactList}\item 
 tuple \mbox{\hyperlink{namespacepathing__plan__task_a2dbc38312760e825d343f93b5f19a674}{pathing\+\_\+plan\+\_\+task.\+YAWGOAL4}} = (166)\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{PI}}/180)
-\item 
+\begin{DoxyCompactList}\small\item\em CP3 to CP4. \end{DoxyCompactList}\item 
 tuple \mbox{\hyperlink{namespacepathing__plan__task_a94fc6cb9a3d19d2ecae8521dd7b00e7a}{pathing\+\_\+plan\+\_\+task.\+YAWGOAL5}} = (163.\+5)\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{PI}}/180)
-\item 
+\begin{DoxyCompactList}\small\item\em CP4 to garage. \end{DoxyCompactList}\item 
 tuple \mbox{\hyperlink{namespacepathing__plan__task_a4d0515529e285d83e523ef9524074b61}{pathing\+\_\+plan\+\_\+task.\+YAWGOAL6}} = (255)\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{PI}}/180)
-\item 
+\begin{DoxyCompactList}\small\item\em Garage to CP5. \end{DoxyCompactList}\item 
 tuple \mbox{\hyperlink{namespacepathing__plan__task_a3b588b09bd63202221026cc2091dad0c}{pathing\+\_\+plan\+\_\+task.\+YAWGOAL7}} = (345)\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{PI}}/180)
-\item 
+\begin{DoxyCompactList}\small\item\em Wall to Cup. \end{DoxyCompactList}\item 
 tuple \mbox{\hyperlink{namespacepathing__plan__task_a8de72c45cb38a04f9371a37582326ef1}{pathing\+\_\+plan\+\_\+task.\+YAWGOAL8}} = (240)\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacepathing__plan__task_ae39c2d7cf2b11fa022f8de8b6e6e816e}{PI}}/180)
-\item 
+\begin{DoxyCompactList}\small\item\em Cup to Finish. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a01d13917567445a34dbb2933c4492bdb}{pathing\+\_\+plan\+\_\+task.\+LINE\+\_\+\+FOLLOW\+\_\+\+STATE\+\_\+0}} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Initial line following state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_adb898b0ca02702300478edc87c167ebf}{pathing\+\_\+plan\+\_\+task.\+CENTROID\+\_\+\+OFFSET\+\_\+\+STATE}} = 1
-\item 
+\begin{DoxyCompactList}\small\item\em Centroid offset adjustment state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_ab070e6573460822dc77582d81f5d109e}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+GOAL\+\_\+1}} = 2
-\item 
+\begin{DoxyCompactList}\small\item\em First alignment goal state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_af8807a86205db630d6770ae64c345a10}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+CONTROL\+\_\+1}} = 3
-\item 
+\begin{DoxyCompactList}\small\item\em First alignment control state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a3ff95545304b1d755d0696bf0fac6f1a}{pathing\+\_\+plan\+\_\+task.\+FORK}} = 4
-\item 
+\begin{DoxyCompactList}\small\item\em Fork navigation state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a32631d95a0f60571676f07ce2b802c32}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+GOAL\+\_\+2}} = 5
-\item 
+\begin{DoxyCompactList}\small\item\em Second alignment goal state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a487478aac1ab6a0e5e140dce207937c5}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+CONTROL\+\_\+2}} = 6
-\item 
+\begin{DoxyCompactList}\small\item\em Second alignment control state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a1560f1a52ba46230c0f69b063d77b585}{pathing\+\_\+plan\+\_\+task.\+FREE\+\_\+\+TRAVERSE\+\_\+1}} = 7
-\item 
+\begin{DoxyCompactList}\small\item\em First free traverse state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_afd9ac91eb1235bc04800951ef57c54d8}{pathing\+\_\+plan\+\_\+task.\+CP2\+\_\+\+PIVOT\+\_\+1}} = 29
-\item 
+\begin{DoxyCompactList}\small\item\em CP2 first pivot state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a45784129a114bc5a0cf4dc2ec86428b8}{pathing\+\_\+plan\+\_\+task.\+CP2\+\_\+\+PIVOT\+\_\+2}} = 31
-\item 
+\begin{DoxyCompactList}\small\item\em CP2 second pivot state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_ad8f4c7b684f7abfd7c4fd144fd10a04f}{pathing\+\_\+plan\+\_\+task.\+LINE\+\_\+\+FOLLOWING\+\_\+2}} = 8
-\item 
+\begin{DoxyCompactList}\small\item\em Second line following state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_ac063a5ad610b365c3b51fedb76a859cf}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+GOAL\+\_\+3}} = 9
-\item 
+\begin{DoxyCompactList}\small\item\em Third alignment goal state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_ade92cfa6b384c5019093729d860ed945}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+CONTROL\+\_\+3}} = 10
-\item 
+\begin{DoxyCompactList}\small\item\em Third alignment control state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_aa5cb14f0bfd011d68a7eda4bdcd0d6cf}{pathing\+\_\+plan\+\_\+task.\+FREE\+\_\+\+TRAVERSE\+\_\+2}} = 11
-\item 
+\begin{DoxyCompactList}\small\item\em Second free traverse state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a91c66f2818d966584468ee018c5376e8}{pathing\+\_\+plan\+\_\+task.\+LINE\+\_\+\+FOLLOW\+\_\+3}} = 12
-\item 
+\begin{DoxyCompactList}\small\item\em Third line following state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a567d4dc58c198a1d0260ea1cffedf3b2}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+GOAL\+\_\+4}} = 13
-\item 
+\begin{DoxyCompactList}\small\item\em Fourth alignment goal state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_af07773b6de437ec5c72c9bdb163b2050}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+CONTROL\+\_\+4}} = 14
-\item 
+\begin{DoxyCompactList}\small\item\em Fourth alignment control state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a8b2321fdd9d190f16b4e726b50a9b2db}{pathing\+\_\+plan\+\_\+task.\+FREE\+\_\+\+TRAVERSE\+\_\+3}} = 15
-\item 
+\begin{DoxyCompactList}\small\item\em Third free traverse state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a36ab4bf708c4c3a930f73396ef7d4cde}{pathing\+\_\+plan\+\_\+task.\+LINE\+\_\+\+FOLLOW\+\_\+\+GRG}} = 32
-\item 
+\begin{DoxyCompactList}\small\item\em Garage line following state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a47ca888c1752dacaa7fc6a5307f9f93f}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+GOAL\+\_\+5}} = 16
-\item 
+\begin{DoxyCompactList}\small\item\em Fifth alignment goal state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a11ff1fdf2defea07f82015ad7edc652f}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+CONTROL\+\_\+5}} = 17
-\item 
+\begin{DoxyCompactList}\small\item\em Fifth alignment control state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a18d5342ef708dfbc341d3c28f74a9933}{pathing\+\_\+plan\+\_\+task.\+FREE\+\_\+\+TRAVERSE\+\_\+4}} = 18
-\item 
+\begin{DoxyCompactList}\small\item\em Fourth free traverse state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_afb1ff89d602fe696c8a69cd6d18db113}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+GOAL\+\_\+6}} = 19
-\item 
+\begin{DoxyCompactList}\small\item\em Sixth alignment goal state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a7a09234430739b6beb16aa462f856aee}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+CONTROL\+\_\+6}} = 20
-\item 
+\begin{DoxyCompactList}\small\item\em Sixth alignment control state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a9210dcc2cf4b5c4465dbac5e520984b7}{pathing\+\_\+plan\+\_\+task.\+FREE\+\_\+\+TRAVERSE\+\_\+5}} = 21
-\item 
+\begin{DoxyCompactList}\small\item\em Fifth free traverse state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_ad5a702328bb19e0d6417b61a8ce01a8a}{pathing\+\_\+plan\+\_\+task.\+WALL}} = 22
-\item 
+\begin{DoxyCompactList}\small\item\em Wall detection state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_ab8f87e653c53e3d4d1e5ab5a144229b2}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+GOAL\+\_\+7}} = 23
-\item 
+\begin{DoxyCompactList}\small\item\em Seventh alignment goal state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a2ed5cf610dc0b1fdf79117e3c2c16238}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+CONTROL\+\_\+7}} = 24
-\item 
+\begin{DoxyCompactList}\small\item\em Seventh alignment control state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a51945bde88de908ecfea61e1f76bd2e2}{pathing\+\_\+plan\+\_\+task.\+CUP}} = 25
-\item 
+\begin{DoxyCompactList}\small\item\em Cup navigation state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_ade0c044ffc96082c1722ab2a4d9872ac}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+GOAL\+\_\+8}} = 26
-\item 
+\begin{DoxyCompactList}\small\item\em Eighth alignment goal state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a7d0bec4f1b6a13861318fdc0ec1b78ac}{pathing\+\_\+plan\+\_\+task.\+ALIGNMENT\+\_\+\+CONTROL\+\_\+8}} = 27
-\item 
+\begin{DoxyCompactList}\small\item\em Eighth alignment control state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a95989f03db5677f04a862a2a236f5771}{pathing\+\_\+plan\+\_\+task.\+FINISH\+\_\+\+LINE}} = 33
-\item 
+\begin{DoxyCompactList}\small\item\em Finish line state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a7a6999147f8806c1988b7be43261a0b4}{pathing\+\_\+plan\+\_\+task.\+FINISH}} = 28
-\item 
+\begin{DoxyCompactList}\small\item\em Finish state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a7dc5de8f2d24ab1f43e1828165856749}{pathing\+\_\+plan\+\_\+task.\+STOP}} = 40
-\item 
+\begin{DoxyCompactList}\small\item\em Stop state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a457a8733388f4100654aa166dd2b9775}{pathing\+\_\+plan\+\_\+task.\+TESTING}} = 30
-\item 
+\begin{DoxyCompactList}\small\item\em Testing state. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_ad56c969729ab98e052047cab31029e96}{pathing\+\_\+plan\+\_\+task.\+CP1\+\_\+2\+\_\+\+DISTANCE}} = 1800
-\item 
+\begin{DoxyCompactList}\small\item\em Distance from CP1 to CP2. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_afb00225647785bb8f471d49d826dd4c8}{pathing\+\_\+plan\+\_\+task.\+LF2\+\_\+\+DIST}} = 2025
-\item 
+\begin{DoxyCompactList}\small\item\em Line follow 2 distance. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a067b1b1978242cfb4df7efcb849db6b8}{pathing\+\_\+plan\+\_\+task.\+CUP\+\_\+\+CP3\+\_\+\+DIST}} = 2725
-\item 
+\begin{DoxyCompactList}\small\item\em Distance from cup to CP3. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a034309efc9a737cfabb2077de1020a00}{pathing\+\_\+plan\+\_\+task.\+CP3\+\_\+\+CP4}} = 3150
-\item 
+\begin{DoxyCompactList}\small\item\em Distance from CP3 to CP4. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a3b05a8bd5d3ea77f0a5a5c153d844c58}{pathing\+\_\+plan\+\_\+task.\+CP4\+\_\+\+LINE}} = 3275
-\item 
+\begin{DoxyCompactList}\small\item\em Distance to CP4 line. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a61128550890e7a95b80dd41adce8b5f6}{pathing\+\_\+plan\+\_\+task.\+CP4\+\_\+\+GARAGE}} = 3600
-\item 
+\begin{DoxyCompactList}\small\item\em Distance from CP4 to garage. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_adc90e4fc2248cb30db7ef557bdbacbc9}{pathing\+\_\+plan\+\_\+task.\+OUT\+\_\+\+GARAGE}} = 3900
-\item 
+\begin{DoxyCompactList}\small\item\em Distance out of garage. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a38889f9323cd0947ab5730f719674b63}{pathing\+\_\+plan\+\_\+task.\+BACK\+\_\+\+UP\+\_\+\+DIST}} = \mbox{\hyperlink{namespacepathing__plan__task_adc90e4fc2248cb30db7ef557bdbacbc9}{OUT\+\_\+\+GARAGE}} + 100
-\item 
+\begin{DoxyCompactList}\small\item\em Backup distance. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a94b9508b29a84429879d73c0b79d60be}{pathing\+\_\+plan\+\_\+task.\+TO\+\_\+\+CUP}} = 4300
-\item 
+\begin{DoxyCompactList}\small\item\em Distance to cup. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a4920f267449ab11b6ac53068168de143}{pathing\+\_\+plan\+\_\+task.\+RUN\+\_\+\+TO\+\_\+\+LINE}} = 4500
-\item 
+\begin{DoxyCompactList}\small\item\em Distance to run to line. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespacepathing__plan__task_a1a48986635d15fcd4a9fbc54172f000a}{pathing\+\_\+plan\+\_\+task.\+FINISH\+\_\+\+DIST}} = 5000
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Finish distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pathing plan task for cooperative scheduler. 
+
+This file contains a class to create a \doxylink{namespacepathing__plan__task}{pathing\+\_\+plan\+\_\+task} object which is compatible with the cotask scheduler to run as a cooperative task.
+
+The pathing\+\_\+plan object uses a finite state machine design to dictate the motion of the Pololu ROMI kit used in ME 405, Fall 2025 to follow the term project course. The task sets share flags and goals to order how control task moves the ROMI to reach the 6 checkpoints and the two bonus cups on the course. A long list of defines are used at the beginning to make tuning path simpler. The state names are used to make adding new states inbetween states easier so that the file reads in the order of how ROMI will move. The goal defines are what are tuned for the course. When moving forward the task uses the total distance travelled as found by the observer to know when it needs to change states. When turning, the task waits for the yaw from the IMU to be within an acceptable range to change states.
+
+\begin{DoxyNote}{Note}
+The intention of the angle goals was to be done in a global sense where 0 is the direction ROMI faces at the start. However, the IMU has a lot of drift as ROMI goes through the course so these values are found experimentally and start to lose meaning when read in the code until you see how ROMI actually moves. 
+
+Yaw drift is inconsistent so this path is not consistent do not run ROMI unsupervised.
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Alex Power, Lucas Heuchert, Erik Heuchert 
+
+Chat\+GPT5 was used for debugging purposes but not to generate this code 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/Nov-\/10 Approximate date of creation of file 
+
+2025-\/Dec-\/12 Final alterations made 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+

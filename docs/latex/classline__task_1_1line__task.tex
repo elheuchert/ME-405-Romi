@@ -2,15 +2,13 @@
 \hypertarget{classline__task_1_1line__task}{}\label{classline__task_1_1line__task}\index{line\_task.line\_task@{line\_task.line\_task}}
 
 
-add description here  
+\doxylink{classline__task_1_1line__task}{line\+\_\+task} class that can be initialized to be run with the cotask scheduler.  
 
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classline__task_1_1line__task_af3907a101c7220b632db8106ff91747f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{line\+Sensor}}, \mbox{\hyperlink{classline__task_1_1line__task_a7660f7398f0dabb102e3bdc91509ac5c}{l\+\_\+state}}, need\+\_\+\+Calibrate, \mbox{\hyperlink{classline__task_1_1line__task_a63f9d9c50447a18e893fcc98f505d958}{ready\+\_\+\+Black}}, \mbox{\hyperlink{classline__task_1_1line__task_a7afa31913c51a156aca95028825c75da}{ready\+\_\+\+White}}, \mbox{\hyperlink{classline__task_1_1line__task_a5e919e7a5d97d28abf4cfa7767433d36}{centroid}})
-\item 
-\mbox{\hyperlink{classline__task_1_1line__task_a25572f4bb2546c1c31f1d3ad89fec333}{run}} (self)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -40,9 +38,28 @@ bool \mbox{\hyperlink{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c
 
 
 \doxysubsection{Detailed Description}
-add description here 
+\doxylink{classline__task_1_1line__task}{line\+\_\+task} class that can be initialized to be run with the cotask scheduler. 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00007}{7}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+See run for behavior.
+
+{\bfseries{init}} is the \doxylink{classline__task_1_1line__task}{line\+\_\+task} object initializer which takes 6 arguments. The arguments are a mix of hardware drivers and share flags. 
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{namespaceline__sensor}{line\+\_\+sensor}} & \+: \doxylink{namespaceline__sensor}{line\+\_\+sensor} is the \doxylink{namespaceline__sensor}{line\+\_\+sensor} object made in main. It is the sensor this task is reading. \\
+\hline
+{\em l\+\_\+state} & \+: l\+\_\+state is not actually used \\
+\hline
+{\em need\+\_\+\+Calibrate} & \+: need\+\_\+\+Calibrate is an integer share flag that tells control task whether the IR sensors are calibrated and control task is ok to start line following. It is set by the line sensor task. \\
+\hline
+{\em ready\+\_\+\+Black} & \+: ready\+\_\+\+Black is an integer share flag that UI task will set true when the ROMI is over a black surface for calibration. \\
+\hline
+{\em ready\+\_\+\+White} & \+: ready\+\_\+\+White is an integer share flag that UI task will set true when the ROMI is over a white surface for calibration. \\
+\hline
+{\em centroid} & \+: centroid is a float share that the line sensor task fills with the current location of the line that ROMI is following. It is used for the automatic line following mode in control task. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00027}{27}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 
 
@@ -57,22 +74,7 @@ line\+\_\+task.\+line\+\_\+task.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCa
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00009}{9}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
-
-
-
-\label{doc-func-members}
-\Hypertarget{classline__task_1_1line__task_doc-func-members}
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classline__task_1_1line__task_a25572f4bb2546c1c31f1d3ad89fec333}\index{line\_task.line\_task@{line\_task.line\_task}!run@{run}}
-\index{run@{run}!line\_task.line\_task@{line\_task.line\_task}}
-\doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily \label{classline__task_1_1line__task_a25572f4bb2546c1c31f1d3ad89fec333} 
-line\+\_\+task.\+line\+\_\+task.\+run (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00022}{22}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00028}{28}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 
 
@@ -87,7 +89,7 @@ list line\+\_\+task.\+line\+\_\+task.\+black\+\_\+data = \mbox{[}0.\+0\mbox{]}\t
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00017}{17}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00036}{36}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_a5e919e7a5d97d28abf4cfa7767433d36}\index{line\_task.line\_task@{line\_task.line\_task}!centroid@{centroid}}
 \index{centroid@{centroid}!line\_task.line\_task@{line\_task.line\_task}}
@@ -97,7 +99,7 @@ line\+\_\+task.\+line\+\_\+task.\+centroid = centroid}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00016}{16}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00035}{35}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_a702791d971e7eee861a123058fa700bf}\index{line\_task.line\_task@{line\_task.line\_task}!got\_black@{got\_black}}
 \index{got\_black@{got\_black}!line\_task.line\_task@{line\_task.line\_task}}
@@ -107,7 +109,7 @@ bool line\+\_\+task.\+line\+\_\+task.\+got\+\_\+black = False}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00019}{19}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00038}{38}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c0abe7}\index{line\_task.line\_task@{line\_task.line\_task}!got\_white@{got\_white}}
 \index{got\_white@{got\_white}!line\_task.line\_task@{line\_task.line\_task}}
@@ -117,7 +119,7 @@ bool line\+\_\+task.\+line\+\_\+task.\+got\+\_\+white = False}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00020}{20}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00039}{39}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_a7660f7398f0dabb102e3bdc91509ac5c}\index{line\_task.line\_task@{line\_task.line\_task}!l\_state@{l\_state}}
 \index{l\_state@{l\_state}!line\_task.line\_task@{line\_task.line\_task}}
@@ -127,7 +129,7 @@ line\+\_\+task.\+line\+\_\+task.\+l\+\_\+state = l\+\_\+state}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00011}{11}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00030}{30}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}\index{line\_task.line\_task@{line\_task.line\_task}!lineSensor@{lineSensor}}
 \index{lineSensor@{lineSensor}!line\_task.line\_task@{line\_task.line\_task}}
@@ -137,7 +139,7 @@ line\+\_\+task.\+line\+\_\+task.\+line\+Sensor = line\+Sensor}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00010}{10}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00029}{29}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_ac742d6e8d5a016ee44f730ac6fd6b997}\index{line\_task.line\_task@{line\_task.line\_task}!need\_Cal@{need\_Cal}}
 \index{need\_Cal@{need\_Cal}!line\_task.line\_task@{line\_task.line\_task}}
@@ -147,7 +149,7 @@ line\+\_\+task.\+line\+\_\+task.\+need\+\_\+\+Cal = need\+\_\+\+Calibrate}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00013}{13}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00032}{32}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_a63f9d9c50447a18e893fcc98f505d958}\index{line\_task.line\_task@{line\_task.line\_task}!ready\_Black@{ready\_Black}}
 \index{ready\_Black@{ready\_Black}!line\_task.line\_task@{line\_task.line\_task}}
@@ -157,7 +159,7 @@ line\+\_\+task.\+line\+\_\+task.\+ready\+\_\+\+Black = ready\+\_\+\+Black}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00014}{14}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00033}{33}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_a7afa31913c51a156aca95028825c75da}\index{line\_task.line\_task@{line\_task.line\_task}!ready\_White@{ready\_White}}
 \index{ready\_White@{ready\_White}!line\_task.line\_task@{line\_task.line\_task}}
@@ -167,7 +169,7 @@ line\+\_\+task.\+line\+\_\+task.\+ready\+\_\+\+White = ready\+\_\+\+White}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00015}{15}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00034}{34}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}\index{line\_task.line\_task@{line\_task.line\_task}!state@{state}}
 \index{state@{state}!line\_task.line\_task@{line\_task.line\_task}}
@@ -177,7 +179,7 @@ int line\+\_\+task.\+line\+\_\+task.\+state = 0}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00012}{12}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00031}{31}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{classline__task_1_1line__task_ac41f900575b1236c0449cd4f9de9483d}\index{line\_task.line\_task@{line\_task.line\_task}!white\_data@{white\_data}}
 \index{white\_data@{white\_data}!line\_task.line\_task@{line\_task.line\_task}}
@@ -187,7 +189,7 @@ list line\+\_\+task.\+line\+\_\+task.\+white\+\_\+data = \mbox{[}0.\+0\mbox{]}\t
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00018}{18}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00037}{37}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 
 

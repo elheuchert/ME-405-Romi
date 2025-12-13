@@ -100,7 +100,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a55d068946fee3ae28b8c76f1e79cd2b4" id="r_a55d068946fee3ae28b8c76f1e79cd2b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55d068946fee3ae28b8c76f1e79cd2b4">__init__</a> (self, <a class="el" href="#abcdbd6733c60dbb2c34d0b0d1b557671">imu</a>, <a class="el" href="#a2f50ac58b2eeded2bfe9f390b9ece44a">imu_flg</a>, <a class="el" href="#a3048c6f34a7dbbeb58425ecd891fe85a">yaw</a>, <a class="el" href="#a455797d2fcf00398b91cf8c69988765e">yaw_velocity</a>)</td></tr>
 <tr class="memdesc:a55d068946fee3ae28b8c76f1e79cd2b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization.  <br /></td></tr>
 <tr class="memitem:a37b46f1ae653c7e9c51ce75a9db1b716" id="r_a37b46f1ae653c7e9c51ce75a9db1b716"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37b46f1ae653c7e9c51ce75a9db1b716">run</a> (self)</td></tr>
-<tr class="memdesc:a37b46f1ae653c7e9c51ce75a9db1b716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encoder Right Run.  <br /></td></tr>
+<tr class="memdesc:a37b46f1ae653c7e9c51ce75a9db1b716"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the IMU Tasks.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -190,7 +190,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Encoder Right Run. </p>
+<p>Runs the IMU Tasks. </p>
 <p><b> State 0 </b> Initialize the IMU by writing to it the coefficients and changing it to the desired fusion mode</p>
 <p><b> State 1 </b> Put IMU data in shares for other tasks (note commented out code is for obtaining calibration coefficients)</p>
 <p><b> State 2 </b> Delay </p>

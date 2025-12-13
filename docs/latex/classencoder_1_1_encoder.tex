@@ -2,26 +2,26 @@
 \hypertarget{classencoder_1_1_encoder}{}\label{classencoder_1_1_encoder}\index{encoder.Encoder@{encoder.Encoder}}
 
 
-add description here  
+The \doxylink{classencoder_1_1_encoder}{Encoder} Diver Class.  
 
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classencoder_1_1_encoder_a2e52fdaba61b82c32c4e3d737a4d4c40}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classencoder_1_1_encoder_a6d34277d78f0f528aeb8b4d8901356b7}{tim}}, ch\+A\+\_\+pin, ch\+B\+\_\+pin)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{classencoder_1_1_encoder}{Encoder} Initialization. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classencoder_1_1_encoder_aa49b0c5f3a84989bbd9500f1d25f81aa}{update}} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{classencoder_1_1_encoder}{Encoder} Update. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classencoder_1_1_encoder_a5e1f45bde021fbdb806bfda8a17ded47}{get\+\_\+position}} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{classencoder_1_1_encoder}{Encoder} Position Get. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classencoder_1_1_encoder_a5f5175f8d031309051acea0f25710e3d}{get\+\_\+velocity}} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{classencoder_1_1_encoder}{Encoder} Velocity Get. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classencoder_1_1_encoder_ab79017405d71f96cb2363307a1f04c88}{zero}} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em Zero the \doxylink{classencoder_1_1_encoder}{Encoder}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classencoder_1_1_encoder_a972289ba941b6dff15f960fe79da2c47}{get\+\_\+dt}} (self)
-\item 
+\begin{DoxyCompactList}\small\item\em Get dt. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classencoder_1_1_encoder_ada0eb6236b545b232280989fc5a03378}{set\+\_\+offset}} (self, \mbox{\hyperlink{classencoder_1_1_encoder_aa5b347ca0eb88735da5e1dd75245aa82}{offset}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set Offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,9 +48,11 @@ int \mbox{\hyperlink{classencoder_1_1_encoder_aa5b347ca0eb88735da5e1dd75245aa82}
 
 
 \doxysubsection{Detailed Description}
-add description here 
+The \doxylink{classencoder_1_1_encoder}{Encoder} Diver Class. 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00004}{4}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+A quadrature encoder decoding interface encapsulated in a Python class 
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00006}{6}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 
 
@@ -65,7 +67,20 @@ encoder.\+Encoder.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00007}{7}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+\doxylink{classencoder_1_1_encoder}{Encoder} Initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P1} & Timer Used \\
+\hline
+{\em P2} & Channel A pin \\
+\hline
+{\em P3} & Channel B pin \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00012}{12}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 
 
@@ -80,7 +95,11 @@ encoder.\+Encoder.\+get\+\_\+dt (\begin{DoxyParamCaption}\item[{}]{self}{}\end{D
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00056}{56}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Get dt. 
+
+gets the elapsed time in between encoder updates 
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00068}{68}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_a5e1f45bde021fbdb806bfda8a17ded47}\index{encoder.Encoder@{encoder.Encoder}!get\_position@{get\_position}}
 \index{get\_position@{get\_position}!encoder.Encoder@{encoder.Encoder}}
@@ -90,7 +109,11 @@ encoder.\+Encoder.\+get\+\_\+position (\begin{DoxyParamCaption}\item[{}]{self}{}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00041}{41}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+\doxylink{classencoder_1_1_encoder}{Encoder} Position Get. 
+
+Returns the most recently updated value of position as determined within the \doxylink{classencoder_1_1_encoder_aa49b0c5f3a84989bbd9500f1d25f81aa}{update()} method 
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00049}{49}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_a5f5175f8d031309051acea0f25710e3d}\index{encoder.Encoder@{encoder.Encoder}!get\_velocity@{get\_velocity}}
 \index{get\_velocity@{get\_velocity}!encoder.Encoder@{encoder.Encoder}}
@@ -100,7 +123,11 @@ encoder.\+Encoder.\+get\+\_\+velocity (\begin{DoxyParamCaption}\item[{}]{self}{}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00045}{45}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+\doxylink{classencoder_1_1_encoder}{Encoder} Velocity Get. 
+
+Returns a measure of velocity using the most recently updated value of delta as determined within the \doxylink{classencoder_1_1_encoder_aa49b0c5f3a84989bbd9500f1d25f81aa}{update()} method 
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00055}{55}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_ada0eb6236b545b232280989fc5a03378}\index{encoder.Encoder@{encoder.Encoder}!set\_offset@{set\_offset}}
 \index{set\_offset@{set\_offset}!encoder.Encoder@{encoder.Encoder}}
@@ -110,7 +137,16 @@ encoder.\+Encoder.\+set\+\_\+offset (\begin{DoxyParamCaption}\item[{}]{self}{, }
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00059}{59}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Set Offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P1} & Offset \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00073}{73}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_aa49b0c5f3a84989bbd9500f1d25f81aa}\index{encoder.Encoder@{encoder.Encoder}!update@{update}}
 \index{update@{update}!encoder.Encoder@{encoder.Encoder}}
@@ -120,7 +156,11 @@ encoder.\+Encoder.\+update (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyPa
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00022}{22}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+\doxylink{classencoder_1_1_encoder}{Encoder} Update. 
+
+Runs one update step on the encoder\textquotesingle{}s timer counter to keep track of the change in count and check for counter reload 
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00030}{30}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_ab79017405d71f96cb2363307a1f04c88}\index{encoder.Encoder@{encoder.Encoder}!zero@{zero}}
 \index{zero@{zero}!encoder.Encoder@{encoder.Encoder}}
@@ -130,7 +170,11 @@ encoder.\+Encoder.\+zero (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyPara
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00050}{50}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Zero the \doxylink{classencoder_1_1_encoder}{Encoder}. 
+
+Sets the present encoder position to zero and causes future updates to measure with respect to the new zero position 
+
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00061}{61}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 
 
@@ -145,7 +189,7 @@ int encoder.\+Encoder.\+current\+\_\+time = 0}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00015}{15}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00019}{19}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_ad3c110d78ce1b5e97ce08efd20b41040}\index{encoder.Encoder@{encoder.Encoder}!delta@{delta}}
 \index{delta@{delta}!encoder.Encoder@{encoder.Encoder}}
@@ -155,7 +199,7 @@ int encoder.\+Encoder.\+delta = 0}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00011}{11}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00016}{16}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_ae5edf4b3cd1456c3997c25fd0d83380f}\index{encoder.Encoder@{encoder.Encoder}!dt@{dt}}
 \index{dt@{dt}!encoder.Encoder@{encoder.Encoder}}
@@ -165,7 +209,7 @@ encoder.\+Encoder.\+dt = 0}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00012}{12}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00017}{17}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_a6fcb5e84009e0bada53204413afe1657}\index{encoder.Encoder@{encoder.Encoder}!last\_time@{last\_time}}
 \index{last\_time@{last\_time}!encoder.Encoder@{encoder.Encoder}}
@@ -175,7 +219,7 @@ int encoder.\+Encoder.\+last\+\_\+time = 0}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00014}{14}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00018}{18}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_aa5b347ca0eb88735da5e1dd75245aa82}\index{encoder.Encoder@{encoder.Encoder}!offset@{offset}}
 \index{offset@{offset}!encoder.Encoder@{encoder.Encoder}}
@@ -185,7 +229,7 @@ int encoder.\+Encoder.\+offset = 0}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00017}{17}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00021}{21}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_a8a6c252ededbb8cff1a29c6ef1d70683}\index{encoder.Encoder@{encoder.Encoder}!position@{position}}
 \index{position@{position}!encoder.Encoder@{encoder.Encoder}}
@@ -195,7 +239,7 @@ int encoder.\+Encoder.\+position = 0}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00009}{9}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00014}{14}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_ae97b9cbf3c0b6b6ba1a6b2db4a5eaf68}\index{encoder.Encoder@{encoder.Encoder}!prev\_count@{prev\_count}}
 \index{prev\_count@{prev\_count}!encoder.Encoder@{encoder.Encoder}}
@@ -205,7 +249,7 @@ int encoder.\+Encoder.\+prev\+\_\+count = 0}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00010}{10}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00015}{15}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_a6d34277d78f0f528aeb8b4d8901356b7}\index{encoder.Encoder@{encoder.Encoder}!tim@{tim}}
 \index{tim@{tim}!encoder.Encoder@{encoder.Encoder}}
@@ -215,7 +259,7 @@ encoder.\+Encoder.\+tim = tim}
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00016}{16}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00020}{20}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_a0671dbfe93c6bfa4373236c0f9113cc8}\index{encoder.Encoder@{encoder.Encoder}!timCh\_A@{timCh\_A}}
 \index{timCh\_A@{timCh\_A}!encoder.Encoder@{encoder.Encoder}}
@@ -225,7 +269,7 @@ encoder.\+Encoder.\+tim\+Ch\+\_\+A = tim.\+channel(1, pin=ch\+A\+\_\+pin, mode=T
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00019}{19}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00023}{23}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 \Hypertarget{classencoder_1_1_encoder_a4ec7f18a41bf6d7c247d9e9769454537}\index{encoder.Encoder@{encoder.Encoder}!timCh\_B@{timCh\_B}}
 \index{timCh\_B@{timCh\_B}!encoder.Encoder@{encoder.Encoder}}
@@ -235,7 +279,7 @@ encoder.\+Encoder.\+tim\+Ch\+\_\+B = tim.\+channel(2, pin=ch\+B\+\_\+pin, mode=T
 
 
 
-Definition at line \mbox{\hyperlink{encoder_8py_source_l00020}{20}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
+Definition at line \mbox{\hyperlink{encoder_8py_source_l00024}{24}} of file \mbox{\hyperlink{encoder_8py_source}{encoder.\+py}}.
 
 
 

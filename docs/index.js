@@ -10,9 +10,11 @@ var index =
       [ "Line Sensors", "index.html#linesensor", null ],
       [ "Bump Sensors", "index.html#bump", null ]
     ] ],
+    [ "Theory", "index.html#theory", null ],
     [ "Test Results and Performance", "index.html#results", [
       [ "Test Results", "index.html#test", null ],
       [ "Track Performance", "index.html#performance", null ]
     ] ],
+    [ "Task Diagrams", "index.html#diagrams", null ],
     [ "Key takeaways", "index.html#key", null ]
 ];

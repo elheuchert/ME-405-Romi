@@ -9,9 +9,9 @@ Initializes User Interface.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classui_1_1ui_a864f0c6f9f3ec78481a6c51196a27740}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\+\_\+flg}}, \mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\+\_\+state\+\_\+l}}, \mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\+\_\+state\+\_\+r}}, \mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}, \mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}, \mbox{\hyperlink{classui_1_1ui_a1a2a560486596244f01e6eb546c8ac0c}{times}}, \mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{PWM\+\_\+l}}, \mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{PWM\+\_\+r}}, \mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}, uart\+\_\+obj, \mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\+\_\+ref}}, \mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\+\_\+ref}}, \mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\+\_\+ref}}, \mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\+\_\+state}}, \mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}, \mbox{\hyperlink{classui_1_1ui_a70e0f47cd4d89b2c110487b6a77bd106}{need\+\_\+\+Calibrate}}, \mbox{\hyperlink{classui_1_1ui_afe2c07e9d29ef08db0d5e524dec34058}{ready\+\_\+\+Black}}, \mbox{\hyperlink{classui_1_1ui_a05a3d1da341894fe8010c2641b749e0a}{ready\+\_\+\+White}}, \mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{automatic\+\_\+mode}}, \mbox{\hyperlink{classui_1_1ui_a58392f37e76b5f2415f4224076221d27}{imu\+\_\+flg}})
-\begin{DoxyCompactList}\small\item\em User Interface. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em User Interface Initialization. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classui_1_1ui_a45e55c67807741484a7a7fa74beb3daf}{run}} (self)
-\begin{DoxyCompactList}\small\item\em UI Run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Runs the various tasks in UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -107,7 +107,7 @@ ui.\+ui.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, 
 
 
 
-User Interface. 
+User Interface Initialization. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -115,7 +115,7 @@ User Interface.
 \hline
 {\em P2} & Left Motor State \\
 \hline
-{\em P3} & RIght Motor State \\
+{\em P3} & Right Motor State \\
 \hline
 {\em P4} & Position \\
 \hline
@@ -169,7 +169,7 @@ ui.\+ui.\+run (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 
 
 
-UI Run. 
+Runs the various tasks in UI. 
 
 {\bfseries{ State 0 }} Checking for Bluetooth Command
 

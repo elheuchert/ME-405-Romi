@@ -92,22 +92,12 @@ $(function(){initNavTree('classobserver_1_1observer.html','','classobserver_1_1o
 </div><!--header-->
 <div class="contents">
 
-<p>add description here  
+<p>observer class that can be initialized to be run with the cotask scheduler.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a48894f073aab39efd1f65b50a91a93af" id="r_a48894f073aab39efd1f65b50a91a93af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48894f073aab39efd1f65b50a91a93af">__init__</a> (self, <a class="el" href="#a4d7061522c61727df6161a08d0590de5">left_pos</a>, <a class="el" href="#ab45caa4354bb6d850fe5b7a0f0d95d38">right_pos</a>, <a class="el" href="#a94a5170656cc7111c9a6848f08499f52">yaw</a>, <a class="el" href="#a970dd87c702ee5f8c767165f157273de">yaw_velocity</a>, <a class="el" href="#a00792ce0720e666b0174806fe76b4010">left_voltage</a>, <a class="el" href="#ad20db868f2fbd1a51eee63b5bbc98d76">right_voltage</a>, <a class="el" href="#a20feb00aff7dcdcf22d0416bf240f6bd">left_vel</a>, <a class="el" href="#afaf67737277de18fdd2e0e26ab3a2f0d">right_vel</a>, <a class="el" href="#abc0f05f21b479c1754f2f4af3cbd866e">total_dist</a>)</td></tr>
-<tr class="memitem:a55162491b5084a3d3a85f7525cf56929" id="r_a55162491b5084a3d3a85f7525cf56929"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a55162491b5084a3d3a85f7525cf56929">update_x</a> (self)</td></tr>
-<tr class="memitem:a60f8ac475482326dfa70671a71e50d0d" id="r_a60f8ac475482326dfa70671a71e50d0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60f8ac475482326dfa70671a71e50d0d">update_u</a> (self)</td></tr>
-<tr class="memitem:a33a47c9cefc4d5857c234793960d49bd" id="r_a33a47c9cefc4d5857c234793960d49bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33a47c9cefc4d5857c234793960d49bd">update_y</a> (self)</td></tr>
-<tr class="memitem:a2ea6ad1691c106d682502bdb9fb03101" id="r_a2ea6ad1691c106d682502bdb9fb03101"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ea6ad1691c106d682502bdb9fb03101">update_u_star</a> (self)</td></tr>
-<tr class="memitem:ad221ff3384370e0845c8d603ac270957" id="r_ad221ff3384370e0845c8d603ac270957"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad221ff3384370e0845c8d603ac270957">calc_derivative</a> (self, <a class="el" href="#ab0cd951c79e32e5254cd4634d41e479c">x</a>, <a class="el" href="#a23d8875c1e404acaede499c343192e92">u</a>)</td></tr>
-<tr class="memitem:ad4b8e50df7f308f88216b5ddd9bc08c0" id="r_ad4b8e50df7f308f88216b5ddd9bc08c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4b8e50df7f308f88216b5ddd9bc08c0">calc_output</a> (self, <a class="el" href="#ab0cd951c79e32e5254cd4634d41e479c">x</a>, <a class="el" href="#a23d8875c1e404acaede499c343192e92">u</a>)</td></tr>
-<tr class="memitem:aae8e6119f533f85576c4df6e37280709" id="r_aae8e6119f533f85576c4df6e37280709"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae8e6119f533f85576c4df6e37280709">calc_discrete_state</a> (self, <a class="el" href="#ab0cd951c79e32e5254cd4634d41e479c">x</a>, <a class="el" href="#ac2158e2e4b6d6a7c8e33ba3ddb8f5a17">u_star</a>)</td></tr>
-<tr class="memitem:a920f96f59a2a7421bf959ff669959f3d" id="r_a920f96f59a2a7421bf959ff669959f3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a920f96f59a2a7421bf959ff669959f3d">calc_discrete_output</a> (self, <a class="el" href="#ab0cd951c79e32e5254cd4634d41e479c">x</a>)</td></tr>
-<tr class="memitem:a429157926e4792d19d5af7a59bcdcab2" id="r_a429157926e4792d19d5af7a59bcdcab2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a429157926e4792d19d5af7a59bcdcab2">RK4_solver</a> (self, <a class="el" href="#ab0cd951c79e32e5254cd4634d41e479c">x</a>, t_step, <a class="el" href="#a23d8875c1e404acaede499c343192e92">u</a>)</td></tr>
-<tr class="memitem:adc38055d5537a80ed9aea905f27d0428" id="r_adc38055d5537a80ed9aea905f27d0428"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc38055d5537a80ed9aea905f27d0428">run</a> (self)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -136,9 +126,24 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2c5d34a1555771ef93f63ee9d83724c7" id="r_a2c5d34a1555771ef93f63ee9d83724c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c5d34a1555771ef93f63ee9d83724c7">feedback</a> = 1</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>add description here </p>
+<div class="textblock"><p>observer class that can be initialized to be run with the cotask scheduler. </p>
+<p>See run for behavior.</p>
+<p><b>init</b> is the observer object initializer which takes 6 arguments. The arguments are data shares. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">left_pos</td><td>: left_pos is a float share that holds the current position of the left encoder. Used as an input. </td></tr>
+    <tr><td class="paramname">right_pos</td><td>: right_pos is a float share that holds the current position of the right encoder. Used as an input. </td></tr>
+    <tr><td class="paramname">yaw</td><td>: yaw is a float share that holds the IMU reading of the yaw. </td></tr>
+    <tr><td class="paramname">yaw_velocity</td><td>: yaw_velocity is the yaw_velocity as measured by the IMU task. </td></tr>
+    <tr><td class="paramname">left_voltage</td><td>: left_voltage is the PWM value of the left motor which observer scales to the expected voltage. </td></tr>
+    <tr><td class="paramname">right_voltage</td><td>: right_voltage is the PWM value of the right motor which observer scales to the expected voltage. </td></tr>
+    <tr><td class="paramname">left_vel</td><td>: left_vel is the velocity of the left motor. </td></tr>
+    <tr><td class="paramname">right_vel</td><td>: right_vel is the velocity of the right motor. </td></tr>
+    <tr><td class="paramname">total_dist</td><td>: total_dist is a float share that the observer will fill with how far it thinks ROMI has travelled in mm. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00004">4</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00023">23</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a48894f073aab39efd1f65b50a91a93af" name="a48894f073aab39efd1f65b50a91a93af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48894f073aab39efd1f65b50a91a93af">&#9670;&#160;</a></span>__init__()</h2>
@@ -199,298 +204,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00006">6</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ad221ff3384370e0845c8d603ac270957" name="ad221ff3384370e0845c8d603ac270957"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad221ff3384370e0845c8d603ac270957">&#9670;&#160;</a></span>calc_derivative()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.calc_derivative </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>u</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00079">79</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_ad221ff3384370e0845c8d603ac270957_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_ad221ff3384370e0845c8d603ac270957_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a920f96f59a2a7421bf959ff669959f3d" name="a920f96f59a2a7421bf959ff669959f3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a920f96f59a2a7421bf959ff669959f3d">&#9670;&#160;</a></span>calc_discrete_output()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.calc_discrete_output </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00128">128</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_a920f96f59a2a7421bf959ff669959f3d_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_a920f96f59a2a7421bf959ff669959f3d_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="aae8e6119f533f85576c4df6e37280709" name="aae8e6119f533f85576c4df6e37280709"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae8e6119f533f85576c4df6e37280709">&#9670;&#160;</a></span>calc_discrete_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.calc_discrete_state </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>u_star</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00124">124</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_aae8e6119f533f85576c4df6e37280709_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_aae8e6119f533f85576c4df6e37280709_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="ad4b8e50df7f308f88216b5ddd9bc08c0" name="ad4b8e50df7f308f88216b5ddd9bc08c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4b8e50df7f308f88216b5ddd9bc08c0">&#9670;&#160;</a></span>calc_output()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.calc_output </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>u</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00104">104</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_ad4b8e50df7f308f88216b5ddd9bc08c0_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_ad4b8e50df7f308f88216b5ddd9bc08c0_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a429157926e4792d19d5af7a59bcdcab2" name="a429157926e4792d19d5af7a59bcdcab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a429157926e4792d19d5af7a59bcdcab2">&#9670;&#160;</a></span>RK4_solver()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.RK4_solver </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>t_step</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>u</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00132">132</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_a429157926e4792d19d5af7a59bcdcab2_cgraph.png" border="0" usemap="#aclassobserver_1_1observer_a429157926e4792d19d5af7a59bcdcab2_cgraph" loading="lazy" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_a429157926e4792d19d5af7a59bcdcab2_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_a429157926e4792d19d5af7a59bcdcab2_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="adc38055d5537a80ed9aea905f27d0428" name="adc38055d5537a80ed9aea905f27d0428"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc38055d5537a80ed9aea905f27d0428">&#9670;&#160;</a></span>run()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.run </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00151">151</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_adc38055d5537a80ed9aea905f27d0428_cgraph.png" border="0" usemap="#aclassobserver_1_1observer_adc38055d5537a80ed9aea905f27d0428_cgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a60f8ac475482326dfa70671a71e50d0d" name="a60f8ac475482326dfa70671a71e50d0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60f8ac475482326dfa70671a71e50d0d">&#9670;&#160;</a></span>update_u()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.update_u </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00061">61</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_a60f8ac475482326dfa70671a71e50d0d_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_a60f8ac475482326dfa70671a71e50d0d_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a2ea6ad1691c106d682502bdb9fb03101" name="a2ea6ad1691c106d682502bdb9fb03101"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ea6ad1691c106d682502bdb9fb03101">&#9670;&#160;</a></span>update_u_star()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.update_u_star </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00071">71</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_a2ea6ad1691c106d682502bdb9fb03101_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_a2ea6ad1691c106d682502bdb9fb03101_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a55162491b5084a3d3a85f7525cf56929" name="a55162491b5084a3d3a85f7525cf56929"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55162491b5084a3d3a85f7525cf56929">&#9670;&#160;</a></span>update_x()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.update_x </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00054">54</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_a55162491b5084a3d3a85f7525cf56929_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_a55162491b5084a3d3a85f7525cf56929_icgraph" loading="lazy" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="a33a47c9cefc4d5857c234793960d49bd" name="a33a47c9cefc4d5857c234793960d49bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33a47c9cefc4d5857c234793960d49bd">&#9670;&#160;</a></span>update_y()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">observer.observer.update_y </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00065">65</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classobserver_1_1observer_a33a47c9cefc4d5857c234793960d49bd_icgraph.png" border="0" usemap="#aclassobserver_1_1observer_a33a47c9cefc4d5857c234793960d49bd_icgraph" loading="lazy" alt=""/></div>
-</div>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00024">24</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -513,7 +227,7 @@ Here is the caller graph for this function:</div>
 <div class="line">        [0.0000, 0.0000, 0.0000,   0.0000]</div>
 <div class="line">        ])</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00032">32</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00054">54</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -535,7 +249,7 @@ Here is the caller graph for this function:</div>
 <div class="line">        [0.0000, 0.0000, -0.0698, 0.0698, 0.9902,  0.0010]</div>
 <div class="line">        ])</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00039">39</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00062">62</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -555,7 +269,7 @@ Here is the caller graph for this function:</div>
 <div class="line">                    [0, 0, 0, 1], </div>
 <div class="line">                    [-.035/.141, .035/.141, 0, 0]])</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00046">46</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00070">70</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -571,7 +285,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00052">52</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00076">76</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -591,7 +305,7 @@ Here is the caller graph for this function:</div>
 <div class="line">                        [9.5000e+01, 9.5000e+01, -2.0531e-11, 9.8455e-10],</div>
 <div class="line">                        [-6.98061e+01, 6.98061e+01, 9.901573e+02, 1.0000]])</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00027">27</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00048">48</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -607,7 +321,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00007">7</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00025">25</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -623,7 +337,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00013">13</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00031">31</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -639,7 +353,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00011">11</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00029">29</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -655,7 +369,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00008">8</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00026">26</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -671,7 +385,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00014">14</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00032">32</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -687,7 +401,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00012">12</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00030">30</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -703,7 +417,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00051">51</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00075">75</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -719,7 +433,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00015">15</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00033">33</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -735,7 +449,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00018">18</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00037">37</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -751,7 +465,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00023">23</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00043">43</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -767,7 +481,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00020">20</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00039">39</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -783,7 +497,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00025">25</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00045">45</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -799,7 +513,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00017">17</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00036">36</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -815,7 +529,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00022">22</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00042">42</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -831,7 +545,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00019">19</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00038">38</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -847,7 +561,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00024">24</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00044">44</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -863,7 +577,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00009">9</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00027">27</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>
@@ -879,7 +593,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00010">10</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="observer_8py_source.html#l00028">28</a> of file <a class="el" href="observer_8py_source.html">observer.py</a>.</p>
 
 </div>
 </div>

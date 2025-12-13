@@ -4,19 +4,83 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classline__task_1_1line__task}{line\+\_\+task}}
-\begin{DoxyCompactList}\small\item\em add description here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{classline__task_1_1line__task}{line\+\_\+task} class that can be initialized to be run with the cotask scheduler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceline__task_a8a8769cc8c9b143b0975d12e53bc3920}{run}} (self)
+\begin{DoxyCompactList}\small\item\em run is the generator that the cotask scheduler will run since our tasks are objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{namespaceline__task_af424651385a226e59d22204fa75e9d49}{SENSOR\+\_\+\+START}} = 0
 \item 
 int \mbox{\hyperlink{namespaceline__task_a2e536a9275c49e1b15f3d87d7b154fa9}{SENSOR\+\_\+\+END}} = 12
+\item 
+int \mbox{\hyperlink{namespaceline__task_a58fec441c04de2b6528bb57cf0844248}{state}} = 0\+:
+\item 
+\mbox{\hyperlink{namespaceline__task_aa35e9c77700ec20bd9382b2f255ac995}{black\+\_\+data}} = list(self.\+line\+Sensor.\+read\+\_\+\+Calibrate\+\_\+\+Data())
+\item 
+bool \mbox{\hyperlink{namespaceline__task_a410f9db0a08df171352e6e55a53e09f6}{got\+\_\+black}} = True
+\item 
+\mbox{\hyperlink{namespaceline__task_af21f68396ea8229730469249cef35d78}{white\+\_\+data}} = list(self.\+line\+Sensor.\+read\+\_\+\+Calibrate\+\_\+\+Data())
+\item 
+bool \mbox{\hyperlink{namespaceline__task_aa5333efefde52e631f4990baf4aa97ff}{got\+\_\+white}} = True
 \end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceline__task_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceline__task_a8a8769cc8c9b143b0975d12e53bc3920}\index{line\_task@{line\_task}!run@{run}}
+\index{run@{run}!line\_task@{line\_task}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{namespaceline__task_a8a8769cc8c9b143b0975d12e53bc3920} 
+line\+\_\+task.\+run (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+run is the generator that the cotask scheduler will run since our tasks are objects. 
+
+All shares it needs are already given to the task object on initialization. The generator will only run one state at a time on each run of the task. @detail The finite state machine for \doxylink{namespacecontrol__task}{control\+\_\+task} has 4 states. State 0\+: Check calibration state State 1\+: Calibrating state. Creates the calibration file State 2\+: Calibrated/\+Reading state. This is the final running state that \doxylink{classline__task_1_1line__task}{line\+\_\+task} will sit in filling centroid forever once its calibrated State 3\+: Calibration check state. Come here to check if the sensor is reading the file 
+
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00058}{58}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+
 
 
 \label{doc-var-members}
 \Hypertarget{namespaceline__task_doc-var-members}
 \doxysubsection{Variable Documentation}
+\Hypertarget{namespaceline__task_aa35e9c77700ec20bd9382b2f255ac995}\index{line\_task@{line\_task}!black\_data@{black\_data}}
+\index{black\_data@{black\_data}!line\_task@{line\_task}}
+\doxysubsubsection{\texorpdfstring{black\_data}{black\_data}}
+{\footnotesize\ttfamily \label{namespaceline__task_aa35e9c77700ec20bd9382b2f255ac995} 
+\mbox{\hyperlink{classline__task_1_1line__task_afe1fee74b27b4cfb0aabf467d7300123}{line\+\_\+task.\+black\+\_\+data}} = list(self.\+line\+Sensor.\+read\+\_\+\+Calibrate\+\_\+\+Data())}
+
+
+
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00078}{78}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+
+\Hypertarget{namespaceline__task_a410f9db0a08df171352e6e55a53e09f6}\index{line\_task@{line\_task}!got\_black@{got\_black}}
+\index{got\_black@{got\_black}!line\_task@{line\_task}}
+\doxysubsubsection{\texorpdfstring{got\_black}{got\_black}}
+{\footnotesize\ttfamily \label{namespaceline__task_a410f9db0a08df171352e6e55a53e09f6} 
+bool \mbox{\hyperlink{classline__task_1_1line__task_a702791d971e7eee861a123058fa700bf}{line\+\_\+task.\+got\+\_\+black}} = True}
+
+
+
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00080}{80}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+
+\Hypertarget{namespaceline__task_aa5333efefde52e631f4990baf4aa97ff}\index{line\_task@{line\_task}!got\_white@{got\_white}}
+\index{got\_white@{got\_white}!line\_task@{line\_task}}
+\doxysubsubsection{\texorpdfstring{got\_white}{got\_white}}
+{\footnotesize\ttfamily \label{namespaceline__task_aa5333efefde52e631f4990baf4aa97ff} 
+bool \mbox{\hyperlink{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c0abe7}{line\+\_\+task.\+got\+\_\+white}} = True}
+
+
+
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00086}{86}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+
 \Hypertarget{namespaceline__task_a2e536a9275c49e1b15f3d87d7b154fa9}\index{line\_task@{line\_task}!SENSOR\_END@{SENSOR\_END}}
 \index{SENSOR\_END@{SENSOR\_END}!line\_task@{line\_task}}
 \doxysubsubsection{\texorpdfstring{SENSOR\_END}{SENSOR\_END}}
@@ -25,7 +89,7 @@ int line\+\_\+task.\+SENSOR\+\_\+\+END = 12}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00005}{5}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00024}{24}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 
 \Hypertarget{namespaceline__task_af424651385a226e59d22204fa75e9d49}\index{line\_task@{line\_task}!SENSOR\_START@{SENSOR\_START}}
 \index{SENSOR\_START@{SENSOR\_START}!line\_task@{line\_task}}
@@ -35,5 +99,25 @@ int line\+\_\+task.\+SENSOR\+\_\+\+START = 0}
 
 
 
-Definition at line \mbox{\hyperlink{line__task_8py_source_l00004}{4}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00023}{23}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+
+\Hypertarget{namespaceline__task_a58fec441c04de2b6528bb57cf0844248}\index{line\_task@{line\_task}!state@{state}}
+\index{state@{state}!line\_task@{line\_task}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{namespaceline__task_a58fec441c04de2b6528bb57cf0844248} 
+int \mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{line\+\_\+task.\+state}} = 0\+:}
+
+
+
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00062}{62}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
+
+\Hypertarget{namespaceline__task_af21f68396ea8229730469249cef35d78}\index{line\_task@{line\_task}!white\_data@{white\_data}}
+\index{white\_data@{white\_data}!line\_task@{line\_task}}
+\doxysubsubsection{\texorpdfstring{white\_data}{white\_data}}
+{\footnotesize\ttfamily \label{namespaceline__task_af21f68396ea8229730469249cef35d78} 
+\mbox{\hyperlink{classline__task_1_1line__task_ac41f900575b1236c0449cd4f9de9483d}{line\+\_\+task.\+white\+\_\+data}} = list(self.\+line\+Sensor.\+read\+\_\+\+Calibrate\+\_\+\+Data())}
+
+
+
+Definition at line \mbox{\hyperlink{line__task_8py_source_l00084}{84}} of file \mbox{\hyperlink{line__task_8py_source}{line\+\_\+task.\+py}}.
 

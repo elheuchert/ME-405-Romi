@@ -109,6 +109,38 @@ Bump 5  &PB14  &GPIO  \\
 GND  &GND  &-\/  \\
 GND  &GND  &-\/  \\
 \end{DoxyTable}
+\hypertarget{index_theory}{}\doxysection{\texorpdfstring{Theory}{Theory}}\label{index_theory}
+Two forms of estimation were used in this lab. First was a simple state estimator that took inputs and applied dynamics equations and the RK4 solver to guess where ROMI would be the next time the task ran. It would continue to add to that value in hopes that it stayed accurate. The second was a discretized version of the system with a feedback loop. Using system dynamic equations and an observer gain matrix, new equations were used that directly computed the next state of ROMI given its current state. The equations and matrices used are as follows (exact numerical values not shown)\+:
+
+State Estimation\+:
+
+x\+\_\+dot = A x + B u (Eq. 1)
+
+y = C x + D u (Eq. 2)
+
+The A, B, C, and D matrices are based on ROMI dynamics, using the following state, input, and output definitions\+:
+
+x = \mbox{[}Ω\+\_\+l, Ω\+\_\+r, s, φ\mbox{]}\texorpdfstring{$^\wedge$}{\string^}T (Eq. 3) ~\newline
+ u = \mbox{[}V\+\_\+l, V\+\_\+r\mbox{]}\texorpdfstring{$^\wedge$}{\string^}T (Eq. 4) ~\newline
+ y = \mbox{[}s\+\_\+l, s\+\_\+r, φ, φ\+\_\+dot\mbox{]}\texorpdfstring{$^\wedge$}{\string^}T (Eq. 5)
+
+Discretized Estimation\+:
+
+x\+\_\+\{k+1\} = A\+\_\+d x\+\_\+k + B\+\_\+d u\texorpdfstring{$\ast$}{*} (Eq. 6)
+
+y\+\_\+k = C x\+\_\+k (Eq. 7)
+
+Where A\+\_\+d and B\+\_\+d are the discretized versions of A\+\_\+o and B\+\_\+o, defined as\+:
+
+A\+\_\+o = A − L C (Eq. 8)
+
+B\+\_\+o = B L (Eq. 9)
+
+The observer input vector is\+:
+
+u\texorpdfstring{$\ast$}{*} = \mbox{[}V\+\_\+l, V\+\_\+r, s\+\_\+l, s\+\_\+r, φ, φ\+\_\+dot\mbox{]}\texorpdfstring{$^\wedge$}{\string^}T (Eq. 10)
+
+The total distance travelled (s), is the only state there is no direct measurement for hence the use of an observer. ~\newline
 \hypertarget{index_results}{}\doxysection{\texorpdfstring{Test Results and Performance}{Test Results and Performance}}\label{index_results}
 \hypertarget{index_test}{}\doxysubsection{\texorpdfstring{Test Results}{Test Results}}\label{index_test}
 {\bfseries{Velocity Plots testing}}
@@ -140,5 +172,8 @@ Figure 14. Attempt \#2
 
 
 
-Figure 15. Attempt \#3\hypertarget{index_key}{}\doxysection{\texorpdfstring{Key takeaways}{Key takeaways}}\label{index_key}
+Figure 15. Attempt \#3\hypertarget{index_diagrams}{}\doxysection{\texorpdfstring{Task Diagrams}{Task Diagrams}}\label{index_diagrams}
+Below are the Finite State Machine transition diagrams for each task. They show the different states of the task, how they transition and what actions they take when transitioning.
+
+ Figure 15. Control Task State Transition Diagram  Figure 16. Data Collector Task State Transition Diagram  Figure 17. UI Task State Transition Diagram  Figure 18. IMU Task State Transition Diagram  Figure 19. Motor Task State Transition Diagram  Figure 20. Pathing Plan Task State Transition Diagram\hypertarget{index_key}{}\doxysection{\texorpdfstring{Key takeaways}{Key takeaways}}\label{index_key}
 Our key takeaways from this project were learning how to successfully integrate all the hardware and bring the system close to achieving our goal. Moving forward, we would focus on improving our state estimation and refining the IMU outputs for distance and heading. These enhancements would increase consistency and would hopefully allow us to complete the course reliably. 

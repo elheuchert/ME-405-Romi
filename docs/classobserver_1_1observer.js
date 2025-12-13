@@ -1,16 +1,6 @@
 var classobserver_1_1observer =
 [
     [ "__init__", "classobserver_1_1observer.html#a48894f073aab39efd1f65b50a91a93af", null ],
-    [ "calc_derivative", "classobserver_1_1observer.html#ad221ff3384370e0845c8d603ac270957", null ],
-    [ "calc_discrete_output", "classobserver_1_1observer.html#a920f96f59a2a7421bf959ff669959f3d", null ],
-    [ "calc_discrete_state", "classobserver_1_1observer.html#aae8e6119f533f85576c4df6e37280709", null ],
-    [ "calc_output", "classobserver_1_1observer.html#ad4b8e50df7f308f88216b5ddd9bc08c0", null ],
-    [ "RK4_solver", "classobserver_1_1observer.html#a429157926e4792d19d5af7a59bcdcab2", null ],
-    [ "run", "classobserver_1_1observer.html#adc38055d5537a80ed9aea905f27d0428", null ],
-    [ "update_u", "classobserver_1_1observer.html#a60f8ac475482326dfa70671a71e50d0d", null ],
-    [ "update_u_star", "classobserver_1_1observer.html#a2ea6ad1691c106d682502bdb9fb03101", null ],
-    [ "update_x", "classobserver_1_1observer.html#a55162491b5084a3d3a85f7525cf56929", null ],
-    [ "update_y", "classobserver_1_1observer.html#a33a47c9cefc4d5857c234793960d49bd", null ],
     [ "A_d", "classobserver_1_1observer.html#a67f90a56e5e8dfcd5a1685d9b3f2e9a4", null ],
     [ "B_d", "classobserver_1_1observer.html#ad31c44ebe78098ccd5bd8e9ad0cb5ace", null ],
     [ "C", "classobserver_1_1observer.html#aecab18d5a3aab286cab104dfc810bf51", null ],

@@ -92,13 +92,12 @@ $(function(){initNavTree('classline__task_1_1line__task.html','','classline__tas
 </div><!--header-->
 <div class="contents">
 
-<p>add description here  
+<p><a class="el" href="classline__task_1_1line__task.html" title="line_task class that can be initialized to be run with the cotask scheduler.">line_task</a> class that can be initialized to be run with the cotask scheduler.  
  <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af3907a101c7220b632db8106ff91747f" id="r_af3907a101c7220b632db8106ff91747f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3907a101c7220b632db8106ff91747f">__init__</a> (self, <a class="el" href="#ab4bdcda5bb99d1207e9b8d952cee99d3">lineSensor</a>, <a class="el" href="#a7660f7398f0dabb102e3bdc91509ac5c">l_state</a>, need_Calibrate, <a class="el" href="#a63f9d9c50447a18e893fcc98f505d958">ready_Black</a>, <a class="el" href="#a7afa31913c51a156aca95028825c75da">ready_White</a>, <a class="el" href="#a5e919e7a5d97d28abf4cfa7767433d36">centroid</a>)</td></tr>
-<tr class="memitem:a25572f4bb2546c1c31f1d3ad89fec333" id="r_a25572f4bb2546c1c31f1d3ad89fec333"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25572f4bb2546c1c31f1d3ad89fec333">run</a> (self)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -115,9 +114,21 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0247054ebd22333508c0b0f843c0abe7" id="r_a0247054ebd22333508c0b0f843c0abe7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0247054ebd22333508c0b0f843c0abe7">got_white</a> = False</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>add description here </p>
+<div class="textblock"><p><a class="el" href="classline__task_1_1line__task.html" title="line_task class that can be initialized to be run with the cotask scheduler.">line_task</a> class that can be initialized to be run with the cotask scheduler. </p>
+<p>See run for behavior.</p>
+<p><b>init</b> is the <a class="el" href="classline__task_1_1line__task.html" title="line_task class that can be initialized to be run with the cotask scheduler.">line_task</a> object initializer which takes 6 arguments. The arguments are a mix of hardware drivers and share flags. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="namespaceline__sensor.html">line_sensor</a></td><td>: <a class="el" href="namespaceline__sensor.html">line_sensor</a> is the <a class="el" href="namespaceline__sensor.html">line_sensor</a> object made in main. It is the sensor this task is reading. </td></tr>
+    <tr><td class="paramname">l_state</td><td>: l_state is not actually used </td></tr>
+    <tr><td class="paramname">need_Calibrate</td><td>: need_Calibrate is an integer share flag that tells control task whether the IR sensors are calibrated and control task is ok to start line following. It is set by the line sensor task. </td></tr>
+    <tr><td class="paramname">ready_Black</td><td>: ready_Black is an integer share flag that UI task will set true when the ROMI is over a black surface for calibration. </td></tr>
+    <tr><td class="paramname">ready_White</td><td>: ready_White is an integer share flag that UI task will set true when the ROMI is over a white surface for calibration. </td></tr>
+    <tr><td class="paramname">centroid</td><td>: centroid is a float share that the line sensor task fills with the current location of the line that ROMI is following. It is used for the automatic line following mode in control task. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00007">7</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00027">27</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af3907a101c7220b632db8106ff91747f" name="af3907a101c7220b632db8106ff91747f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3907a101c7220b632db8106ff91747f">&#9670;&#160;</a></span>__init__()</h2>
@@ -163,27 +174,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00009">9</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a25572f4bb2546c1c31f1d3ad89fec333" name="a25572f4bb2546c1c31f1d3ad89fec333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25572f4bb2546c1c31f1d3ad89fec333">&#9670;&#160;</a></span>run()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">line_task.line_task.run </td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00022">22</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00028">28</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -200,7 +191,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00017">17</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00036">36</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -216,7 +207,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00016">16</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00035">35</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -232,7 +223,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00019">19</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00038">38</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -248,7 +239,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00020">20</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00039">39</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -264,7 +255,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00011">11</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00030">30</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -280,7 +271,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00010">10</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00029">29</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -296,7 +287,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00013">13</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00032">32</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -312,7 +303,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00014">14</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00033">33</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -328,7 +319,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00015">15</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00034">34</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -344,7 +335,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00012">12</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00031">31</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -360,7 +351,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00018">18</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00037">37</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>

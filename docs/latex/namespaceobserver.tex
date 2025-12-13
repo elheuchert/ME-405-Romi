@@ -4,4 +4,263 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classobserver_1_1observer}{observer}}
-\begin{DoxyCompactList}\small\item\em add description here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em observer class that can be initialized to be run with the cotask scheduler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceobserver_a841a69a03d1c2403f91297ce768526fb}{update\+\_\+x}} (self)
+\begin{DoxyCompactList}\small\item\em update\+\_\+x updates the state vector with real values and the last guess total distance \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a8c3aef460dd18b304705dbf0c8fae8bb}{update\+\_\+u}} (self)
+\begin{DoxyCompactList}\small\item\em update\+\_\+u updates the input vector with real values assuming full battery voltage \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_ad67aa1863a9e1c0810028b2f05d7712e}{update\+\_\+y}} (self)
+\begin{DoxyCompactList}\small\item\em update\+\_\+y updates the output vector with real values \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_adfb5029006db8f540249f2e100eafd87}{update\+\_\+u\+\_\+star}} (self)
+\begin{DoxyCompactList}\small\item\em update\+\_\+u\+\_\+star updates the discetized combined input and output vectors \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a345a90f5d63d54a21190facff3eb2b4e}{calc\+\_\+derivative}} (self, x, u)
+\begin{DoxyCompactList}\small\item\em calc\+\_\+derivative calculates the derivative state vector using the continuous model with no feedback \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a7537934c5ae4a728fca68bb8df7280ec}{calc\+\_\+output}} (self, x, u)
+\begin{DoxyCompactList}\small\item\em calc\+\_\+output calculates the output vector using the continuous model with no feedback \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a6242b332b9bad573532d0120f46bac25}{calc\+\_\+discrete\+\_\+state}} (self, x, u\+\_\+star)
+\begin{DoxyCompactList}\small\item\em calc\+\_\+discrete\+\_\+state calculates the next state vector using the discretized model \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_aa0ba8bfb71c9be1d30e8173079c0b1b4}{calc\+\_\+discrete\+\_\+output}} (self, x)
+\begin{DoxyCompactList}\small\item\em calc\+\_\+discrete\+\_\+state calculates the current output vector using the discretized model \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a9f5db79182e18cf79d49294f13b2de7f}{RK4\+\_\+solver}} (self, x, t\+\_\+step, u)
+\begin{DoxyCompactList}\small\item\em RK4\+\_\+solver is an implementation of the RK4\+\_\+solver algorithm that will be used to estimate the state if using a continuous model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a34127165f976f5a7012bc0cadc169c2c}{run}} (self)
+\begin{DoxyCompactList}\small\item\em run is the generator that the cotask scheduler will run since our tasks are objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceobserver_ac224e91e9bc9bcfbd70637307bc26f8a}{state}} = 0\+:
+\item 
+int \mbox{\hyperlink{namespaceobserver_aa881c0e1eb17816a9a63ded104decdd6}{feedback}} = 0\+:
+\item 
+\mbox{\hyperlink{namespaceobserver_ae1ff6e6437ad64a76aa92be2abff7d0a}{x\+\_\+estimated}}
+\item 
+\mbox{\hyperlink{namespaceobserver_a733d71895534e303d6821f34dce35034}{y\+\_\+estimated}} = self.\+RK4\+\_\+solver(self.\+x, .\+02, self.\+u)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespaceobserver_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceobserver_a345a90f5d63d54a21190facff3eb2b4e}\index{observer@{observer}!calc\_derivative@{calc\_derivative}}
+\index{calc\_derivative@{calc\_derivative}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{calc\_derivative()}{calc\_derivative()}}
+{\footnotesize\ttfamily \label{namespaceobserver_a345a90f5d63d54a21190facff3eb2b4e} 
+observer.\+calc\+\_\+derivative (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{, }\item[{}]{u}{}\end{DoxyParamCaption})}
+
+
+
+calc\+\_\+derivative calculates the derivative state vector using the continuous model with no feedback 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: x is the \mbox{[}4,1\mbox{]} state vector \\
+\hline
+{\em u} & \+: u is the \mbox{[}2,1\mbox{]} input vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00125}{125}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_aa0ba8bfb71c9be1d30e8173079c0b1b4}\index{observer@{observer}!calc\_discrete\_output@{calc\_discrete\_output}}
+\index{calc\_discrete\_output@{calc\_discrete\_output}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{calc\_discrete\_output()}{calc\_discrete\_output()}}
+{\footnotesize\ttfamily \label{namespaceobserver_aa0ba8bfb71c9be1d30e8173079c0b1b4} 
+observer.\+calc\+\_\+discrete\+\_\+output (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{}\end{DoxyParamCaption})}
+
+
+
+calc\+\_\+discrete\+\_\+state calculates the current output vector using the discretized model 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: x is the \mbox{[}4,1\mbox{]} state vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00183}{183}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_a6242b332b9bad573532d0120f46bac25}\index{observer@{observer}!calc\_discrete\_state@{calc\_discrete\_state}}
+\index{calc\_discrete\_state@{calc\_discrete\_state}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{calc\_discrete\_state()}{calc\_discrete\_state()}}
+{\footnotesize\ttfamily \label{namespaceobserver_a6242b332b9bad573532d0120f46bac25} 
+observer.\+calc\+\_\+discrete\+\_\+state (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{, }\item[{}]{u\+\_\+star}{}\end{DoxyParamCaption})}
+
+
+
+calc\+\_\+discrete\+\_\+state calculates the next state vector using the discretized model 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: x is the \mbox{[}4,1\mbox{]} state vector \\
+\hline
+{\em u\+\_\+star} & \+: u\+\_\+star is the \mbox{[}6,1\mbox{]} combined input and output vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00176}{176}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_a7537934c5ae4a728fca68bb8df7280ec}\index{observer@{observer}!calc\_output@{calc\_output}}
+\index{calc\_output@{calc\_output}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{calc\_output()}{calc\_output()}}
+{\footnotesize\ttfamily \label{namespaceobserver_a7537934c5ae4a728fca68bb8df7280ec} 
+observer.\+calc\+\_\+output (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{, }\item[{}]{u}{}\end{DoxyParamCaption})}
+
+
+
+calc\+\_\+output calculates the output vector using the continuous model with no feedback 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: x is the \mbox{[}4,1\mbox{]} state vector \\
+\hline
+{\em u} & \+: u is the \mbox{[}2,1\mbox{]} input vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00153}{153}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_a9f5db79182e18cf79d49294f13b2de7f}\index{observer@{observer}!RK4\_solver@{RK4\_solver}}
+\index{RK4\_solver@{RK4\_solver}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{RK4\_solver()}{RK4\_solver()}}
+{\footnotesize\ttfamily \label{namespaceobserver_a9f5db79182e18cf79d49294f13b2de7f} 
+observer.\+RK4\+\_\+solver (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{x}{, }\item[{}]{t\+\_\+step}{, }\item[{}]{u}{}\end{DoxyParamCaption})}
+
+
+
+RK4\+\_\+solver is an implementation of the RK4\+\_\+solver algorithm that will be used to estimate the state if using a continuous model. 
+
+Returns next state and current output 
+\begin{DoxyParams}{Parameters}
+{\em x} & \+: x is the current state vector \\
+\hline
+{\em t\+\_\+step} & \+: t\+\_\+step is the time step between the current state and the estimated state. Should be the time when this task next runs \\
+\hline
+{\em u} & \+: u is the input vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00192}{192}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_a34127165f976f5a7012bc0cadc169c2c}\index{observer@{observer}!run@{run}}
+\index{run@{run}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{namespaceobserver_a34127165f976f5a7012bc0cadc169c2c} 
+observer.\+run (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+run is the generator that the cotask scheduler will run since our tasks are objects. 
+
+All shares it needs are already given to the task object on initialization. The generator will only run one state at a time on each run of the task. @detail The observer will always update its current states then guess at the next state. The only state vector it does not have direct data for is total distance travelled so it will always use its estimation for the next state. If feedback is turned off the observer will run the simple state space continuous model that has no feedback. This is not really an observer it is just an estimator. If feedback is turned on the observer will run the discretized model of the system. Typically the total distance travelled is useful but the others are not. The value is predicts is also pretty consistent each run, but it is always negative and off by a factor of about 2.\+1 so we simply scalled it by -\/2.\+1 so that the value is more useful. It is in mm. 
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00217}{217}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_a8c3aef460dd18b304705dbf0c8fae8bb}\index{observer@{observer}!update\_u@{update\_u}}
+\index{update\_u@{update\_u}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{update\_u()}{update\_u()}}
+{\footnotesize\ttfamily \label{namespaceobserver_a8c3aef460dd18b304705dbf0c8fae8bb} 
+observer.\+update\+\_\+u (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+update\+\_\+u updates the input vector with real values assuming full battery voltage 
+
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00100}{100}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_adfb5029006db8f540249f2e100eafd87}\index{observer@{observer}!update\_u\_star@{update\_u\_star}}
+\index{update\_u\_star@{update\_u\_star}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{update\_u\_star()}{update\_u\_star()}}
+{\footnotesize\ttfamily \label{namespaceobserver_adfb5029006db8f540249f2e100eafd87} 
+observer.\+update\+\_\+u\+\_\+star (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+update\+\_\+u\+\_\+star updates the discetized combined input and output vectors 
+
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00113}{113}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_a841a69a03d1c2403f91297ce768526fb}\index{observer@{observer}!update\_x@{update\_x}}
+\index{update\_x@{update\_x}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{update\_x()}{update\_x()}}
+{\footnotesize\ttfamily \label{namespaceobserver_a841a69a03d1c2403f91297ce768526fb} 
+observer.\+update\+\_\+x (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+update\+\_\+x updates the state vector with real values and the last guess total distance 
+
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00092}{92}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_ad67aa1863a9e1c0810028b2f05d7712e}\index{observer@{observer}!update\_y@{update\_y}}
+\index{update\_y@{update\_y}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{update\_y()}{update\_y()}}
+{\footnotesize\ttfamily \label{namespaceobserver_ad67aa1863a9e1c0810028b2f05d7712e} 
+observer.\+update\+\_\+y (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+update\+\_\+y updates the output vector with real values 
+
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00106}{106}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{namespaceobserver_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceobserver_aa881c0e1eb17816a9a63ded104decdd6}\index{observer@{observer}!feedback@{feedback}}
+\index{feedback@{feedback}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{feedback}{feedback}}
+{\footnotesize\ttfamily \label{namespaceobserver_aa881c0e1eb17816a9a63ded104decdd6} 
+int \mbox{\hyperlink{classobserver_1_1observer_a2c5d34a1555771ef93f63ee9d83724c7}{observer.\+feedback}} = 0\+:}
+
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00225}{225}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_ac224e91e9bc9bcfbd70637307bc26f8a}\index{observer@{observer}!state@{state}}
+\index{state@{state}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{namespaceobserver_ac224e91e9bc9bcfbd70637307bc26f8a} 
+int \mbox{\hyperlink{classobserver_1_1observer_ae19f95f09104799a5300be5c4fd4f1a5}{observer.\+state}} = 0\+:}
+
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00220}{220}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_ae1ff6e6437ad64a76aa92be2abff7d0a}\index{observer@{observer}!x\_estimated@{x\_estimated}}
+\index{x\_estimated@{x\_estimated}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{x\_estimated}{x\_estimated}}
+{\footnotesize\ttfamily \label{namespaceobserver_ae1ff6e6437ad64a76aa92be2abff7d0a} 
+\mbox{\hyperlink{classobserver_1_1observer_a3e49c3576abb200aa88dd2f1abd33d67}{observer.\+x\+\_\+estimated}}}
+
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00227}{227}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+
+\Hypertarget{namespaceobserver_a733d71895534e303d6821f34dce35034}\index{observer@{observer}!y\_estimated@{y\_estimated}}
+\index{y\_estimated@{y\_estimated}!observer@{observer}}
+\doxysubsubsection{\texorpdfstring{y\_estimated}{y\_estimated}}
+{\footnotesize\ttfamily \label{namespaceobserver_a733d71895534e303d6821f34dce35034} 
+\mbox{\hyperlink{classobserver_1_1observer_a24ba711f79c8c586706575146ea8d13f}{observer.\+y\+\_\+estimated}} = self.\+RK4\+\_\+solver(self.\+x, .\+02, self.\+u)}
+
+
+
+Definition at line \mbox{\hyperlink{observer_8py_source_l00227}{227}} of file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+

@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{iftex}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\ifPDFTeX
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+
+\fi
+\pagestyle{empty}
+\begin{document}
+\[        \dot{x} = A x + B u \qquad \text{(Eq. 1)}
+\]
+\pagebreak
+
+\[        y = C x + D u \qquad \text{(Eq. 2)}
+\]
+\pagebreak
+
+\[        x = 
+        \begin{bmatrix}
+        \Omega_l \\ \Omega_r \\ s \\ \phi
+        \end{bmatrix},
+        \qquad
+        u =
+        \begin{bmatrix}
+        V_l \\ V_r
+        \end{bmatrix},
+        \qquad
+        y =
+        \begin{bmatrix}
+        s_l \\ s_r \\ \phi \\ \dot{\phi}
+        \end{bmatrix}
+        \qquad \text{(Eq. 3–5)}
+\]
+\pagebreak
+
+\[        x_{k+1} = A_d x_k + B_d u^\* \qquad \text{(Eq. 6)}
+\]
+\pagebreak
+
+\[        y_k = C x_k \qquad \text{(Eq. 7)}
+\]
+\pagebreak
+
+\[        A_o = A - L C \qquad \text{(Eq. 8)}
+\]
+\pagebreak
+
+\[        B_o = B L \qquad \text{(Eq. 9)}
+\]
+\pagebreak
+
+\[        u^\* = 
+        \begin{bmatrix}
+        V_l \\ V_r \\ s_l \\ s_r \\ \phi \\ \dot{\phi}
+        \end{bmatrix}
+        \qquad \text{(Eq. 10)}
+\]
+\pagebreak
+
+$s$
+\pagebreak
+
+\end{document}

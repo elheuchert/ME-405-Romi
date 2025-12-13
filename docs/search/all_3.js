@@ -8,7 +8,7 @@ var searchData=
   ['baudrate_5',['baudrate',['../namespacepc__micro__reader.html#a7ffe13548d71cb347fd6bc35df9ee01b',1,'pc_micro_reader']]],
   ['bits_6',['bits',['../namespacemain.html#ae9e583c6d55b6164ddb1e42b0231b7fa',1,'main']]],
   ['black_7',['black',['../classline__sensor_1_1_line___sensor.html#a6c8e61b5ad97cdf2cc07a21f3b0e5406',1,'line_sensor::Line_Sensor']]],
-  ['black_5fdata_8',['black_data',['../classline__task_1_1line__task.html#afe1fee74b27b4cfb0aabf467d7300123',1,'line_task::line_task']]],
+  ['black_5fdata_8',['black_data',['../classline__task_1_1line__task.html#afe1fee74b27b4cfb0aabf467d7300123',1,'line_task.line_task.black_data'],['../namespaceline__task.html#aa35e9c77700ec20bd9382b2f255ac995',1,'line_task.black_data']]],
   ['black_5fref_9',['black_ref',['../classir__sensor_1_1_i_r___sensor.html#a65a6f94938625bcd8a3c8c58e1bc9d5b',1,'ir_sensor::IR_Sensor']]],
   ['bluetooth_10',['Bluetooth',['../index.html#bluetooth',1,'']]],
   ['buf1_11',['buf1',['../classline__sensor_1_1_line___sensor.html#abe966e1ca767aa7d4ef798421437ccb8',1,'line_sensor::Line_Sensor']]],

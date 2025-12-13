@@ -245,6 +245,26 @@ Bump Sensors</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">GND  </td><td class="markdownTableBodyNone">-  </td></tr>
 </table>
+<h1 class="doxsection"><a class="anchor" id="theory"></a>
+Theory</h1>
+<p>Two forms of estimation were used in this lab. First was a simple state estimator that took inputs and applied dynamics equations and the RK4 solver to guess where ROMI would be the next time the task ran. It would continue to add to that value in hopes that it stayed accurate. The second was a discretized version of the system with a feedback loop. Using system dynamic equations and an observer gain matrix, new equations were used that directly computed the next state of ROMI given its current state. The equations and matrices used are as follows (exact numerical values not shown):</p>
+<p>State Estimation:</p>
+<p>x_dot = A x + B u (Eq. 1)</p>
+<p>y = C x + D u (Eq. 2)</p>
+<p>The A, B, C, and D matrices are based on ROMI dynamics, using the following state, input, and output definitions:</p>
+<p>x = [Ω_l, Ω_r, s, φ]^T (Eq. 3) <br  />
+ u = [V_l, V_r]^T (Eq. 4) <br  />
+ y = [s_l, s_r, φ, φ_dot]^T (Eq. 5)</p>
+<p>Discretized Estimation:</p>
+<p>x_{k+1} = A_d x_k + B_d u* (Eq. 6)</p>
+<p>y_k = C x_k (Eq. 7)</p>
+<p>Where A_d and B_d are the discretized versions of A_o and B_o, defined as:</p>
+<p>A_o = A − L C (Eq. 8)</p>
+<p>B_o = B L (Eq. 9)</p>
+<p>The observer input vector is:</p>
+<p>u* = [V_l, V_r, s_l, s_r, φ, φ_dot]^T (Eq. 10)</p>
+<p>The total distance travelled (s), is the only state there is no direct measurement for hence the use of an observer. <br  />
+</p>
 <h1 class="doxsection"><a class="anchor" id="results"></a>
 Test Results and Performance</h1>
 <h2 class="doxsection"><a class="anchor" id="test"></a>
@@ -315,6 +335,28 @@ Track Performance</h2>
 </video>
 </p>
 <p>Figure 15. Attempt #3</p>
+<h1 class="doxsection"><a class="anchor" id="diagrams"></a>
+Task Diagrams</h1>
+<p>Below are the Finite State Machine transition diagrams for each task. They show the different states of the task, how they transition and what actions they take when transitioning.</p>
+<div class="image">
+<img src="Control_task.png" alt=""/>
+</div>
+<p> Figure 15. Control Task State Transition Diagram </p><div class="image">
+<img src="data_task.png" alt=""/>
+</div>
+<p> Figure 16. Data Collector Task State Transition Diagram </p><div class="image">
+<img src="UI_task.png" alt=""/>
+</div>
+<p> Figure 17. UI Task State Transition Diagram </p><div class="image">
+<img src="Imu_task.png" alt=""/>
+</div>
+<p> Figure 18. IMU Task State Transition Diagram </p><div class="image">
+<img src="motor_task.png" alt=""/>
+</div>
+<p> Figure 19. Motor Task State Transition Diagram </p><div class="image">
+<img src="pathing_task.png" alt=""/>
+</div>
+<p> Figure 20. Pathing Plan Task State Transition Diagram</p>
 <h1 class="doxsection"><a class="anchor" id="key"></a>
 Key takeaways</h1>
 <p>Our key takeaways from this project were learning how to successfully integrate all the hardware and bring the system close to achieving our goal. Moving forward, we would focus on improving our state estimation and refining the IMU outputs for distance and heading. These enhancements would increase consistency and would hopefully allow us to complete the course reliably. </p>

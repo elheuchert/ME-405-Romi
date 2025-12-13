@@ -95,14 +95,95 @@ $(function(){initNavTree('namespaceline__task.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:line_5Ftask" id="r_line_5Ftask"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classline__task_1_1line__task.html">line_task</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">add description here  <a href="classline__task_1_1line__task.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classline__task_1_1line__task.html" title="line_task class that can be initialized to be run with the cotask scheduler.">line_task</a> class that can be initialized to be run with the cotask scheduler.  <a href="classline__task_1_1line__task.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8a8769cc8c9b143b0975d12e53bc3920" id="r_a8a8769cc8c9b143b0975d12e53bc3920"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a8769cc8c9b143b0975d12e53bc3920">run</a> (self)</td></tr>
+<tr class="memdesc:a8a8769cc8c9b143b0975d12e53bc3920"><td class="mdescLeft">&#160;</td><td class="mdescRight">run is the generator that the cotask scheduler will run since our tasks are objects.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:af424651385a226e59d22204fa75e9d49" id="r_af424651385a226e59d22204fa75e9d49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af424651385a226e59d22204fa75e9d49">SENSOR_START</a> = 0</td></tr>
 <tr class="memitem:a2e536a9275c49e1b15f3d87d7b154fa9" id="r_a2e536a9275c49e1b15f3d87d7b154fa9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e536a9275c49e1b15f3d87d7b154fa9">SENSOR_END</a> = 12</td></tr>
+<tr class="memitem:a58fec441c04de2b6528bb57cf0844248" id="r_a58fec441c04de2b6528bb57cf0844248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58fec441c04de2b6528bb57cf0844248">state</a> = 0:</td></tr>
+<tr class="memitem:aa35e9c77700ec20bd9382b2f255ac995" id="r_aa35e9c77700ec20bd9382b2f255ac995"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa35e9c77700ec20bd9382b2f255ac995">black_data</a> = list(self.lineSensor.read_Calibrate_Data())</td></tr>
+<tr class="memitem:a410f9db0a08df171352e6e55a53e09f6" id="r_a410f9db0a08df171352e6e55a53e09f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a410f9db0a08df171352e6e55a53e09f6">got_black</a> = True</td></tr>
+<tr class="memitem:af21f68396ea8229730469249cef35d78" id="r_af21f68396ea8229730469249cef35d78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af21f68396ea8229730469249cef35d78">white_data</a> = list(self.lineSensor.read_Calibrate_Data())</td></tr>
+<tr class="memitem:aa5333efefde52e631f4990baf4aa97ff" id="r_aa5333efefde52e631f4990baf4aa97ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5333efefde52e631f4990baf4aa97ff">got_white</a> = True</td></tr>
 </table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a8a8769cc8c9b143b0975d12e53bc3920" name="a8a8769cc8c9b143b0975d12e53bc3920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8769cc8c9b143b0975d12e53bc3920">&#9670;&#160;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">line_task.run </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>run is the generator that the cotask scheduler will run since our tasks are objects. </p>
+<p>All shares it needs are already given to the task object on initialization. The generator will only run one state at a time on each run of the task. @detail The finite state machine for <a class="el" href="namespacecontrol__task.html">control_task</a> has 4 states. State 0: Check calibration state State 1: Calibrating state. Creates the calibration file State 2: Calibrated/Reading state. This is the final running state that <a class="el" href="classline__task_1_1line__task.html" title="line_task class that can be initialized to be run with the cotask scheduler.">line_task</a> will sit in filling centroid forever once its calibrated State 3: Calibration check state. Come here to check if the sensor is reading the file </p>
+
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00058">58</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+
+</div>
+</div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="aa35e9c77700ec20bd9382b2f255ac995" name="aa35e9c77700ec20bd9382b2f255ac995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35e9c77700ec20bd9382b2f255ac995">&#9670;&#160;</a></span>black_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classline__task_1_1line__task.html#afe1fee74b27b4cfb0aabf467d7300123">line_task.black_data</a> = list(self.lineSensor.read_Calibrate_Data())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00078">78</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+
+</div>
+</div>
+<a id="a410f9db0a08df171352e6e55a53e09f6" name="a410f9db0a08df171352e6e55a53e09f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410f9db0a08df171352e6e55a53e09f6">&#9670;&#160;</a></span>got_black</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classline__task_1_1line__task.html#a702791d971e7eee861a123058fa700bf">line_task.got_black</a> = True</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00080">80</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+
+</div>
+</div>
+<a id="aa5333efefde52e631f4990baf4aa97ff" name="aa5333efefde52e631f4990baf4aa97ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5333efefde52e631f4990baf4aa97ff">&#9670;&#160;</a></span>got_white</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classline__task_1_1line__task.html#a0247054ebd22333508c0b0f843c0abe7">line_task.got_white</a> = True</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00086">86</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+
+</div>
+</div>
 <a id="a2e536a9275c49e1b15f3d87d7b154fa9" name="a2e536a9275c49e1b15f3d87d7b154fa9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e536a9275c49e1b15f3d87d7b154fa9">&#9670;&#160;</a></span>SENSOR_END</h2>
 
@@ -115,7 +196,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00005">5</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00024">24</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>
@@ -131,7 +212,39 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00004">4</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00023">23</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+
+</div>
+</div>
+<a id="a58fec441c04de2b6528bb57cf0844248" name="a58fec441c04de2b6528bb57cf0844248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58fec441c04de2b6528bb57cf0844248">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classline__task_1_1line__task.html#ae51501acac9437c8ce714843a2e4f985">line_task.state</a> = 0:</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00062">62</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
+
+</div>
+</div>
+<a id="af21f68396ea8229730469249cef35d78" name="af21f68396ea8229730469249cef35d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af21f68396ea8229730469249cef35d78">&#9670;&#160;</a></span>white_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classline__task_1_1line__task.html#ac41f900575b1236c0449cd4f9de9483d">line_task.white_data</a> = list(self.lineSensor.read_Calibrate_Data())</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="line__task_8py_source.html#l00084">84</a> of file <a class="el" href="line__task_8py_source.html">line_task.py</a>.</p>
 
 </div>
 </div>

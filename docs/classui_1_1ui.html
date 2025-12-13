@@ -98,9 +98,9 @@ $(function(){initNavTree('classui_1_1ui.html','','classui_1_1ui-members'); });
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a864f0c6f9f3ec78481a6c51196a27740" id="r_a864f0c6f9f3ec78481a6c51196a27740"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a864f0c6f9f3ec78481a6c51196a27740">__init__</a> (self, <a class="el" href="#a516efca0f59aa59adb8c0da4731adf86">testing_flg</a>, <a class="el" href="#a30769635529534b5f470a150e8008171">m_state_l</a>, <a class="el" href="#aa82260796c82c07017da68f6a6d63ad5">m_state_r</a>, <a class="el" href="#a995f2970b96bc314b783779e0b7c744a">position</a>, <a class="el" href="#acc2e933d24839fd64eb692e5762d37c5">velocity</a>, <a class="el" href="#a1a2a560486596244f01e6eb546c8ac0c">times</a>, <a class="el" href="#a0be7845de17f205e6fb880ad28b957c0">PWM_l</a>, <a class="el" href="#a6188c524fd16397181bec2ff681392f9">PWM_r</a>, <a class="el" href="#a25b8e416d9f120a1390a7318f3230394">delay</a>, uart_obj, <a class="el" href="#af6bbf84102ddb5a5b5801b5e7d01373d">fwd_ref</a>, <a class="el" href="#afd1a969404e0291812e1104556bae52b">arc_ref</a>, <a class="el" href="#aff9f4d7686d071f59cc18c615d8c4546">piv_ref</a>, <a class="el" href="#a757fe3373c9de05362ac1422ef443b40">c_state</a>, <a class="el" href="#a213173cffeabf6851fa0e4dc0bf25cc0">velocity2</a>, <a class="el" href="#a70e0f47cd4d89b2c110487b6a77bd106">need_Calibrate</a>, <a class="el" href="#afe2c07e9d29ef08db0d5e524dec34058">ready_Black</a>, <a class="el" href="#a05a3d1da341894fe8010c2641b749e0a">ready_White</a>, <a class="el" href="#a4e33e8d9bd212d6352bf7bcb5064881f">automatic_mode</a>, <a class="el" href="#a58392f37e76b5f2415f4224076221d27">imu_flg</a>)</td></tr>
-<tr class="memdesc:a864f0c6f9f3ec78481a6c51196a27740"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Interface.  <br /></td></tr>
+<tr class="memdesc:a864f0c6f9f3ec78481a6c51196a27740"><td class="mdescLeft">&#160;</td><td class="mdescRight">User Interface Initialization.  <br /></td></tr>
 <tr class="memitem:a45e55c67807741484a7a7fa74beb3daf" id="r_a45e55c67807741484a7a7fa74beb3daf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45e55c67807741484a7a7fa74beb3daf">run</a> (self)</td></tr>
-<tr class="memdesc:a45e55c67807741484a7a7fa74beb3daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">UI Run.  <br /></td></tr>
+<tr class="memdesc:a45e55c67807741484a7a7fa74beb3daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the various tasks in UI.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -260,12 +260,12 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>User Interface. </p>
+<p>User Interface Initialization. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">P1</td><td>Testing Flag </td></tr>
     <tr><td class="paramname">P2</td><td>Left Motor State </td></tr>
-    <tr><td class="paramname">P3</td><td>RIght Motor State </td></tr>
+    <tr><td class="paramname">P3</td><td>Right Motor State </td></tr>
     <tr><td class="paramname">P4</td><td>Position </td></tr>
     <tr><td class="paramname">P5</td><td>Velocity </td></tr>
     <tr><td class="paramname">P6</td><td>Encoder Time </td></tr>
@@ -307,7 +307,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>UI Run. </p>
+<p>Runs the various tasks in UI. </p>
 <p><b> State 0 </b> Checking for Bluetooth Command</p>
 <p><b> State 1 </b> Motor Step Resposne Test</p>
 <p><b> State 2 </b> Wating for Test Data To be collected</p>

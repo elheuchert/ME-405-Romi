@@ -1,12 +1,74 @@
 \doxysection{C\+:/\+Users/14083/vscode\+\_\+python/observer.py File Reference}
 \hypertarget{observer_8py}{}\label{observer_8py}\index{C:/Users/14083/vscode\_python/observer.py@{C:/Users/14083/vscode\_python/observer.py}}
+
+
+This file contains a class to create a observer object which is compatible with the cotask scheduler to run as a cooperative task.  
+
+
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classobserver_1_1observer}{observer.\+observer}}
-\begin{DoxyCompactList}\small\item\em add description here \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em observer class that can be initialized to be run with the cotask scheduler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespaceobserver}{observer}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceobserver_a841a69a03d1c2403f91297ce768526fb}{observer.\+update\+\_\+x}} (self)
+\begin{DoxyCompactList}\small\item\em update\+\_\+x updates the state vector with real values and the last guess total distance \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a8c3aef460dd18b304705dbf0c8fae8bb}{observer.\+update\+\_\+u}} (self)
+\begin{DoxyCompactList}\small\item\em update\+\_\+u updates the input vector with real values assuming full battery voltage \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_ad67aa1863a9e1c0810028b2f05d7712e}{observer.\+update\+\_\+y}} (self)
+\begin{DoxyCompactList}\small\item\em update\+\_\+y updates the output vector with real values \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_adfb5029006db8f540249f2e100eafd87}{observer.\+update\+\_\+u\+\_\+star}} (self)
+\begin{DoxyCompactList}\small\item\em update\+\_\+u\+\_\+star updates the discetized combined input and output vectors \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a345a90f5d63d54a21190facff3eb2b4e}{observer.\+calc\+\_\+derivative}} (self, x, u)
+\begin{DoxyCompactList}\small\item\em calc\+\_\+derivative calculates the derivative state vector using the continuous model with no feedback \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a7537934c5ae4a728fca68bb8df7280ec}{observer.\+calc\+\_\+output}} (self, x, u)
+\begin{DoxyCompactList}\small\item\em calc\+\_\+output calculates the output vector using the continuous model with no feedback \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a6242b332b9bad573532d0120f46bac25}{observer.\+calc\+\_\+discrete\+\_\+state}} (self, x, u\+\_\+star)
+\begin{DoxyCompactList}\small\item\em calc\+\_\+discrete\+\_\+state calculates the next state vector using the discretized model \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_aa0ba8bfb71c9be1d30e8173079c0b1b4}{observer.\+calc\+\_\+discrete\+\_\+output}} (self, x)
+\begin{DoxyCompactList}\small\item\em calc\+\_\+discrete\+\_\+state calculates the current output vector using the discretized model \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a9f5db79182e18cf79d49294f13b2de7f}{observer.\+RK4\+\_\+solver}} (self, x, t\+\_\+step, u)
+\begin{DoxyCompactList}\small\item\em RK4\+\_\+solver is an implementation of the RK4\+\_\+solver algorithm that will be used to estimate the state if using a continuous model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceobserver_a34127165f976f5a7012bc0cadc169c2c}{observer.\+run}} (self)
+\begin{DoxyCompactList}\small\item\em run is the generator that the cotask scheduler will run since our tasks are objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespaceobserver_ac224e91e9bc9bcfbd70637307bc26f8a}{observer.\+state}} = 0\+:
+\item 
+int \mbox{\hyperlink{namespaceobserver_aa881c0e1eb17816a9a63ded104decdd6}{observer.\+feedback}} = 0\+:
+\item 
+\mbox{\hyperlink{namespaceobserver_ae1ff6e6437ad64a76aa92be2abff7d0a}{observer.\+x\+\_\+estimated}}
+\item 
+\mbox{\hyperlink{namespaceobserver_a733d71895534e303d6821f34dce35034}{observer.\+y\+\_\+estimated}} = self.\+RK4\+\_\+solver(self.\+x, .\+02, self.\+u)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a class to create a observer object which is compatible with the cotask scheduler to run as a cooperative task. 
+
+This task always estimates the state of ROMI given its sensor inputs using a discretized state space model.
+
+NOTE\+: These values have errors and the errors get worse as ROMI runs it is only an estimation.
+
+IMPORTANT\+: This observer will reach a null space if the encoder values and yaw value are not possible with each other. If the encoder positions can\textquotesingle{}t equal the yaw value of the sensors this will fail. This happens on start because the encoders start at zero but the yaw does not necessarily start at 0 as well. The correction for this is in state 0 of the control task where the encoders are given an offset to make them match whatever the starting yaw is.
+
+\begin{DoxyAuthor}{Author}
+Alex Power, Lucas Heuchert, Erik Heuchert 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/Nov-\/11 Approximate date of creation of file 
+
+2025-\/Dec-\/12 Final alterations made 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{observer_8py_source}{observer.\+py}}.
+

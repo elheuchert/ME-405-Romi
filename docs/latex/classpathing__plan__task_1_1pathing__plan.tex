@@ -1,22 +1,27 @@
 \doxysection{pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan Class Reference}
 \hypertarget{classpathing__plan__task_1_1pathing__plan}{}\label{classpathing__plan__task_1_1pathing__plan}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
+
+
+Pathing plan task class for ROMI navigation.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a38b6d3f0f49f0dd291b72ed599b9964a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_abff51fcfeaf60454f26345295c001e2c}{total\+\_\+dist}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_aaa34ec5c7e9681cf64e98c73a2f2d497}{automatic\+\_\+mode}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_acbccb9a71dd80a13c13fc310eebda0bd}{c\+\_\+state}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_af0ae95dd8213d368e752fa9c7791dcfd}{fwd\+\_\+ref}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a7fb18bad7cfd09bb560c7fd72924c55f}{piv\+\_\+ref}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a583a8c2f5f08dee13cad6bb6a66a5c3f}{yaw}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a4f93c869bce694c024134b1281a55273}{centroid\+\_\+goal}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a51be1d30bc9417f40801cbd9e713c485}{yaw\+\_\+goal}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a937263f8369bcfc879238dca1922003f}{bump\+\_\+on}}, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a02617d8fa41d58f48dee07e3b7d40304}{bump\+\_\+flg}})
-\begin{DoxyCompactList}\small\item\em {\bfseries{init}} is the \doxylink{namespacepathing__plan__task}{pathing\+\_\+plan\+\_\+task} object initializer which takes 10 arguments. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{namespacepathing__plan__task}{pathing\+\_\+plan\+\_\+task} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_ad08c3360eb952dab07e98c69169c43b5}{wrapper}} (self, val)
-\begin{DoxyCompactList}\small\item\em wrapper will take a yaw value that is typically a goal to be set and wrap it around the 0-\/2PI range the IMU uses. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Wrap a yaw value to the 0-\/2PI range. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_afdc5715b2647cb1fe291cb542f25e686}{line\+\_\+following}} (self, final\+\_\+dist, next\+\_\+state)
-\begin{DoxyCompactList}\small\item\em line\+\_\+following sets all flags necessary to put control task into a line following mode and it checks if ROMI has moved far enough. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Configure control task for line following and check progress. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a7cabe7403a1b005a063a5fd59b557e8e}{alignment\+\_\+goal}} (self, \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a51be1d30bc9417f40801cbd9e713c485}{yaw\+\_\+goal}}, rot\+\_\+direction, next\+\_\+state)
-\begin{DoxyCompactList}\small\item\em alignment\+\_\+goal sets all flags necessary to put control task into a pivoting mode to make large inaccurate turns. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Configure control task for large pivoting turns. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a29b99a247d490f7e9d969d3622cd4500}{alignment\+\_\+control}} (self, next\+\_\+state)
-\begin{DoxyCompactList}\small\item\em alignment\+\_\+control sets all flags necessary to put control task into a controlled turning mode for minute, accurate yaw changes. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Configure control task for precise controlled turning. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_aa2e83fa62bb08fdfc4c34e9ab2c8f0f4}{free\+\_\+traverse}} (self, final\+\_\+dist, next\+\_\+state, ref)
-\begin{DoxyCompactList}\small\item\em free\+\_\+traverse sets all flags necessary to put control task into a forward motion mode and it checks if ROMI has moved far enough. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Configure control task for forward motion and check progress. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a50ae901bf0f81f3057545b804b84b2a4}{run}} (self)
-\begin{DoxyCompactList}\small\item\em run is the generator that the cotask scheduler will run since our tasks are objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Main task generator for cooperative scheduler. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,16 +55,18 @@ int \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a6bb6c2b8bb880f7a
 \item 
 list \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_a45e990ffaaa72445aa8c548b099e6d03}{yaw\+\_\+goals\+\_\+5}} = \mbox{[}\mbox{\hyperlink{namespacepathing__plan__task_a94fc6cb9a3d19d2ecae8521dd7b00e7a}{YAWGOAL5}}, EXPYAWGOAL1, EXPYAWGOAL2, EXPYAWGOAL3\mbox{]}
 \item 
-list \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_ac69576519b4ed2fc84a45cb6d3242893}{direction}} = \mbox{[}1,1,-\/1,1\mbox{]}
+list \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_ac69576519b4ed2fc84a45cb6d3242893}{direction}} = \mbox{[}1, 1, -\/1, 1\mbox{]}
 \item 
 list \mbox{\hyperlink{classpathing__plan__task_1_1pathing__plan_ae442e5d1eef7bdf96e9d9153e02112ed}{dist}} = \mbox{[}\mbox{\hyperlink{namespacepathing__plan__task_a61128550890e7a95b80dd41adce8b5f6}{CP4\+\_\+\+GARAGE}}, 3600, 3800, 4000\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Pathing plan task class for ROMI navigation. 
 
+This class implements a finite state machine for autonomous navigation of the Pololu ROMI robot through a predefined course with checkpoints and obstacles. 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00087}{87}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00091}{91}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 
 
@@ -74,29 +81,29 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+\_\+\+\_\+init\+\_\+\+\_\+ (\b
 
 
 
-{\bfseries{init}} is the \doxylink{namespacepathing__plan__task}{pathing\+\_\+plan\+\_\+task} object initializer which takes 10 arguments. 
+Initialize the \doxylink{namespacepathing__plan__task}{pathing\+\_\+plan\+\_\+task} object. 
 
-The arguments are a mix of data shares and flag shares. 
+
 \begin{DoxyParams}{Parameters}
-{\em total\+\_\+dist} & total\+\_\+dist is a float share that the observer sets with how far ROMI has travelled. It is used to figure out when ROMI reaches checkpoints. It does go negative when ROMI reverses which is handled in the WALL state. \\
+{\em total\+\_\+dist} & Float share containing total distance traveled by ROMI (set by observer) \\
 \hline
-{\em automatic\+\_\+mode} & automatic\+\_\+mode is an integer share flag that is set to tell \doxylink{namespacecontrol__task}{control\+\_\+task} that it should start automatically following a line. pathing plan sets this whenever it wants to line follow. \\
+{\em automatic\+\_\+mode} & Integer share flag to enable automatic line following mode \\
 \hline
-{\em c\+\_\+state} & c\+\_\+state is an integer share flag that holds the expected state of \doxylink{namespacecontrol__task}{control\+\_\+task}. It is set by UI or pathing plan to tell \doxylink{namespacecontrol__task}{control\+\_\+task} the expected motion of ROMI. \\
+{\em c\+\_\+state} & Integer share flag holding the expected state of \doxylink{namespacecontrol__task}{control\+\_\+task} \\
 \hline
-{\em fwd\+\_\+ref} & fwd\+\_\+ref is an integer share that holds the expected forward reference speed of ROMI in mm.\+s. It is set by the UI task for testing purposes or by pathing plan task for course navigation. \\
+{\em fwd\+\_\+ref} & Integer share holding forward reference speed in mm/s \\
 \hline
-{\em piv\+\_\+ref} & piv\+\_\+ref is a float share that holds the expected pivoting reference angular speed of ROMI in rad/s. It is set by the UI task for testing purposes or by pathing plan task for course navigation. \\
+{\em piv\+\_\+ref} & Float share holding pivoting reference angular speed in rad/s \\
 \hline
-{\em yaw} & yaw is a float share that the IMU task fills with the current yaw of ROMI. \doxylink{classpathing__plan__task_1_1pathing__plan}{pathing\+\_\+plan} uses it for setting correct yaw goals. \\
+{\em yaw} & Float share containing current yaw from IMU task \\
 \hline
-{\em centroid\+\_\+goal} & centroid\+\_\+goal is a float share that the pathing plan task sets. The control task will use it as the line following centroid controller set point. \\
+{\em centroid\+\_\+goal} & Float share for line following centroid controller set point \\
 \hline
-{\em yaw\+\_\+goal} & yaw\+\_\+goal is a float share that is the set point of the heading control. It is the angle ROMI should turn to on the course and is set by pathing plan for course navigation. \\
+{\em yaw\+\_\+goal} & Float share for heading control set point (target angle) \\
 \hline
-{\em bump\+\_\+on} & bump\+\_\+on is a integer share flag that pathing plan task sets to turn on the bump sensors. \\
+{\em bump\+\_\+on} & Integer share flag to turn on bump sensors \\
 \hline
-{\em bump\+\_\+flg} & bump\+\_\+flg is an integer share flag that the bump task will set if it is on and the bump sensors touch something. It is used for detecting the wall. \\
+{\em bump\+\_\+flg} & Integer share flag set by bump task when sensors are triggered \\
 \hline
 \end{DoxyParams}
 
@@ -116,16 +123,21 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+alignment\+\_\+control (\begin
 
 
 
-alignment\+\_\+control sets all flags necessary to put control task into a controlled turning mode for minute, accurate yaw changes. 
+Configure control task for precise controlled turning. 
 
-It returns True if \doxylink{namespacecontrol__task}{control\+\_\+task} says that the yaw is aligned properly, and it will set the next state. It is expected to be used after alignment\+\_\+goal. It will not set the yaw\+\_\+goal itself. 
+Sets all necessary flags for controlled turning mode to achieve precise yaw alignment. Expected to be used after \doxylink{classpathing__plan__task_1_1pathing__plan_a7cabe7403a1b005a063a5fd59b557e8e}{alignment\+\_\+goal()}. Does not set yaw\+\_\+goal itself.
+
+
 \begin{DoxyParams}{Parameters}
-{\em next\+\_\+state} & next\+\_\+state is the state number of the next\+\_\+state for pathing plan to go to \\
+{\em next\+\_\+state} & State number to transition to when alignment is complete \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if \doxylink{namespacecontrol__task}{control\+\_\+task} indicates proper alignment, False otherwise 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00162}{162}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00191}{191}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 Here is the caller graph for this function\+:
 % FIG 0
@@ -137,20 +149,25 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+alignment\+\_\+goal (\begin{Do
 
 
 
-alignment\+\_\+goal sets all flags necessary to put control task into a pivoting mode to make large inaccurate turns. 
+Configure control task for large pivoting turns. 
 
-It returns True if ROMI if within 0.\+5 rad of the goal and sets the next state, and the yaw\+\_\+goal for alignment control and it returns False if ROMI has to turn more 
+Sets all necessary flags to put \doxylink{namespacecontrol__task}{control\+\_\+task} into pivoting mode for making large, inaccurate turns. Transitions to the next state when within 0.\+5 rad of goal.
+
+
 \begin{DoxyParams}{Parameters}
-{\em yaw\+\_\+goal} & yaw\+\_\+goal is the yaw value that is checked to see if pathing plan should go to the next state \\
+{\em yaw\+\_\+goal} & Target yaw value to reach \\
 \hline
-{\em rot\+\_\+direction} & rot\+\_\+direction should be either 1 or -\/1 to set which direction to turn ROMI. 1 is CCW, -\/1 is CW \\
+{\em rot\+\_\+direction} & Direction to turn (1 for CCW, -\/1 for CW) \\
 \hline
-{\em next\+\_\+state} & next\+\_\+state is the state number of the next\+\_\+state for pathing plan to go to \\
+{\em next\+\_\+state} & State number to transition to when goal is reached \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if ROMI is within tolerance and state is updated, False otherwise 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00145}{145}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00167}{167}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 Here is the call graph for this function\+:
 % FIG 1
@@ -164,20 +181,25 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+free\+\_\+traverse (\begin{Dox
 
 
 
-free\+\_\+traverse sets all flags necessary to put control task into a forward motion mode and it checks if ROMI has moved far enough. 
+Configure control task for forward motion and check progress. 
 
-It returns True if ROMI has moved far enough and sets the next state, and it returns False if ROMI has further to go. 
+Sets all necessary flags to put \doxylink{namespacecontrol__task}{control\+\_\+task} into forward motion mode and monitors whether ROMI has traveled far enough to transition to the next state.
+
+
 \begin{DoxyParams}{Parameters}
-{\em final\+\_\+dist} & final\+\_\+dist is the value to compare the total distance to to see if its time to go to the next state \\
+{\em final\+\_\+dist} & Distance threshold to compare against total distance traveled \\
 \hline
-{\em next\+\_\+state} & next\+\_\+state is the state number of the next\+\_\+state for pathing plan to go to \\
+{\em next\+\_\+state} & State number to transition to when distance is reached \\
 \hline
-{\em ref} & ref is the reference speed for ROMI to traverse at in mm/s \\
+{\em ref} & Reference speed for ROMI to traverse at in mm/s \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if ROMI has moved far enough and state is updated, False otherwise 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00173}{173}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00207}{207}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 Here is the caller graph for this function\+:
 % FIG 3
@@ -189,18 +211,23 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+line\+\_\+following (\begin{Do
 
 
 
-line\+\_\+following sets all flags necessary to put control task into a line following mode and it checks if ROMI has moved far enough. 
+Configure control task for line following and check progress. 
 
-It returns True if ROMI has moved far enough and sets the next state, and it returns False if ROMI has further to go. 
+Sets all necessary flags to put \doxylink{namespacecontrol__task}{control\+\_\+task} into line following mode and monitors whether ROMI has traveled far enough to transition to the next state.
+
+
 \begin{DoxyParams}{Parameters}
-{\em final\+\_\+dist} & final\+\_\+dist is the value to compare the total distance to to see if its time to go to the next state \\
+{\em final\+\_\+dist} & Distance threshold to compare against total distance traveled \\
 \hline
-{\em next\+\_\+state} & next\+\_\+state is the state number of the next\+\_\+state for pathing plan to go to \\
+{\em next\+\_\+state} & State number to transition to when distance is reached \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if ROMI has moved far enough and state is updated, False otherwise 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00131}{131}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00149}{149}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 Here is the caller graph for this function\+:
 % FIG 4
@@ -212,21 +239,27 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+run (\begin{DoxyParamCaption}\
 
 
 
-run is the generator that the cotask scheduler will run since our tasks are objects. 
+Main task generator for cooperative scheduler. 
 
-All shares it needs are already given to the task object on initialization. The generator will only run one state at a time on each run of the task.
+Implements a 34-\/state finite state machine for autonomous course navigation. Each state executes once in sequence and never returns. The generator yields control after processing each state.
 
-The finite state machine for \doxylink{namespacecontrol__task}{control\+\_\+task} has 34 states. These states always go in order. Each state runs once and is never returned to. The order of states is as follows\+: LINE\+\_\+\+FOLLOW\+\_\+\+STATE\+\_\+0, CENTROID\+\_\+\+OFFSET\+\_\+\+STATE, ALIGNMENT\+\_\+\+GOAL\+\_\+1, ALIGNMENT\+\_\+\+CONTROL\+\_\+1, FORK, ALIGNMENT\+\_\+\+GOAL\+\_\+2, ALIGNMENT\+\_\+\+CONTROL\+\_\+2, FREE\+\_\+\+TRAVERSE\+\_\+1, CP2\+\_\+\+PIVOT\+\_\+1, CP2\+\_\+\+PIVOT\+\_\+2, LINE\+\_\+\+FOLLOWING\+\_\+2, ALIGNMENT\+\_\+\+GOAL\+\_\+3, ALIGNMENT\+\_\+\+CONTROL\+\_\+3, FREE\+\_\+\+TRAVERSE\+\_\+2, LINE\+\_\+\+FOLLOW\+\_\+3, ALIGNMENT\+\_\+\+GOAL\+\_\+4, ALIGNMENT\+\_\+\+CONTROL\+\_\+4, FREE\+\_\+\+TRAVERSE\+\_\+3, LINE\+\_\+\+FOLLOW\+\_\+\+GRG, ALIGNMENT\+\_\+\+GOAL\+\_\+5, ALIGNMENT\+\_\+\+CONTROL\+\_\+5, FREE\+\_\+\+TRAVERSE\+\_\+4, ALIGNMENT\+\_\+\+GOAL\+\_\+6, ALIGNMENT\+\_\+\+CONTROL\+\_\+6, FREE\+\_\+\+TRAVERSE\+\_\+5, WALL, ALIGNMENT\+\_\+\+GOAL\+\_\+7, ALIGNMENT\+\_\+\+CONTROL\+\_\+7, CUP, ALIGNMENT\+\_\+\+GOAL\+\_\+8, ALIGNMENT\+\_\+\+CONTROL\+\_\+8, FINISH, FINISH\+\_\+\+LINE
+State sequence overview\+:
 
-Fulling describing each state\textquotesingle{}s exact behavior will probably be more confusing than helpful but here\textquotesingle{}s a general overview of the path\+:
+States execute in the following order\+: LINE\+\_\+\+FOLLOW\+\_\+\+STATE\+\_\+0, CENTROID\+\_\+\+OFFSET\+\_\+\+STATE, ALIGNMENT\+\_\+\+GOAL\+\_\+1, ALIGNMENT\+\_\+\+CONTROL\+\_\+1, FORK, ALIGNMENT\+\_\+\+GOAL\+\_\+2, ALIGNMENT\+\_\+\+CONTROL\+\_\+2, FREE\+\_\+\+TRAVERSE\+\_\+1, CP2\+\_\+\+PIVOT\+\_\+1, CP2\+\_\+\+PIVOT\+\_\+2, LINE\+\_\+\+FOLLOWING\+\_\+2, ALIGNMENT\+\_\+\+GOAL\+\_\+3, ALIGNMENT\+\_\+\+CONTROL\+\_\+3, FREE\+\_\+\+TRAVERSE\+\_\+2, LINE\+\_\+\+FOLLOW\+\_\+3, ALIGNMENT\+\_\+\+GOAL\+\_\+4, ALIGNMENT\+\_\+\+CONTROL\+\_\+4, FREE\+\_\+\+TRAVERSE\+\_\+3, LINE\+\_\+\+FOLLOW\+\_\+\+GRG, ALIGNMENT\+\_\+\+GOAL\+\_\+5, ALIGNMENT\+\_\+\+CONTROL\+\_\+5, FREE\+\_\+\+TRAVERSE\+\_\+4, ALIGNMENT\+\_\+\+GOAL\+\_\+6, ALIGNMENT\+\_\+\+CONTROL\+\_\+6, FREE\+\_\+\+TRAVERSE\+\_\+5, WALL, ALIGNMENT\+\_\+\+GOAL\+\_\+7, ALIGNMENT\+\_\+\+CONTROL\+\_\+7, CUP, ALIGNMENT\+\_\+\+GOAL\+\_\+8, ALIGNMENT\+\_\+\+CONTROL\+\_\+8, FINISH, FINISH\+\_\+\+LINE
 
-Start line following to the Y, move the centroid to the left a bit to keep right, face CP1, drive directly there, face CP2, drive directly there, line follow a bit, turn to CP3, drive there pushing cup out of the way, turn to CP4, drive there and line follow a bit at the end to align, align at garage entrance, drive through, turn towards wall, drive out, hit wall and backup, turn towards cup, drive over it, turn towards finish, drive back to the line, use line following to get into CP6.
+Path overview\+: Start line following to the Y, move the centroid to the left to keep right, face CP1, drive directly there, face CP2, drive directly there, line follow briefly, turn to CP3, drive there pushing cup out of the way, turn to CP4, drive there and line follow at the end to align, align at garage entrance, drive through, turn towards wall, drive out, hit wall and backup, turn towards cup, drive over it, turn towards finish, drive back to the line, use line following to get into CP6.
 
-Note\+: The way alignments are done is with a goal state then a control state. The goal states makes large turns at set pivoting speeds. The control state uses a controller to get precise alignment with our goal heading. Goals are set by the goal state though so a controller align must always be ran after a goal align.
+\begin{DoxyNote}{Note}
+Alignments use two-\/stage process\+: goal state for large turns at set speeds, then control state for precise alignment using controller 
 
-Note\+: Yaw drift is inconsistent so this path is not consistent do not run ROMI unsupervised. 
+Yaw drift is inconsistent making the path unreliable -\/ do not run unsupervised
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Yields state number after each iteration 
+\end{DoxyReturn}
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00193}{193}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00228}{228}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 Here is the call graph for this function\+:
 % FIG 5
@@ -238,16 +271,21 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+wrapper (\begin{DoxyParamCapti
 
 
 
-wrapper will take a yaw value that is typically a goal to be set and wrap it around the 0-\/2PI range the IMU uses. 
+Wrap a yaw value to the 0-\/2PI range. 
 
-This stops goals from being negative or larger than the yaw reading will ever be. 
+This method ensures yaw values stay within the valid range used by the IMU, preventing negative values or values exceeding 2π.
+
+
 \begin{DoxyParams}{Parameters}
-{\em val} & val is the yaw that is being wrapped \\
+{\em val} & The yaw value to be wrapped \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wrapped yaw value in the range \mbox{[}0, 2π\mbox{]} 
+\end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00120}{120}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00132}{132}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 Here is the caller graph for this function\+:
 % FIG 6
@@ -264,7 +302,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+automatic\+\_\+mode = automati
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00102}{102}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00116}{116}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a02617d8fa41d58f48dee07e3b7d40304}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!bump\_flg@{bump\_flg}}
 \index{bump\_flg@{bump\_flg}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -274,7 +312,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+bump\+\_\+flg = bump\+\_\+flg}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00111}{111}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00125}{125}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a52e8874ddec1618d5c70406f0bc82809}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!bump\_off@{bump\_off}}
 \index{bump\_off@{bump\_off}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -284,7 +322,7 @@ int pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+bump\+\_\+off = 0}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00112}{112}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00126}{126}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a937263f8369bcfc879238dca1922003f}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!bump\_on@{bump\_on}}
 \index{bump\_on@{bump\_on}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -294,7 +332,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+bump\+\_\+on = bump\+\_\+on}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00110}{110}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00124}{124}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_acbccb9a71dd80a13c13fc310eebda0bd}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!c\_state@{c\_state}}
 \index{c\_state@{c\_state}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -304,7 +342,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+c\+\_\+state = c\+\_\+state}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00103}{103}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00117}{117}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a4f93c869bce694c024134b1281a55273}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!centroid\_goal@{centroid\_goal}}
 \index{centroid\_goal@{centroid\_goal}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -314,17 +352,17 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+centroid\+\_\+goal = centroid\
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00108}{108}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00122}{122}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_ac69576519b4ed2fc84a45cb6d3242893}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!direction@{direction}}
 \index{direction@{direction}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
 \doxysubsubsection{\texorpdfstring{direction}{direction}}
 {\footnotesize\ttfamily \label{classpathing__plan__task_1_1pathing__plan_ac69576519b4ed2fc84a45cb6d3242893} 
-list pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+direction = \mbox{[}1,1,-\/1,1\mbox{]}}
+list pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+direction = \mbox{[}1, 1, -\/1, 1\mbox{]}}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00115}{115}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00129}{129}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_ae442e5d1eef7bdf96e9d9153e02112ed}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!dist@{dist}}
 \index{dist@{dist}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -334,7 +372,7 @@ list pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+dist = \mbox{[}\mbox{\hyp
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00116}{116}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00130}{130}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_af0ae95dd8213d368e752fa9c7791dcfd}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!fwd\_ref@{fwd\_ref}}
 \index{fwd\_ref@{fwd\_ref}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -344,7 +382,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+fwd\+\_\+ref = fwd\+\_\+ref}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00104}{104}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00118}{118}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a6bb6c2b8bb880f7a77eb1f8d0752b5f5}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!iteration@{iteration}}
 \index{iteration@{iteration}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -354,7 +392,7 @@ int pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+iteration = 0}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00113}{113}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00127}{127}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a7fb18bad7cfd09bb560c7fd72924c55f}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!piv\_ref@{piv\_ref}}
 \index{piv\_ref@{piv\_ref}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -364,7 +402,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+piv\+\_\+ref = piv\+\_\+ref}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00107}{107}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00121}{121}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a1d72985cc982ceb82ef7b26d13b8ad2d}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!state@{state}}
 \index{state@{state}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -374,7 +412,7 @@ int pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+state = \mbox{\hyperlink{n
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00100}{100}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00114}{114}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_abff51fcfeaf60454f26345295c001e2c}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!total\_dist@{total\_dist}}
 \index{total\_dist@{total\_dist}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -384,7 +422,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+total\+\_\+dist = total\+\_\+d
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00101}{101}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00115}{115}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a583a8c2f5f08dee13cad6bb6a66a5c3f}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!yaw@{yaw}}
 \index{yaw@{yaw}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -394,7 +432,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+yaw = yaw}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00105}{105}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00119}{119}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a51be1d30bc9417f40801cbd9e713c485}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!yaw\_goal@{yaw\_goal}}
 \index{yaw\_goal@{yaw\_goal}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -404,7 +442,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+yaw\+\_\+goal = yaw\+\_\+goal}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00109}{109}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00123}{123}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a45e990ffaaa72445aa8c548b099e6d03}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!yaw\_goals\_5@{yaw\_goals\_5}}
 \index{yaw\_goals\_5@{yaw\_goals\_5}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -414,7 +452,7 @@ list pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+yaw\+\_\+goals\+\_\+5 = \
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00114}{114}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00128}{128}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 \Hypertarget{classpathing__plan__task_1_1pathing__plan_a1253595431c8daad87b2917f0b53214b}\index{pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}!yaw\_init@{yaw\_init}}
 \index{yaw\_init@{yaw\_init}!pathing\_plan\_task.pathing\_plan@{pathing\_plan\_task.pathing\_plan}}
@@ -424,7 +462,7 @@ pathing\+\_\+plan\+\_\+task.\+pathing\+\_\+plan.\+yaw\+\_\+init = 0}
 
 
 
-Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00106}{106}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
+Definition at line \mbox{\hyperlink{pathing__plan__task_8py_source_l00120}{120}} of file \mbox{\hyperlink{pathing__plan__task_8py_source}{pathing\+\_\+plan\+\_\+task.\+py}}.
 
 
 

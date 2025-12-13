@@ -2,95 +2,95 @@
 \hypertarget{line__task_8py_source}{}\label{line__task_8py_source}\index{C:/Users/14083/vscode\_python/line\_task.py@{C:/Users/14083/vscode\_python/line\_task.py}}
 \mbox{\hyperlink{line__task_8py}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00001}\mbox{\hyperlink{namespaceline__task}{00001}}\ \textcolor{keyword}{import}\ line\_sensor}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00002}00002\ \textcolor{keyword}{import}\ os}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00003}00003\ \textcolor{keyword}{import}\ gc}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00004}\mbox{\hyperlink{namespaceline__task_af424651385a226e59d22204fa75e9d49}{00004}}\ SENSOR\_START\ =\ 0}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00005}\mbox{\hyperlink{namespaceline__task_a2e536a9275c49e1b15f3d87d7b154fa9}{00005}}\ SENSOR\_END\ =\ 12}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00007}\mbox{\hyperlink{classline__task_1_1line__task}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classline__task_1_1line__task}{line\_task}}:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00008}00008\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00009}\mbox{\hyperlink{classline__task_1_1line__task_af3907a101c7220b632db8106ff91747f}{00009}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classline__task_1_1line__task_af3907a101c7220b632db8106ff91747f}{\_\_init\_\_}}(self,\ lineSensor,\ l\_state,\ need\_Calibrate,\ ready\_Black,\ ready\_White,\ centroid):}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00010}\mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{00010}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{lineSensor}}\ =\ lineSensor}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00011}\mbox{\hyperlink{classline__task_1_1line__task_a7660f7398f0dabb102e3bdc91509ac5c}{00011}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a7660f7398f0dabb102e3bdc91509ac5c}{l\_state}}\ =\ l\_state\ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00012}\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{00012}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00013}\mbox{\hyperlink{classline__task_1_1line__task_ac742d6e8d5a016ee44f730ac6fd6b997}{00013}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ac742d6e8d5a016ee44f730ac6fd6b997}{need\_Cal}}\ =\ need\_Calibrate}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00014}\mbox{\hyperlink{classline__task_1_1line__task_a63f9d9c50447a18e893fcc98f505d958}{00014}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a63f9d9c50447a18e893fcc98f505d958}{ready\_Black}}\ =\ ready\_Black}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00015}\mbox{\hyperlink{classline__task_1_1line__task_a7afa31913c51a156aca95028825c75da}{00015}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a7afa31913c51a156aca95028825c75da}{ready\_White}}\ =\ ready\_White}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00016}\mbox{\hyperlink{classline__task_1_1line__task_a5e919e7a5d97d28abf4cfa7767433d36}{00016}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a5e919e7a5d97d28abf4cfa7767433d36}{centroid}}\ =\ centroid}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00017}\mbox{\hyperlink{classline__task_1_1line__task_afe1fee74b27b4cfb0aabf467d7300123}{00017}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_afe1fee74b27b4cfb0aabf467d7300123}{black\_data}}\ =\ [0.0]*13}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00018}\mbox{\hyperlink{classline__task_1_1line__task_ac41f900575b1236c0449cd4f9de9483d}{00018}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ac41f900575b1236c0449cd4f9de9483d}{white\_data}}\ =\ [0.0]*13}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00019}\mbox{\hyperlink{classline__task_1_1line__task_a702791d971e7eee861a123058fa700bf}{00019}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a702791d971e7eee861a123058fa700bf}{got\_black}}\ =\ \textcolor{keyword}{False}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00020}\mbox{\hyperlink{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c0abe7}{00020}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c0abe7}{got\_white}}\ =\ \textcolor{keyword}{False}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00022}\mbox{\hyperlink{classline__task_1_1line__task_a25572f4bb2546c1c31f1d3ad89fec333}{00022}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classline__task_1_1line__task_a25572f4bb2546c1c31f1d3ad89fec333}{run}}(self):}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{True}):}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ calibration\ state}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ans\ =\ self.\mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{lineSensor}}.calibrate()}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(ans)}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ans:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}sensor\ calibrated"{}})}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ =\ 2}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Sensor\ not\ calibrated"{}})}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ =\ 1}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ac742d6e8d5a016ee44f730ac6fd6b997}{need\_Cal}}.put(1)}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 0}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Calibrating\ state}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ ==\ 1:\ \ \ \ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classline__task_1_1line__task_a63f9d9c50447a18e893fcc98f505d958}{ready\_Black}}.get():}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Getting\ Black"{})}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_afe1fee74b27b4cfb0aabf467d7300123}{black\_data}}\ =\ list(self.\mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{lineSensor}}.read\_Calibrate\_Data())}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a63f9d9c50447a18e893fcc98f505d958}{ready\_Black}}.put(0)}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a702791d971e7eee861a123058fa700bf}{got\_black}}\ =\ \textcolor{keyword}{True}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.black\_data)}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classline__task_1_1line__task_a7afa31913c51a156aca95028825c75da}{ready\_White}}.get():}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Getting\ White"{})}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ac41f900575b1236c0449cd4f9de9483d}{white\_data}}\ =\ list(self.\mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{lineSensor}}.read\_Calibrate\_Data())}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a7afa31913c51a156aca95028825c75da}{ready\_White}}.put(0)}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c0abe7}{got\_white}}\ =\ \textcolor{keyword}{True}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.white\_data)}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classline__task_1_1line__task_a702791d971e7eee861a123058fa700bf}{got\_black}}\ \textcolor{keywordflow}{and}\ self.\mbox{\hyperlink{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c0abe7}{got\_white}}\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Got\ my\ data\ trying\ to\ make\ a\ file"{})}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ac742d6e8d5a016ee44f730ac6fd6b997}{need\_Cal}}.put(0)}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ =\ 3}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#\ Get\ the\ folder\ where\ *this\ script*\ is\ located}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ current\_folder\ =\ os.path.dirname(os.path.abspath(\_\_file\_\_))}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#\ Build\ the\ full\ path\ to\ the\ new\ text\ file}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ file\_path\ =\ os.path.join(current\_folder,\ "{}IR\_cal.txt"{})}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ file\_path\ =\ \textcolor{stringliteral}{"{}/flash/IR\_cal.txt"{}}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}file\ creation\ complete"{})}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ 1)\ See\ where\ a\ relative\ path\ points}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Write\ both\ arrays\ to\ the\ file}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{with}\ open(file\_path,\ \textcolor{stringliteral}{"{}w"{}})\ \textcolor{keyword}{as}\ file:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ for\ w,\ b\ in\ zip(self.white\_data,\ self.black\_data):}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ file.write(f"{}\{w\},\{b\}\(\backslash\)n"{})}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combined\ =\ [f\textcolor{stringliteral}{"{}\{a\},\{b\}"{}}\ \textcolor{keywordflow}{for}\ a,\ b\ \textcolor{keywordflow}{in}\ zip(self.\mbox{\hyperlink{classline__task_1_1line__task_afe1fee74b27b4cfb0aabf467d7300123}{black\_data}},\ self.\mbox{\hyperlink{classline__task_1_1line__task_ac41f900575b1236c0449cd4f9de9483d}{white\_data}})]}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ line\ \textcolor{keywordflow}{in}\ combined:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ file.write(line\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ for\ x,\ y\ in\ zip(self.black\_data,\ self.white\_data):}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ file.write(f"{}\{x\}\(\backslash\)t\{y\}\(\backslash\)n"{})}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 1}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Reading\ state}}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ ==\ 2:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gc.collect()}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a5e919e7a5d97d28abf4cfa7767433d36}{centroid}}.put(self.\mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{lineSensor}}.getCentroid())}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 2}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ ==\ 3:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ans\ =\ self.\mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{lineSensor}}.calibrate()}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(ans)}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ans:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ =\ 2}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 3}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
-\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00001}\mbox{\hyperlink{namespaceline__task}{00001}}\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00020}00020\ \textcolor{keyword}{import}\ line\_sensor}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00021}00021\ \textcolor{keyword}{import}\ os}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00022}00022\ \textcolor{keyword}{import}\ gc}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00023}\mbox{\hyperlink{namespaceline__task_af424651385a226e59d22204fa75e9d49}{00023}}\ SENSOR\_START\ =\ 0}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00024}\mbox{\hyperlink{namespaceline__task_a2e536a9275c49e1b15f3d87d7b154fa9}{00024}}\ SENSOR\_END\ =\ 12}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00027}\mbox{\hyperlink{classline__task_1_1line__task}{00027}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classline__task_1_1line__task}{line\_task}}:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00028}\mbox{\hyperlink{classline__task_1_1line__task_af3907a101c7220b632db8106ff91747f}{00028}}\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00039}\mbox{\hyperlink{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c0abe7}{00039}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classline__task_1_1line__task_af3907a101c7220b632db8106ff91747f}{\_\_init\_\_}}(self,\ lineSensor,\ l\_state,\ need\_Calibrate,\ ready\_Black,\ ready\_White,\ centroid):}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00040}00040\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ab4bdcda5bb99d1207e9b8d952cee99d3}{lineSensor}}\ =\ lineSensor}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00041}00041\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a7660f7398f0dabb102e3bdc91509ac5c}{l\_state}}\ =\ l\_state\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00042}00042\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ae51501acac9437c8ce714843a2e4f985}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ac742d6e8d5a016ee44f730ac6fd6b997}{need\_Cal}}\ =\ need\_Calibrate}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a63f9d9c50447a18e893fcc98f505d958}{ready\_Black}}\ =\ ready\_Black}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a7afa31913c51a156aca95028825c75da}{ready\_White}}\ =\ ready\_White}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a5e919e7a5d97d28abf4cfa7767433d36}{centroid}}\ =\ centroid}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_afe1fee74b27b4cfb0aabf467d7300123}{black\_data}}\ =\ [0.0]*13}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_ac41f900575b1236c0449cd4f9de9483d}{white\_data}}\ =\ [0.0]*13}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a702791d971e7eee861a123058fa700bf}{got\_black}}\ =\ \textcolor{keyword}{False}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classline__task_1_1line__task_a0247054ebd22333508c0b0f843c0abe7}{got\_white}}\ =\ \textcolor{keyword}{False}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00058}\mbox{\hyperlink{namespaceline__task_a8a8769cc8c9b143b0975d12e53bc3920}{00058}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespaceline__task_a8a8769cc8c9b143b0975d12e53bc3920}{run}}(self):}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{True}):}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ calibration\ state}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00062}\mbox{\hyperlink{namespaceline__task_a58fec441c04de2b6528bb57cf0844248}{00062}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.state\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ans\ =\ self.lineSensor.calibrate()}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(ans)}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ans:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}sensor\ calibrated"{}})}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.state\ =\ 2}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Sensor\ not\ calibrated"{}})}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.state\ =\ 1}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.need\_Cal.put(1)}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 0}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Calibrating\ state}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.state\ ==\ 1:\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.ready\_Black.get():}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Getting\ Black"{})}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00078}\mbox{\hyperlink{namespaceline__task_aa35e9c77700ec20bd9382b2f255ac995}{00078}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.black\_data\ =\ list(self.lineSensor.read\_Calibrate\_Data())}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.ready\_Black.put(0)}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00080}\mbox{\hyperlink{namespaceline__task_a410f9db0a08df171352e6e55a53e09f6}{00080}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.got\_black\ =\ \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.black\_data)}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.ready\_White.get():}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Getting\ White"{})}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00084}\mbox{\hyperlink{namespaceline__task_af21f68396ea8229730469249cef35d78}{00084}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.white\_data\ =\ list(self.lineSensor.read\_Calibrate\_Data())}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.ready\_White.put(0)}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00086}\mbox{\hyperlink{namespaceline__task_aa5333efefde52e631f4990baf4aa97ff}{00086}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.got\_white\ =\ \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.white\_data)}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.got\_black\ \textcolor{keywordflow}{and}\ self.got\_white\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Got\ my\ data\ trying\ to\ make\ a\ file"{})}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.need\_Cal.put(0)}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.state\ =\ 3}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#\ Get\ the\ folder\ where\ *this\ script*\ is\ located}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ current\_folder\ =\ os.path.dirname(os.path.abspath(\_\_file\_\_))}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \#\ Build\ the\ full\ path\ to\ the\ new\ text\ file}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ file\_path\ =\ os.path.join(current\_folder,\ "{}IR\_cal.txt"{})}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ file\_path\ =\ \textcolor{stringliteral}{"{}/flash/IR\_cal.txt"{}}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}file\ creation\ complete"{})}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ 1)\ See\ where\ a\ relative\ path\ points}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Write\ both\ arrays\ to\ the\ file}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{with}\ open(file\_path,\ \textcolor{stringliteral}{"{}w"{}})\ \textcolor{keyword}{as}\ file:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ for\ w,\ b\ in\ zip(self.white\_data,\ self.black\_data):}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ file.write(f"{}\{w\},\{b\}\(\backslash\)n"{})}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combined\ =\ [f\textcolor{stringliteral}{"{}\{a\},\{b\}"{}}\ \textcolor{keywordflow}{for}\ a,\ b\ \textcolor{keywordflow}{in}\ zip(self.black\_data,\ self.white\_data)]}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ line\ \textcolor{keywordflow}{in}\ combined:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ file.write(line\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ for\ x,\ y\ in\ zip(self.black\_data,\ self.white\_data):}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ file.write(f"{}\{x\}\(\backslash\)t\{y\}\(\backslash\)n"{})}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 1}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Reading\ state}}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.state\ ==\ 2:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gc.collect()}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.centroid.put(self.lineSensor.getCentroid())}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 2}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.state\ ==\ 3:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ans\ =\ self.lineSensor.calibrate()}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(ans)}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ans:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.state\ =\ 2}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 3}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
+\DoxyCodeLine{\Hypertarget{line__task_8py_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.state\ }
 
 \end{DoxyCode}
