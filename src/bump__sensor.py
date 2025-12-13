@@ -4,7 +4,10 @@ from pyb import Pin, Timer, ADC
 # This class manages bump sensors for romi, to detect any collisions.
 # 
 # The bump sensor we are using is made specifically for the Pololu Romi, and is placed on the front of the chassis board. The sensors should be connected to digital input pins, with their internal pull ups enabled. This means that the lines will be floating up and will be pulled down when a switch is pressed. 
-class Bump_Sensor:
+#  @author Alex Power, Lucas Heuchert, Erik Heuchert
+#  @date   2025-Dec-8 Approximate date of creation of file
+#  @date   2025-Dec-12 Final alterations made
+class Bump_Sensor: 
     ## @brief This initializes the Pins to input pins and enables internal pull-ups for one set of bump sensors (three switches).
     # @param P1 Pin Object
     # @param P2 Pin Object
@@ -12,7 +15,7 @@ class Bump_Sensor:
     def __init__ (self, p1,p2,p3):
         
         self.Pin_A=Pin(p1,mode=Pin.IN, pull=Pin.PULL_UP)
-        self.Pin_B=Pi n(p2,mode=Pin.IN, pull=Pin.PULL_UP)
+        self.Pin_B=Pin(p2,mode=Pin.IN, pull=Pin.PULL_UP)
         self.Pin_C=Pin(p3,mode=Pin.IN, pull=Pin.PULL_UP)
         
     ## @brief This function tests if any one of three sensors has been pressed.
