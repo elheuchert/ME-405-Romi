@@ -8,7 +8,7 @@ from pyb import Timer, Pin
 # It drives the motor, reads the encoder and runs continuously, setting flags that are shared with other tasks.  
 class motor_encoder_left_class:   
     
-    ## @brief User Interface
+    ## @brief Right Encoder Initialization
     # @param 1 Motor Object
     # @param 2 Encoder Object
     # @param 3 Left Motor State in UI
@@ -30,7 +30,7 @@ class motor_encoder_left_class:
         self.state = 0
         self.delay=delay
     
-    ## @brief Encoder Left Run
+    ## @brief Runs the tasks for the Right Motor
     #
     # <b> State 0 </b> Enable The Left Motor
     #

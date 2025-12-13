@@ -1,6 +1,20 @@
-## @brief add description here
+## @brief Collects data from shares
+#
+# This task class which contains a generator finite state machine that collects data from shares and puts them into ques to be read
+#
+# This class runs continuously
 class data_collector:
     
+    ## @brief Data Collector Initialization
+    # @param P1 Testing Flag
+    # @param P2 Position
+    # @param P3 Velocity
+    # @param P4 Times
+    # @param P5 Left Motor Position
+    # @param P6 Left Motor Velocity
+    # @param P7 Right Motor Position
+    # @param P8 Right Motor Velocity
+    # @param P9 Velocity 2
     def __init__(self, testing_flg, position, velocity, times, position_l, velocity_l,position_r, velocity_r, velocity2):
         self.testing_flg=testing_flg
         self.position=position
@@ -12,7 +26,19 @@ class data_collector:
         self.velocity_r = velocity_r
         self.velocity2 = velocity2 
         self.state = 1
-    # Initialize the collector
+    ## @brief Runs the various tasks Data Collector
+    #
+    # <b> State 1 </b> Wait for data collection call
+    #
+    # <b> State 2 </b> Load the Queue for left motor velocity
+    #
+    # <b> State 3 </b> Load the Queue for right motor velocity
+    #
+    # <b> State 4 </b> Load the Queue for left motor position
+    #
+    # <b> State 5 </b> Load the Queue for right motor position
+    #
+    # <b> State 6 </b> Load the Queue for both motor velocities
     def run(self):
         
         while True:

@@ -28,7 +28,7 @@ class imu_task:
         self.yaw = yaw
         self.yaw_velocity = yaw_velocity
 
-    ## @brief Encoder Right Run
+    ## @brief Runs the IMU Tasks
     #
     # <b> State 0 </b> Initialize the IMU by writing to it the coefficients and changing it to the desired fusion mode
     #
