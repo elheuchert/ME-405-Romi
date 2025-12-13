@@ -3,7 +3,10 @@ from matplotlib import pyplot
 from time import sleep 
 from datetime import datetime
 import csv
-
+## @brief User tests
+#
+# Project that allows user to select which tests to perform. Can perform step tests, and Romi motion tests.
+# This project allows the user to connect to the Romi via bluetooth and communicate with the UI task.
 NUMBERS_OF_TESTS = 10
 VALUES_SENT = 50
 period=13/1000
@@ -17,29 +20,42 @@ velo_lim = 300 #velocity in mm/s
 angular_lim = 10 #angular velocity in rad/s
 test_done=True
 
-# Reads the header line from the data
+## brief Reads the header line from the data
 def saveHeaders():
     thead, dhead = ser.readline().decode().strip().split(",")
     #print(thead, dhead)
     return thead, dhead
 
-# Saves the data sent from a single test
+## brief Saves the data sent from a single test
 def saveData():
     t,d = map(float, ser.readline().decode().strip().split(","))
     return t, d
 
-# Plots passed data
+## brief Plots passed data
+# @param times time data
+# @param data data being passed
+# @param thead timer header text
+# @param dhead distance header text
+# @param legend legend text
 def plotData(times, data, thead, dhead, legend):
     pyplot.plot(times,data, label = legend)
     pyplot.xlabel(thead)
     pyplot.ylabel(dhead)
-
+## brief Averages data
+# @param data_list data list
+# <b> Returns </b> 
+#  <blockquote>
+# average of data being passed
 def average(data_list):
     sum = 0
     for i in data_list:
         sum += i
     return sum/len(data_list)
-
+## brief Returns time cosntant of motor
+# @param data data from tests
+# <b> Returns </b> 
+#  <blockquote>
+# time constant value
 def timeConstant(data):
     steady_state = data[-1]
     tau_val= 0.63*steady_state
@@ -48,7 +64,12 @@ def timeConstant(data):
             tau= i*period
             return tau
     return
-    
+## brief Returns motor gain of motor
+# @param test_num, number of tests
+# @param data data from tests
+# <b> Returns </b> 
+#  <blockquote>
+# Motor gain  
 def motorGain(test_num, data):
     steady_state = data[-1]
     if test_num <= NUMBERS_OF_TESTS:
@@ -56,7 +77,10 @@ def motorGain(test_num, data):
     elif test_num <= 2* NUMBERS_OF_TESTS:
         motor_gain = steady_state/((test_num-NUMBERS_OF_TESTS)/10)
     return motor_gain
-
+## brief Saves and creates test plots
+# <b> Effects </b> 
+#  <blockquote>
+# Plots and saves plots to computer
 def get_test_plots():
     
     values_read = 0
@@ -132,7 +156,10 @@ def get_test_plots():
     #     pyplot.clf()
     # values_read += 1
     return
-
+## brief Runs the User tests
+# 
+# Promts user to select which tests to perform
+# These commands are: "Send a command: s=full motor step response, t=test, 0=stop romi, 1=straight, 2=Arc turn, 3= pivot, q=quit: "
 def run_tests():
 
 
