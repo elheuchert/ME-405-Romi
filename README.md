@@ -11,6 +11,9 @@ The documentation site includes details about
 - Software architecture
 - Test results and performance
 - Key takeaways
+- Theory
+- Task Diagrams
+- Priorities
 
 ## Authors
 - Erik Heuchert
