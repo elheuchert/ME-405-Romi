@@ -1,6 +1,7 @@
 var index =
 [
     [ "Introduction", "index.html#intro", null ],
+    [ "Software architecture", "index.html#software", null ],
     [ "Hardware", "index.html#hardware", [
       [ "Motors", "index.html#motors", null ],
       [ "Encoders", "index.html#encoders", null ],

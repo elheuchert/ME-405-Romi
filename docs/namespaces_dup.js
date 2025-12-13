@@ -150,7 +150,6 @@ var namespaces_dup =
       [ "velo_lim", "namespacepc__micro__reader.html#a0b64d9deda4bf5bdbb8232a2b574b12e", null ]
     ] ],
     [ "task_share", "namespacetask__share.html", "namespacetask__share" ],
-    [ "test", "namespacetest.html", null ],
     [ "ui", "namespaceui.html", "namespaceui" ],
     [ "ui_old", "namespaceui__old.html", [
       [ "ui", "namespaceui__old.html#aa1480ff287afc8d0a81edba3d53b83d6", null ],

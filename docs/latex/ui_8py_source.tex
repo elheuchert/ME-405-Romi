@@ -5,348 +5,348 @@
 \DoxyCodeLine{\Hypertarget{ui_8py_source_l00001}\mbox{\hyperlink{namespaceui}{00001}}\ \textcolor{keyword}{from}\ pyb\ \textcolor{keyword}{import}\ USB\_VCP}
 \DoxyCodeLine{\Hypertarget{ui_8py_source_l00002}00002\ \textcolor{keyword}{from}\ pyb\ \textcolor{keyword}{import}\ UART}
 \DoxyCodeLine{\Hypertarget{ui_8py_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00004}\mbox{\hyperlink{classui_1_1ui}{00004}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classui_1_1ui}{ui}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00005}00005\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00006}\mbox{\hyperlink{classui_1_1ui_a864f0c6f9f3ec78481a6c51196a27740}{00006}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classui_1_1ui_a864f0c6f9f3ec78481a6c51196a27740}{\_\_init\_\_}}(self,\ testing\_flg,\ m\_state\_l,\ m\_state\_r,\ position,\ velocity,\ times,\ PWM\_l,\ PWM\_r,}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00007}00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ delay,\ uart\_obj,fwd\_ref,\ arc\_ref,\ piv\_ref,\ c\_state,\ velocity2,\ need\_Calibrate,\ ready\_Black,\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ready\_White,\ automatic\_mode,\ imu\_flg):}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00009}\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{00009}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}\ =\ testing\_flg}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00010}\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{00010}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}\ =\ m\_state\_l}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00011}\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{00011}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}\ =\ m\_state\_r}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00012}\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{00012}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}\ =\ position}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00013}\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{00013}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}\ =\ velocity}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00014}\mbox{\hyperlink{classui_1_1ui_a1a2a560486596244f01e6eb546c8ac0c}{00014}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a1a2a560486596244f01e6eb546c8ac0c}{times}}\ =\ times}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00015}\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{00015}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00016}\mbox{\hyperlink{classui_1_1ui_a9da9e91758d2fbf23f96a806b50f04a4}{00016}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a9da9e91758d2fbf23f96a806b50f04a4}{ser}}=USB\_VCP()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00017}\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{00017}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ =\ 10}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00018}\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{00018}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ =\ 2}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00019}\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{00019}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00020}\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{00020}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00021}\mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{00021}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{PWM\_l}}\ =\ PWM\_l}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00022}\mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{00022}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{PWM\_r}}\ =\ PWM\_r}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00023}\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{00023}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}=delay}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00024}\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{00024}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}\ =\ uart\_obj}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00025}\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{00025}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{headers\_v}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00026}\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{00026}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{headers\_p}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00027}\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{00027}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{ui\_delay}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00028}\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{00028}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\_ref}}\ =\ fwd\_ref}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00029}\mbox{\hyperlink{classui_1_1ui_ac61f0f8a85fc25bf76bc034792f4bf5e}{00029}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ac61f0f8a85fc25bf76bc034792f4bf5e}{msg\_send}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00030}\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{00030}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\_ref}}\ =\ arc\_ref}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00031}\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{00031}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\_ref}}\ =\ piv\_ref}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00032}\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{00032}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}\ =\ c\_state}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00033}\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{00033}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}\ =\ velocity2}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00034}\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{00034}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00035}\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{00035}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00036}\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{00036}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00037}\mbox{\hyperlink{classui_1_1ui_a70e0f47cd4d89b2c110487b6a77bd106}{00037}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a70e0f47cd4d89b2c110487b6a77bd106}{need\_Calibrate}}\ =\ need\_Calibrate}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00038}\mbox{\hyperlink{classui_1_1ui_afe2c07e9d29ef08db0d5e524dec34058}{00038}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afe2c07e9d29ef08db0d5e524dec34058}{ready\_Black}}\ =\ ready\_Black}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00039}\mbox{\hyperlink{classui_1_1ui_a05a3d1da341894fe8010c2641b749e0a}{00039}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a05a3d1da341894fe8010c2641b749e0a}{ready\_White}}\ =\ ready\_White}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00040}\mbox{\hyperlink{classui_1_1ui_a3fc7c0ba38512b6e883e5da95e616005}{00040}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a3fc7c0ba38512b6e883e5da95e616005}{data\_requested}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00041}00041\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00042}\mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{00042}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{automatic\_mode}}\ =\ automatic\_mode}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00043}\mbox{\hyperlink{classui_1_1ui_a58392f37e76b5f2415f4224076221d27}{00043}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a58392f37e76b5f2415f4224076221d27}{imu\_flg}}\ =\ imu\_flg}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00045}00045\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00046}\mbox{\hyperlink{classui_1_1ui_a45e55c67807741484a7a7fa74beb3daf}{00046}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classui_1_1ui_a45e55c67807741484a7a7fa74beb3daf}{run}}(self):}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00047}00047\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ for\ start\ command\ from\ bluetooth}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}==0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Comment\ out\ if\ you\ want\ to\ run\ tests\ on\ the\ bot}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Keep\ in\ if\ you\ want\ bot\ to\ just\ try\ to\ follow\ a\ line}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}checking\ if\ needs\ calibration"{})}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.need\_Calibrate.get())}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a70e0f47cd4d89b2c110487b6a77bd106}{need\_Calibrate}}.get()\ ==\ 1:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}checked\ Need\ calibrate)"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a3fc7c0ba38512b6e883e5da95e616005}{data\_requested}}\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}Need\ Calibration\ Data\(\backslash\)r\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a3fc7c0ba38512b6e883e5da95e616005}{data\_requested}}\ =\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 10}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00061}00061\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.uart.write(b"{}still\ running\ rn"{})}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}waiting"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ char\_in\ =\ self.uart.read(1).decode()}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Full\ motor\ step\ response\ test\ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ char\_in\ ==\ \textcolor{stringliteral}{"{}s"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Straight\ drive}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}1"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=4}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Arced\ turn}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}2"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=5}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00006}\mbox{\hyperlink{classui_1_1ui}{00006}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classui_1_1ui}{ui}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00007}00007\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00009}\mbox{\hyperlink{classui_1_1ui_a864f0c6f9f3ec78481a6c51196a27740}{00009}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classui_1_1ui_a864f0c6f9f3ec78481a6c51196a27740}{\_\_init\_\_}}(self,\ testing\_flg,\ m\_state\_l,\ m\_state\_r,\ position,\ velocity,\ times,\ PWM\_l,\ PWM\_r,}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ delay,\ uart\_obj,fwd\_ref,\ arc\_ref,\ piv\_ref,\ c\_state,\ velocity2,\ need\_Calibrate,\ ready\_Black,\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ready\_White,\ automatic\_mode,\ imu\_flg):}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00012}\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{00012}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}\ =\ testing\_flg}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00013}\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{00013}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}\ =\ m\_state\_l}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00014}\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{00014}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}\ =\ m\_state\_r}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00015}\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{00015}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}\ =\ position}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00016}\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{00016}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}\ =\ velocity}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00017}\mbox{\hyperlink{classui_1_1ui_a1a2a560486596244f01e6eb546c8ac0c}{00017}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a1a2a560486596244f01e6eb546c8ac0c}{times}}\ =\ times}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00018}\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{00018}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00019}\mbox{\hyperlink{classui_1_1ui_a9da9e91758d2fbf23f96a806b50f04a4}{00019}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a9da9e91758d2fbf23f96a806b50f04a4}{ser}}=USB\_VCP()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00020}\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{00020}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ =\ 10}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00021}\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{00021}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ =\ 2}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00022}\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{00022}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00023}\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{00023}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00024}\mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{00024}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{PWM\_l}}\ =\ PWM\_l}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00025}\mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{00025}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{PWM\_r}}\ =\ PWM\_r}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00026}\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{00026}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}=delay}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00027}\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{00027}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}\ =\ uart\_obj}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00028}\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{00028}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{headers\_v}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00029}\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{00029}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{headers\_p}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00030}\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{00030}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{ui\_delay}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00031}\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{00031}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\_ref}}\ =\ fwd\_ref}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00032}\mbox{\hyperlink{classui_1_1ui_ac61f0f8a85fc25bf76bc034792f4bf5e}{00032}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ac61f0f8a85fc25bf76bc034792f4bf5e}{msg\_send}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00033}\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{00033}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\_ref}}\ =\ arc\_ref}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00034}\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{00034}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\_ref}}\ =\ piv\_ref}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00035}\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{00035}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}\ =\ c\_state}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00036}\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{00036}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}\ =\ velocity2}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00037}\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{00037}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00038}\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{00038}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00039}\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{00039}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00040}\mbox{\hyperlink{classui_1_1ui_a70e0f47cd4d89b2c110487b6a77bd106}{00040}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a70e0f47cd4d89b2c110487b6a77bd106}{need\_Calibrate}}\ =\ need\_Calibrate}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00041}\mbox{\hyperlink{classui_1_1ui_afe2c07e9d29ef08db0d5e524dec34058}{00041}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afe2c07e9d29ef08db0d5e524dec34058}{ready\_Black}}\ =\ ready\_Black}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00042}\mbox{\hyperlink{classui_1_1ui_a05a3d1da341894fe8010c2641b749e0a}{00042}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a05a3d1da341894fe8010c2641b749e0a}{ready\_White}}\ =\ ready\_White}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00043}\mbox{\hyperlink{classui_1_1ui_a3fc7c0ba38512b6e883e5da95e616005}{00043}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a3fc7c0ba38512b6e883e5da95e616005}{data\_requested}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00045}\mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{00045}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{automatic\_mode}}\ =\ automatic\_mode}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00046}\mbox{\hyperlink{classui_1_1ui_a58392f37e76b5f2415f4224076221d27}{00046}}\ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a58392f37e76b5f2415f4224076221d27}{imu\_flg}}\ =\ imu\_flg}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00047}00047\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00048}00048\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00050}\mbox{\hyperlink{classui_1_1ui_a45e55c67807741484a7a7fa74beb3daf}{00050}}\ \ \ \ \ \textcolor{keyword}{def\ }\mbox{\hyperlink{classui_1_1ui_a45e55c67807741484a7a7fa74beb3daf}{run}}(self):}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00051}00051\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ for\ start\ command\ from\ bluetooth}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}==0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Comment\ out\ if\ you\ want\ to\ run\ tests\ on\ the\ bot}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Keep\ in\ if\ you\ want\ bot\ to\ just\ try\ to\ follow\ a\ line}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}checking\ if\ needs\ calibration"{})}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.need\_Calibrate.get())}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a70e0f47cd4d89b2c110487b6a77bd106}{need\_Calibrate}}.get()\ ==\ 1:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}checked\ Need\ calibrate)"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a3fc7c0ba38512b6e883e5da95e616005}{data\_requested}}\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}Need\ Calibration\ Data\(\backslash\)r\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a3fc7c0ba38512b6e883e5da95e616005}{data\_requested}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 10}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#self.uart.write(b"{}still\ running\ rn"{})}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}waiting"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ char\_in\ =\ self.uart.read(1).decode()}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Full\ motor\ step\ response\ test\ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ char\_in\ ==\ \textcolor{stringliteral}{"{}s"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Straight\ drive}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=4}
 \DoxyCodeLine{\Hypertarget{ui_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Pivot\ turn}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}3"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=6\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Arced\ turn}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=5}
 \DoxyCodeLine{\Hypertarget{ui_8py_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Stop\ command}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}0"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 7}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Pivot\ turn}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}=6\ }
 \DoxyCodeLine{\Hypertarget{ui_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Testing\ state\ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}t"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}got\ a\ t"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 8}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}g"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 12}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}i"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 13}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 0\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Test\ Setup\ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 1:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ for\ motor\ delays}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.get()\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.put(5)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.put(5)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Send\ start\ commands}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.get()==1\ \textcolor{keywordflow}{and}\ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.get()\ ==1:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Flush\ queues}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.any()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.get()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.any()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.get()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Set\ motors}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{PWM\_l}}.put(self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{PWM\_r}}.put(self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ for\ time\ for\ next\ kind\ of\ test}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ !=\ 1:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ If\ next\ kind\ of\ test\ go\ to\ new\ test}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ +\ 1)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Go\ to\ next\ state\ and\ tell\ motors\ to\ update}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 2}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.put(2)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.put(2)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Waiting\ for\ data}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 2:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Velocity\ Tests}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()\ <=\ 3:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.full()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ ==\ 10\ \textcolor{keywordflow}{and}\ self.\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{headers\_v}}\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}Times,\ Velocity(mm/s)\(\backslash\)r\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{headers\_v}}\ =\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.any()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(str(self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}).encode())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(\textcolor{stringliteral}{"{},\ "{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel\ =\ (self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.get())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(f\textcolor{stringliteral}{"{}\{vel:.3f\}"{}}.encode())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ +=\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ +=\ 10}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#If\ that\ was\ the\ last\ test\ go\ to\ next\ test\ type}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ >=\ 110:\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ =\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ =\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ =\ 10}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0\ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(0)\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 3}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 2}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Position\ Tests}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.full()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ ==\ 10\ \textcolor{keywordflow}{and}\ self.\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{headers\_p}}\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}Times,\ Position(mm)\(\backslash\)r\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{headers\_p}}\ =\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.any()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(str(self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}).encode())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(\textcolor{stringliteral}{"{},\ "{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos\ \ =\ (self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.get())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(f\textcolor{stringliteral}{"{}\{pos:.3f\}"{}}.encode())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ +=\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ +=\ 10\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ If\ that\ was\ the\ last\ test\ go\ to\ wait\ state}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ >=\ 110:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ =\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ ==\ 5:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Reset\ variables\ for\ next\ test\ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{PWM\_l}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{PWM\_r}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.put(1)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.put(2)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.put(2)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ =\ 10}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ =\ 2}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{headers\_p}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{headers\_v}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 2\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ =\ 1\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ =\ 10}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 3}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 2\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 3:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{ui\_delay}}\ +=\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{ui\_delay}}\ >=\ 10:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{ui\_delay}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 3}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Go\ forward\ state}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 4:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{False}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\_ref}}.put(int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip()))}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.fwd\_ref.get())}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{True}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(1)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 4}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Turn\ in\ an\ arc\ state}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 5:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{False}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\_ref}}.put(int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip()))}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{True}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(2)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 5}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00217}00217\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Pivot\ in\ place\ state}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 6:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{False}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\_ref}}.put(int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip()))}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{True}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(3)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 6}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00228}00228\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Stop\ command\ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 7:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Went\ to\ state\ 7"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\_ref}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\_ref}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\_ref}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(4)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{automatic\_mode}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 7}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00239}00239\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Testing\ check\ \ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 8:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ =\ int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Got\ which\ test"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}}\ =\ int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Got\ a\ test\ ref"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Setting\ up\ test\ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}}\ !=\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ for\ motor\ delays\ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.get()\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()\ ==\ 0:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.put(5)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.put(5)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Send\ start\ commands\ if\ delay\ over}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.get()\ ==\ 1:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#if\ self.m\_state\_l.get()==1\ and\ self.m\_state\_r.get()\ ==1:}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Flush\ queues}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}flsuh\ queues"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.any()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.get()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.any()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.get()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}setting\ testing\ flag"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(6)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 8\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Set\ up\ correct\ controller\ state\ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}setting\ up\ controller"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ ==\ 1:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\_ref}}.put(self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(1)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ ==\ 2:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\_ref}}.put(self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(2)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ ==\ 3:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\_ref}}.put(self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(3)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 9}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 8}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Waiting\ for\ Data}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 9:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.full()\ ==\ \textcolor{keyword}{True})\ \&\ (self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.full()\ ==\ \textcolor{keyword}{True}):}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}About\ to\ send\ headers"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}Times,\ Velocity(mm/s)\(\backslash\)r\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.any()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}About\ to\ send\ left\ motor\ data"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(str(self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}).encode())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(\textcolor{stringliteral}{"{},\ "{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel\ =\ (self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.get())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(f\textcolor{stringliteral}{"{}\{vel:.3f\}"{}}.encode())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ +=\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Sent\ that\ bitch"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.any()\ ==\ \textcolor{keyword}{True}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}About\ to\ send\ right\ motor\ data"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(str(self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}).encode())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(\textcolor{stringliteral}{"{},\ "{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel\ =\ (self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.get())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(f\textcolor{stringliteral}{"{}\{vel:.3f\}"{}}.encode())}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ +=\ 1}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Sent\ it"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(0)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Asking\ motors\ to\ turn\ off"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 7}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Wait\ to\ get\ Black\ Calibration\ Data}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 10:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ char\_in\ =\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.read(1).decode()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ char\_in\ ==\ \textcolor{stringliteral}{"{}1"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afe2c07e9d29ef08db0d5e524dec34058}{ready\_Black}}.put(1)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 11}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Wait\ to\ get\ White\ Calibration\ Data}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 11:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ char\_in\ =\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.read(1).decode()}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ char\_in\ ==\ \textcolor{stringliteral}{"{}1"{}}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a05a3d1da341894fe8010c2641b749e0a}{ready\_White}}.put(1)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Wait\ for\ go\ \ \ \ \ \ \ \ \ \ \ }}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 12:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}went\ to\ state\ 12"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{automatic\_mode}}.put(1)}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 12}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 13:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a58392f37e76b5f2415f4224076221d27}{imu\_flg}}.put(1)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Stop\ command}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}0"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 7}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Testing\ state\ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}t"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}got\ a\ t"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 8}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{False}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}g"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 12}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ char\_in\ ==\ \textcolor{stringliteral}{"{}i"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 13}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 0\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Test\ Setup\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 1:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ for\ motor\ delays}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.get()\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.put(5)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.put(5)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Send\ start\ commands}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.get()==1\ \textcolor{keywordflow}{and}\ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.get()\ ==1:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Flush\ queues}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.any()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.get()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.any()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.get()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Set\ motors}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{PWM\_l}}.put(self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{PWM\_r}}.put(self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ for\ time\ for\ next\ kind\ of\ test}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ !=\ 1:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ If\ next\ kind\ of\ test\ go\ to\ new\ test}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ +\ 1)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Go\ to\ next\ state\ and\ tell\ motors\ to\ update}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 2}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.put(2)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.put(2)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Waiting\ for\ data}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 2:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Velocity\ Tests}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()\ <=\ 3:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.full()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ ==\ 10\ \textcolor{keywordflow}{and}\ self.\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{headers\_v}}\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}Times,\ Velocity(mm/s)\(\backslash\)r\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{headers\_v}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.any()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(str(self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}).encode())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(\textcolor{stringliteral}{"{},\ "{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel\ =\ (self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.get())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(f\textcolor{stringliteral}{"{}\{vel:.3f\}"{}}.encode())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ +=\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ +=\ 10}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#If\ that\ was\ the\ last\ test\ go\ to\ next\ test\ type}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ >=\ 110:\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ =\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ =\ 10}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0\ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(0)\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 3}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 2}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Position\ Tests}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.full()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ ==\ 10\ \textcolor{keywordflow}{and}\ self.\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{headers\_p}}\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}Times,\ Position(mm)\(\backslash\)r\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{headers\_p}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.any()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(str(self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}).encode())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(\textcolor{stringliteral}{"{},\ "{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos\ \ =\ (self.\mbox{\hyperlink{classui_1_1ui_a995f2970b96bc314b783779e0b7c744a}{position}}.get())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(f\textcolor{stringliteral}{"{}\{pos:.3f\}"{}}.encode())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ +=\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ +=\ 10\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ If\ that\ was\ the\ last\ test\ go\ to\ wait\ state}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ >=\ 110:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ =\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ ==\ 5:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Reset\ variables\ for\ next\ test\ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a0be7845de17f205e6fb880ad28b957c0}{PWM\_l}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6188c524fd16397181bec2ff681392f9}{PWM\_r}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.put(1)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.put(2)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.put(2)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ =\ 10}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa6e40ac305068558806e886e5bd69988}{last\_test}}\ =\ 2}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ac62742bd91bead06bbb58c4947e6067d}{headers\_p}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a34f5f4930b120e65d701629593ace959}{headers\_v}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 2\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a6653e93939ad6175c97b54786dff7547}{next\_test}}\ =\ 1\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a72ccf1d5a63a062fef46c859c7725ccd}{output}}\ =\ 10}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 3}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 2\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 3:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{ui\_delay}}\ +=\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{ui\_delay}}\ >=\ 10:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af4ab69d57304b42cbcd9529f1ee8fbae}{ui\_delay}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 3}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Go\ forward\ state}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 4:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{False}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\_ref}}.put(int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip()))}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(self.fwd\_ref.get())}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(1)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 4}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Turn\ in\ an\ arc\ state}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 5:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{False}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\_ref}}.put(int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip()))}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(2)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 5}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Pivot\ in\ place\ state}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 6:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{False}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\_ref}}.put(int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip()))}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ =\ \textcolor{keyword}{True}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(3)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a2beb52784c71c3052ffc2a78f6aa135d}{ref\_got}}\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 6}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Stop\ command\ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 7:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Went\ to\ state\ 7"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\_ref}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\_ref}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\_ref}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(4)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{automatic\_mode}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 7}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Testing\ check\ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 8:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ =\ int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Got\ which\ test"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}}\ =\ int(self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.readline().decode().strip())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Got\ a\ test\ ref"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Setting\ up\ test\ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}}\ !=\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Check\ for\ motor\ delays\ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.get()\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.get()\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a30769635529534b5f470a150e8008171}{m\_state\_l}}.put(5)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aa82260796c82c07017da68f6a6d63ad5}{m\_state\_r}}.put(5)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Send\ start\ commands\ if\ delay\ over}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.get()\ ==\ 1:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#if\ self.m\_state\_l.get()==1\ and\ self.m\_state\_r.get()\ ==1:}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Flush\ queues}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}flsuh\ queues"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.any()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.get()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.any()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.get()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}setting\ testing\ flag"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(6)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 8\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Set\ up\ correct\ controller\ state\ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}setting\ up\ controller"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ ==\ 1:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_af6bbf84102ddb5a5b5801b5e7d01373d}{fwd\_ref}}.put(self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(1)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ ==\ 2:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afd1a969404e0291812e1104556bae52b}{arc\_ref}}.put(self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(2)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a5c20b9c3faae2715b2f19f9f11578167}{which\_test}}\ ==\ 3:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_aff9f4d7686d071f59cc18c615d8c4546}{piv\_ref}}.put(self.\mbox{\hyperlink{classui_1_1ui_a87d239c47622be72772bf2968adc6171}{test\_ref}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a757fe3373c9de05362ac1422ef443b40}{c\_state}}.put(3)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 9}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 8}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Waiting\ for\ Data}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 9:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.full()\ ==\ \textcolor{keyword}{True})\ \&\ (self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.full()\ ==\ \textcolor{keyword}{True}):}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}About\ to\ send\ headers"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}Times,\ Velocity(mm/s)\(\backslash\)r\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.any()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}About\ to\ send\ left\ motor\ data"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(str(self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}).encode())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(\textcolor{stringliteral}{"{},\ "{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel\ =\ (self.\mbox{\hyperlink{classui_1_1ui_acc2e933d24839fd64eb692e5762d37c5}{velocity}}.get())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(f\textcolor{stringliteral}{"{}\{vel:.3f\}"{}}.encode())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ +=\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Sent\ that\ bitch"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.any()\ ==\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}About\ to\ send\ right\ motor\ data"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(str(self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}).encode())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(\textcolor{stringliteral}{"{},\ "{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vel\ =\ (self.\mbox{\hyperlink{classui_1_1ui_a213173cffeabf6851fa0e4dc0bf25cc0}{velocity2}}.get())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(f\textcolor{stringliteral}{"{}\{vel:.3f\}"{}}.encode())}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.write(b\textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ +=\ 1}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Sent\ it"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_ad4c52b3e9c5d43d1d7b1355ec9e5b33e}{time\_idx}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a25b8e416d9f120a1390a7318f3230394}{delay}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a516efca0f59aa59adb8c0da4731adf86}{testing\_flg}}.put(0)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Asking\ motors\ to\ turn\ off"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 7}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Wait\ to\ get\ Black\ Calibration\ Data}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 10:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ char\_in\ =\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.read(1).decode()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ char\_in\ ==\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_afe2c07e9d29ef08db0d5e524dec34058}{ready\_Black}}.put(1)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 11}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Wait\ to\ get\ White\ Calibration\ Data}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 11:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.any():}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ char\_in\ =\ self.\mbox{\hyperlink{classui_1_1ui_a288d7995a2c901af5768c5168671ffd0}{uart}}.read(1).decode()}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00333}00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ char\_in\ ==\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a05a3d1da341894fe8010c2641b749e0a}{ready\_White}}.put(1)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Wait\ for\ go\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 12:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}went\ to\ state\ 12"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a4e33e8d9bd212d6352bf7bcb5064881f}{automatic\_mode}}.put(1)}
 \DoxyCodeLine{\Hypertarget{ui_8py_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 13}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}}
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00345}00345\ }
-\DoxyCodeLine{\Hypertarget{ui_8py_source_l00346}00346\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 12}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ ==\ 13:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a58392f37e76b5f2415f4224076221d27}{imu\_flg}}.put(1)}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}\ =\ 0}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ 13}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{raise}\ ValueError(\textcolor{stringliteral}{"{}Not\ that\ many\ states"{}})}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{yield}\ self.\mbox{\hyperlink{classui_1_1ui_a577487ab95eea041009593952c25b66c}{state}}}
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{ui_8py_source_l00350}00350\ \ \ \ \ }
 
 \end{DoxyCode}

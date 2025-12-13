@@ -21,7 +21,6 @@ var dir_e0a522aee57a3fefbd9b6c523f4e1f9a =
     [ "pathing_plan_task.py", "pathing__plan__task_8py.html", "pathing__plan__task_8py" ],
     [ "pc_micro_reader.py", "pc__micro__reader_8py.html", "pc__micro__reader_8py" ],
     [ "task_share.py", "task__share_8py.html", "task__share_8py" ],
-    [ "test.py", "test_8py.html", null ],
     [ "ui.py", "ui_8py.html", "ui_8py" ],
     [ "ui_old.py", "ui__old_8py.html", "ui__old_8py" ]
 ];

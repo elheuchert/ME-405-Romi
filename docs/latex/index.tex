@@ -14,7 +14,8 @@ This Documentation includes information about\+:
 \end{DoxyItemize}
 \item Test results and performance
 \item Key takeaways
-\end{DoxyItemize}\hypertarget{index_hardware}{}\doxysection{\texorpdfstring{Hardware}{Hardware}}\label{index_hardware}
+\end{DoxyItemize}\hypertarget{index_software}{}\doxysection{\texorpdfstring{Software architecture}{Software architecture}}\label{index_software}
+The software architecture can be found by going to the Namespaces, Classes, and Files tabs. There you can find infomation about the files for this project and the functions they contain.\hypertarget{index_hardware}{}\doxysection{\texorpdfstring{Hardware}{Hardware}}\label{index_hardware}
 \hypertarget{index_motors}{}\doxysubsection{\texorpdfstring{Motors}{Motors}}\label{index_motors}
 We used Romi, which has two H-\/bridge motor drivers.
 
@@ -84,7 +85,9 @@ GND  &GND  &-\/  \\
 CTRL EVN  &PH1  &GPIO  \\
 CTRL ODD  &PH0  &GPIO  \\
 \end{DoxyTable}
-\hypertarget{index_bump}{}\doxysubsection{\texorpdfstring{Bump Sensors}{Bump Sensors}}\label{index_bump}
+
+
+ Figure 1. Support used for securing Line Sensors\hypertarget{index_bump}{}\doxysubsection{\texorpdfstring{Bump Sensors}{Bump Sensors}}\label{index_bump}
 We used bump sensors made for Romi, using both left and right modules. These bump sensors are used to detect collision, which will tell Romi the next steps. We attached these to the front of the Romi robot.
 
 
@@ -103,19 +106,31 @@ GND  &GND  &-\/  \\
 \hypertarget{index_test}{}\doxysubsection{\texorpdfstring{Test Results}{Test Results}}\label{index_test}
 {\bfseries{Velocity Plots testing}}
 
-After pressing the go command “s”, we have the Romi go through 4 tests, each consisting of 10 step response tests. Those 4 tests are velocity for the left and right motor, and position for the left and right motor. These data points are automatically given to the user when running the PC script and plotted accordingly. The results are shown below in Figures 1-\/4.
+After pressing the go command “s”, we have the Romi go through 4 tests, each consisting of 10 step response tests. Those 4 tests are velocity for the left and right motor, and position for the left and right motor. These data points are automatically given to the user when running the PC script and plotted accordingly. The results are shown below in Figures 2-\/5.
 
- Figure 1. Left Motor Velocity Step Response  Figure 2. Right Motor Velocity Step Response  Figure 3. Left Motor Position Step Response  Figure 4. Right Motor Position Step Response
+ Figure 2. Left Motor Velocity Step Response  Figure 3. Right Motor Velocity Step Response  Figure 4. Left Motor Position Step Response  Figure 5. Right Motor Position Step Response
 
 Based on these velocity graphs, it seems that our chosen frequencies were sufficient as it portrays a step response. Using the CSV files we obtained, we can then generate a time constant for both the left and right motors for the control theory task to be applied next week.
 
 {\bfseries{Closed Loop Control Testing}}
 
-To tune Romi’s performance, we used our automatic data collection to run driving forward tests via our PC script. We started with only proportional control, running the motor at 200 mm/s, with K\+\_\+P being the same for both motors, with Figure 5 being our first test. The next tests with Figures 6-\/7 are tests where we changed the Kp values, resulting in Figure 7, where we found a sufficient Kp value for this test period.
+To tune Romi’s performance, we used our automatic data collection to run driving forward tests via our PC script. We started with only proportional control, running the motor at 200 mm/s, with K\+\_\+P being the same for both motors, with Figure 6 being our first test. The next tests with Figures 7-\/8 are tests where we changed the Kp values, resulting in Figure 8, where we found a sufficient Kp value for this test period.
 
- Figure 5. Velocity of both motors with Kpr = 0.\+25 and Kpl = 0.\+25  Figure 6. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15  Figure 7. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15 and Vref = 300 mm/s
+ Figure 6. Velocity of both motors with Kpr = 0.\+25 and Kpl = 0.\+25  Figure 7. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15  Figure 8. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15 and Vref = 300 mm/s
 
-After obtaining a relatively sufficient Kp, next we included integral control, controlling the Kp and Ki. Implementing both started of beneficial, as seen in Figure 8. We then raised Ki, in the next two Figures, 9 and 10, but it behaved erratically. Seeing as it was too much gain, we lowered Ki, but it still behaved erratically, so we were unsure where to continue from there.
+After obtaining a relatively sufficient Kp, next we included integral control, controlling the Kp and Ki. Implementing both started of beneficial, as seen in Figure 9. We then raised Ki, in the next two Figures, 10 and 11, but it behaved erratically. Seeing as it was too much gain, we lowered Ki, but it still behaved erratically, so we were unsure where to continue from there.
 
- Figure 8. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 0.\+5 and Kil = 0.\+5  Figure 9. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2 and Kil = 2  Figure 10. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2.\+5 and Kil = 2.\+5  Figure 11. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2.\+1 and Kil = 2.\+1\hypertarget{index_performance}{}\doxysubsection{\texorpdfstring{Track Performance}{Track Performance}}\label{index_performance}
-\hypertarget{index_key}{}\doxysection{\texorpdfstring{Key takeaways}{Key takeaways}}\label{index_key}
+ Figure 9. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 0.\+5 and Kil = 0.\+5  Figure 10. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2 and Kil = 2  Figure 11. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2.\+5 and Kil = 2.\+5  Figure 12. Velocity of both motors with Kpr = 0.\+1 and Kpl = 0.\+15, Kir = 2.\+1 and Kil = 2.\+1\hypertarget{index_performance}{}\doxysubsection{\texorpdfstring{Track Performance}{Track Performance}}\label{index_performance}
+Below are three videos containing our three attempts to autonomously drive the track. These attempts are rather inconsistant, which is due to our distance and yaw rates being thrown off while running the Romi.
+
+
+
+Figure 13. Attempt \#1
+
+
+
+Figure 14. Attempt \#2
+
+
+
+Figure 15. Attempt \#3\hypertarget{index_key}{}\doxysection{\texorpdfstring{Key takeaways}{Key takeaways}}\label{index_key}
