@@ -12,6 +12,10 @@
 #  @date   2025-Sept-28 Approximate date of creation of file
 #  @date   2025-Dec-12 Final alterations made
 # 
+
+## @brief The Controller class is a classical PID controller that implements single input, single output control when called to. 
+#         The user gives it gains and setpoints and calls the control function for efforts. 
+#
 class Controller:
 ## @brief __init__ is the Controller object initializer which takes 5 arguments. 
 #         The arguments the gains and saturation points of the classical controller. 
