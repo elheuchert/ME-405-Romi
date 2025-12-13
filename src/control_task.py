@@ -13,7 +13,7 @@
 #  @date   2025-Nov-10 Approximate date of creation of file
 #  @date   2025-Dec-12 Final alterations made
 # 
-
+## @brief control_task class that can be initialized to be run with the cotask scheduler. See run for behavior. 
 class control_task: 
 ## @brief __init__ is the control_task object initializer which takes 25 arguments. 
 #         The arguments are a mix of controllers, data shares, and flag shares.
